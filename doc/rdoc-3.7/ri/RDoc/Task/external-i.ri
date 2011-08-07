@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"external"RDoc::Task#external"RW:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["LWhether to run the rdoc process as an external shell (default is false)F"lib/rdoc/task.rb

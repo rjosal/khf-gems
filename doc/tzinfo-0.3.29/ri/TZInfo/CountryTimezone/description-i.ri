@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"description"(TZInfo::CountryTimezone#description"R:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["EA description of this timezone in relation to the country, e.g. "K"Eastern Time". This is usually nil for countries having only a single"Timezone.F"#lib/tzinfo/country_timezone.rb

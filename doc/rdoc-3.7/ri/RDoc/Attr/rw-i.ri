@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"rw"RDoc::Attr#rw"RW:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["DIs the attribute readable ('R'), writable ('W') or both ('RW')?F"lib/rdoc/attr.rb

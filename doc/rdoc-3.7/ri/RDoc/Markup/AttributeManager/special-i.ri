@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"special"+RDoc::Markup::AttributeManager#special"R:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["GAnd this maps _special_ sequences to a name. A special sequence is"something like a WikiWordF")lib/rdoc/markup/attribute_manager.rb

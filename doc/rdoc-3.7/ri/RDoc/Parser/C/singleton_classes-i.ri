@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"singleton_classes"&RDoc::Parser::C#singleton_classes"R:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["=Maps C variable names to names of ruby singleton classesF"lib/rdoc/parser/c.rb

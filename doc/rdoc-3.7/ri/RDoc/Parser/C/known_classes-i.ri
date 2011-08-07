@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"known_classes""RDoc::Parser::C#known_classes"R:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["JMaps C variable names to names of ruby classes (andsingleton classes)F"lib/rdoc/parser/c.rb

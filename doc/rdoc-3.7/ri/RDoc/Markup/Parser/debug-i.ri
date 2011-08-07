@@ -1,3 +1,0 @@
-U:RDoc::Attr[i"
-debug"RDoc::Markup::Parser#debug"RW:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["-Enables display of debugging informationF"lib/rdoc/markup/parser.rb

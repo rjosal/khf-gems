@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"	name"Bundler::Source::Path#name"W:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["8Kind of a hack, but needed for the lock file parserF"lib/bundler/source.rb

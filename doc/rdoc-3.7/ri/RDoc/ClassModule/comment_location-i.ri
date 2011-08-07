@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"comment_location"'RDoc::ClassModule#comment_location"R:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["MComment and the location it came from.  Use #add_comment to add commentsF"lib/rdoc/class_module.rb

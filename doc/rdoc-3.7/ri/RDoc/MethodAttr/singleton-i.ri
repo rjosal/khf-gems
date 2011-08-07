@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"singleton"RDoc::MethodAttr#singleton"RW:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["*Is this a singleton method/attribute?F"lib/rdoc/method_attr.rb

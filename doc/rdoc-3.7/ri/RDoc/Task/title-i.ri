@@ -1,3 +1,0 @@
-U:RDoc::Attr[i"
-title"RDoc::Task#title"RW:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	[">Title of RDoc documentation. (defaults to rdoc's default)F"lib/rdoc/task.rb

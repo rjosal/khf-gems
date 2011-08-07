@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"is_alias_for"#RDoc::ClassModule#is_alias_for"RW:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["2Class or module this constant is an alias forF"lib/rdoc/class_module.rb

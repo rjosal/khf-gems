@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"app"Rack::Mount::Route#app"R:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["9Valid rack application to call if conditions are metF"lib/rack/mount/route.rb

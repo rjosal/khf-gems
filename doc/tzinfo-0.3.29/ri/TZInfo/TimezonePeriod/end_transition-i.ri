@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"end_transition"*TZInfo::TimezonePeriod#end_transition"R:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["KThe TimezoneTransitionInfo that defines the end of this TimezonePeriod"(may be nil if unbounded).F""lib/tzinfo/timezone_period.rb

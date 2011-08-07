@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"extensions"MIME::Type#extensions"RW:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["KThe list of extensions which are known to be used for this MIME::Type."ENon-array values will be coerced into an array with #to_a. Array"7values will be flattened and +nil+ values removed.F"lib/mime/types.rb

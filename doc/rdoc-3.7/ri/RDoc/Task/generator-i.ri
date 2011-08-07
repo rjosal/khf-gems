@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"generator"RDoc::Task#generator"RW:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["PName of format generator (--fmt) used by rdoc. (defaults to rdoc's default)F"lib/rdoc/task.rb

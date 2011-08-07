@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"done_documenting"&RDoc::CodeObject#done_documenting"R:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["AAre we done documenting (ie, did we come across a :enddoc:)?F"lib/rdoc/code_object.rb

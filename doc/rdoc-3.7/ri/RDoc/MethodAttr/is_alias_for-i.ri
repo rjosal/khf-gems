@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"is_alias_for""RDoc::MethodAttr#is_alias_for"RW:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["(The method/attribute we're aliasingF"lib/rdoc/method_attr.rb

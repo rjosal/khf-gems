@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"dry_run"RDoc::Options#dry_run"RW:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	[",If true, RDoc will not write any files.F"lib/rdoc/options.rb

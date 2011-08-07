@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"obsolete"MIME::Type#obsolete"W:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["9Sets the obsolescence indicator for this media type.F"lib/mime/types.rb

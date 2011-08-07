@@ -1,6 +1,0 @@
-{:modules[	"	MIME"MIME::InvalidContentType"MIME::Type"MIME::Types:encoding0:attributes{"MIME::Type["attr_accessor docs"attr_accessor encoding"attr_accessor extensions"attr_accessor system"attr_accessor url"attr_reader content_type"!attr_reader default_encoding"attr_reader media_type"attr_reader raw_media_type"attr_reader raw_sub_type"attr_reader simplified"attr_reader sub_type"attr_reader use_instead"attr_writer obsolete"MIME::Types["attr_reader data_version:class_methods{@[
-"from_array"from_hash"from_mime_type"new"simplified@[
-"[]"add"new"of"type_for:instance_methods{@[%"<=>"ascii?"binary?"complete?"content_type"default_encoding"	docs"
-docs="encoding"	eql?"extensions"
-like?"media_type"obsolete"obsolete?"platform?"priority_compare"raw_media_type"raw_sub_type"registered?"signature?"simplified"sub_type"system"system?"	to_a"to_hash"	to_s"to_str"url"	urls"use_instead@[
-"[]"add"data_version"of"type_for:ancestors{@["Comparable"Object"MIME::InvalidContentType["RuntimeError@["Object

@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"system"MIME::Type#system"RW:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["IThe regexp for the operating system that this MIME::Type is specific"to.F"lib/mime/types.rb

@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"html_tags"-RDoc::Markup::AttributeManager#html_tags"R:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["<This maps HTML tags to the corresponding attribute charF")lib/rdoc/markup/attribute_manager.rb

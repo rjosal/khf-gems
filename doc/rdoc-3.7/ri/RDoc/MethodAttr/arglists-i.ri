@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"arglists"RDoc::MethodAttr#arglists"R:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["MThe call_seq or the param_seq with method name, if there is no call_seq.F"lib/rdoc/method_attr.rb

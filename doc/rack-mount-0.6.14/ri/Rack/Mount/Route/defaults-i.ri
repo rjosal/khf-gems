@@ -1,2 +1,0 @@
-U:RDoc::Attr[i"defaults" Rack::Mount::Route#defaults"R:publico:RDoc::Markup::Document:
-@file0:@parts[o:RDoc::Markup::Paragraph;	["FA hash of values that always gets merged into the parameters hashF"lib/rack/mount/route.rb
