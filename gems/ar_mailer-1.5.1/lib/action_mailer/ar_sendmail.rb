@@ -462,13 +462,14 @@ file already exists or the contents don't match it's PID.
   def deliver(emails)
     user = smtp_settings[:user] || smtp_settings[:user_name]
     server = Net::SMTP.new smtp_settings[:address], smtp_settings[:port]
+#rjosal hack tls before server.start.  Idiots can't write a mail program by v1.5!
+    if smtp_settings[:tls] then
+      raise 'gem install smtp_tls for 1.8.6' unless
+        server.respond_to? :starttls
+      server.enable_starttls
+    end
     server.start smtp_settings[:domain], user, smtp_settings[:password],
                  smtp_settings[:authentication] do |smtp|
-      if smtp_settings[:tls] then
-        raise 'gem install smtp_tls for 1.8.6' unless
-          server.respond_to? :starttls
-        smtp.enable_starttls
-      end
       @failed_auth_count = 0
       until emails.empty? do
         email = emails.shift

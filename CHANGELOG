@@ -1,3 +1,4 @@
 
+*) hack ar_mailer to issue starttls before connecting to server
 *) remove unnecessary gems
 *) created a changelog
