@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"iterations"8PhusionPassenger::AbstractRequestHandler#iterations"R:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["IThe number of times the main loop has iterated so far. Mostly useful"for unit test assertions.F"6lib/phusion_passenger/abstract_request_handler.rb

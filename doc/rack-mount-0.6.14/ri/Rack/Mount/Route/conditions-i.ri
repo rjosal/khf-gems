@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"conditions""Rack::Mount::Route#conditions"R:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["GA hash of conditions to match against. Conditions may be expressed",as strings or regexps to match against.F"lib/rack/mount/route.rb

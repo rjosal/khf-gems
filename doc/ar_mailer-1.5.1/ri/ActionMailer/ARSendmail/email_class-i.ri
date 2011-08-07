@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"email_class")ActionMailer::ARSendmail#email_class"R:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	[")ActiveRecord class that holds emailsF"%lib/action_mailer/ar_sendmail.rb

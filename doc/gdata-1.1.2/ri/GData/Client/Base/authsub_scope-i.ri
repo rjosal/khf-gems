@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"authsub_scope"&GData::Client::Base#authsub_scope"RW:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;["8The broadest AuthSub scope for working with an API.":This is overriden by the service-specific subclasses.:
+@file0F"lib/gdata/client/base.rb

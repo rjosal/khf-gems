@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"owner_pipe",PhusionPassenger::AppProcess#owner_pipe"R:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["JThe owner pipe of the application instance (an IO object). Please see"8RequestHandler for a description of the owner pipe.F")lib/phusion_passenger/app_process.rb

@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"app_type",PhusionPassenger::AppInitError#app_type"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["2The application type, e.g. "rails" or "rack".F"(lib/phusion_passenger/exceptions.rb

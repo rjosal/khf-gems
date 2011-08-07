@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"constant_aliases"'RDoc::ClassModule#constant_aliases"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["8Constants that are aliases for this class or moduleF"lib/rdoc/class_module.rb

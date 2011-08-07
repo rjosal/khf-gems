@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: PhusionPassenger::Utils::UnseekableSocket</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/phusion_passenger/utils/unseekable_socket_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/phusion_passenger/utils/unseekable_socket.rb">lib/phusion_passenger/utils/unseekable_socket.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-wrap">::wrap</a></li>
+          
+          <li><a href="#method-i-addr">#addr</a></li>
+          
+          <li><a href="#method-i-binmode">#binmode</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-close_read">#close_read</a></li>
+          
+          <li><a href="#method-i-close_write">#close_write</a></li>
+          
+          <li><a href="#method-i-closed-3F">#closed?</a></li>
+          
+          <li><a href="#method-i-each">#each</a></li>
+          
+          <li><a href="#method-i-flush">#flush</a></li>
+          
+          <li><a href="#method-i-gets">#gets</a></li>
+          
+          <li><a href="#method-i-puts">#puts</a></li>
+          
+          <li><a href="#method-i-read">#read</a></li>
+          
+          <li><a href="#method-i-readline">#readline</a></li>
+          
+          <li><a href="#method-i-readpartial">#readpartial</a></li>
+          
+          <li><a href="#method-i-source_of_exception-3F">#source_of_exception?</a></li>
+          
+          <li><a href="#method-i-sync-3D">#sync=</a></li>
+          
+          <li><a href="#method-i-to_io">#to_io</a></li>
+          
+          <li><a href="#method-i-wrap">#wrap</a></li>
+          
+          <li><a href="#method-i-write">#write</a></li>
+          
+          <li><a href="#method-i-writev">#writev</a></li>
+          
+          <li><a href="#method-i-writev2">#writev2</a></li>
+          
+          <li><a href="#method-i-writev3">#writev3</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../PhusionPassenger.html">PhusionPassenger</a></li>
+        
+          <li><a href="../../PhusionPassenger/AbstractInstaller.html">PhusionPassenger::AbstractInstaller</a></li>
+        
+          <li><a href="../../PhusionPassenger/AbstractRequestHandler.html">PhusionPassenger::AbstractRequestHandler</a></li>
+        
+          <li><a href="../../PhusionPassenger/AbstractServer.html">PhusionPassenger::AbstractServer</a></li>
+        
+          <li><a href="../../PhusionPassenger/AbstractServer/InvalidPassword.html">PhusionPassenger::AbstractServer::InvalidPassword</a></li>
+        
+          <li><a href="../../PhusionPassenger/AbstractServer/ServerAlreadyStarted.html">PhusionPassenger::AbstractServer::ServerAlreadyStarted</a></li>
+        
+          <li><a href="../../PhusionPassenger/AbstractServer/ServerError.html">PhusionPassenger::AbstractServer::ServerError</a></li>
+        
+          <li><a href="../../PhusionPassenger/AbstractServer/ServerNotStarted.html">PhusionPassenger::AbstractServer::ServerNotStarted</a></li>
+        
+          <li><a href="../../PhusionPassenger/AbstractServer/UnknownMessage.html">PhusionPassenger::AbstractServer::UnknownMessage</a></li>
+        
+          <li><a href="../../PhusionPassenger/AbstractServerCollection.html">PhusionPassenger::AbstractServerCollection</a></li>
+        
+          <li><a href="../../PhusionPassenger/AdminTools.html">PhusionPassenger::AdminTools</a></li>
+        
+          <li><a href="../../PhusionPassenger/AdminTools/MemoryStats.html">PhusionPassenger::AdminTools::MemoryStats</a></li>
+        
+          <li><a href="../../PhusionPassenger/AdminTools/MemoryStats/Process.html">PhusionPassenger::AdminTools::MemoryStats::Process</a></li>
+        
+          <li><a href="../../PhusionPassenger/AdminTools/ServerInstance.html">PhusionPassenger::AdminTools::ServerInstance</a></li>
+        
+          <li><a href="../../PhusionPassenger/AdminTools/ServerInstance/CorruptedDirectoryError.html">PhusionPassenger::AdminTools::ServerInstance::CorruptedDirectoryError</a></li>
+        
+          <li><a href="../../PhusionPassenger/AdminTools/ServerInstance/GenerationsAbsentError.html">PhusionPassenger::AdminTools::ServerInstance::GenerationsAbsentError</a></li>
+        
+          <li><a href="../../PhusionPassenger/AdminTools/ServerInstance/Group.html">PhusionPassenger::AdminTools::ServerInstance::Group</a></li>
+        
+          <li><a href="../../PhusionPassenger/AdminTools/ServerInstance/Process.html">PhusionPassenger::AdminTools::ServerInstance::Process</a></li>
+        
+          <li><a href="../../PhusionPassenger/AdminTools/ServerInstance/RoleDeniedError.html">PhusionPassenger::AdminTools::ServerInstance::RoleDeniedError</a></li>
+        
+          <li><a href="../../PhusionPassenger/AdminTools/ServerInstance/StaleDirectoryError.html">PhusionPassenger::AdminTools::ServerInstance::StaleDirectoryError</a></li>
+        
+          <li><a href="../../PhusionPassenger/AdminTools/ServerInstance/Stats.html">PhusionPassenger::AdminTools::ServerInstance::Stats</a></li>
+        
+          <li><a href="../../PhusionPassenger/AdminTools/ServerInstance/UnsupportedGenerationStructureVersionError.html">PhusionPassenger::AdminTools::ServerInstance::UnsupportedGenerationStructureVersionError</a></li>
+        
+          <li><a href="../../PhusionPassenger/AnalyticsLogger.html">PhusionPassenger::AnalyticsLogger</a></li>
+        
+          <li><a href="../../PhusionPassenger/AnalyticsLogger/Lock.html">PhusionPassenger::AnalyticsLogger::Lock</a></li>
+        
+          <li><a href="../../PhusionPassenger/AnalyticsLogger/Log.html">PhusionPassenger::AnalyticsLogger::Log</a></li>
+        
+          <li><a href="../../PhusionPassenger/AnalyticsLogger/SharedData.html">PhusionPassenger::AnalyticsLogger::SharedData</a></li>
+        
+          <li><a href="../../PhusionPassenger/AppInitError.html">PhusionPassenger::AppInitError</a></li>
+        
+          <li><a href="../../PhusionPassenger/AppProcess.html">PhusionPassenger::AppProcess</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRails.html">PhusionPassenger::ClassicRails</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRails/ApplicationSpawner.html">PhusionPassenger::ClassicRails::ApplicationSpawner</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRails/ApplicationSpawner/Error.html">PhusionPassenger::ClassicRails::ApplicationSpawner::Error</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRails/CGIFixed.html">PhusionPassenger::ClassicRails::CGIFixed</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRails/FrameworkSpawner.html">PhusionPassenger::ClassicRails::FrameworkSpawner</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRails/FrameworkSpawner/Error.html">PhusionPassenger::ClassicRails::FrameworkSpawner::Error</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRails/RequestHandler.html">PhusionPassenger::ClassicRails::RequestHandler</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRailsExtensions.html">PhusionPassenger::ClassicRailsExtensions</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACBaseExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACBaseExtension</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACBenchmarkingExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACBenchmarkingExtension</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACRescueExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACRescueExtension</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ARAbstractAdapterExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ARAbstractAdapterExtension</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/AVBenchmarkHelperExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::AVBenchmarkHelperExtension</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/CacheStoreExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::CacheStoreExtension</a></li>
+        
+          <li><a href="../../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ConcreteCacheStoreExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ConcreteCacheStoreExtension</a></li>
+        
+          <li><a href="../../PhusionPassenger/ConsoleTextTemplate.html">PhusionPassenger::ConsoleTextTemplate</a></li>
+        
+          <li><a href="../../PhusionPassenger/DebugLogging.html">PhusionPassenger::DebugLogging</a></li>
+        
+          <li><a href="../../PhusionPassenger/FrameworkInitError.html">PhusionPassenger::FrameworkInitError</a></li>
+        
+          <li><a href="../../PhusionPassenger/HTMLTemplate.html">PhusionPassenger::HTMLTemplate</a></li>
+        
+          <li><a href="../../PhusionPassenger/InitializationError.html">PhusionPassenger::InitializationError</a></li>
+        
+          <li><a href="../../PhusionPassenger/InvalidPath.html">PhusionPassenger::InvalidPath</a></li>
+        
+          <li><a href="../../PhusionPassenger/MessageChannel.html">PhusionPassenger::MessageChannel</a></li>
+        
+          <li><a href="../../PhusionPassenger/MessageChannel/InvalidHashError.html">PhusionPassenger::MessageChannel::InvalidHashError</a></li>
+        
+          <li><a href="../../PhusionPassenger/MessageClient.html">PhusionPassenger::MessageClient</a></li>
+        
+          <li><a href="../../PhusionPassenger/NativeSupportLoader.html">PhusionPassenger::NativeSupportLoader</a></li>
+        
+          <li><a href="../../PhusionPassenger/Packaging.html">PhusionPassenger::Packaging</a></li>
+        
+          <li><a href="../../PhusionPassenger/PlatformInfo.html">PhusionPassenger::PlatformInfo</a></li>
+        
+          <li><a href="../../PhusionPassenger/PlatformInfo/RuntimeError.html">PhusionPassenger::PlatformInfo::RuntimeError</a></li>
+        
+          <li><a href="../../PhusionPassenger/Plugin.html">PhusionPassenger::Plugin</a></li>
+        
+          <li><a href="../../PhusionPassenger/Rack.html">PhusionPassenger::Rack</a></li>
+        
+          <li><a href="../../PhusionPassenger/Rack/ApplicationSpawner.html">PhusionPassenger::Rack::ApplicationSpawner</a></li>
+        
+          <li><a href="../../PhusionPassenger/Rack/ApplicationSpawner/Error.html">PhusionPassenger::Rack::ApplicationSpawner::Error</a></li>
+        
+          <li><a href="../../PhusionPassenger/Rack/RequestHandler.html">PhusionPassenger::Rack::RequestHandler</a></li>
+        
+          <li><a href="../../PhusionPassenger/Rails3Extensions.html">PhusionPassenger::Rails3Extensions</a></li>
+        
+          <li><a href="../../PhusionPassenger/Rails3Extensions/AnalyticsLogging.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging</a></li>
+        
+          <li><a href="../../PhusionPassenger/Rails3Extensions/AnalyticsLogging/ACExtension.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging::ACExtension</a></li>
+        
+          <li><a href="../../PhusionPassenger/Rails3Extensions/AnalyticsLogging/ASBenchmarkableExtension.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging::ASBenchmarkableExtension</a></li>
+        
+          <li><a href="../../PhusionPassenger/Rails3Extensions/AnalyticsLogging/ExceptionLogger.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging::ExceptionLogger</a></li>
+        
+          <li><a href="../../PhusionPassenger/SpawnManager.html">PhusionPassenger::SpawnManager</a></li>
+        
+          <li><a href="../../PhusionPassenger/Standalone.html">PhusionPassenger::Standalone</a></li>
+        
+          <li><a href="../../PhusionPassenger/Standalone/AppFinder.html">PhusionPassenger::Standalone::AppFinder</a></li>
+        
+          <li><a href="../../PhusionPassenger/Standalone/Command.html">PhusionPassenger::Standalone::Command</a></li>
+        
+          <li><a href="../../PhusionPassenger/Standalone/ConfigFile.html">PhusionPassenger::Standalone::ConfigFile</a></li>
+        
+          <li><a href="../../PhusionPassenger/Standalone/ConfigFile/DisallowedContextError.html">PhusionPassenger::Standalone::ConfigFile::DisallowedContextError</a></li>
+        
+          <li><a href="../../PhusionPassenger/Standalone/HelpCommand.html">PhusionPassenger::Standalone::HelpCommand</a></li>
+        
+          <li><a href="../../PhusionPassenger/Standalone/Main.html">PhusionPassenger::Standalone::Main</a></li>
+        
+          <li><a href="../../PhusionPassenger/Standalone/PackageRuntimeCommand.html">PhusionPassenger::Standalone::PackageRuntimeCommand</a></li>
+        
+          <li><a href="../../PhusionPassenger/Standalone/RuntimeInstaller.html">PhusionPassenger::Standalone::RuntimeInstaller</a></li>
+        
+          <li><a href="../../PhusionPassenger/Standalone/StartCommand.html">PhusionPassenger::Standalone::StartCommand</a></li>
+        
+          <li><a href="../../PhusionPassenger/Standalone/StatusCommand.html">PhusionPassenger::Standalone::StatusCommand</a></li>
+        
+          <li><a href="../../PhusionPassenger/Standalone/StopCommand.html">PhusionPassenger::Standalone::StopCommand</a></li>
+        
+          <li><a href="../../PhusionPassenger/Standalone/Utils.html">PhusionPassenger::Standalone::Utils</a></li>
+        
+          <li><a href="../../PhusionPassenger/Standalone/VersionCommand.html">PhusionPassenger::Standalone::VersionCommand</a></li>
+        
+          <li><a href="../../PhusionPassenger/UnknownError.html">PhusionPassenger::UnknownError</a></li>
+        
+          <li><a href="../../PhusionPassenger/Utils.html">PhusionPassenger::Utils</a></li>
+        
+          <li><a href="../../PhusionPassenger/Utils/FileSystemWatcher.html">PhusionPassenger::Utils::FileSystemWatcher</a></li>
+        
+          <li><a href="../../PhusionPassenger/Utils/FileSystemWatcher/DirInfo.html">PhusionPassenger::Utils::FileSystemWatcher::DirInfo</a></li>
+        
+          <li><a href="../../PhusionPassenger/Utils/FileSystemWatcher/FileInfo.html">PhusionPassenger::Utils::FileSystemWatcher::FileInfo</a></li>
+        
+          <li><a href="../../PhusionPassenger/Utils/HostsFileParser.html">PhusionPassenger::Utils::HostsFileParser</a></li>
+        
+          <li><a href="../../PhusionPassenger/Utils/Kernel.html">PhusionPassenger::Utils::Kernel</a></li>
+        
+          <li><a href="../../PhusionPassenger/Utils/PseudoIO.html">PhusionPassenger::Utils::PseudoIO</a></li>
+        
+          <li><a href="../../PhusionPassenger/Utils/RewindableInput.html">PhusionPassenger::Utils::RewindableInput</a></li>
+        
+          <li><a href="../../PhusionPassenger/Utils/RewindableInput/Tempfile.html">PhusionPassenger::Utils::RewindableInput::Tempfile</a></li>
+        
+          <li><a href="../../PhusionPassenger/Utils/UnseekableSocket.html">PhusionPassenger::Utils::UnseekableSocket</a></li>
+        
+          <li><a href="../../PhusionPassenger/VersionNotFound.html">PhusionPassenger::VersionNotFound</a></li>
+        
+          <li><a href="../../PhusionPassenger/WSGI.html">PhusionPassenger::WSGI</a></li>
+        
+          <li><a href="../../PhusionPassenger/WSGI/ApplicationSpawner.html">PhusionPassenger::WSGI::ApplicationSpawner</a></li>
+        
+          <li><a href="../../ConditionVariable.html">ConditionVariable</a></li>
+        
+          <li><a href="../../Exception.html">Exception</a></li>
+        
+          <li><a href="../../GC.html">GC</a></li>
+        
+          <li><a href="../../IO.html">IO</a></li>
+        
+          <li><a href="../../Object.html">Object</a></li>
+        
+          <li><a href="../../Process.html">Process</a></li>
+        
+          <li><a href="../../Signal.html">Signal</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">PhusionPassenger::Utils::UnseekableSocket</h1>
+
+    <div id="description" class="description">
+      
+<p>Some frameworks (e.g. Merb) call <em>seek</em> and <em>rewind</em> on the
+input stream if it responds to these methods. In case of Phusion Passenger,
+the input stream is a socket, and altough socket objects respond to
+<em>seek</em> and <em>rewind</em>, calling these methods will raise an
+exception. We don’t want this to happen so in <a
+href="../AbstractRequestHandler.html">AbstractRequestHandler</a> we wrap
+the client socket into an <a
+href="UnseekableSocket.html">UnseekableSocket</a> wrapper, which doesn’t
+respond to these methods.</p>
+
+<p>We used to dynamically undef <em>seek</em> and <em>rewind</em> on sockets,
+but this blows the Ruby interpreter’s method cache and made things
+slower. Wrapping a socket is faster despite extra method calls.</p>
+
+<p>Furthermore, all exceptions originating from the wrapped socket will be
+annotated. One can check whether a certain exception originates from the
+wrapped socket by calling <a
+href="UnseekableSocket.html#method-i-source_of_exception-3F">#source_of_exception?</a></p>
+
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="wrap-method" class="method-detail ">
+          <a name="method-c-wrap"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">wrap</span><span
+              class="method-args">(socket)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="wrap-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">wrap</span>(<span class="ruby-identifier">socket</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">new</span>.<span class="ruby-identifier">wrap</span>(<span class="ruby-identifier">socket</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- wrap-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- wrap-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="addr-method" class="method-detail ">
+          <a name="method-i-addr"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">addr</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="addr-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">addr</span>
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">addr</span>
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- addr-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- addr-method -->
+
+      
+        <div id="binmode-method" class="method-detail ">
+          <a name="method-i-binmode"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">binmode</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Already set to binary mode.</p>
+            
+
+            
+            <div class="method-source-code" id="binmode-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">binmode</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- binmode-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- binmode-method -->
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">close</span>
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="close_read-method" class="method-detail ">
+          <a name="method-i-close_read"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close_read</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="close_read-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close_read</span>
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">close_read</span>
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close_read-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close_read-method -->
+
+      
+        <div id="close_write-method" class="method-detail ">
+          <a name="method-i-close_write"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close_write</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="close_write-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close_write</span>
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">close_write</span>
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close_write-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close_write-method -->
+
+      
+        <div id="closed-3F-method" class="method-detail ">
+          <a name="method-i-closed-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">closed?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="closed-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">closed?</span>
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">closed?</span>
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- closed-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- closed-3F-method -->
+
+      
+        <div id="each-method" class="method-detail ">
+          <a name="method-i-each"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">each</span><span
+              class="method-args">(&block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="each-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">each</span>(&amp;<span class="ruby-identifier">block</span>)
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">each</span>(&amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- each-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each-method -->
+
+      
+        <div id="flush-method" class="method-detail ">
+          <a name="method-i-flush"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">flush</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Socket is sync’ed so flushing shouldn’t do anything.</p>
+            
+
+            
+            <div class="method-source-code" id="flush-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">flush</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- flush-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- flush-method -->
+
+      
+        <div id="gets-method" class="method-detail ">
+          <a name="method-i-gets"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">gets</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="gets-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">gets</span>
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">gets</span>
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- gets-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- gets-method -->
+
+      
+        <div id="puts-method" class="method-detail ">
+          <a name="method-i-puts"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">puts</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="puts-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">puts</span>(*<span class="ruby-identifier">args</span>)
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">puts</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- puts-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- puts-method -->
+
+      
+        <div id="read-method" class="method-detail ">
+          <a name="method-i-read"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="read-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read</span>(*<span class="ruby-identifier">args</span>)
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">read</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read-method -->
+
+      
+        <div id="readline-method" class="method-detail ">
+          <a name="method-i-readline"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">readline</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="readline-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">readline</span>
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">readline</span>
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- readline-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- readline-method -->
+
+      
+        <div id="readpartial-method" class="method-detail ">
+          <a name="method-i-readpartial"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">readpartial</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="readpartial-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">readpartial</span>(*<span class="ruby-identifier">args</span>)
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">readpartial</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- readpartial-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- readpartial-method -->
+
+      
+        <div id="source_of_exception-3F-method" class="method-detail ">
+          <a name="method-i-source_of_exception-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">source_of_exception?</span><span
+              class="method-args">(exception)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="source_of_exception-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 184</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">source_of_exception?</span>(<span class="ruby-identifier">exception</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">exception</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-value">:&quot;@from_unseekable_socket&quot;</span>) <span class="ruby-operator">==</span> <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">object_id</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- source_of_exception-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- source_of_exception-3F-method -->
+
+      
+        <div id="sync-3D-method" class="method-detail ">
+          <a name="method-i-sync-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sync=</span><span
+              class="method-args">(value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Don’t allow disabling of sync.</p>
+            
+
+            
+            <div class="method-source-code" id="sync-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sync=</span>(<span class="ruby-identifier">value</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- sync-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sync-3D-method -->
+
+      
+        <div id="to_io-method" class="method-detail ">
+          <a name="method-i-to_io"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_io</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="to_io-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_io</span>
+        <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_io-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_io-method -->
+
+      
+        <div id="wrap-method" class="method-detail ">
+          <a name="method-i-wrap"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">wrap</span><span
+              class="method-args">(socket)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="wrap-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">wrap</span>(<span class="ruby-identifier">socket</span>)
+        <span class="ruby-comment"># Some people report that sometimes their Ruby (MRI/REE)</span>
+        <span class="ruby-comment"># processes get stuck with 100% CPU usage. Upon further</span>
+        <span class="ruby-comment"># inspection with strace, it turns out that these Ruby</span>
+        <span class="ruby-comment"># processes are continuously calling lseek() on a socket,</span>
+        <span class="ruby-comment"># which of course returns ESPIPE as error. gdb reveals</span>
+        <span class="ruby-comment"># lseek() is called by fwrite(), which in turn is called</span>
+        <span class="ruby-comment"># by rb_fwrite(). The affected socket is the</span>
+        <span class="ruby-comment"># AbstractRequestHandler client socket.</span>
+        <span class="ruby-comment">#</span>
+        <span class="ruby-comment"># I inspected the MRI source code and didn't find</span>
+        <span class="ruby-comment"># anything that would explain this behavior. This makes</span>
+        <span class="ruby-comment"># me think that it's a glibc bug, but that's very</span>
+        <span class="ruby-comment"># unlikely.</span>
+        <span class="ruby-comment">#</span>
+        <span class="ruby-comment"># The rb_fwrite() implementation takes an entirely</span>
+        <span class="ruby-comment"># different code path if I set 'sync' to true: it will</span>
+        <span class="ruby-comment"># skip fwrite() and use write() instead. So here we set</span>
+        <span class="ruby-comment"># 'sync' to true in the hope that this will work around</span>
+        <span class="ruby-comment"># the problem.</span>
+        <span class="ruby-identifier">socket</span>.<span class="ruby-identifier">sync</span> = <span class="ruby-keyword">true</span>
+        
+        <span class="ruby-comment"># There's no need to set the encoding for Ruby 1.9 because</span>
+        <span class="ruby-comment"># abstract_request_handler.rb is tagged with 'encoding: binary'.</span>
+        
+        <span class="ruby-ivar">@socket</span> = <span class="ruby-identifier">socket</span>
+        
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- wrap-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- wrap-method -->
+
+      
+        <div id="write-method" class="method-detail ">
+          <a name="method-i-write"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">write</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="write-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write</span>(<span class="ruby-identifier">string</span>)
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">string</span>)
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- write-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- write-method -->
+
+      
+        <div id="writev-method" class="method-detail ">
+          <a name="method-i-writev"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">writev</span><span
+              class="method-args">(components)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="writev-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">writev</span>(<span class="ruby-identifier">components</span>)
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">writev</span>(<span class="ruby-identifier">components</span>)
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- writev-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- writev-method -->
+
+      
+        <div id="writev2-method" class="method-detail ">
+          <a name="method-i-writev2"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">writev2</span><span
+              class="method-args">(components, components2)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="writev2-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">writev2</span>(<span class="ruby-identifier">components</span>, <span class="ruby-identifier">components2</span>)
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">writev2</span>(<span class="ruby-identifier">components</span>, <span class="ruby-identifier">components2</span>)
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- writev2-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- writev2-method -->
+
+      
+        <div id="writev3-method" class="method-detail ">
+          <a name="method-i-writev3"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">writev3</span><span
+              class="method-args">(components, components2, components3)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="writev3-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/utils/unseekable_socket.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">writev3</span>(<span class="ruby-identifier">components</span>, <span class="ruby-identifier">components2</span>, <span class="ruby-identifier">components3</span>)
+        <span class="ruby-ivar">@socket</span>.<span class="ruby-identifier">writev3</span>(<span class="ruby-identifier">components</span>, <span class="ruby-identifier">components2</span>, <span class="ruby-identifier">components3</span>)
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">e</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- writev3-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- writev3-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

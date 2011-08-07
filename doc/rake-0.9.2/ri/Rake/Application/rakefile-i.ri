@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"rakefile"Rake::Application#rakefile"R:privateo:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["&Name of the actual rakefile used.F"lib/rake/application.rb

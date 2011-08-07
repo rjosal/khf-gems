@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"last_description"'Rake::TaskManager#last_description"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["1Track the last comment made in the Rakefile.F"lib/rake/task_manager.rb

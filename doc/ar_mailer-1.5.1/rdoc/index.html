@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>ar_mailer-1.5.1 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>ar_mailer-1.5.1 Documentation</h1>
+
+  
+  <div id="main">
+    
+<ul><li>
+<p><a
+href="http://seattlerb.rubyforge.org/ar_mailer">seattlerb.rubyforge.org/ar_mailer</a></p>
+</li><li>
+<p><a
+href="http://rubyforge.org/projects/seattlerb">rubyforge.org/projects/seattlerb</a></p>
+</li><li>
+<p><a
+href="http://rubyforge.org/tracker/?func=add&group_id=1513&atid=5921">rubyforge.org/tracker/?func=add&group_id=1513&atid=5921</a></p>
+</li></ul>
+
+<h2>DESCRIPTION:</h2>
+
+<p>ar_mailer is a two-phase delivery agent for <a
+href="ActionMailer.html">ActionMailer</a>.  Even delivering email to the
+local machine may take too long when you have to send hundreds of messages.
+ar_mailer allows you to store messages into the database for later delivery
+by a separate process, ar_sendmail.</p>
+
+<h2>SYNOPSIS:</h2>
+
+<p>See <a href="ActionMailer/ARMailer.html">ActionMailer::ARMailer</a> for
+instructions on using ar_mailer.</p>
+
+<p>See ar_sendmail -h for options to ar_sendmail.</p>
+
+<p>An rc.d script is included in share/ar_sendmail for *BSD operating systems.</p>
+
+<h2>INSTALL:</h2>
+<ul><li>
+<p>gem install ar_mailer</p>
+</li></ul>
+
+<p>NOTE: You may need to delete an smtp_tls.rb file if you have one lying
+around.  ar_mailer supplies it own.</p>
+
+  </div>
+  
+
+  
+  
+  <h2>Files</h2>
+  <ul>
+    
+      <li class="file"><a href="History_txt.html">History.txt</a></li>
+    
+      <li class="file"><a href="LICENSE_txt.html">LICENSE.txt</a></li>
+    
+      <li class="file"><a href="Manifest_txt.html">Manifest.txt</a></li>
+    
+      <li class="file"><a href="README_txt.html">README.txt</a></li>
+    
+  </ul>
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="ActionMailer.html">ActionMailer</a></li>
+    
+    <li class="class"><a href="ActionMailer/ARMailer.html">ActionMailer::ARMailer</a></li>
+    
+    <li class="class"><a href="ActionMailer/ARSendmail.html">ActionMailer::ARSendmail</a></li>
+    
+    <li class="module"><a href="Net.html">Net</a></li>
+    
+    <li class="class"><a href="Net/SMTP.html">Net::SMTP</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-c-check_pid">::check_pid &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-c-create_migration">::create_migration &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-c-create_model">::create_model &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARMailer.html#method-c-email_class">::email_class &mdash; ActionMailer::ARMailer</a></li>
+    
+      <li><a href="ActionMailer/ARMailer.html#method-c-email_class-3D">::email_class= &mdash; ActionMailer::ARMailer</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-c-mailq">::mailq &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-c-new">::new &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-c-process_args">::process_args &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-c-run">::run &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-c-usage">::usage &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-i-cleanup">#cleanup &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-i-deliver">#deliver &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-i-do_exit">#do_exit &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-i-find_emails">#find_emails &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-i-install_signal_handlers">#install_signal_handlers &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-i-log">#log &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARMailer.html#method-i-perform_delivery_activerecord">#perform_delivery_activerecord &mdash; ActionMailer::ARMailer</a></li>
+    
+      <li><a href="Net/SMTP.html#method-i-reset">#reset &mdash; Net::SMTP</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-i-run">#run &mdash; ActionMailer::ARSendmail</a></li>
+    
+      <li><a href="ActionMailer/ARSendmail.html#method-i-smtp_settings">#smtp_settings &mdash; ActionMailer::ARSendmail</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

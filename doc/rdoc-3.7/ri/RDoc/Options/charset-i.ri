@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"charset"RDoc::Options#charset"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["ICharacter-set for HTML output.  #encoding is preferred over #charsetF"lib/rdoc/options.rb

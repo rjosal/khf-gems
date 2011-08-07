@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"line_numbers"RDoc::Options#line_numbers"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	[",Include line numbers in the source codeF"lib/rdoc/options.rb

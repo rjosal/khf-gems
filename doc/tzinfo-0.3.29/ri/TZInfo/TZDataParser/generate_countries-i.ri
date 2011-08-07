@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"generate_countries",TZInfo::TZDataParser#generate_countries"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["LWhether to generate country definitions (set to false to stop countries"being generated).F"lib/tzinfo/tzdataparser.rb

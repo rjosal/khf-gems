@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>gdata-1.1.2 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>gdata-1.1.2 Documentation</h1>
+
+  
+  <div id="main">
+    
+<ul><li>
+<p><a href="http://code.google.com/p/gdata">code.google.com/p/gdata</a></p>
+</li></ul>
+
+<h2>DESCRIPTION:</h2>
+
+<p>Ruby wrapper for working with Google Data APIs</p>
+
+<h2>SYNOPSIS:</h2>
+
+<pre>yt = GData::Client::YouTube.new
+yt.source = 'my_cool_application'
+yt.clientlogin('username', 'password')
+yt.client_id = 'CLIENT_ID'
+yt.developer_key = 'DEVELOPER_KEY'
+feed = yt.get('http://gdata.youtube.com/feeds/api/users/default/uploads').to_xml
+
+# creating, updating, and deleting a playlist
+
+entry = &lt;&lt;-EOF
+&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot;
+    xmlns:yt=&quot;http://gdata.youtube.com/schemas/2007&quot;&gt;
+  &lt;title type=&quot;text&quot;&gt;Ruby Utility Unit Test&lt;/title&gt;
+  &lt;summary&gt;This is a test playlist.&lt;/summary&gt;
+&lt;/entry&gt;
+EOF
+
+response = yt.post('http://gdata.youtube.com/feeds/api/users/default/playlists', entry).to_xml
+
+edit_uri = response.elements[&quot;link[@rel='edit']&quot;].attributes['href']
+
+response.elements[&quot;summary&quot;].text = &quot;Updated description&quot;
+
+response = yt.put(edit_uri, response.to_s).to_xml
+
+yt.delete(edit_uri).to_xml
+
+# uploading a video
+
+test_movie = '/path/to/a/movie.mov'
+mime_type = 'video/quicktime'
+feed = 'http://uploads.gdata.youtube.com/feeds/api/users/default/uploads'
+
+entry = &lt;&lt;EOF
+&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot;
+  xmlns:media=&quot;http://search.yahoo.com/mrss/&quot;
+  xmlns:yt=&quot;http://gdata.youtube.com/schemas/2007&quot;&gt;
+  &lt;media:group&gt;
+    &lt;media:title type=&quot;plain&quot;&gt;Test Movie&lt;/media:title&gt;
+    &lt;media:description type=&quot;plain&quot;&gt;
+      This is a test with the Ruby library
+    &lt;/media:description&gt;
+    &lt;media:category
+      scheme=&quot;http://gdata.youtube.com/schemas/2007/categories.cat&quot;&gt;People
+    &lt;/media:category&gt;
+    &lt;media:keywords&gt;test,lame&lt;/media:keywords&gt;
+  &lt;/media:group&gt;
+&lt;/entry&gt;
+EOF
+
+response = @yt.post_file(feed, test_movie, mime_type, entry).to_xml</pre>
+
+<h2>REQUIREMENTS:</h2>
+<ul><li>
+<p>A sunny disposition</p>
+</li></ul>
+
+<p>Tested against Ruby 1.8.6 patch level 114</p>
+
+<h2>INSTALL:</h2>
+
+<pre>sudo gem install gdata</pre>
+
+<p>To generate documentation:</p>
+
+<pre>rake doc</pre>
+
+<p>To run unit tests:</p>
+
+<pre>cp test/test_config.yml.example test/test_config.yml
+# edit test/test_config.yml
+rake test</pre>
+
+<h2>LICENSE:</h2>
+
+<p>Copyright (C) 2008 Google Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may
+not use this file except in compliance with the License. You may obtain a
+copy of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+
+  </div>
+  
+
+  
+  
+  <h2>Files</h2>
+  <ul>
+    
+      <li class="file"><a href="LICENSE.html">LICENSE</a></li>
+    
+      <li class="file"><a href="README.html">README</a></li>
+    
+  </ul>
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="GData.html">GData</a></li>
+    
+    <li class="module"><a href="GData/Auth.html">GData::Auth</a></li>
+    
+    <li class="class"><a href="GData/Auth/AuthSub.html">GData::Auth::AuthSub</a></li>
+    
+    <li class="class"><a href="GData/Auth/ClientLogin.html">GData::Auth::ClientLogin</a></li>
+    
+    <li class="module"><a href="GData/Client.html">GData::Client</a></li>
+    
+    <li class="class"><a href="GData/Client/Apps.html">GData::Client::Apps</a></li>
+    
+    <li class="class"><a href="GData/Client/AuthorizationError.html">GData::Client::AuthorizationError</a></li>
+    
+    <li class="class"><a href="GData/Client/BadRequestError.html">GData::Client::BadRequestError</a></li>
+    
+    <li class="class"><a href="GData/Client/Base.html">GData::Client::Base</a></li>
+    
+    <li class="class"><a href="GData/Client/Blogger.html">GData::Client::Blogger</a></li>
+    
+    <li class="class"><a href="GData/Client/BookSearch.html">GData::Client::BookSearch</a></li>
+    
+    <li class="class"><a href="GData/Client/Calendar.html">GData::Client::Calendar</a></li>
+    
+    <li class="class"><a href="GData/Client/CaptchaError.html">GData::Client::CaptchaError</a></li>
+    
+    <li class="class"><a href="GData/Client/Contacts.html">GData::Client::Contacts</a></li>
+    
+    <li class="class"><a href="GData/Client/DocList.html">GData::Client::DocList</a></li>
+    
+    <li class="class"><a href="GData/Client/Error.html">GData::Client::Error</a></li>
+    
+    <li class="class"><a href="GData/Client/Finance.html">GData::Client::Finance</a></li>
+    
+    <li class="class"><a href="GData/Client/GBase.html">GData::Client::GBase</a></li>
+    
+    <li class="class"><a href="GData/Client/GMail.html">GData::Client::GMail</a></li>
+    
+    <li class="class"><a href="GData/Client/Health.html">GData::Client::Health</a></li>
+    
+    <li class="class"><a href="GData/Client/Notebook.html">GData::Client::Notebook</a></li>
+    
+    <li class="class"><a href="GData/Client/Photos.html">GData::Client::Photos</a></li>
+    
+    <li class="class"><a href="GData/Client/RequestError.html">GData::Client::RequestError</a></li>
+    
+    <li class="class"><a href="GData/Client/ServerError.html">GData::Client::ServerError</a></li>
+    
+    <li class="class"><a href="GData/Client/Spreadsheets.html">GData::Client::Spreadsheets</a></li>
+    
+    <li class="class"><a href="GData/Client/UnknownError.html">GData::Client::UnknownError</a></li>
+    
+    <li class="class"><a href="GData/Client/VersionConflictError.html">GData::Client::VersionConflictError</a></li>
+    
+    <li class="class"><a href="GData/Client/WebmasterTools.html">GData::Client::WebmasterTools</a></li>
+    
+    <li class="class"><a href="GData/Client/YouTube.html">GData::Client::YouTube</a></li>
+    
+    <li class="module"><a href="GData/HTTP.html">GData::HTTP</a></li>
+    
+    <li class="class"><a href="GData/HTTP/DefaultService.html">GData::HTTP::DefaultService</a></li>
+    
+    <li class="class"><a href="GData/HTTP/MimeBody.html">GData::HTTP::MimeBody</a></li>
+    
+    <li class="class"><a href="GData/HTTP/MimeBodyString.html">GData::HTTP::MimeBodyString</a></li>
+    
+    <li class="class"><a href="GData/HTTP/Request.html">GData::HTTP::Request</a></li>
+    
+    <li class="class"><a href="GData/HTTP/Response.html">GData::HTTP::Response</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="GData/Auth/AuthSub.html#method-c-get_url">::get_url &mdash; GData::Auth::AuthSub</a></li>
+    
+      <li><a href="GData/HTTP/MimeBodyString.html#method-c-new">::new &mdash; GData::HTTP::MimeBodyString</a></li>
+    
+      <li><a href="GData/Auth/ClientLogin.html#method-c-new">::new &mdash; GData::Auth::ClientLogin</a></li>
+    
+      <li><a href="GData/Client/DocList.html#method-c-new">::new &mdash; GData::Client::DocList</a></li>
+    
+      <li><a href="GData/HTTP/MimeBody.html#method-c-new">::new &mdash; GData::HTTP::MimeBody</a></li>
+    
+      <li><a href="GData/Client/Contacts.html#method-c-new">::new &mdash; GData::Client::Contacts</a></li>
+    
+      <li><a href="GData/Auth/AuthSub.html#method-c-new">::new &mdash; GData::Auth::AuthSub</a></li>
+    
+      <li><a href="GData/Client/Blogger.html#method-c-new">::new &mdash; GData::Client::Blogger</a></li>
+    
+      <li><a href="GData/Client/CaptchaError.html#method-c-new">::new &mdash; GData::Client::CaptchaError</a></li>
+    
+      <li><a href="GData/Client/RequestError.html#method-c-new">::new &mdash; GData::Client::RequestError</a></li>
+    
+      <li><a href="GData/Client/Finance.html#method-c-new">::new &mdash; GData::Client::Finance</a></li>
+    
+      <li><a href="GData/Client/YouTube.html#method-c-new">::new &mdash; GData::Client::YouTube</a></li>
+    
+      <li><a href="GData/Client/GBase.html#method-c-new">::new &mdash; GData::Client::GBase</a></li>
+    
+      <li><a href="GData/HTTP/Request.html#method-c-new">::new &mdash; GData::HTTP::Request</a></li>
+    
+      <li><a href="GData/Client/Apps.html#method-c-new">::new &mdash; GData::Client::Apps</a></li>
+    
+      <li><a href="GData/Client/Calendar.html#method-c-new">::new &mdash; GData::Client::Calendar</a></li>
+    
+      <li><a href="GData/Client/Health.html#method-c-new">::new &mdash; GData::Client::Health</a></li>
+    
+      <li><a href="GData/Client/GMail.html#method-c-new">::new &mdash; GData::Client::GMail</a></li>
+    
+      <li><a href="GData/Client/Spreadsheets.html#method-c-new">::new &mdash; GData::Client::Spreadsheets</a></li>
+    
+      <li><a href="GData/Client/WebmasterTools.html#method-c-new">::new &mdash; GData::Client::WebmasterTools</a></li>
+    
+      <li><a href="GData/Client/Notebook.html#method-c-new">::new &mdash; GData::Client::Notebook</a></li>
+    
+      <li><a href="GData/Client/BookSearch.html#method-c-new">::new &mdash; GData::Client::BookSearch</a></li>
+    
+      <li><a href="GData/Client/Base.html#method-c-new">::new &mdash; GData::Client::Base</a></li>
+    
+      <li><a href="GData/Client/Photos.html#method-c-new">::new &mdash; GData::Client::Photos</a></li>
+    
+      <li><a href="GData/Client/Calendar.html#method-i-auth_handler-3D">#auth_handler= &mdash; GData::Client::Calendar</a></li>
+    
+      <li><a href="GData/Client/Base.html#method-i-authsub_private_key-3D">#authsub_private_key= &mdash; GData::Client::Base</a></li>
+    
+      <li><a href="GData/Client/Base.html#method-i-authsub_token-3D">#authsub_token= &mdash; GData::Client::Base</a></li>
+    
+      <li><a href="GData/Client/Base.html#method-i-authsub_url">#authsub_url &mdash; GData::Client::Base</a></li>
+    
+      <li><a href="GData/HTTP/Request.html#method-i-calculate_length-21">#calculate_length! &mdash; GData::HTTP::Request</a></li>
+    
+      <li><a href="GData/HTTP/Request.html#method-i-chunked-3D">#chunked= &mdash; GData::HTTP::Request</a></li>
+    
+      <li><a href="GData/HTTP/Request.html#method-i-chunked-3F">#chunked? &mdash; GData::HTTP::Request</a></li>
+    
+      <li><a href="GData/Client/Base.html#method-i-clientlogin">#clientlogin &mdash; GData::Client::Base</a></li>
+    
+      <li><a href="GData/HTTP/MimeBody.html#method-i-content_type">#content_type &mdash; GData::HTTP::MimeBody</a></li>
+    
+      <li><a href="GData/Client/Base.html#method-i-delete">#delete &mdash; GData::Client::Base</a></li>
+    
+      <li><a href="GData/Client/Base.html#method-i-get">#get &mdash; GData::Client::Base</a></li>
+    
+      <li><a href="GData/Auth/ClientLogin.html#method-i-get_token">#get_token &mdash; GData::Auth::ClientLogin</a></li>
+    
+      <li><a href="GData/Auth/AuthSub.html#method-i-info">#info &mdash; GData::Auth::AuthSub</a></li>
+    
+      <li><a href="GData/Client/Base.html#method-i-make_file_request">#make_file_request &mdash; GData::Client::Base</a></li>
+    
+      <li><a href="GData/HTTP/DefaultService.html#method-i-make_request">#make_request &mdash; GData::HTTP::DefaultService</a></li>
+    
+      <li><a href="GData/Client/Base.html#method-i-make_request">#make_request &mdash; GData::Client::Base</a></li>
+    
+      <li><a href="GData/Client/Calendar.html#method-i-make_request">#make_request &mdash; GData::Client::Calendar</a></li>
+    
+      <li><a href="GData/Client/Base.html#method-i-post">#post &mdash; GData::Client::Base</a></li>
+    
+      <li><a href="GData/Client/Base.html#method-i-post_file">#post_file &mdash; GData::Client::Base</a></li>
+    
+      <li><a href="GData/Client/Base.html#method-i-prepare_headers">#prepare_headers &mdash; GData::Client::Base</a></li>
+    
+      <li><a href="GData/Client/YouTube.html#method-i-prepare_headers">#prepare_headers &mdash; GData::Client::YouTube</a></li>
+    
+      <li><a href="GData/Client/Calendar.html#method-i-prepare_headers">#prepare_headers &mdash; GData::Client::Calendar</a></li>
+    
+      <li><a href="GData/Auth/AuthSub.html#method-i-private_key-3D">#private_key= &mdash; GData::Auth::AuthSub</a></li>
+    
+      <li><a href="GData/Client/Base.html#method-i-put">#put &mdash; GData::Client::Base</a></li>
+    
+      <li><a href="GData/Client/Base.html#method-i-put_file">#put_file &mdash; GData::Client::Base</a></li>
+    
+      <li><a href="GData/HTTP/MimeBody.html#method-i-read">#read &mdash; GData::HTTP::MimeBody</a></li>
+    
+      <li><a href="GData/HTTP/MimeBodyString.html#method-i-read">#read &mdash; GData::HTTP::MimeBodyString</a></li>
+    
+      <li><a href="GData/Auth/AuthSub.html#method-i-revoke">#revoke &mdash; GData::Auth::AuthSub</a></li>
+    
+      <li><a href="GData/Auth/AuthSub.html#method-i-sign_request-21">#sign_request! &mdash; GData::Auth::AuthSub</a></li>
+    
+      <li><a href="GData/Auth/ClientLogin.html#method-i-sign_request-21">#sign_request! &mdash; GData::Auth::ClientLogin</a></li>
+    
+      <li><a href="GData/HTTP/Response.html#method-i-to_xml">#to_xml &mdash; GData::HTTP::Response</a></li>
+    
+      <li><a href="GData/Auth/AuthSub.html#method-i-upgrade">#upgrade &mdash; GData::Auth::AuthSub</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

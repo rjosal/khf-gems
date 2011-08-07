@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"verbose"Rake::TestTask#verbose"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["<True if verbose test output desired. (default is false)F"lib/rake/testtask.rb

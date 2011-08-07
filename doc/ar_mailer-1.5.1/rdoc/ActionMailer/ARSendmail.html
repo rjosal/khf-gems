@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: ActionMailer::ARSendmail</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/action_mailer/ar_sendmail_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/action_mailer/ar_sendmail.rb">lib/action_mailer/ar_sendmail.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-check_pid">::check_pid</a></li>
+          
+          <li><a href="#method-c-create_migration">::create_migration</a></li>
+          
+          <li><a href="#method-c-create_model">::create_model</a></li>
+          
+          <li><a href="#method-c-mailq">::mailq</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-process_args">::process_args</a></li>
+          
+          <li><a href="#method-c-run">::run</a></li>
+          
+          <li><a href="#method-c-usage">::usage</a></li>
+          
+          <li><a href="#method-i-cleanup">#cleanup</a></li>
+          
+          <li><a href="#method-i-deliver">#deliver</a></li>
+          
+          <li><a href="#method-i-do_exit">#do_exit</a></li>
+          
+          <li><a href="#method-i-find_emails">#find_emails</a></li>
+          
+          <li><a href="#method-i-install_signal_handlers">#install_signal_handlers</a></li>
+          
+          <li><a href="#method-i-log">#log</a></li>
+          
+          <li><a href="#method-i-run">#run</a></li>
+          
+          <li><a href="#method-i-smtp_settings">#smtp_settings</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../History_txt.html">History.txt</a></li>
+        
+          <li class="file"><a href="../LICENSE_txt.html">LICENSE.txt</a></li>
+        
+          <li class="file"><a href="../Manifest_txt.html">Manifest.txt</a></li>
+        
+          <li class="file"><a href="../README_txt.html">README.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../ActionMailer.html">ActionMailer</a></li>
+        
+          <li><a href="../ActionMailer/ARMailer.html">ActionMailer::ARMailer</a></li>
+        
+          <li><a href="../ActionMailer/ARSendmail.html">ActionMailer::ARSendmail</a></li>
+        
+          <li><a href="../Net.html">Net</a></li>
+        
+          <li><a href="../Net/SMTP.html">Net::SMTP</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">ActionMailer::ARSendmail</h1>
+
+    <div id="description" class="description">
+      
+<p><a href="ARSendmail.html">ActionMailer::ARSendmail</a> delivers email from
+the email table to the SMTP server configured in your application’s
+config/environment.rb. ar_sendmail does not work with sendmail delivery.</p>
+
+<p>ar_mailer can deliver to SMTP with TLS using the smtp_tls gem Set the :tls
+option in ActionMailer::Base’s <a
+href="ARSendmail.html#method-i-smtp_settings">smtp_settings</a> to true to
+enable TLS.</p>
+
+<p>See ar_sendmail -h for the full list of supported options.</p>
+
+<p>The interesting options are:</p>
+<ul><li>
+<p>–daemon</p>
+</li><li>
+<p>–mailq</p>
+</li><li>
+<p>–create-migration</p>
+</li><li>
+<p>–create-model</p>
+</li><li>
+<p>–table-name</p>
+</li></ul>
+
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="MAX_AUTH_FAILURES">MAX_AUTH_FAILURES</a></dt>
+          
+          <dd class="description"><p>Maximum number of times authentication will be consecutively retried</p></dd>
+          
+        
+          <dt><a name="VERSION">VERSION</a></dt>
+          
+          <dd class="description"><p>The version of <a href="ARSendmail.html">ActionMailer::ARSendmail</a> you
+are running.</p></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="batch_size-attribute-method" class="method-detail">
+          <a name="batch_size"></a>
+          
+          <a name="batch_size="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">batch_size</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Email delivery attempts per run</p>
+          
+          </div>
+        </div>
+        
+        <div id="delay-attribute-method" class="method-detail">
+          <a name="delay"></a>
+          
+          <a name="delay="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">delay</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Seconds to delay between runs</p>
+          
+          </div>
+        </div>
+        
+        <div id="email_class-attribute-method" class="method-detail">
+          <a name="email_class"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">email_class</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>ActiveRecord class that holds emails</p>
+          
+          </div>
+        </div>
+        
+        <div id="failed_auth_count-attribute-method" class="method-detail">
+          <a name="failed_auth_count"></a>
+          
+          <a name="failed_auth_count="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">failed_auth_count</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Times authentication has failed</p>
+          
+          </div>
+        </div>
+        
+        <div id="max_age-attribute-method" class="method-detail">
+          <a name="max_age"></a>
+          
+          <a name="max_age="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">max_age</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Maximum age of emails in seconds before they are removed from the queue.</p>
+          
+          </div>
+        </div>
+        
+        <div id="once-attribute-method" class="method-detail">
+          <a name="once"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">once</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>True if only one delivery attempt will be made per call to run</p>
+          
+          </div>
+        </div>
+        
+        <div id="verbose-attribute-method" class="method-detail">
+          <a name="verbose"></a>
+          
+          <a name="verbose="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">verbose</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Be verbose</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="check_pid-method" class="method-detail ">
+          <a name="method-c-check_pid"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">check_pid</span><span
+              class="method-args">(pid_file)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Checks and writes <tt>pid_file</tt>, aborting if it already exists or this
+process loses the pid-writing race.</p>
+            
+
+            
+            <div class="method-source-code" id="check_pid-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">check_pid</span>(<span class="ruby-identifier">pid_file</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">pid_file</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">abort</span> <span class="ruby-node">&quot;pid file exists at #{pid_file}, exiting&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">open</span> <span class="ruby-identifier">pid_file</span>, <span class="ruby-string">'w'</span>, <span class="ruby-value">0644</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">io</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">io</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">$$</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">written_pid</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span> <span class="ruby-identifier">pid_file</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">written_pid</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$$</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">abort</span> <span class="ruby-node">&quot;pid #{written_pid} from #{pid_file} doesn't match $$ #{$$}, exiting&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- check_pid-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- check_pid-method -->
+
+      
+        <div id="create_migration-method" class="method-detail ">
+          <a name="method-c-create_migration"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create_migration</span><span
+              class="method-args">(table_name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates a new migration using <tt>table_name</tt> and prints it on stdout.</p>
+            
+
+            
+            <div class="method-source-code" id="create_migration-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">create_migration</span>(<span class="ruby-identifier">table_name</span>)
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'active_support'</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">class Add#{table_name.classify} &lt; ActiveRecord::Migration  def self.up    create_table :#{table_name.tableize} do |t|      t.column :from, :string      t.column :to, :string      t.column :last_send_attempt, :integer, :default =&gt; 0      t.column :mail, :text      t.column :created_on, :datetime    end  end  def self.down    drop_table :#{table_name.tableize}  endend</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create_migration-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create_migration-method -->
+
+      
+        <div id="create_model-method" class="method-detail ">
+          <a name="method-c-create_model"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create_model</span><span
+              class="method-args">(table_name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates a new model using <tt>table_name</tt> and prints it on stdout.</p>
+            
+
+            
+            <div class="method-source-code" id="create_model-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">create_model</span>(<span class="ruby-identifier">table_name</span>)
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'active_support'</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">class #{table_name.classify} &lt; ActiveRecord::Baseend</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create_model-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create_model-method -->
+
+      
+        <div id="mailq-method" class="method-detail ">
+          <a name="method-c-mailq"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mailq</span><span
+              class="method-args">(table_name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Prints a list of unsent emails and the last delivery attempt, if any.</p>
+
+<p>If ActiveRecord::Timestamp is not being used the arrival time will not be
+known.  See <a
+href="http://api.rubyonrails.org/classes/ActiveRecord/Timestamp.html">api.rubyonrails.org/classes/ActiveRecord/Timestamp.html</a>
+to learn how to enable ActiveRecord::Timestamp.</p>
+            
+
+            
+            <div class="method-source-code" id="mailq-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">mailq</span>(<span class="ruby-identifier">table_name</span>)
+  <span class="ruby-identifier">klass</span> = <span class="ruby-identifier">table_name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'::'</span>).<span class="ruby-identifier">inject</span>(<span class="ruby-constant">Object</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">const_get</span> <span class="ruby-identifier">n</span> }
+  <span class="ruby-identifier">emails</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">find</span> <span class="ruby-value">:all</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">emails</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Mail queue is empty&quot;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">total_size</span> = <span class="ruby-value">0</span>
+
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;-Queue ID- --Size-- ----Arrival Time---- -Sender/Recipient-------&quot;</span>
+  <span class="ruby-identifier">emails</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">email</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">size</span> = <span class="ruby-identifier">email</span>.<span class="ruby-identifier">mail</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-identifier">total_size</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">size</span>
+
+    <span class="ruby-identifier">create_timestamp</span> = <span class="ruby-identifier">email</span>.<span class="ruby-identifier">created_on</span> <span class="ruby-keyword">rescue</span>
+                       <span class="ruby-identifier">email</span>.<span class="ruby-identifier">created_at</span> <span class="ruby-keyword">rescue</span>
+                       <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">email</span>.<span class="ruby-identifier">created_date</span>) <span class="ruby-keyword">rescue</span> <span class="ruby-comment"># for Robot Co-op</span>
+                       <span class="ruby-keyword">nil</span>
+
+    <span class="ruby-identifier">created</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">create_timestamp</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">then</span>
+                <span class="ruby-string">'             Unknown'</span>
+              <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">create_timestamp</span>.<span class="ruby-identifier">strftime</span> <span class="ruby-string">'%a %b %d %H:%M:%S'</span>
+              <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;%10d %8d %s  %s&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">email</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">size</span>, <span class="ruby-identifier">created</span>, <span class="ruby-identifier">email</span>.<span class="ruby-identifier">from</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">email</span>.<span class="ruby-identifier">last_send_attempt</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">last_send_attempt</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span> <span class="ruby-identifier">email</span>.<span class="ruby-identifier">last_send_attempt</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Last send attempt: #{last_send_attempt.asctime}&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;                                         #{email.to}&quot;</span>
+    <span class="ruby-identifier">puts</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;-- #{total_size/1024} Kbytes in #{emails.length} Requests.&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- mailq-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- mailq-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(options = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates a new <a href="ARSendmail.html">ARSendmail</a>.</p>
+
+<p>Valid options are:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p><tt>:BatchSize</tt></p></td>
+<td>
+<p>Maximum number of emails to send per delay</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>:Delay</tt></p></td>
+<td>
+<p>Delay between deliver attempts</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>:TableName</tt></p></td>
+<td>
+<p>Table name that stores the emails</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>:Once</tt></p></td>
+<td>
+<p>Only attempt to deliver emails once when run is called</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>:Verbose</tt></p></td>
+<td>
+<p>Be verbose.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 430</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:Delay</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">60</span>
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:TableName</span>] <span class="ruby-operator">||=</span> <span class="ruby-string">'Email'</span>
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:MaxAge</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">86400</span> * <span class="ruby-value">7</span>
+
+  <span class="ruby-ivar">@batch_size</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:BatchSize</span>]
+  <span class="ruby-ivar">@delay</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:Delay</span>]
+  <span class="ruby-ivar">@email_class</span> = <span class="ruby-constant">Object</span>.<span class="ruby-identifier">path2class</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:TableName</span>]
+  <span class="ruby-ivar">@once</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:Once</span>]
+  <span class="ruby-ivar">@verbose</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:Verbose</span>]
+  <span class="ruby-ivar">@max_age</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:MaxAge</span>]
+
+  <span class="ruby-ivar">@failed_auth_count</span> = <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="process_args-method" class="method-detail ">
+          <a name="method-c-process_args"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_args</span><span
+              class="method-args">(args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Processes command line options in <tt>args</tt></p>
+            
+
+            
+            <div class="method-source-code" id="process_args-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">process_args</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">name</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span> <span class="ruby-identifier">$0</span>
+
+  <span class="ruby-identifier">options</span> = {}
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:Chdir</span>] = <span class="ruby-string">'.'</span>
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:Daemon</span>] = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:Delay</span>] = <span class="ruby-value">60</span>
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:MaxAge</span>] = <span class="ruby-value">86400</span> * <span class="ruby-value">7</span>
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:Once</span>] = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:RailsEnv</span>] = <span class="ruby-constant">ENV</span>[<span class="ruby-string">'RAILS_ENV'</span>]
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:TableName</span>] = <span class="ruby-string">'Email'</span>
+
+  <span class="ruby-identifier">op</span> = <span class="ruby-constant">OptionParser</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">opts</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">program_name</span> = <span class="ruby-identifier">name</span>
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">version</span> = <span class="ruby-constant">VERSION</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">banner</span> = <span class="ruby-string">Usage: #{name} [options]#{name} scans the email table for new messages and sends them to thewebsite's configured SMTP host.#{name} must be run from a Rails application's root or have it specifiedwith --chdir.If #{name} is started with --pid-file, it will fail to start if the PIDfile already exists or the contents don't match it's PID.</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">separator</span> <span class="ruby-string">''</span>
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">separator</span> <span class="ruby-string">'Sendmail options:'</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-b&quot;</span>, <span class="ruby-string">&quot;--batch-size BATCH_SIZE&quot;</span>,
+            <span class="ruby-string">&quot;Maximum number of emails to send per delay&quot;</span>,
+            <span class="ruby-string">&quot;Default: Deliver all available emails&quot;</span>, <span class="ruby-constant">Integer</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">batch_size</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:BatchSize</span>] = <span class="ruby-identifier">batch_size</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(      <span class="ruby-string">&quot;--delay DELAY&quot;</span>,
+            <span class="ruby-string">&quot;Delay between checks for new mail&quot;</span>,
+            <span class="ruby-string">&quot;in the database&quot;</span>,
+            <span class="ruby-node">&quot;Default: #{options[:Delay]}&quot;</span>, <span class="ruby-constant">Integer</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">delay</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:Delay</span>] = <span class="ruby-identifier">delay</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(      <span class="ruby-string">&quot;--max-age MAX_AGE&quot;</span>,
+            <span class="ruby-string">&quot;Maxmimum age for an email. After this&quot;</span>,
+            <span class="ruby-string">&quot;it will be removed from the queue.&quot;</span>,
+            <span class="ruby-string">&quot;Set to 0 to disable queue cleanup.&quot;</span>,
+            <span class="ruby-node">&quot;Default: #{options[:MaxAge]} seconds&quot;</span>, <span class="ruby-constant">Integer</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">max_age</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:MaxAge</span>] = <span class="ruby-identifier">max_age</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-o&quot;</span>, <span class="ruby-string">&quot;--once&quot;</span>,
+            <span class="ruby-string">&quot;Only check for new mail and deliver once&quot;</span>,
+            <span class="ruby-node">&quot;Default: #{options[:Once]}&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">once</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:Once</span>] = <span class="ruby-identifier">once</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-p&quot;</span>, <span class="ruby-string">&quot;--pid-file [PATH]&quot;</span>,
+            <span class="ruby-string">&quot;File to store the pid in.&quot;</span>,
+            <span class="ruby-string">&quot;Defaults to /var/run/ar_sendmail.pid&quot;</span>,
+            <span class="ruby-string">&quot;when no path is given&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pid_file</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">pid_file</span> <span class="ruby-operator">||=</span> <span class="ruby-string">'/var/run/ar_sendmail/ar_sendmail.pid'</span>
+
+      <span class="ruby-identifier">pid_dir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span> <span class="ruby-identifier">pid_file</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">OptionParser</span><span class="ruby-operator">::</span><span class="ruby-constant">InvalidArgument</span>,
+            <span class="ruby-node">&quot;directory #{pid_dir} does not exist&quot;</span> <span class="ruby-keyword">unless</span>
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-identifier">pid_dir</span>
+
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:PidFile</span>] = <span class="ruby-identifier">pid_file</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-d&quot;</span>, <span class="ruby-string">&quot;--daemonize&quot;</span>,
+            <span class="ruby-string">&quot;Run as a daemon process&quot;</span>,
+            <span class="ruby-node">&quot;Default: #{options[:Daemon]}&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">daemon</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:Daemon</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(      <span class="ruby-string">&quot;--mailq&quot;</span>,
+            <span class="ruby-string">&quot;Display a list of emails waiting to be sent&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">mailq</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:MailQ</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">separator</span> <span class="ruby-string">''</span>
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">separator</span> <span class="ruby-string">'Setup Options:'</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(      <span class="ruby-string">&quot;--create-migration&quot;</span>,
+            <span class="ruby-string">&quot;Prints a migration to add an Email table&quot;</span>,
+            <span class="ruby-string">&quot;to stdout&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">create</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:Migrate</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(      <span class="ruby-string">&quot;--create-model&quot;</span>,
+            <span class="ruby-string">&quot;Prints a model for an Email ActiveRecord&quot;</span>,
+            <span class="ruby-string">&quot;object to stdout&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">create</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:Model</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">separator</span> <span class="ruby-string">''</span>
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">separator</span> <span class="ruby-string">'Generic Options:'</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-c&quot;</span>, <span class="ruby-string">&quot;--chdir PATH&quot;</span>,
+            <span class="ruby-string">&quot;Use PATH for the application path&quot;</span>,
+            <span class="ruby-node">&quot;Default: #{options[:Chdir]}&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">usage</span> <span class="ruby-identifier">opts</span>, <span class="ruby-node">&quot;#{path} is not a directory&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-identifier">path</span>
+      <span class="ruby-identifier">usage</span> <span class="ruby-identifier">opts</span>, <span class="ruby-node">&quot;#{path} is not readable&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">readable?</span> <span class="ruby-identifier">path</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:Chdir</span>] = <span class="ruby-identifier">path</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-e&quot;</span>, <span class="ruby-string">&quot;--environment RAILS_ENV&quot;</span>,
+            <span class="ruby-string">&quot;Set the RAILS_ENV constant&quot;</span>,
+            <span class="ruby-node">&quot;Default: #{options[:RailsEnv]}&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">env</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:RailsEnv</span>] = <span class="ruby-identifier">env</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-t&quot;</span>, <span class="ruby-string">&quot;--table-name TABLE_NAME&quot;</span>,
+            <span class="ruby-string">&quot;Name of table holding emails&quot;</span>,
+            <span class="ruby-string">&quot;Used for both sendmail and&quot;</span>,
+            <span class="ruby-string">&quot;migration creation&quot;</span>,
+            <span class="ruby-node">&quot;Default: #{options[:TableName]}&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">table_name</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:TableName</span>] = <span class="ruby-identifier">table_name</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-v&quot;</span>, <span class="ruby-string">&quot;--[no-]verbose&quot;</span>,
+            <span class="ruby-string">&quot;Be verbose&quot;</span>,
+            <span class="ruby-node">&quot;Default: #{options[:Verbose]}&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">verbose</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:Verbose</span>] = <span class="ruby-identifier">verbose</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-string">&quot;-h&quot;</span>, <span class="ruby-string">&quot;--help&quot;</span>,
+            <span class="ruby-string">&quot;You're looking at it&quot;</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">usage</span> <span class="ruby-identifier">opts</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">separator</span> <span class="ruby-string">''</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">op</span>.<span class="ruby-identifier">parse!</span> <span class="ruby-identifier">args</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">options</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value">:Migrate</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value">:Model</span>
+
+  <span class="ruby-constant">ENV</span>[<span class="ruby-string">'RAILS_ENV'</span>] = <span class="ruby-identifier">options</span>[<span class="ruby-value">:RailsEnv</span>]
+
+  <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:Chdir</span>] <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">require</span> <span class="ruby-string">'config/environment'</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">LoadError</span>
+      <span class="ruby-identifier">usage</span> <span class="ruby-identifier">op</span>, <span class="ruby-string">#{name} must be run from a Rails application's root to deliver email.#{Dir.pwd} does not appear to be a Rails application root.</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">options</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_args-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_args-method -->
+
+      
+        <div id="run-method" class="method-detail ">
+          <a name="method-c-run"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run</span><span
+              class="method-args">(args = ARGV)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Processes <tt>args</tt> and runs as appropriate</p>
+            
+
+            
+            <div class="method-source-code" id="run-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 365</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">run</span>(<span class="ruby-identifier">args</span> = <span class="ruby-constant">ARGV</span>)
+  <span class="ruby-identifier">options</span> = <span class="ruby-identifier">process_args</span> <span class="ruby-identifier">args</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value">:Migrate</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">create_migration</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:TableName</span>]
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value">:Model</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">create_model</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:TableName</span>]
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value">:MailQ</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">mailq</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:TableName</span>]
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:Daemon</span>] <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">require</span> <span class="ruby-string">'webrick/server'</span>
+    <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">clear_all_connections!</span>
+    <span class="ruby-constant">WEBrick</span><span class="ruby-operator">::</span><span class="ruby-constant">Daemon</span>.<span class="ruby-identifier">start</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">sendmail</span> = <span class="ruby-identifier">new</span> <span class="ruby-identifier">options</span>
+
+  <span class="ruby-identifier">check_pid</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:PidFile</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">key?</span> <span class="ruby-value">:PidFile</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">sendmail</span>.<span class="ruby-identifier">run</span>
+  <span class="ruby-keyword">ensure</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">unlink</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:PidFile</span>] <span class="ruby-keyword">if</span>
+      <span class="ruby-identifier">options</span>.<span class="ruby-identifier">key?</span> <span class="ruby-value">:PidFile</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">$PID</span> <span class="ruby-operator">==</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:PidFile</span>]).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">SystemExit</span>
+  <span class="ruby-identifier">raise</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">SignalException</span>
+  <span class="ruby-identifier">exit</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Unhandled exception #{e.message}(#{e.class}):&quot;</span>
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t#{e.backtrace.join &quot;\n\t&quot;}&quot;</span>
+  <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run-method -->
+
+      
+        <div id="usage-method" class="method-detail ">
+          <a name="method-c-usage"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">usage</span><span
+              class="method-args">(opts, message = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Prints a usage message to $stderr using <tt>opts</tt> and exits</p>
+            
+
+            
+            <div class="method-source-code" id="usage-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 409</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">usage</span>(<span class="ruby-identifier">opts</span>, <span class="ruby-identifier">message</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">opts</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">message</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span>
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">message</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- usage-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- usage-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="cleanup-method" class="method-detail ">
+          <a name="method-i-cleanup"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cleanup</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Removes emails that have lived in the queue for too long.  If <a
+href="ARSendmail.html#attribute-i-max_age">max_age</a> is set to 0, no
+emails will be removed.</p>
+            
+
+            
+            <div class="method-source-code" id="cleanup-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 449</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cleanup</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@max_age</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">timeout</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@max_age</span>
+  <span class="ruby-identifier">conditions</span> = [<span class="ruby-string">'last_send_attempt &gt; 0 and created_on &lt; ?'</span>, <span class="ruby-identifier">timeout</span>]
+  <span class="ruby-identifier">mail</span> = <span class="ruby-ivar">@email_class</span>.<span class="ruby-identifier">destroy_all</span> <span class="ruby-identifier">conditions</span>
+
+  <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;expired #{mail.length} emails from the queue&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- cleanup-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- cleanup-method -->
+
+      
+        <div id="deliver-method" class="method-detail ">
+          <a name="method-i-deliver"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">deliver</span><span
+              class="method-args">(emails)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Delivers <tt>emails</tt> to ActionMailer’s SMTP server and destroys them.</p>
+            
+
+            
+            <div class="method-source-code" id="deliver-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 461</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">deliver</span>(<span class="ruby-identifier">emails</span>)
+  <span class="ruby-identifier">user</span> = <span class="ruby-identifier">smtp_settings</span>[<span class="ruby-value">:user</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">smtp_settings</span>[<span class="ruby-value">:user_name</span>]
+  <span class="ruby-identifier">server</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">SMTP</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">smtp_settings</span>[<span class="ruby-value">:address</span>], <span class="ruby-identifier">smtp_settings</span>[<span class="ruby-value">:port</span>]
+  <span class="ruby-identifier">server</span>.<span class="ruby-identifier">start</span> <span class="ruby-identifier">smtp_settings</span>[<span class="ruby-value">:domain</span>], <span class="ruby-identifier">user</span>, <span class="ruby-identifier">smtp_settings</span>[<span class="ruby-value">:password</span>],
+               <span class="ruby-identifier">smtp_settings</span>[<span class="ruby-value">:authentication</span>] <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">smtp</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">smtp_settings</span>[<span class="ruby-value">:tls</span>] <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-string">'gem install smtp_tls for 1.8.6'</span> <span class="ruby-keyword">unless</span>
+        <span class="ruby-identifier">server</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:starttls</span>
+      <span class="ruby-identifier">smtp</span>.<span class="ruby-identifier">enable_starttls</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@failed_auth_count</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">until</span> <span class="ruby-identifier">emails</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">email</span> = <span class="ruby-identifier">emails</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">res</span> = <span class="ruby-identifier">smtp</span>.<span class="ruby-identifier">send_message</span> <span class="ruby-identifier">email</span>.<span class="ruby-identifier">mail</span>, <span class="ruby-identifier">email</span>.<span class="ruby-identifier">from</span>, <span class="ruby-identifier">email</span>.<span class="ruby-identifier">to</span>
+        <span class="ruby-identifier">email</span>.<span class="ruby-identifier">destroy</span>
+        <span class="ruby-identifier">log</span> <span class="ruby-string">&quot;sent email %011d from %s to %s: %p&quot;</span> <span class="ruby-operator">%</span>
+              [<span class="ruby-identifier">email</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">email</span>.<span class="ruby-identifier">from</span>, <span class="ruby-identifier">email</span>.<span class="ruby-identifier">to</span>, <span class="ruby-identifier">res</span>]
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">SMTPFatalError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">log</span> <span class="ruby-string">&quot;5xx error sending email %d, removing from queue: %p(%s):\n\t%s&quot;</span> <span class="ruby-operator">%</span>
+              [<span class="ruby-identifier">email</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>, <span class="ruby-identifier">e</span>.<span class="ruby-identifier">class</span>, <span class="ruby-identifier">e</span>.<span class="ruby-identifier">backtrace</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n\t&quot;</span>)]
+        <span class="ruby-identifier">email</span>.<span class="ruby-identifier">destroy</span>
+        <span class="ruby-identifier">smtp</span>.<span class="ruby-identifier">reset</span>
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">SMTPServerBusy</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;server too busy, sleeping #{@delay} seconds&quot;</span>
+        <span class="ruby-identifier">sleep</span> <span class="ruby-identifier">delay</span>
+        <span class="ruby-keyword">return</span>
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">SMTPUnknownError</span>, <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">SMTPSyntaxError</span>, <span class="ruby-constant">TimeoutError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">email</span>.<span class="ruby-identifier">last_send_attempt</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>
+        <span class="ruby-identifier">email</span>.<span class="ruby-identifier">save</span> <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">log</span> <span class="ruby-string">&quot;error sending email %d: %p(%s):\n\t%s&quot;</span> <span class="ruby-operator">%</span>
+              [<span class="ruby-identifier">email</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>, <span class="ruby-identifier">e</span>.<span class="ruby-identifier">class</span>, <span class="ruby-identifier">e</span>.<span class="ruby-identifier">backtrace</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n\t&quot;</span>)]
+
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">TimeoutError</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">e</span>
+
+        <span class="ruby-identifier">smtp</span>.<span class="ruby-identifier">reset</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">SMTPAuthenticationError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-ivar">@failed_auth_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@failed_auth_count</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_AUTH_FAILURES</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;authentication error, giving up: #{e.message}&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;authentication error, retrying: #{e.message}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">sleep</span> <span class="ruby-identifier">delay</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">SMTPServerBusy</span>, <span class="ruby-constant">SystemCallError</span>, <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSLError</span>
+  <span class="ruby-comment"># ignore SMTPServerBusy/EPIPE/ECONNRESET from Net::SMTP.start's ensure</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">TimeoutError</span>
+  <span class="ruby-comment"># terminate our connection since Net::SMTP may be in a bogus state.</span>
+  <span class="ruby-identifier">sleep</span> <span class="ruby-identifier">delay</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- deliver-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- deliver-method -->
+
+      
+        <div id="do_exit-method" class="method-detail ">
+          <a name="method-i-do_exit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">do_exit</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Prepares ar_sendmail for exiting</p>
+            
+
+            
+            <div class="method-source-code" id="do_exit-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 519</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">do_exit</span>
+  <span class="ruby-identifier">log</span> <span class="ruby-string">&quot;caught signal, shutting down&quot;</span>
+  <span class="ruby-identifier">exit</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- do_exit-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- do_exit-method -->
+
+      
+        <div id="find_emails-method" class="method-detail ">
+          <a name="method-i-find_emails"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">find_emails</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns emails in <a
+href="ARSendmail.html#attribute-i-email_class">email_class</a> that
+haven’t had a delivery attempt in the last 300 seconds.</p>
+            
+
+            
+            <div class="method-source-code" id="find_emails-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 528</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_emails</span>
+  <span class="ruby-identifier">options</span> = { <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'last_send_attempt &lt; ?'</span>, <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">-</span> <span class="ruby-value">300</span>] }
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:limit</span>] = <span class="ruby-identifier">batch_size</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">batch_size</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">mail</span> = <span class="ruby-ivar">@email_class</span>.<span class="ruby-identifier">find</span> <span class="ruby-value">:all</span>, <span class="ruby-identifier">options</span>
+
+  <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;found #{mail.length} emails to send&quot;</span>
+  <span class="ruby-identifier">mail</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- find_emails-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- find_emails-method -->
+
+      
+        <div id="install_signal_handlers-method" class="method-detail ">
+          <a name="method-i-install_signal_handlers"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">install_signal_handlers</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Installs signal handlers to gracefully exit.</p>
+            
+
+            
+            <div class="method-source-code" id="install_signal_handlers-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 540</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">install_signal_handlers</span>
+  <span class="ruby-identifier">trap</span> <span class="ruby-string">'TERM'</span> <span class="ruby-keyword">do</span> <span class="ruby-identifier">do_exit</span> <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">trap</span> <span class="ruby-string">'INT'</span>  <span class="ruby-keyword">do</span> <span class="ruby-identifier">do_exit</span> <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- install_signal_handlers-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- install_signal_handlers-method -->
+
+      
+        <div id="log-method" class="method-detail ">
+          <a name="method-i-log"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">log</span><span
+              class="method-args">(message)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Logs <tt>message</tt> if verbose</p>
+            
+
+            
+            <div class="method-source-code" id="log-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 548</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">log</span>(<span class="ruby-identifier">message</span>)
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">message</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+  <span class="ruby-constant">ActionMailer</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;ar_sendmail: #{message}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- log-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- log-method -->
+
+      
+        <div id="run-method" class="method-detail ">
+          <a name="method-i-run"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Scans for emails and delivers them every delay seconds.  Only returns if
+once is true.</p>
+            
+
+            
+            <div class="method-source-code" id="run-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 557</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span>
+  <span class="ruby-identifier">install_signal_handlers</span>
+
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">now</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">cleanup</span>
+      <span class="ruby-identifier">deliver</span> <span class="ruby-identifier">find_emails</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Transactions</span><span class="ruby-operator">::</span><span class="ruby-constant">TransactionError</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@once</span>
+    <span class="ruby-identifier">sleep</span> <span class="ruby-ivar">@delay</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">now</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@delay</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run-method -->
+
+      
+        <div id="smtp_settings-method" class="method-detail ">
+          <a name="method-i-smtp_settings"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">smtp_settings</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Proxy to ActionMailer::Base::smtp_settings.  See <a
+href="http://api.rubyonrails.org/classes/ActionMailer/Base.html">api.rubyonrails.org/classes/ActionMailer/Base.html</a>
+for instructions on how to configure ActionMailer’s SMTP server.</p>
+
+<p>Falls back to ::server_settings if ::smtp_settings doesn’t exist for
+backwards compatibility.</p>
+            
+
+            
+            <div class="method-source-code" id="smtp_settings-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_sendmail.rb, line 580</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">smtp_settings</span>
+  <span class="ruby-constant">ActionMailer</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">smtp_settings</span> <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ActionMailer</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">server_settings</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- smtp_settings-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- smtp_settings-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

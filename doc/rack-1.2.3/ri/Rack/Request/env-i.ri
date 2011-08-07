@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"env"Rack::Request#env"R:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["$The environment of the request.F"lib/rack/request.rb

@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"current_section""RDoc::Context#current_section"W:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["<Sets the current documentation section of documentationF"lib/rdoc/context.rb

@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"app_root"*PhusionPassenger::AppProcess#app_root"R:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["4The root directory of this application process.F")lib/phusion_passenger/app_process.rb

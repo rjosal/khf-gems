@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"failed_auth_count"/ActionMailer::ARSendmail#failed_auth_count"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["$Times authentication has failedF"%lib/action_mailer/ar_sendmail.rb

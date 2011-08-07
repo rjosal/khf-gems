@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"account_type"*GData::Auth::ClientLogin#account_type"RW:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;["7One of 'HOSTED_OR_GOOGLE', 'GOOGLE', or 'HOSTED'. "See documentation here: "Hhttp://code.google.com/apis/accounts/docs/AuthForInstalledApps.html:
+@file0F""lib/gdata/auth/clientlogin.rb

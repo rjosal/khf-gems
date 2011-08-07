@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"original_dir"#Rake::Application#original_dir"R:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["3The original directory where rake was invoked.F"lib/rake/application.rb

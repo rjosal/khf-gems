@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"method" GData::HTTP::Request#method"RW:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;["/The HTTP method being used in the request.:
+@file0F"lib/gdata/http/request.rb

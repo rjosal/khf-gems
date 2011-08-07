@@ -1,0 +1,3472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Mysql</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/mysql_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mysql.rb">lib/mysql.rb</a></li>
+          
+            <li><a href="./ext/mysql_api/mysql_c.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="ext/mysql_api/mysql.c">ext/mysql_api/mysql.c</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">MODULE</span> <a href="Mysql/GemVersion.html">Mysql::GemVersion</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mysql/Error.html">Mysql::Error</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mysql/Field.html">Mysql::Field</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mysql/Result.html">Mysql::Result</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mysql/RowOffset.html">Mysql::RowOffset</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mysql/Stmt.html">Mysql::Stmt</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mysql/Time.html">Mysql::Time</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-client_info">::client_info</a></li>
+          
+          <li><a href="#method-c-client_version">::client_version</a></li>
+          
+          <li><a href="#method-c-connect">::connect</a></li>
+          
+          <li><a href="#method-c-debug">::debug</a></li>
+          
+          <li><a href="#method-c-escape_string">::escape_string</a></li>
+          
+          <li><a href="#method-c-get_client_info">::get_client_info</a></li>
+          
+          <li><a href="#method-c-get_client_version">::get_client_version</a></li>
+          
+          <li><a href="#method-c-init">::init</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-quote">::quote</a></li>
+          
+          <li><a href="#method-c-real_connect">::real_connect</a></li>
+          
+          <li><a href="#method-i-affected_rows">#affected_rows</a></li>
+          
+          <li><a href="#method-i-autocommit">#autocommit</a></li>
+          
+          <li><a href="#method-i-change_user">#change_user</a></li>
+          
+          <li><a href="#method-i-character_set_name">#character_set_name</a></li>
+          
+          <li><a href="#method-i-client_info">#client_info</a></li>
+          
+          <li><a href="#method-i-client_version">#client_version</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-commit">#commit</a></li>
+          
+          <li><a href="#method-i-connect">#connect</a></li>
+          
+          <li><a href="#method-i-create_db">#create_db</a></li>
+          
+          <li><a href="#method-i-drop_db">#drop_db</a></li>
+          
+          <li><a href="#method-i-dump_debug_info">#dump_debug_info</a></li>
+          
+          <li><a href="#method-i-errno">#errno</a></li>
+          
+          <li><a href="#method-i-error">#error</a></li>
+          
+          <li><a href="#method-i-escape_string">#escape_string</a></li>
+          
+          <li><a href="#method-i-field_count">#field_count</a></li>
+          
+          <li><a href="#method-i-get_client_info">#get_client_info</a></li>
+          
+          <li><a href="#method-i-get_client_version">#get_client_version</a></li>
+          
+          <li><a href="#method-i-get_host_info">#get_host_info</a></li>
+          
+          <li><a href="#method-i-get_proto_info">#get_proto_info</a></li>
+          
+          <li><a href="#method-i-get_server_info">#get_server_info</a></li>
+          
+          <li><a href="#method-i-get_server_version">#get_server_version</a></li>
+          
+          <li><a href="#method-i-host_info">#host_info</a></li>
+          
+          <li><a href="#method-i-info">#info</a></li>
+          
+          <li><a href="#method-i-insert_id">#insert_id</a></li>
+          
+          <li><a href="#method-i-kill">#kill</a></li>
+          
+          <li><a href="#method-i-list_dbs">#list_dbs</a></li>
+          
+          <li><a href="#method-i-list_fields">#list_fields</a></li>
+          
+          <li><a href="#method-i-list_processes">#list_processes</a></li>
+          
+          <li><a href="#method-i-list_tables">#list_tables</a></li>
+          
+          <li><a href="#method-i-more_results">#more_results</a></li>
+          
+          <li><a href="#method-i-more_results-3F">#more_results?</a></li>
+          
+          <li><a href="#method-i-next_result">#next_result</a></li>
+          
+          <li><a href="#method-i-options">#options</a></li>
+          
+          <li><a href="#method-i-ping">#ping</a></li>
+          
+          <li><a href="#method-i-prepare">#prepare</a></li>
+          
+          <li><a href="#method-i-proto_info">#proto_info</a></li>
+          
+          <li><a href="#method-i-query">#query</a></li>
+          
+          <li><a href="#method-i-query_with_result">#query_with_result</a></li>
+          
+          <li><a href="#method-i-query_with_result-3D">#query_with_result=</a></li>
+          
+          <li><a href="#method-i-quote">#quote</a></li>
+          
+          <li><a href="#method-i-real_connect">#real_connect</a></li>
+          
+          <li><a href="#method-i-real_query">#real_query</a></li>
+          
+          <li><a href="#method-i-reconnect">#reconnect</a></li>
+          
+          <li><a href="#method-i-reconnect-3D">#reconnect=</a></li>
+          
+          <li><a href="#method-i-refresh">#refresh</a></li>
+          
+          <li><a href="#method-i-reload">#reload</a></li>
+          
+          <li><a href="#method-i-rollback">#rollback</a></li>
+          
+          <li><a href="#method-i-select_db">#select_db</a></li>
+          
+          <li><a href="#method-i-server_info">#server_info</a></li>
+          
+          <li><a href="#method-i-server_version">#server_version</a></li>
+          
+          <li><a href="#method-i-set_server_option">#set_server_option</a></li>
+          
+          <li><a href="#method-i-shutdown">#shutdown</a></li>
+          
+          <li><a href="#method-i-sqlstate">#sqlstate</a></li>
+          
+          <li><a href="#method-i-ssl_set">#ssl_set</a></li>
+          
+          <li><a href="#method-i-stat">#stat</a></li>
+          
+          <li><a href="#method-i-stmt_init">#stmt_init</a></li>
+          
+          <li><a href="#method-i-store_result">#store_result</a></li>
+          
+          <li><a href="#method-i-thread_id">#thread_id</a></li>
+          
+          <li><a href="#method-i-use_result">#use_result</a></li>
+          
+          <li><a href="#method-i-warning_count">#warning_count</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./History_txt.html">History.txt</a></li>
+        
+          <li class="file"><a href="./Manifest_txt.html">Manifest.txt</a></li>
+        
+          <li class="file"><a href="./README_txt.html">README.txt</a></li>
+        
+          <li class="file"><a href="./ext/mysql_api/Makefile.html">Makefile</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Mysql.html">Mysql</a></li>
+        
+          <li><a href="./Mysql/Error.html">Mysql::Error</a></li>
+        
+          <li><a href="./Mysql/Field.html">Mysql::Field</a></li>
+        
+          <li><a href="./Mysql/GemVersion.html">Mysql::GemVersion</a></li>
+        
+          <li><a href="./Mysql/Result.html">Mysql::Result</a></li>
+        
+          <li><a href="./Mysql/RowOffset.html">Mysql::RowOffset</a></li>
+        
+          <li><a href="./Mysql/Stmt.html">Mysql::Stmt</a></li>
+        
+          <li><a href="./Mysql/Time.html">Mysql::Time</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Mysql</h1>
+
+    <div id="description" class="description">
+      
+<p>define version string to be used internally for the Gem by Hoe.</p>
+
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="CLIENT_CHANGE_USER">CLIENT_CHANGE_USER</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CLIENT_COMPRESS">CLIENT_COMPRESS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CLIENT_FOUND_ROWS">CLIENT_FOUND_ROWS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CLIENT_IGNORE_SIGPIPE">CLIENT_IGNORE_SIGPIPE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CLIENT_IGNORE_SPACE">CLIENT_IGNORE_SPACE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CLIENT_INTERACTIVE">CLIENT_INTERACTIVE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CLIENT_LOCAL_FILES">CLIENT_LOCAL_FILES</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CLIENT_MULTI_RESULTS">CLIENT_MULTI_RESULTS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CLIENT_MULTI_STATEMENTS">CLIENT_MULTI_STATEMENTS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CLIENT_NO_SCHEMA">CLIENT_NO_SCHEMA</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CLIENT_ODBC">CLIENT_ODBC</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CLIENT_SSL">CLIENT_SSL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CLIENT_TRANSACTIONS">CLIENT_TRANSACTIONS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="INIT_COMMAND">INIT_COMMAND</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="OPTION_MULTI_STATEMENTS_OFF">OPTION_MULTI_STATEMENTS_OFF</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="OPTION_MULTI_STATEMENTS_ON">OPTION_MULTI_STATEMENTS_ON</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="OPT_COMPRESS">OPT_COMPRESS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="OPT_CONNECT_TIMEOUT">OPT_CONNECT_TIMEOUT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="OPT_GUESS_CONNECTION">OPT_GUESS_CONNECTION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="OPT_LOCAL_INFILE">OPT_LOCAL_INFILE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="OPT_NAMED_PIPE">OPT_NAMED_PIPE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="OPT_PROTOCOL">OPT_PROTOCOL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="OPT_READ_TIMEOUT">OPT_READ_TIMEOUT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="OPT_USE_EMBEDDED_CONNECTION">OPT_USE_EMBEDDED_CONNECTION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="OPT_USE_REMOTE_CONNECTION">OPT_USE_REMOTE_CONNECTION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="OPT_WRITE_TIMEOUT">OPT_WRITE_TIMEOUT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="READ_DEFAULT_FILE">READ_DEFAULT_FILE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="READ_DEFAULT_GROUP">READ_DEFAULT_GROUP</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="REFRESH_GRANT">REFRESH_GRANT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="REFRESH_HOSTS">REFRESH_HOSTS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="REFRESH_LOG">REFRESH_LOG</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="REFRESH_MASTER">REFRESH_MASTER</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="REFRESH_SLAVE">REFRESH_SLAVE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="REFRESH_STATUS">REFRESH_STATUS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="REFRESH_TABLES">REFRESH_TABLES</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="REFRESH_THREADS">REFRESH_THREADS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SECURE_AUTH">SECURE_AUTH</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SET_CHARSET_DIR">SET_CHARSET_DIR</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SET_CHARSET_NAME">SET_CHARSET_NAME</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SET_CLIENT_IP">SET_CLIENT_IP</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SHARED_MEMORY_BASE_NAME">SHARED_MEMORY_BASE_NAME</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="VERSION">VERSION</a></dt>
+          
+          <dd class="description"><p><a href="Mysql.html">Mysql</a> constant</p></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="client_info-method" class="method-detail ">
+          <a name="method-c-client_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">client_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-client_info">client_info</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="client_info-source">
+<pre>
+static VALUE client_info(VALUE klass)
+{
+    return rb_tainted_str_new2(mysql_get_client_info());
+}</pre>
+            </div><!-- client_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- client_info-method -->
+
+      
+        <div id="client_version-method" class="method-detail ">
+          <a name="method-c-client_version"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">client_version</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-client_version">client_version</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="client_version-source">
+<pre>
+static VALUE client_version(VALUE obj)
+{
+    return INT2NUM(mysql_get_client_version());
+}</pre>
+            </div><!-- client_version-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- client_version-method -->
+
+      
+        <div id="connect-method" class="method-detail ">
+          <a name="method-c-connect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">connect</span><span
+              class="method-args">(p1 = v1, p2 = v2, p3 = v3, p4 = v4, p5 = v5, p6 = v6, p7 = v7)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-real_connect">real_connect</a>(host=nil,
+user=nil, passwd=nil, db=nil, port=nil, sock=nil, flag=nil)</p>
+            
+
+            
+            <div class="method-source-code" id="connect-source">
+<pre>
+static VALUE real_connect(int argc, VALUE* argv, VALUE klass)
+{
+    VALUE host, user, passwd, db, port, sock, flag;
+    char *h, *u, *p, *d, *s;
+    unsigned int pp, f;
+    struct mysql* myp;
+    VALUE obj;
+
+#if MYSQL_VERSION_ID &gt;= 32200
+    rb_scan_args(argc, argv, &quot;07&quot;, &amp;host, &amp;user, &amp;passwd, &amp;db, &amp;port, &amp;sock, &amp;flag);
+    d = NILorSTRING(db);
+    f = NILorINT(flag);
+#elif MYSQL_VERSION_ID &gt;= 32115
+    rb_scan_args(argc, argv, &quot;06&quot;, &amp;host, &amp;user, &amp;passwd, &amp;port, &amp;sock, &amp;flag);
+    f = NILorINT(flag);
+#else
+    rb_scan_args(argc, argv, &quot;05&quot;, &amp;host, &amp;user, &amp;passwd, &amp;port, &amp;sock);
+#endif
+    h = NILorSTRING(host);
+    u = NILorSTRING(user);
+    p = NILorSTRING(passwd);
+    pp = NILorINT(port);
+    s = NILorSTRING(sock);
+
+#ifdef HAVE_RB_THREAD_START_TIMER
+    rb_thread_stop_timer();
+#endif
+    obj = Data_Make_Struct(klass, struct mysql, 0, free_mysql, myp);
+#if MYSQL_VERSION_ID &gt;= 32200
+    mysql_init(&amp;myp-&gt;handler);
+    if (mysql_real_connect(&amp;myp-&gt;handler, h, u, p, d, pp, s, f) == NULL)
+#elif MYSQL_VERSION_ID &gt;= 32115
+    if (mysql_real_connect(&amp;myp-&gt;handler, h, u, p, pp, s, f) == NULL)
+#else
+    if (mysql_real_connect(&amp;myp-&gt;handler, h, u, p, pp, s) == NULL)
+#endif
+    {
+#ifdef HAVE_RB_THREAD_START_TIMER
+        rb_thread_start_timer();
+#endif
+        mysql_raise(&amp;myp-&gt;handler);
+    }
+#ifdef HAVE_RB_THREAD_START_TIMER
+    rb_thread_start_timer();
+#endif
+
+    myp-&gt;handler.reconnect = 0;
+    myp-&gt;connection = Qtrue;
+    myp-&gt;query_with_result = Qtrue;
+    rb_obj_call_init(obj, argc, argv);
+
+    return obj;
+}</pre>
+            </div><!-- connect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- connect-method -->
+
+      
+        <div id="debug-method" class="method-detail ">
+          <a name="method-c-debug"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">debug</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>my_debug(string)</p>
+            
+
+            
+            <div class="method-source-code" id="debug-source">
+<pre>
+static VALUE my_debug(VALUE obj, VALUE str)
+{
+    mysql_debug(StringValuePtr(str));
+    return obj;
+}</pre>
+            </div><!-- debug-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- debug-method -->
+
+      
+        <div id="escape_string-method" class="method-detail ">
+          <a name="method-c-escape_string"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">escape_string</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-escape_string">escape_string</a>(string)</p>
+            
+
+            
+            <div class="method-source-code" id="escape_string-source">
+<pre>
+static VALUE escape_string(VALUE klass, VALUE str)
+{
+    VALUE ret;
+    Check_Type(str, T_STRING);
+    ret = rb_str_new(0, (RSTRING_LEN(str))*2+1);
+    rb_str_set_len(ret, mysql_escape_string(RSTRING_PTR(ret), RSTRING_PTR(str), RSTRING_LEN(str)));
+    return ret;
+}</pre>
+            </div><!-- escape_string-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- escape_string-method -->
+
+      
+        <div id="get_client_info-method" class="method-detail ">
+          <a name="method-c-get_client_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_client_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-client_info">client_info</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="get_client_info-source">
+<pre>
+static VALUE client_info(VALUE klass)
+{
+    return rb_tainted_str_new2(mysql_get_client_info());
+}</pre>
+            </div><!-- get_client_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_client_info-method -->
+
+      
+        <div id="get_client_version-method" class="method-detail ">
+          <a name="method-c-get_client_version"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_client_version</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-client_version">client_version</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="get_client_version-source">
+<pre>
+static VALUE client_version(VALUE obj)
+{
+    return INT2NUM(mysql_get_client_version());
+}</pre>
+            </div><!-- get_client_version-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_client_version-method -->
+
+      
+        <div id="init-method" class="method-detail ">
+          <a name="method-c-init"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">init</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>init()</p>
+            
+
+            
+            <div class="method-source-code" id="init-source">
+<pre>
+static VALUE init(VALUE klass)
+{
+    struct mysql* myp;
+    VALUE obj;
+
+    obj = Data_Make_Struct(klass, struct mysql, 0, free_mysql, myp);
+    mysql_init(&amp;myp-&gt;handler);
+    myp-&gt;connection = Qfalse;
+    myp-&gt;query_with_result = Qtrue;
+    rb_obj_call_init(obj, 0, NULL);
+    return obj;
+}</pre>
+            </div><!-- init-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- init-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(p1 = v1, p2 = v2, p3 = v3, p4 = v4, p5 = v5, p6 = v6, p7 = v7)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-real_connect">real_connect</a>(host=nil,
+user=nil, passwd=nil, db=nil, port=nil, sock=nil, flag=nil)</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+static VALUE real_connect(int argc, VALUE* argv, VALUE klass)
+{
+    VALUE host, user, passwd, db, port, sock, flag;
+    char *h, *u, *p, *d, *s;
+    unsigned int pp, f;
+    struct mysql* myp;
+    VALUE obj;
+
+#if MYSQL_VERSION_ID &gt;= 32200
+    rb_scan_args(argc, argv, &quot;07&quot;, &amp;host, &amp;user, &amp;passwd, &amp;db, &amp;port, &amp;sock, &amp;flag);
+    d = NILorSTRING(db);
+    f = NILorINT(flag);
+#elif MYSQL_VERSION_ID &gt;= 32115
+    rb_scan_args(argc, argv, &quot;06&quot;, &amp;host, &amp;user, &amp;passwd, &amp;port, &amp;sock, &amp;flag);
+    f = NILorINT(flag);
+#else
+    rb_scan_args(argc, argv, &quot;05&quot;, &amp;host, &amp;user, &amp;passwd, &amp;port, &amp;sock);
+#endif
+    h = NILorSTRING(host);
+    u = NILorSTRING(user);
+    p = NILorSTRING(passwd);
+    pp = NILorINT(port);
+    s = NILorSTRING(sock);
+
+#ifdef HAVE_RB_THREAD_START_TIMER
+    rb_thread_stop_timer();
+#endif
+    obj = Data_Make_Struct(klass, struct mysql, 0, free_mysql, myp);
+#if MYSQL_VERSION_ID &gt;= 32200
+    mysql_init(&amp;myp-&gt;handler);
+    if (mysql_real_connect(&amp;myp-&gt;handler, h, u, p, d, pp, s, f) == NULL)
+#elif MYSQL_VERSION_ID &gt;= 32115
+    if (mysql_real_connect(&amp;myp-&gt;handler, h, u, p, pp, s, f) == NULL)
+#else
+    if (mysql_real_connect(&amp;myp-&gt;handler, h, u, p, pp, s) == NULL)
+#endif
+    {
+#ifdef HAVE_RB_THREAD_START_TIMER
+        rb_thread_start_timer();
+#endif
+        mysql_raise(&amp;myp-&gt;handler);
+    }
+#ifdef HAVE_RB_THREAD_START_TIMER
+    rb_thread_start_timer();
+#endif
+
+    myp-&gt;handler.reconnect = 0;
+    myp-&gt;connection = Qtrue;
+    myp-&gt;query_with_result = Qtrue;
+    rb_obj_call_init(obj, argc, argv);
+
+    return obj;
+}</pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="quote-method" class="method-detail ">
+          <a name="method-c-quote"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">quote</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-escape_string">escape_string</a>(string)</p>
+            
+
+            
+            <div class="method-source-code" id="quote-source">
+<pre>
+static VALUE escape_string(VALUE klass, VALUE str)
+{
+    VALUE ret;
+    Check_Type(str, T_STRING);
+    ret = rb_str_new(0, (RSTRING_LEN(str))*2+1);
+    rb_str_set_len(ret, mysql_escape_string(RSTRING_PTR(ret), RSTRING_PTR(str), RSTRING_LEN(str)));
+    return ret;
+}</pre>
+            </div><!-- quote-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- quote-method -->
+
+      
+        <div id="real_connect-method" class="method-detail ">
+          <a name="method-c-real_connect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">real_connect</span><span
+              class="method-args">(p1 = v1, p2 = v2, p3 = v3, p4 = v4, p5 = v5, p6 = v6, p7 = v7)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-real_connect">real_connect</a>(host=nil,
+user=nil, passwd=nil, db=nil, port=nil, sock=nil, flag=nil)</p>
+            
+
+            
+            <div class="method-source-code" id="real_connect-source">
+<pre>
+static VALUE real_connect(int argc, VALUE* argv, VALUE klass)
+{
+    VALUE host, user, passwd, db, port, sock, flag;
+    char *h, *u, *p, *d, *s;
+    unsigned int pp, f;
+    struct mysql* myp;
+    VALUE obj;
+
+#if MYSQL_VERSION_ID &gt;= 32200
+    rb_scan_args(argc, argv, &quot;07&quot;, &amp;host, &amp;user, &amp;passwd, &amp;db, &amp;port, &amp;sock, &amp;flag);
+    d = NILorSTRING(db);
+    f = NILorINT(flag);
+#elif MYSQL_VERSION_ID &gt;= 32115
+    rb_scan_args(argc, argv, &quot;06&quot;, &amp;host, &amp;user, &amp;passwd, &amp;port, &amp;sock, &amp;flag);
+    f = NILorINT(flag);
+#else
+    rb_scan_args(argc, argv, &quot;05&quot;, &amp;host, &amp;user, &amp;passwd, &amp;port, &amp;sock);
+#endif
+    h = NILorSTRING(host);
+    u = NILorSTRING(user);
+    p = NILorSTRING(passwd);
+    pp = NILorINT(port);
+    s = NILorSTRING(sock);
+
+#ifdef HAVE_RB_THREAD_START_TIMER
+    rb_thread_stop_timer();
+#endif
+    obj = Data_Make_Struct(klass, struct mysql, 0, free_mysql, myp);
+#if MYSQL_VERSION_ID &gt;= 32200
+    mysql_init(&amp;myp-&gt;handler);
+    if (mysql_real_connect(&amp;myp-&gt;handler, h, u, p, d, pp, s, f) == NULL)
+#elif MYSQL_VERSION_ID &gt;= 32115
+    if (mysql_real_connect(&amp;myp-&gt;handler, h, u, p, pp, s, f) == NULL)
+#else
+    if (mysql_real_connect(&amp;myp-&gt;handler, h, u, p, pp, s) == NULL)
+#endif
+    {
+#ifdef HAVE_RB_THREAD_START_TIMER
+        rb_thread_start_timer();
+#endif
+        mysql_raise(&amp;myp-&gt;handler);
+    }
+#ifdef HAVE_RB_THREAD_START_TIMER
+    rb_thread_start_timer();
+#endif
+
+    myp-&gt;handler.reconnect = 0;
+    myp-&gt;connection = Qtrue;
+    myp-&gt;query_with_result = Qtrue;
+    rb_obj_call_init(obj, argc, argv);
+
+    return obj;
+}</pre>
+            </div><!-- real_connect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- real_connect-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="affected_rows-method" class="method-detail ">
+          <a name="method-i-affected_rows"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">affected_rows</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-affected_rows">affected_rows</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="affected_rows-source">
+<pre>
+static VALUE affected_rows(VALUE obj)
+{
+    return INT2NUM(mysql_affected_rows(GetHandler(obj)));
+}</pre>
+            </div><!-- affected_rows-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- affected_rows-method -->
+
+      
+        <div id="autocommit-method" class="method-detail ">
+          <a name="method-i-autocommit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">autocommit</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>autocommit()</p>
+            
+
+            
+            <div class="method-source-code" id="autocommit-source">
+<pre>
+static VALUE autocommit(VALUE obj, VALUE mode)
+{
+    MYSQL* m = GetHandler(obj);
+    int f;
+    f = (mode == Qnil || mode == Qfalse || (rb_type(mode) == T_FIXNUM &amp;&amp; NUM2INT(mode) == 0)) ? 0 : 1;
+    if (mysql_autocommit(m, f) != 0)
+        mysql_raise(m);
+    return obj;
+}</pre>
+            </div><!-- autocommit-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- autocommit-method -->
+
+      
+        <div id="change_user-method" class="method-detail ">
+          <a name="method-i-change_user"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">change_user</span><span
+              class="method-args">(p1 = v1, p2 = v2, p3 = v3)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-change_user">change_user</a>(user=nil,
+passwd=nil, db=nil)</p>
+            
+
+            
+            <div class="method-source-code" id="change_user-source">
+<pre>
+static VALUE change_user(int argc, VALUE* argv, VALUE obj)
+{
+    VALUE user, passwd, db;
+    char *u, *p, *d;
+    MYSQL* m = GetHandler(obj);
+    rb_scan_args(argc, argv, &quot;03&quot;, &amp;user, &amp;passwd, &amp;db);
+    u = NILorSTRING(user);
+    p = NILorSTRING(passwd);
+    d = NILorSTRING(db);
+    if (mysql_change_user(m, u, p, d) != 0)
+        mysql_raise(m);
+    return obj;
+}</pre>
+            </div><!-- change_user-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- change_user-method -->
+
+      
+        <div id="character_set_name-method" class="method-detail ">
+          <a name="method-i-character_set_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">character_set_name</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-character_set_name">character_set_name</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="character_set_name-source">
+<pre>
+static VALUE character_set_name(VALUE obj)
+{
+    return rb_tainted_str_new2(mysql_character_set_name(GetHandler(obj)));
+}</pre>
+            </div><!-- character_set_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- character_set_name-method -->
+
+      
+        <div id="client_info-method" class="method-detail ">
+          <a name="method-i-client_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">client_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-client_info">client_info</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="client_info-source">
+<pre>
+static VALUE client_info(VALUE klass)
+{
+    return rb_tainted_str_new2(mysql_get_client_info());
+}</pre>
+            </div><!-- client_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- client_info-method -->
+
+      
+        <div id="client_version-method" class="method-detail ">
+          <a name="method-i-client_version"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">client_version</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-client_version">client_version</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="client_version-source">
+<pre>
+static VALUE client_version(VALUE obj)
+{
+    return INT2NUM(mysql_get_client_version());
+}</pre>
+            </div><!-- client_version-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- client_version-method -->
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>close()</p>
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+static VALUE my_close(VALUE obj)
+{
+    MYSQL* m = GetHandler(obj);
+    mysql_close(m);
+    GetMysqlStruct(obj)-&gt;connection = Qfalse;
+    return obj;
+}</pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="commit-method" class="method-detail ">
+          <a name="method-i-commit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">commit</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>commit()</p>
+            
+
+            
+            <div class="method-source-code" id="commit-source">
+<pre>
+static VALUE commit(VALUE obj)
+{
+    MYSQL* m = GetHandler(obj);
+    if (mysql_commit(m) != 0)
+        mysql_raise(m);
+    return obj;
+}</pre>
+            </div><!-- commit-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- commit-method -->
+
+      
+        <div id="connect-method" class="method-detail ">
+          <a name="method-i-connect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">connect</span><span
+              class="method-args">(p1 = v1, p2 = v2, p3 = v3, p4 = v4, p5 = v5, p6 = v6, p7 = v7)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-real_connect">real_connect</a>(host=nil,
+user=nil, passwd=nil, db=nil, port=nil, sock=nil, flag=nil)</p>
+            
+
+            
+            <div class="method-source-code" id="connect-source">
+<pre>
+static VALUE real_connect2(int argc, VALUE* argv, VALUE obj)
+{
+    VALUE host, user, passwd, db, port, sock, flag;
+    char *h, *u, *p, *d, *s;
+    unsigned int pp, f;
+    MYSQL* m = GetHandler(obj);
+    rb_scan_args(argc, argv, &quot;07&quot;, &amp;host, &amp;user, &amp;passwd, &amp;db, &amp;port, &amp;sock, &amp;flag);
+    d = NILorSTRING(db);
+    f = NILorINT(flag);
+    h = NILorSTRING(host);
+    u = NILorSTRING(user);
+    p = NILorSTRING(passwd);
+    pp = NILorINT(port);
+    s = NILorSTRING(sock);
+
+#ifdef HAVE_RB_THREAD_START_TIMER
+    rb_thread_stop_timer();
+#endif
+    if (mysql_real_connect(m, h, u, p, d, pp, s, f) == NULL) {
+#ifdef HAVE_RB_THREAD_START_TIMER
+        rb_thread_start_timer();
+#endif
+        mysql_raise(m);
+    }
+#ifdef HAVE_RB_THREAD_START_TIMER
+    rb_thread_start_timer();
+#endif
+    m-&gt;reconnect = 0;
+    GetMysqlStruct(obj)-&gt;connection = Qtrue;
+
+    return obj;
+}</pre>
+            </div><!-- connect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- connect-method -->
+
+      
+        <div id="create_db-method" class="method-detail ">
+          <a name="method-i-create_db"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create_db</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-create_db">create_db</a>(db)</p>
+            
+
+            
+            <div class="method-source-code" id="create_db-source">
+<pre>
+static VALUE create_db(VALUE obj, VALUE db)
+{
+    MYSQL* m = GetHandler(obj);
+    if (mysql_create_db(m, StringValuePtr(db)) != 0)
+        mysql_raise(m);
+    return obj;
+}</pre>
+            </div><!-- create_db-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create_db-method -->
+
+      
+        <div id="drop_db-method" class="method-detail ">
+          <a name="method-i-drop_db"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drop_db</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-drop_db">drop_db</a>(db)</p>
+            
+
+            
+            <div class="method-source-code" id="drop_db-source">
+<pre>
+static VALUE drop_db(VALUE obj, VALUE db)
+{
+    MYSQL* m = GetHandler(obj);
+    if (mysql_drop_db(m, StringValuePtr(db)) != 0)
+        mysql_raise(m);
+    return obj;
+}</pre>
+            </div><!-- drop_db-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- drop_db-method -->
+
+      
+        <div id="dump_debug_info-method" class="method-detail ">
+          <a name="method-i-dump_debug_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dump_debug_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-dump_debug_info">dump_debug_info</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="dump_debug_info-source">
+<pre>
+static VALUE dump_debug_info(VALUE obj)
+{
+    MYSQL* m = GetHandler(obj);
+    if (mysql_dump_debug_info(m) != 0)
+        mysql_raise(m);
+    return obj;
+}</pre>
+            </div><!-- dump_debug_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dump_debug_info-method -->
+
+      
+        <div id="errno-method" class="method-detail ">
+          <a name="method-i-errno"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">errno</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>errno()</p>
+            
+
+            
+            <div class="method-source-code" id="errno-source">
+<pre>
+static VALUE my_errno(VALUE obj)
+{
+    return INT2NUM(mysql_errno(GetHandler(obj)));
+}</pre>
+            </div><!-- errno-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- errno-method -->
+
+      
+        <div id="error-method" class="method-detail ">
+          <a name="method-i-error"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">error</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>error()</p>
+            
+
+            
+            <div class="method-source-code" id="error-source">
+<pre>
+static VALUE my_error(VALUE obj)
+{
+    return rb_str_new2(mysql_error(GetHandler(obj)));
+}</pre>
+            </div><!-- error-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- error-method -->
+
+      
+        <div id="escape_string-method" class="method-detail ">
+          <a name="method-i-escape_string"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">escape_string</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>real_escape_string(string)</p>
+            
+
+            
+            <div class="method-source-code" id="escape_string-source">
+<pre>
+static VALUE real_escape_string(VALUE obj, VALUE str)
+{
+    MYSQL* m = GetHandler(obj);
+    VALUE ret;
+    Check_Type(str, T_STRING);
+    ret = rb_str_new(0, (RSTRING_LEN(str))*2+1);
+    rb_str_set_len(ret, mysql_real_escape_string(m, RSTRING_PTR(ret), RSTRING_PTR(str), RSTRING_LEN(str)));
+    return ret;
+}</pre>
+            </div><!-- escape_string-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- escape_string-method -->
+
+      
+        <div id="field_count-method" class="method-detail ">
+          <a name="method-i-field_count"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">field_count</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-field_count">field_count</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="field_count-source">
+<pre>
+static VALUE field_count(VALUE obj)
+{
+    return INT2NUM(mysql_field_count(GetHandler(obj)));
+}</pre>
+            </div><!-- field_count-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- field_count-method -->
+
+      
+        <div id="get_client_info-method" class="method-detail ">
+          <a name="method-i-get_client_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_client_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-client_info">client_info</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="get_client_info-source">
+<pre>
+static VALUE client_info(VALUE klass)
+{
+    return rb_tainted_str_new2(mysql_get_client_info());
+}</pre>
+            </div><!-- get_client_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_client_info-method -->
+
+      
+        <div id="get_client_version-method" class="method-detail ">
+          <a name="method-i-get_client_version"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_client_version</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-client_version">client_version</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="get_client_version-source">
+<pre>
+static VALUE client_version(VALUE obj)
+{
+    return INT2NUM(mysql_get_client_version());
+}</pre>
+            </div><!-- get_client_version-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_client_version-method -->
+
+      
+        <div id="get_host_info-method" class="method-detail ">
+          <a name="method-i-get_host_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_host_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-host_info">host_info</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="get_host_info-source">
+<pre>
+static VALUE host_info(VALUE obj)
+{
+    return rb_tainted_str_new2(mysql_get_host_info(GetHandler(obj)));
+}</pre>
+            </div><!-- get_host_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_host_info-method -->
+
+      
+        <div id="get_proto_info-method" class="method-detail ">
+          <a name="method-i-get_proto_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_proto_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-proto_info">proto_info</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="get_proto_info-source">
+<pre>
+static VALUE proto_info(VALUE obj)
+{
+    return INT2NUM(mysql_get_proto_info(GetHandler(obj)));
+}</pre>
+            </div><!-- get_proto_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_proto_info-method -->
+
+      
+        <div id="get_server_info-method" class="method-detail ">
+          <a name="method-i-get_server_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_server_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-server_info">server_info</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="get_server_info-source">
+<pre>
+static VALUE server_info(VALUE obj)
+{
+    return rb_tainted_str_new2(mysql_get_server_info(GetHandler(obj)));
+}</pre>
+            </div><!-- get_server_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_server_info-method -->
+
+      
+        <div id="get_server_version-method" class="method-detail ">
+          <a name="method-i-get_server_version"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_server_version</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-server_version">server_version</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="get_server_version-source">
+<pre>
+static VALUE server_version(VALUE obj)
+{
+    return INT2NUM(mysql_get_server_version(GetHandler(obj)));
+}</pre>
+            </div><!-- get_server_version-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_server_version-method -->
+
+      
+        <div id="host_info-method" class="method-detail ">
+          <a name="method-i-host_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">host_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-host_info">host_info</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="host_info-source">
+<pre>
+static VALUE host_info(VALUE obj)
+{
+    return rb_tainted_str_new2(mysql_get_host_info(GetHandler(obj)));
+}</pre>
+            </div><!-- host_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- host_info-method -->
+
+      
+        <div id="info-method" class="method-detail ">
+          <a name="method-i-info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>info()</p>
+            
+
+            
+            <div class="method-source-code" id="info-source">
+<pre>
+static VALUE info(VALUE obj)
+{
+    const char* p = mysql_info(GetHandler(obj));
+    return p? rb_tainted_str_new2(p): Qnil;
+}</pre>
+            </div><!-- info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- info-method -->
+
+      
+        <div id="insert_id-method" class="method-detail ">
+          <a name="method-i-insert_id"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">insert_id</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-insert_id">insert_id</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="insert_id-source">
+<pre>
+static VALUE insert_id(VALUE obj)
+{
+    return INT2NUM(mysql_insert_id(GetHandler(obj)));
+}</pre>
+            </div><!-- insert_id-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- insert_id-method -->
+
+      
+        <div id="kill-method" class="method-detail ">
+          <a name="method-i-kill"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">kill</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>kill(pid)</p>
+            
+
+            
+            <div class="method-source-code" id="kill-source">
+<pre>
+static VALUE my_kill(VALUE obj, VALUE pid)
+{
+    int p = NUM2INT(pid);
+    MYSQL* m = GetHandler(obj);
+    if (mysql_kill(m, p) != 0)
+        mysql_raise(m);
+    return obj;
+}</pre>
+            </div><!-- kill-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- kill-method -->
+
+      
+        <div id="list_dbs-method" class="method-detail ">
+          <a name="method-i-list_dbs"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">list_dbs</span><span
+              class="method-args">(p1 = v1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-list_dbs">list_dbs</a>(db=nil)</p>
+            
+
+            
+            <div class="method-source-code" id="list_dbs-source">
+<pre>
+static VALUE list_dbs(int argc, VALUE* argv, VALUE obj)
+{
+    unsigned int i, n;
+    VALUE db, ret;
+    MYSQL* m = GetHandler(obj);
+    MYSQL_RES* res;
+
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;db);
+    res = mysql_list_dbs(m, NILorSTRING(db));
+    if (res == NULL)
+        mysql_raise(m);
+
+    n = mysql_num_rows(res);
+    ret = rb_ary_new2(n);
+    for (i=0; i&lt;n; i++)
+        rb_ary_store(ret, i, rb_tainted_str_new2(mysql_fetch_row(res)[0]));
+    mysql_free_result(res);
+    return ret;
+}</pre>
+            </div><!-- list_dbs-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- list_dbs-method -->
+
+      
+        <div id="list_fields-method" class="method-detail ">
+          <a name="method-i-list_fields"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">list_fields</span><span
+              class="method-args">(p1, p2 = v2)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-list_fields">list_fields</a>(table, field=nil)</p>
+            
+
+            
+            <div class="method-source-code" id="list_fields-source">
+<pre>
+static VALUE list_fields(int argc, VALUE* argv, VALUE obj)
+{
+    VALUE table, field;
+    MYSQL* m = GetHandler(obj);
+    MYSQL_RES* res;
+    rb_scan_args(argc, argv, &quot;11&quot;, &amp;table, &amp;field);
+    res = mysql_list_fields(m, StringValuePtr(table), NILorSTRING(field));
+    if (res == NULL)
+        mysql_raise(m);
+    return mysqlres2obj(res);
+}</pre>
+            </div><!-- list_fields-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- list_fields-method -->
+
+      
+        <div id="list_processes-method" class="method-detail ">
+          <a name="method-i-list_processes"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">list_processes</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-list_processes">list_processes</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="list_processes-source">
+<pre>
+static VALUE list_processes(VALUE obj)
+{
+    MYSQL* m = GetHandler(obj);
+    MYSQL_RES* res = mysql_list_processes(m);
+    if (res == NULL)
+        mysql_raise(m);
+    return mysqlres2obj(res);
+}</pre>
+            </div><!-- list_processes-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- list_processes-method -->
+
+      
+        <div id="list_tables-method" class="method-detail ">
+          <a name="method-i-list_tables"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">list_tables</span><span
+              class="method-args">(p1 = v1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-list_tables">list_tables</a>(table=nil)</p>
+            
+
+            
+            <div class="method-source-code" id="list_tables-source">
+<pre>
+static VALUE list_tables(int argc, VALUE* argv, VALUE obj)
+{
+    VALUE table;
+    MYSQL* m = GetHandler(obj);
+    MYSQL_RES* res;
+    unsigned int i, n;
+    VALUE ret;
+
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;table);
+    res = mysql_list_tables(m, NILorSTRING(table));
+    if (res == NULL)
+        mysql_raise(m);
+
+    n = mysql_num_rows(res);
+    ret = rb_ary_new2(n);
+    for (i=0; i&lt;n; i++)
+        rb_ary_store(ret, i, rb_tainted_str_new2(mysql_fetch_row(res)[0]));
+    mysql_free_result(res);
+    return ret;
+}</pre>
+            </div><!-- list_tables-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- list_tables-method -->
+
+      
+        <div id="more_results-method" class="method-detail ">
+          <a name="method-i-more_results"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">more_results</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-more_results">more_results</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="more_results-source">
+<pre>
+static VALUE more_results(VALUE obj)
+{
+    if (mysql_more_results(GetHandler(obj)) == 0)
+        return Qfalse;
+    else
+        return Qtrue;
+}</pre>
+            </div><!-- more_results-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- more_results-method -->
+
+      
+        <div id="more_results-3F-method" class="method-detail ">
+          <a name="method-i-more_results-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">more_results?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-more_results">more_results</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="more_results-3F-source">
+<pre>
+static VALUE more_results(VALUE obj)
+{
+    if (mysql_more_results(GetHandler(obj)) == 0)
+        return Qfalse;
+    else
+        return Qtrue;
+}</pre>
+            </div><!-- more_results-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- more_results-3F-method -->
+
+      
+        <div id="next_result-method" class="method-detail ">
+          <a name="method-i-next_result"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">next_result</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="next_result-source">
+<pre>
+static VALUE next_result(VALUE obj)
+{
+    MYSQL* m = GetHandler(obj);
+    int ret;
+    ret = mysql_next_result(m);
+    if (ret &gt; 0)
+        mysql_raise(m);
+    if (ret == 0)
+        return Qtrue;
+    return Qfalse;
+}</pre>
+            </div><!-- next_result-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- next_result-method -->
+
+      
+        <div id="options-method" class="method-detail ">
+          <a name="method-i-options"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">options</span><span
+              class="method-args">(p1, p2 = v2)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>options(opt, value=nil)</p>
+            
+
+            
+            <div class="method-source-code" id="options-source">
+<pre>
+static VALUE options(int argc, VALUE* argv, VALUE obj)
+{
+    VALUE opt, val;
+    int n;
+    my_bool b;
+    char* v;
+    MYSQL* m = GetHandler(obj);
+
+    rb_scan_args(argc, argv, &quot;11&quot;, &amp;opt, &amp;val);
+    switch(NUM2INT(opt)) {
+    case MYSQL_OPT_CONNECT_TIMEOUT:
+#if MYSQL_VERSION_ID &gt;= 40100
+    case MYSQL_OPT_PROTOCOL:
+#endif
+#if MYSQL_VERSION_ID &gt;= 40101
+    case MYSQL_OPT_READ_TIMEOUT:
+    case MYSQL_OPT_WRITE_TIMEOUT:
+#endif
+        if (val == Qnil)
+            rb_raise(rb_eArgError, &quot;wrong # of arguments(1 for 2)&quot;);
+        n = NUM2INT(val);
+        v = (char*)&amp;n;
+        break;
+    case MYSQL_INIT_COMMAND:
+    case MYSQL_READ_DEFAULT_FILE:
+    case MYSQL_READ_DEFAULT_GROUP:
+#if MYSQL_VERSION_ID &gt;= 32349
+    case MYSQL_SET_CHARSET_DIR:
+    case MYSQL_SET_CHARSET_NAME:
+#endif
+#if MYSQL_VERSION_ID &gt;= 40100
+    case MYSQL_SHARED_MEMORY_BASE_NAME:
+#endif
+#if MYSQL_VERSION_ID &gt;= 40101
+    case MYSQL_SET_CLIENT_IP:
+#endif
+        if (val == Qnil)
+            rb_raise(rb_eArgError, &quot;wrong # of arguments(1 for 2)&quot;);
+        v = StringValuePtr(val);
+        break;
+#if MYSQL_VERSION_ID &gt;= 40101
+    case MYSQL_SECURE_AUTH:
+        if (val == Qnil || val == Qfalse)
+            b = 1;
+        else
+            b = 0;
+        v = (char*)&amp;b;
+        break;
+#endif
+#if MYSQL_VERSION_ID &gt;= 32349
+    case MYSQL_OPT_LOCAL_INFILE:
+        if (val == Qnil || val == Qfalse)
+            v = NULL;
+        else {
+            n = 1;
+            v = (char*)&amp;n;
+        }
+        break;
+#endif
+    default:
+        v = NULL;
+    }
+
+    if (mysql_options(m, NUM2INT(opt), v) != 0)
+        rb_raise(eMysql, &quot;unknown option: %d&quot;, NUM2INT(opt));
+    return obj;
+}</pre>
+            </div><!-- options-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- options-method -->
+
+      
+        <div id="ping-method" class="method-detail ">
+          <a name="method-i-ping"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ping</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>ping()</p>
+            
+
+            
+            <div class="method-source-code" id="ping-source">
+<pre>
+static VALUE ping(VALUE obj)
+{
+    MYSQL* m = GetHandler(obj);
+    if (mysql_ping(m) != 0)
+        mysql_raise(m);
+    return obj;
+}</pre>
+            </div><!-- ping-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ping-method -->
+
+      
+        <div id="prepare-method" class="method-detail ">
+          <a name="method-i-prepare"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">prepare</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>prepare(query)</p>
+            
+
+            
+            <div class="method-source-code" id="prepare-source">
+<pre>
+static VALUE prepare(VALUE obj, VALUE query)
+{
+    VALUE st;
+    st = stmt_init(obj);
+    return stmt_prepare(st, query);
+}</pre>
+            </div><!-- prepare-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- prepare-method -->
+
+      
+        <div id="proto_info-method" class="method-detail ">
+          <a name="method-i-proto_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">proto_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-proto_info">proto_info</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="proto_info-source">
+<pre>
+static VALUE proto_info(VALUE obj)
+{
+    return INT2NUM(mysql_get_proto_info(GetHandler(obj)));
+}</pre>
+            </div><!-- proto_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- proto_info-method -->
+
+      
+        <div id="query-method" class="method-detail ">
+          <a name="method-i-query"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">query</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>query(sql)</p>
+            
+
+            
+            <div class="method-source-code" id="query-source">
+<pre>
+static VALUE query(VALUE obj, VALUE sql)
+{
+    int loop = 0;
+    MYSQL* m = GetHandler(obj);
+    Check_Type(sql, T_STRING);
+    if (GetMysqlStruct(obj)-&gt;connection == Qfalse) {
+        rb_raise(eMysql, &quot;query: not connected&quot;);
+    }
+    if (rb_block_given_p()) {
+        if (mysql_real_query(m, RSTRING_PTR(sql), RSTRING_LEN(sql)) != 0)
+            mysql_raise(m);
+        do {
+            MYSQL_RES* res = mysql_store_result(m);
+            if (res == NULL) {
+                if (mysql_field_count(m) != 0)
+                    mysql_raise(m);
+            } else {
+                VALUE robj = mysqlres2obj(res);
+                rb_ensure(rb_yield, robj, res_free, robj);
+            }
+#if MYSQL_VERSION_ID &gt;= 40101
+            if ((loop = mysql_next_result(m)) &gt; 0)
+                mysql_raise(m);
+        } while (loop == 0);
+#else
+        } while (0);
+#endif
+        return obj;
+    }
+    if (mysql_real_query(m, RSTRING_PTR(sql), RSTRING_LEN(sql)) != 0)
+        mysql_raise(m);
+    if (GetMysqlStruct(obj)-&gt;query_with_result == Qfalse)
+        return obj;
+    if (mysql_field_count(m) == 0)
+        return Qnil;
+    return store_result(obj);
+}</pre>
+            </div><!-- query-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- query-method -->
+
+      
+        <div id="query_with_result-method" class="method-detail ">
+          <a name="method-i-query_with_result"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">query_with_result</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-query_with_result">query_with_result</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="query_with_result-source">
+<pre>
+static VALUE query_with_result(VALUE obj)
+{
+    return GetMysqlStruct(obj)-&gt;query_with_result? Qtrue: Qfalse;
+}</pre>
+            </div><!-- query_with_result-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- query_with_result-method -->
+
+      
+        <div id="query_with_result-3D-method" class="method-detail ">
+          <a name="method-i-query_with_result-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">query_with_result=</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a
+href="Mysql.html#method-i-query_with_result">query_with_result</a>=(flag)</p>
+            
+
+            
+            <div class="method-source-code" id="query_with_result-3D-source">
+<pre>
+static VALUE query_with_result_set(VALUE obj, VALUE flag)
+{
+    if (TYPE(flag) != T_TRUE &amp;&amp; TYPE(flag) != T_FALSE)
+        rb_raise(rb_eTypeError, &quot;invalid type, required true or false.&quot;);
+    GetMysqlStruct(obj)-&gt;query_with_result = flag;
+    return flag;
+}</pre>
+            </div><!-- query_with_result-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- query_with_result-3D-method -->
+
+      
+        <div id="quote-method" class="method-detail ">
+          <a name="method-i-quote"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">quote</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>real_escape_string(string)</p>
+            
+
+            
+            <div class="method-source-code" id="quote-source">
+<pre>
+static VALUE real_escape_string(VALUE obj, VALUE str)
+{
+    MYSQL* m = GetHandler(obj);
+    VALUE ret;
+    Check_Type(str, T_STRING);
+    ret = rb_str_new(0, (RSTRING_LEN(str))*2+1);
+    rb_str_set_len(ret, mysql_real_escape_string(m, RSTRING_PTR(ret), RSTRING_PTR(str), RSTRING_LEN(str)));
+    return ret;
+}</pre>
+            </div><!-- quote-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- quote-method -->
+
+      
+        <div id="real_connect-method" class="method-detail ">
+          <a name="method-i-real_connect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">real_connect</span><span
+              class="method-args">(p1 = v1, p2 = v2, p3 = v3, p4 = v4, p5 = v5, p6 = v6, p7 = v7)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-c-real_connect">real_connect</a>(host=nil,
+user=nil, passwd=nil, db=nil, port=nil, sock=nil, flag=nil)</p>
+            
+
+            
+            <div class="method-source-code" id="real_connect-source">
+<pre>
+static VALUE real_connect2(int argc, VALUE* argv, VALUE obj)
+{
+    VALUE host, user, passwd, db, port, sock, flag;
+    char *h, *u, *p, *d, *s;
+    unsigned int pp, f;
+    MYSQL* m = GetHandler(obj);
+    rb_scan_args(argc, argv, &quot;07&quot;, &amp;host, &amp;user, &amp;passwd, &amp;db, &amp;port, &amp;sock, &amp;flag);
+    d = NILorSTRING(db);
+    f = NILorINT(flag);
+    h = NILorSTRING(host);
+    u = NILorSTRING(user);
+    p = NILorSTRING(passwd);
+    pp = NILorINT(port);
+    s = NILorSTRING(sock);
+
+#ifdef HAVE_RB_THREAD_START_TIMER
+    rb_thread_stop_timer();
+#endif
+    if (mysql_real_connect(m, h, u, p, d, pp, s, f) == NULL) {
+#ifdef HAVE_RB_THREAD_START_TIMER
+        rb_thread_start_timer();
+#endif
+        mysql_raise(m);
+    }
+#ifdef HAVE_RB_THREAD_START_TIMER
+    rb_thread_start_timer();
+#endif
+    m-&gt;reconnect = 0;
+    GetMysqlStruct(obj)-&gt;connection = Qtrue;
+
+    return obj;
+}</pre>
+            </div><!-- real_connect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- real_connect-method -->
+
+      
+        <div id="real_query-method" class="method-detail ">
+          <a name="method-i-real_query"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">real_query</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>query(sql)</p>
+            
+
+            
+            <div class="method-source-code" id="real_query-source">
+<pre>
+static VALUE query(VALUE obj, VALUE sql)
+{
+    int loop = 0;
+    MYSQL* m = GetHandler(obj);
+    Check_Type(sql, T_STRING);
+    if (GetMysqlStruct(obj)-&gt;connection == Qfalse) {
+        rb_raise(eMysql, &quot;query: not connected&quot;);
+    }
+    if (rb_block_given_p()) {
+        if (mysql_real_query(m, RSTRING_PTR(sql), RSTRING_LEN(sql)) != 0)
+            mysql_raise(m);
+        do {
+            MYSQL_RES* res = mysql_store_result(m);
+            if (res == NULL) {
+                if (mysql_field_count(m) != 0)
+                    mysql_raise(m);
+            } else {
+                VALUE robj = mysqlres2obj(res);
+                rb_ensure(rb_yield, robj, res_free, robj);
+            }
+#if MYSQL_VERSION_ID &gt;= 40101
+            if ((loop = mysql_next_result(m)) &gt; 0)
+                mysql_raise(m);
+        } while (loop == 0);
+#else
+        } while (0);
+#endif
+        return obj;
+    }
+    if (mysql_real_query(m, RSTRING_PTR(sql), RSTRING_LEN(sql)) != 0)
+        mysql_raise(m);
+    if (GetMysqlStruct(obj)-&gt;query_with_result == Qfalse)
+        return obj;
+    if (mysql_field_count(m) == 0)
+        return Qnil;
+    return store_result(obj);
+}</pre>
+            </div><!-- real_query-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- real_query-method -->
+
+      
+        <div id="reconnect-method" class="method-detail ">
+          <a name="method-i-reconnect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reconnect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>reconnect()</p>
+            
+
+            
+            <div class="method-source-code" id="reconnect-source">
+<pre>
+static VALUE reconnect(VALUE obj)
+{
+    return GetHandler(obj)-&gt;reconnect ? Qtrue : Qfalse;
+}</pre>
+            </div><!-- reconnect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reconnect-method -->
+
+      
+        <div id="reconnect-3D-method" class="method-detail ">
+          <a name="method-i-reconnect-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reconnect=</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>reconnect=(flag)</p>
+            
+
+            
+            <div class="method-source-code" id="reconnect-3D-source">
+<pre>
+static VALUE reconnect_set(VALUE obj, VALUE flag)
+{
+    GetHandler(obj)-&gt;reconnect = (flag == Qnil || flag == Qfalse) ? 0 : 1;
+    return flag;
+}</pre>
+            </div><!-- reconnect-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reconnect-3D-method -->
+
+      
+        <div id="refresh-method" class="method-detail ">
+          <a name="method-i-refresh"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">refresh</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>refresh®</p>
+            
+
+            
+            <div class="method-source-code" id="refresh-source">
+<pre>
+static VALUE refresh(VALUE obj, VALUE r)
+{
+    MYSQL* m = GetHandler(obj);
+    if (mysql_refresh(m, NUM2INT(r)) != 0)
+        mysql_raise(m);
+    return obj;
+}</pre>
+            </div><!-- refresh-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- refresh-method -->
+
+      
+        <div id="reload-method" class="method-detail ">
+          <a name="method-i-reload"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reload</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>reload()</p>
+            
+
+            
+            <div class="method-source-code" id="reload-source">
+<pre>
+static VALUE reload(VALUE obj)
+{
+    MYSQL* m = GetHandler(obj);
+    if (mysql_reload(m) != 0)
+        mysql_raise(m);
+    return obj;
+}</pre>
+            </div><!-- reload-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reload-method -->
+
+      
+        <div id="rollback-method" class="method-detail ">
+          <a name="method-i-rollback"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rollback</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>rollback()</p>
+            
+
+            
+            <div class="method-source-code" id="rollback-source">
+<pre>
+static VALUE rollback(VALUE obj)
+{
+    MYSQL* m = GetHandler(obj);
+    if (mysql_rollback(m) != 0)
+        mysql_raise(m);
+    return obj;
+}</pre>
+            </div><!-- rollback-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rollback-method -->
+
+      
+        <div id="select_db-method" class="method-detail ">
+          <a name="method-i-select_db"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">select_db</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-select_db">select_db</a>(db)</p>
+            
+
+            
+            <div class="method-source-code" id="select_db-source">
+<pre>
+static VALUE select_db(VALUE obj, VALUE db)
+{
+    MYSQL* m = GetHandler(obj);
+    if (mysql_select_db(m, StringValuePtr(db)) != 0)
+        mysql_raise(m);
+    return obj;
+}</pre>
+            </div><!-- select_db-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- select_db-method -->
+
+      
+        <div id="server_info-method" class="method-detail ">
+          <a name="method-i-server_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">server_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-server_info">server_info</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="server_info-source">
+<pre>
+static VALUE server_info(VALUE obj)
+{
+    return rb_tainted_str_new2(mysql_get_server_info(GetHandler(obj)));
+}</pre>
+            </div><!-- server_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- server_info-method -->
+
+      
+        <div id="server_version-method" class="method-detail ">
+          <a name="method-i-server_version"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">server_version</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-server_version">server_version</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="server_version-source">
+<pre>
+static VALUE server_version(VALUE obj)
+{
+    return INT2NUM(mysql_get_server_version(GetHandler(obj)));
+}</pre>
+            </div><!-- server_version-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- server_version-method -->
+
+      
+        <div id="set_server_option-method" class="method-detail ">
+          <a name="method-i-set_server_option"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_server_option</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a
+href="Mysql.html#method-i-set_server_option">set_server_option</a>(option)</p>
+            
+
+            
+            <div class="method-source-code" id="set_server_option-source">
+<pre>
+static VALUE set_server_option(VALUE obj, VALUE option)
+{
+    MYSQL *m = GetHandler(obj);
+    if (mysql_set_server_option(m, NUM2INT(option)) != 0)
+        mysql_raise(m);
+    return obj;
+}</pre>
+            </div><!-- set_server_option-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_server_option-method -->
+
+      
+        <div id="shutdown-method" class="method-detail ">
+          <a name="method-i-shutdown"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">shutdown</span><span
+              class="method-args">(p1 = v1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>shutdown()</p>
+            
+
+            
+            <div class="method-source-code" id="shutdown-source">
+<pre>
+static VALUE my_shutdown(int argc, VALUE* argv, VALUE obj)
+{
+    MYSQL* m = GetHandler(obj);
+    VALUE level;
+
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;level);
+#if MYSQL_VERSION_ID &gt;= 40103
+    if (mysql_shutdown(m, NIL_P(level) ? SHUTDOWN_DEFAULT : NUM2INT(level)) != 0)
+#else
+    if (mysql_shutdown(m) != 0)
+#endif
+        mysql_raise(m);
+    return obj;
+}</pre>
+            </div><!-- shutdown-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- shutdown-method -->
+
+      
+        <div id="sqlstate-method" class="method-detail ">
+          <a name="method-i-sqlstate"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sqlstate</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>sqlstate()</p>
+            
+
+            
+            <div class="method-source-code" id="sqlstate-source">
+<pre>
+static VALUE sqlstate(VALUE obj)
+{
+    MYSQL *m = GetHandler(obj);
+    return rb_tainted_str_new2(mysql_sqlstate(m));
+}</pre>
+            </div><!-- sqlstate-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sqlstate-method -->
+
+      
+        <div id="ssl_set-method" class="method-detail ">
+          <a name="method-i-ssl_set"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ssl_set</span><span
+              class="method-args">(p1 = v1, p2 = v2, p3 = v3, p4 = v4, p5 = v5)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-ssl_set">ssl_set</a>(key=nil, cert=nil,
+ca=nil, capath=nil, cipher=nil)</p>
+            
+
+            
+            <div class="method-source-code" id="ssl_set-source">
+<pre>
+static VALUE ssl_set(int argc, VALUE* argv, VALUE obj)
+{
+    VALUE key, cert, ca, capath, cipher;
+    char *s_key, *s_cert, *s_ca, *s_capath, *s_cipher;
+    MYSQL* m = GetHandler(obj);
+    rb_scan_args(argc, argv, &quot;05&quot;, &amp;key, &amp;cert, &amp;ca, &amp;capath, &amp;cipher);
+    s_key = NILorSTRING(key);
+    s_cert = NILorSTRING(cert);
+    s_ca = NILorSTRING(ca);
+    s_capath = NILorSTRING(capath);
+    s_cipher = NILorSTRING(cipher);
+    mysql_ssl_set(m, s_key, s_cert, s_ca, s_capath, s_cipher);
+    return obj;
+}</pre>
+            </div><!-- ssl_set-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ssl_set-method -->
+
+      
+        <div id="stat-method" class="method-detail ">
+          <a name="method-i-stat"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stat</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>stat()</p>
+            
+
+            
+            <div class="method-source-code" id="stat-source">
+<pre>
+static VALUE my_stat(VALUE obj)
+{
+    MYSQL* m = GetHandler(obj);
+    const char* s = mysql_stat(m);
+    if (s == NULL)
+        mysql_raise(m);
+    return rb_tainted_str_new2(s);
+}</pre>
+            </div><!-- stat-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stat-method -->
+
+      
+        <div id="stmt_init-method" class="method-detail ">
+          <a name="method-i-stmt_init"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stmt_init</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-stmt_init">stmt_init</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="stmt_init-source">
+<pre>
+static VALUE stmt_init(VALUE obj)
+{
+    MYSQL *m = GetHandler(obj);
+    MYSQL_STMT *s;
+    struct mysql_stmt* stmt;
+    my_bool true = 1;
+    VALUE st_obj;
+
+    if ((s = mysql_stmt_init(m)) == NULL)
+        mysql_raise(m);
+    if (mysql_stmt_attr_set(s, STMT_ATTR_UPDATE_MAX_LENGTH, &amp;true))
+        rb_raise(rb_eArgError, &quot;mysql_stmt_attr_set() failed&quot;);
+    st_obj = Data_Make_Struct(cMysqlStmt, struct mysql_stmt, 0, free_mysqlstmt, stmt);
+    memset(stmt, 0, sizeof(*stmt));
+    stmt-&gt;stmt = s;
+    stmt-&gt;closed = Qfalse;
+    return st_obj;
+}</pre>
+            </div><!-- stmt_init-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stmt_init-method -->
+
+      
+        <div id="store_result-method" class="method-detail ">
+          <a name="method-i-store_result"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">store_result</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-store_result">store_result</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="store_result-source">
+<pre>
+static VALUE store_result(VALUE obj)
+{
+    MYSQL* m = GetHandler(obj);
+    MYSQL_RES* res = mysql_store_result(m);
+    if (res == NULL)
+        mysql_raise(m);
+    return mysqlres2obj(res);
+}</pre>
+            </div><!-- store_result-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- store_result-method -->
+
+      
+        <div id="thread_id-method" class="method-detail ">
+          <a name="method-i-thread_id"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">thread_id</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-thread_id">thread_id</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="thread_id-source">
+<pre>
+static VALUE thread_id(VALUE obj)
+{
+    return INT2NUM(mysql_thread_id(GetHandler(obj)));
+}</pre>
+            </div><!-- thread_id-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- thread_id-method -->
+
+      
+        <div id="use_result-method" class="method-detail ">
+          <a name="method-i-use_result"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">use_result</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-use_result">use_result</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="use_result-source">
+<pre>
+static VALUE use_result(VALUE obj)
+{
+    MYSQL* m = GetHandler(obj);
+    MYSQL_RES* res = mysql_use_result(m);
+    if (res == NULL)
+        mysql_raise(m);
+    return mysqlres2obj(res);
+}</pre>
+            </div><!-- use_result-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- use_result-method -->
+
+      
+        <div id="warning_count-method" class="method-detail ">
+          <a name="method-i-warning_count"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">warning_count</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Mysql.html#method-i-warning_count">warning_count</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="warning_count-source">
+<pre>
+static VALUE warning_count(VALUE obj)
+{
+    return INT2NUM(mysql_warning_count(GetHandler(obj)));
+}</pre>
+            </div><!-- warning_count-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- warning_count-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

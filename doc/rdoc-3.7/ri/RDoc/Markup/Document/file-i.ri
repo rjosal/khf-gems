@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"	file" RDoc::Markup::Document#file"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["7The file this document was created from.  See also""RDoc::ClassModule#add_commentF" lib/rdoc/markup/document.rb

@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"from_path"#RDoc::Markup::ToHtml#from_path"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["-Path to this document for relative linksF"lib/rdoc/markup/to_html.rb

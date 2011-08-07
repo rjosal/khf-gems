@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"next_cleaning_time"8PhusionPassenger::AbstractServer#next_cleaning_time"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["JUsed by AbstractServerCollection to remember when this AbstractServer"should be idle cleaned.F"-lib/phusion_passenger/abstract_server.rb

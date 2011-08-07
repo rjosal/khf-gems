@@ -1,0 +1,3195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: PhusionPassenger::PlatformInfo</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/phusion_passenger/platform_info/operating_system_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/phusion_passenger/platform_info/operating_system.rb">lib/phusion_passenger/platform_info/operating_system.rb</a></li>
+          
+            <li><a href="../lib/phusion_passenger/platform_info/curl_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/phusion_passenger/platform_info/curl.rb">lib/phusion_passenger/platform_info/curl.rb</a></li>
+          
+            <li><a href="../lib/phusion_passenger/platform_info/zlib_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/phusion_passenger/platform_info/zlib.rb">lib/phusion_passenger/platform_info/zlib.rb</a></li>
+          
+            <li><a href="../lib/phusion_passenger/platform_info/compiler_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/phusion_passenger/platform_info/compiler.rb">lib/phusion_passenger/platform_info/compiler.rb</a></li>
+          
+            <li><a href="../lib/phusion_passenger/platform_info/documentation_tools_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/phusion_passenger/platform_info/documentation_tools.rb">lib/phusion_passenger/platform_info/documentation_tools.rb</a></li>
+          
+            <li><a href="../lib/phusion_passenger/platform_info/linux_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/phusion_passenger/platform_info/linux.rb">lib/phusion_passenger/platform_info/linux.rb</a></li>
+          
+            <li><a href="../lib/phusion_passenger/platform_info/ruby_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/phusion_passenger/platform_info/ruby.rb">lib/phusion_passenger/platform_info/ruby.rb</a></li>
+          
+            <li><a href="../lib/phusion_passenger/platform_info/binary_compatibility_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/phusion_passenger/platform_info/binary_compatibility.rb">lib/phusion_passenger/platform_info/binary_compatibility.rb</a></li>
+          
+            <li><a href="../lib/phusion_passenger/platform_info/apache_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/phusion_passenger/platform_info/apache.rb">lib/phusion_passenger/platform_info/apache.rb</a></li>
+          
+            <li><a href="../lib/phusion_passenger/platform_info_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/phusion_passenger/platform_info.rb">lib/phusion_passenger/platform_info.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="PlatformInfo/RuntimeError.html">PhusionPassenger::PlatformInfo::RuntimeError</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-apache2_bindir">::apache2_bindir</a></li>
+          
+          <li><a href="#method-c-apache2_module_cflags">::apache2_module_cflags</a></li>
+          
+          <li><a href="#method-c-apache2_module_ldflags">::apache2_module_ldflags</a></li>
+          
+          <li><a href="#method-c-apache2_sbindir">::apache2_sbindir</a></li>
+          
+          <li><a href="#method-c-apache2ctl">::apache2ctl</a></li>
+          
+          <li><a href="#method-c-apr_config">::apr_config</a></li>
+          
+          <li><a href="#method-c-apr_config_needed_for_building_apache_modules-3F">::apr_config_needed_for_building_apache_modules?</a></li>
+          
+          <li><a href="#method-c-apr_flags">::apr_flags</a></li>
+          
+          <li><a href="#method-c-apr_libs">::apr_libs</a></li>
+          
+          <li><a href="#method-c-apu_config">::apu_config</a></li>
+          
+          <li><a href="#method-c-apu_flags">::apu_flags</a></li>
+          
+          <li><a href="#method-c-apu_libs">::apu_libs</a></li>
+          
+          <li><a href="#method-c-apxs2">::apxs2</a></li>
+          
+          <li><a href="#method-c-asciidoc">::asciidoc</a></li>
+          
+          <li><a href="#method-c-cc">::cc</a></li>
+          
+          <li><a href="#method-c-compiler_supports_architecture-3F">::compiler_supports_architecture?</a></li>
+          
+          <li><a href="#method-c-compiler_supports_visibility_flag-3F">::compiler_supports_visibility_flag?</a></li>
+          
+          <li><a href="#method-c-compiler_supports_wno_attributes_flag-3F">::compiler_supports_wno_attributes_flag?</a></li>
+          
+          <li><a href="#method-c-compiler_visibility_flag_generates_warnings-3F">::compiler_visibility_flag_generates_warnings?</a></li>
+          
+          <li><a href="#method-c-cpu_architectures">::cpu_architectures</a></li>
+          
+          <li><a href="#method-c-curl_flags">::curl_flags</a></li>
+          
+          <li><a href="#method-c-curl_libs">::curl_libs</a></li>
+          
+          <li><a href="#method-c-curl_supports_ssl-3F">::curl_supports_ssl?</a></li>
+          
+          <li><a href="#method-c-cxx">::cxx</a></li>
+          
+          <li><a href="#method-c-debugging_cflags">::debugging_cflags</a></li>
+          
+          <li><a href="#method-c-env_defined-3F">::env_defined?</a></li>
+          
+          <li><a href="#method-c-export_dynamic_flags">::export_dynamic_flags</a></li>
+          
+          <li><a href="#method-c-find_command">::find_command</a></li>
+          
+          <li><a href="#method-c-gem_command">::gem_command</a></li>
+          
+          <li><a href="#method-c-gnu_make">::gnu_make</a></li>
+          
+          <li><a href="#method-c-has_math_library-3F">::has_math_library?</a></li>
+          
+          <li><a href="#method-c-httpd">::httpd</a></li>
+          
+          <li><a href="#method-c-in_rvm-3F">::in_rvm?</a></li>
+          
+          <li><a href="#method-c-library_extension">::library_extension</a></li>
+          
+          <li><a href="#method-c-linux_distro">::linux_distro</a></li>
+          
+          <li><a href="#method-c-linux_distro_tags">::linux_distro_tags</a></li>
+          
+          <li><a href="#method-c-locate_ruby_tool">::locate_ruby_tool</a></li>
+          
+          <li><a href="#method-c-os_name">::os_name</a></li>
+          
+          <li><a href="#method-c-passenger_binary_compatibility_id">::passenger_binary_compatibility_id</a></li>
+          
+          <li><a href="#method-c-portability_cflags">::portability_cflags</a></li>
+          
+          <li><a href="#method-c-portability_ldflags">::portability_ldflags</a></li>
+          
+          <li><a href="#method-c-rake">::rake</a></li>
+          
+          <li><a href="#method-c-rake_command">::rake_command</a></li>
+          
+          <li><a href="#method-c-rspec">::rspec</a></li>
+          
+          <li><a href="#method-c-ruby_command">::ruby_command</a></li>
+          
+          <li><a href="#method-c-ruby_executable">::ruby_executable</a></li>
+          
+          <li><a href="#method-c-ruby_extension_binary_compatibility_ids">::ruby_extension_binary_compatibility_ids</a></li>
+          
+          <li><a href="#method-c-ruby_sudo_command">::ruby_sudo_command</a></li>
+          
+          <li><a href="#method-c-ruby_supports_fork-3F">::ruby_supports_fork?</a></li>
+          
+          <li><a href="#method-c-rvm_path">::rvm_path</a></li>
+          
+          <li><a href="#method-c-rvm_ruby_string">::rvm_ruby_string</a></li>
+          
+          <li><a href="#method-c-supports_lfence_instruction-3F">::supports_lfence_instruction?</a></li>
+          
+          <li><a href="#method-c-supports_sfence_instruction-3F">::supports_sfence_instruction?</a></li>
+          
+          <li><a href="#method-c-tmpdir">::tmpdir</a></li>
+          
+          <li><a href="#method-c-tmpexedir">::tmpexedir</a></li>
+          
+          <li><a href="#method-c-zlib_flags">::zlib_flags</a></li>
+          
+          <li><a href="#method-c-zlib_libs">::zlib_libs</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../PhusionPassenger.html">PhusionPassenger</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractInstaller.html">PhusionPassenger::AbstractInstaller</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractRequestHandler.html">PhusionPassenger::AbstractRequestHandler</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractServer.html">PhusionPassenger::AbstractServer</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractServer/InvalidPassword.html">PhusionPassenger::AbstractServer::InvalidPassword</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractServer/ServerAlreadyStarted.html">PhusionPassenger::AbstractServer::ServerAlreadyStarted</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractServer/ServerError.html">PhusionPassenger::AbstractServer::ServerError</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractServer/ServerNotStarted.html">PhusionPassenger::AbstractServer::ServerNotStarted</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractServer/UnknownMessage.html">PhusionPassenger::AbstractServer::UnknownMessage</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractServerCollection.html">PhusionPassenger::AbstractServerCollection</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools.html">PhusionPassenger::AdminTools</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/MemoryStats.html">PhusionPassenger::AdminTools::MemoryStats</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/MemoryStats/Process.html">PhusionPassenger::AdminTools::MemoryStats::Process</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance.html">PhusionPassenger::AdminTools::ServerInstance</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/CorruptedDirectoryError.html">PhusionPassenger::AdminTools::ServerInstance::CorruptedDirectoryError</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/GenerationsAbsentError.html">PhusionPassenger::AdminTools::ServerInstance::GenerationsAbsentError</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/Group.html">PhusionPassenger::AdminTools::ServerInstance::Group</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/Process.html">PhusionPassenger::AdminTools::ServerInstance::Process</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/RoleDeniedError.html">PhusionPassenger::AdminTools::ServerInstance::RoleDeniedError</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/StaleDirectoryError.html">PhusionPassenger::AdminTools::ServerInstance::StaleDirectoryError</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/Stats.html">PhusionPassenger::AdminTools::ServerInstance::Stats</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/UnsupportedGenerationStructureVersionError.html">PhusionPassenger::AdminTools::ServerInstance::UnsupportedGenerationStructureVersionError</a></li>
+        
+          <li><a href="../PhusionPassenger/AnalyticsLogger.html">PhusionPassenger::AnalyticsLogger</a></li>
+        
+          <li><a href="../PhusionPassenger/AnalyticsLogger/Lock.html">PhusionPassenger::AnalyticsLogger::Lock</a></li>
+        
+          <li><a href="../PhusionPassenger/AnalyticsLogger/Log.html">PhusionPassenger::AnalyticsLogger::Log</a></li>
+        
+          <li><a href="../PhusionPassenger/AnalyticsLogger/SharedData.html">PhusionPassenger::AnalyticsLogger::SharedData</a></li>
+        
+          <li><a href="../PhusionPassenger/AppInitError.html">PhusionPassenger::AppInitError</a></li>
+        
+          <li><a href="../PhusionPassenger/AppProcess.html">PhusionPassenger::AppProcess</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRails.html">PhusionPassenger::ClassicRails</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRails/ApplicationSpawner.html">PhusionPassenger::ClassicRails::ApplicationSpawner</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRails/ApplicationSpawner/Error.html">PhusionPassenger::ClassicRails::ApplicationSpawner::Error</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRails/CGIFixed.html">PhusionPassenger::ClassicRails::CGIFixed</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRails/FrameworkSpawner.html">PhusionPassenger::ClassicRails::FrameworkSpawner</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRails/FrameworkSpawner/Error.html">PhusionPassenger::ClassicRails::FrameworkSpawner::Error</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRails/RequestHandler.html">PhusionPassenger::ClassicRails::RequestHandler</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions.html">PhusionPassenger::ClassicRailsExtensions</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACBaseExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACBaseExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACBenchmarkingExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACBenchmarkingExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACRescueExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACRescueExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ARAbstractAdapterExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ARAbstractAdapterExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/AVBenchmarkHelperExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::AVBenchmarkHelperExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/CacheStoreExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::CacheStoreExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ConcreteCacheStoreExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ConcreteCacheStoreExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/ConsoleTextTemplate.html">PhusionPassenger::ConsoleTextTemplate</a></li>
+        
+          <li><a href="../PhusionPassenger/DebugLogging.html">PhusionPassenger::DebugLogging</a></li>
+        
+          <li><a href="../PhusionPassenger/FrameworkInitError.html">PhusionPassenger::FrameworkInitError</a></li>
+        
+          <li><a href="../PhusionPassenger/HTMLTemplate.html">PhusionPassenger::HTMLTemplate</a></li>
+        
+          <li><a href="../PhusionPassenger/InitializationError.html">PhusionPassenger::InitializationError</a></li>
+        
+          <li><a href="../PhusionPassenger/InvalidPath.html">PhusionPassenger::InvalidPath</a></li>
+        
+          <li><a href="../PhusionPassenger/MessageChannel.html">PhusionPassenger::MessageChannel</a></li>
+        
+          <li><a href="../PhusionPassenger/MessageChannel/InvalidHashError.html">PhusionPassenger::MessageChannel::InvalidHashError</a></li>
+        
+          <li><a href="../PhusionPassenger/MessageClient.html">PhusionPassenger::MessageClient</a></li>
+        
+          <li><a href="../PhusionPassenger/NativeSupportLoader.html">PhusionPassenger::NativeSupportLoader</a></li>
+        
+          <li><a href="../PhusionPassenger/Packaging.html">PhusionPassenger::Packaging</a></li>
+        
+          <li><a href="../PhusionPassenger/PlatformInfo.html">PhusionPassenger::PlatformInfo</a></li>
+        
+          <li><a href="../PhusionPassenger/PlatformInfo/RuntimeError.html">PhusionPassenger::PlatformInfo::RuntimeError</a></li>
+        
+          <li><a href="../PhusionPassenger/Plugin.html">PhusionPassenger::Plugin</a></li>
+        
+          <li><a href="../PhusionPassenger/Rack.html">PhusionPassenger::Rack</a></li>
+        
+          <li><a href="../PhusionPassenger/Rack/ApplicationSpawner.html">PhusionPassenger::Rack::ApplicationSpawner</a></li>
+        
+          <li><a href="../PhusionPassenger/Rack/ApplicationSpawner/Error.html">PhusionPassenger::Rack::ApplicationSpawner::Error</a></li>
+        
+          <li><a href="../PhusionPassenger/Rack/RequestHandler.html">PhusionPassenger::Rack::RequestHandler</a></li>
+        
+          <li><a href="../PhusionPassenger/Rails3Extensions.html">PhusionPassenger::Rails3Extensions</a></li>
+        
+          <li><a href="../PhusionPassenger/Rails3Extensions/AnalyticsLogging.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging</a></li>
+        
+          <li><a href="../PhusionPassenger/Rails3Extensions/AnalyticsLogging/ACExtension.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging::ACExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/Rails3Extensions/AnalyticsLogging/ASBenchmarkableExtension.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging::ASBenchmarkableExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/Rails3Extensions/AnalyticsLogging/ExceptionLogger.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging::ExceptionLogger</a></li>
+        
+          <li><a href="../PhusionPassenger/SpawnManager.html">PhusionPassenger::SpawnManager</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone.html">PhusionPassenger::Standalone</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/AppFinder.html">PhusionPassenger::Standalone::AppFinder</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/Command.html">PhusionPassenger::Standalone::Command</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/ConfigFile.html">PhusionPassenger::Standalone::ConfigFile</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/ConfigFile/DisallowedContextError.html">PhusionPassenger::Standalone::ConfigFile::DisallowedContextError</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/HelpCommand.html">PhusionPassenger::Standalone::HelpCommand</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/Main.html">PhusionPassenger::Standalone::Main</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/PackageRuntimeCommand.html">PhusionPassenger::Standalone::PackageRuntimeCommand</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/RuntimeInstaller.html">PhusionPassenger::Standalone::RuntimeInstaller</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/StartCommand.html">PhusionPassenger::Standalone::StartCommand</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/StatusCommand.html">PhusionPassenger::Standalone::StatusCommand</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/StopCommand.html">PhusionPassenger::Standalone::StopCommand</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/Utils.html">PhusionPassenger::Standalone::Utils</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/VersionCommand.html">PhusionPassenger::Standalone::VersionCommand</a></li>
+        
+          <li><a href="../PhusionPassenger/UnknownError.html">PhusionPassenger::UnknownError</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils.html">PhusionPassenger::Utils</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/FileSystemWatcher.html">PhusionPassenger::Utils::FileSystemWatcher</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/FileSystemWatcher/DirInfo.html">PhusionPassenger::Utils::FileSystemWatcher::DirInfo</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/FileSystemWatcher/FileInfo.html">PhusionPassenger::Utils::FileSystemWatcher::FileInfo</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/HostsFileParser.html">PhusionPassenger::Utils::HostsFileParser</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/Kernel.html">PhusionPassenger::Utils::Kernel</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/PseudoIO.html">PhusionPassenger::Utils::PseudoIO</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/RewindableInput.html">PhusionPassenger::Utils::RewindableInput</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/RewindableInput/Tempfile.html">PhusionPassenger::Utils::RewindableInput::Tempfile</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/UnseekableSocket.html">PhusionPassenger::Utils::UnseekableSocket</a></li>
+        
+          <li><a href="../PhusionPassenger/VersionNotFound.html">PhusionPassenger::VersionNotFound</a></li>
+        
+          <li><a href="../PhusionPassenger/WSGI.html">PhusionPassenger::WSGI</a></li>
+        
+          <li><a href="../PhusionPassenger/WSGI/ApplicationSpawner.html">PhusionPassenger::WSGI::ApplicationSpawner</a></li>
+        
+          <li><a href="../ConditionVariable.html">ConditionVariable</a></li>
+        
+          <li><a href="../Exception.html">Exception</a></li>
+        
+          <li><a href="../GC.html">GC</a></li>
+        
+          <li><a href="../IO.html">IO</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+          <li><a href="../Process.html">Process</a></li>
+        
+          <li><a href="../Signal.html">Signal</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">PhusionPassenger::PlatformInfo</h1>
+
+    <div id="description" class="description">
+      
+<p>Users can change the detection behavior by setting the environment variable
+<tt>APXS2</tt> to the correct ‘apxs’ (or ‘apxs2’) binary, as
+provided by Apache.</p>
+<hr style="height: 1px">
+
+<p>This module autodetects various platform-specific information, and provides
+that information through constants.</p>
+
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="GEM_HOME">GEM_HOME</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="RUBY_ENGINE">RUBY_ENGINE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="apache2_bindir-method" class="method-detail ">
+          <a name="method-c-apache2_bindir"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">apache2_bindir</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The absolute path to the Apache 2 ‘bin’ directory, or nil if unknown.</p>
+            
+
+            
+            <div class="method-source-code" id="apache2_bindir-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/apache.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">apache2_bindir</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">apxs2</span>.<span class="ruby-identifier">nil?</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-node">`#{apxs2} -q BINDIR 2&gt;/dev/null`</span>.<span class="ruby-identifier">strip</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- apache2_bindir-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- apache2_bindir-method -->
+
+      
+        <div id="apache2_module_cflags-method" class="method-detail ">
+          <a name="method-c-apache2_module_cflags"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">apache2_module_cflags</span><span
+              class="method-args">(with_apr_flags = true)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The C compiler flags that are necessary to compile an Apache module. Also
+includes APR and APU compiler flags if with_apr_flags is true.</p>
+            
+
+            
+            <div class="method-source-code" id="apache2_module_cflags-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/apache.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">apache2_module_cflags</span>(<span class="ruby-identifier">with_apr_flags</span> = <span class="ruby-keyword">true</span>)
+        <span class="ruby-identifier">flags</span> = [<span class="ruby-string">&quot;-fPIC&quot;</span>]
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">compiler_supports_visibility_flag?</span>
+                <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;-fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED&quot;</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">compiler_visibility_flag_generates_warnings?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">compiler_supports_wno_attributes_flag?</span>
+                        <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;-Wno-attributes&quot;</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">with_apr_flags</span>
+                <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">apr_flags</span>
+                <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">apu_flags</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">apxs2</span>.<span class="ruby-identifier">nil?</span>
+                <span class="ruby-identifier">apxs2_flags</span> = <span class="ruby-node">`#{apxs2} -q CFLAGS`</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot; -I&quot;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">`#{apxs2} -q INCLUDEDIR`</span>.<span class="ruby-identifier">strip</span>
+                <span class="ruby-identifier">apxs2_flags</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/-O\d? /</span>, <span class="ruby-string">''</span>)
+
+                <span class="ruby-comment"># Remove flags not supported by GCC</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/solaris/</span> <span class="ruby-comment"># TODO: Add support for people using SunStudio</span>
+                        <span class="ruby-comment"># The big problem is Coolstack apxs includes a bunch of solaris -x directives.</span>
+                        <span class="ruby-identifier">options</span> = <span class="ruby-identifier">apxs2_flags</span>.<span class="ruby-identifier">split</span>
+                        <span class="ruby-identifier">options</span>.<span class="ruby-identifier">reject!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\-x/</span> }
+                        <span class="ruby-identifier">options</span>.<span class="ruby-identifier">reject!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\-Xa/</span> }
+                        <span class="ruby-identifier">options</span>.<span class="ruby-identifier">reject!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\-fast/</span> }
+                        <span class="ruby-identifier">options</span>.<span class="ruby-identifier">reject!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\-mt/</span> }
+                        <span class="ruby-identifier">apxs2_flags</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">' '</span>)
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-identifier">apxs2_flags</span>.<span class="ruby-identifier">strip!</span>
+                <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">apxs2_flags</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">httpd</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/darwin/</span>
+                <span class="ruby-comment"># The default Apache install on OS X is a universal binary.</span>
+                <span class="ruby-comment"># Figure out which architectures it's compiled for and do the same</span>
+                <span class="ruby-comment"># thing for mod_passenger. We use the 'file' utility to do this.</span>
+                <span class="ruby-comment">#</span>
+                <span class="ruby-comment"># Running 'file' on the Apache executable usually outputs something</span>
+                <span class="ruby-comment"># like this:</span>
+                <span class="ruby-comment">#</span>
+                <span class="ruby-comment">#   /usr/sbin/httpd: Mach-O universal binary with 4 architectures</span>
+                <span class="ruby-comment">#   /usr/sbin/httpd (for architecture ppc7400):     Mach-O executable ppc</span>
+                <span class="ruby-comment">#   /usr/sbin/httpd (for architecture ppc64):       Mach-O 64-bit executable ppc64</span>
+                <span class="ruby-comment">#   /usr/sbin/httpd (for architecture i386):        Mach-O executable i386</span>
+                <span class="ruby-comment">#   /usr/sbin/httpd (for architecture x86_64):      Mach-O 64-bit executable x86_64</span>
+                <span class="ruby-comment">#</span>
+                <span class="ruby-comment"># But on some machines, it may output just:</span>
+                <span class="ruby-comment">#</span>
+                <span class="ruby-comment">#   /usr/sbin/httpd: Mach-O fat file with 4 architectures</span>
+                <span class="ruby-comment">#</span>
+                <span class="ruby-comment"># (http://code.google.com/p/phusion-passenger/issues/detail?id=236)</span>
+                <span class="ruby-identifier">output</span> = <span class="ruby-node">`file &quot;#{httpd}&quot;`</span>.<span class="ruby-identifier">strip</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">output</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/Mach-O fat file/</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">output</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp">/for architecture/</span>
+                        <span class="ruby-identifier">architectures</span> = [<span class="ruby-string">&quot;i386&quot;</span>, <span class="ruby-string">&quot;ppc&quot;</span>, <span class="ruby-string">&quot;x86_64&quot;</span>, <span class="ruby-string">&quot;ppc64&quot;</span>]
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">architectures</span> = []
+                        <span class="ruby-identifier">output</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>).<span class="ruby-identifier">grep</span>(<span class="ruby-regexp">/for architecture/</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+                                <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/for architecture (.*?)\)/</span>
+                                <span class="ruby-identifier">architectures</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">$1</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-comment"># The compiler may not support all architectures in the binary.</span>
+                <span class="ruby-comment"># XCode 4 seems to have removed support for the PPC architecture</span>
+                <span class="ruby-comment"># even though there are still plenty of Apache binaries around</span>
+                <span class="ruby-comment"># containing PPC components.</span>
+                <span class="ruby-identifier">architectures</span>.<span class="ruby-identifier">reject!</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">arch</span><span class="ruby-operator">|</span>
+                        <span class="ruby-operator">!</span><span class="ruby-identifier">compiler_supports_architecture?</span>(<span class="ruby-identifier">arch</span>)
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">architectures</span>.<span class="ruby-identifier">map!</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">arch</span><span class="ruby-operator">|</span>
+                        <span class="ruby-node">&quot;-arch #{arch}&quot;</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">architectures</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">' '</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">flags</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">' '</span>).<span class="ruby-identifier">strip</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- apache2_module_cflags-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- apache2_module_cflags-method -->
+
+      
+        <div id="apache2_module_ldflags-method" class="method-detail ">
+          <a name="method-c-apache2_module_ldflags"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">apache2_module_ldflags</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Linker flags that are necessary for linking an Apache module. Already
+includes APR and APU linker flags.</p>
+            
+
+            
+            <div class="method-source-code" id="apache2_module_ldflags-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/apache.rb, line 241</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">apache2_module_ldflags</span>
+        <span class="ruby-identifier">flags</span> = <span class="ruby-node">&quot;-fPIC #{apr_libs} #{apu_libs}&quot;</span>
+        <span class="ruby-identifier">flags</span>.<span class="ruby-identifier">strip!</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">flags</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- apache2_module_ldflags-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- apache2_module_ldflags-method -->
+
+      
+        <div id="apache2_sbindir-method" class="method-detail ">
+          <a name="method-c-apache2_sbindir"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">apache2_sbindir</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The absolute path to the Apache 2 ‘sbin’ directory, or nil if unknown.</p>
+            
+
+            
+            <div class="method-source-code" id="apache2_sbindir-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/apache.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">apache2_sbindir</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">apxs2</span>.<span class="ruby-identifier">nil?</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-node">`#{apxs2} -q SBINDIR`</span>.<span class="ruby-identifier">strip</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- apache2_sbindir-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- apache2_sbindir-method -->
+
+      
+        <div id="apache2ctl-method" class="method-detail ">
+          <a name="method-c-apache2ctl"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">apache2ctl</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The absolute path to the ‘apachectl’ or ‘apache2ctl’ binary, or nil
+if not found.</p>
+            
+
+            
+            <div class="method-source-code" id="apache2ctl-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/apache.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">apache2ctl</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">find_apache2_executable</span>(<span class="ruby-string">'apache2ctl'</span>, <span class="ruby-string">'apachectl2'</span>, <span class="ruby-string">'apachectl'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- apache2ctl-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- apache2ctl-method -->
+
+      
+        <div id="apr_config-method" class="method-detail ">
+          <a name="method-c-apr_config"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">apr_config</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The absolute path to the ‘apr-config’ or ‘apr-1-config’ executable,
+or nil if not found.</p>
+            
+
+            
+            <div class="method-source-code" id="apr_config-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/apache.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">apr_config</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">env_defined?</span>(<span class="ruby-string">'APR_CONFIG'</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'APR_CONFIG'</span>]
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">apxs2</span>.<span class="ruby-identifier">nil?</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">filename</span> = <span class="ruby-node">`#{apxs2} -q APR_CONFIG 2&gt;/dev/null`</span>.<span class="ruby-identifier">strip</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">filename</span>.<span class="ruby-identifier">empty?</span>
+                        <span class="ruby-identifier">apr_bindir</span> = <span class="ruby-node">`#{apxs2} -q APR_BINDIR 2&gt;/dev/null`</span>.<span class="ruby-identifier">strip</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">apr_bindir</span>.<span class="ruby-identifier">empty?</span>
+                                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-keyword">return</span> <span class="ruby-identifier">select_executable</span>(<span class="ruby-identifier">apr_bindir</span>,
+                                        <span class="ruby-string">&quot;apr-1-config&quot;</span>, <span class="ruby-string">&quot;apr-config&quot;</span>)
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">elsif</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">filename</span>)
+                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">filename</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- apr_config-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- apr_config-method -->
+
+      
+        <div id="apr_config_needed_for_building_apache_modules-3F-method" class="method-detail ">
+          <a name="method-c-apr_config_needed_for_building_apache_modules-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">apr_config_needed_for_building_apache_modules?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns whether it is necessary to use information outputted by
+‘apr-config’ and ‘apu-config’ in order to compile an Apache module.
+When Apache is installed with –with-included-apr, the APR/APU headers are
+placed into the same directory as the Apache headers, and so
+‘apr-config’ and ‘apu-config’ won’t be necessary in that case.</p>
+            
+
+            
+            <div class="method-source-code" id="apr_config_needed_for_building_apache_modules-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/apache.rb, line 276</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">apr_config_needed_for_building_apache_modules?</span>
+        <span class="ruby-identifier">filename</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-node">&quot;#{tmpexedir}/passenger-platform-check-#{Process.pid}.c&quot;</span>)
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-string">&quot;w&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;#include &lt;apr.h&gt;&quot;</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">begin</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-operator">!</span><span class="ruby-identifier">system</span>(<span class="ruby-node">&quot;(gcc #{apache2_module_cflags(false)} -c '#{filename}' -o '#{filename}.o') &gt;/dev/null 2&gt;/dev/null&quot;</span>)
+        <span class="ruby-keyword">ensure</span>
+                <span class="ruby-constant">File</span>.<span class="ruby-identifier">unlink</span>(<span class="ruby-identifier">filename</span>) <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-constant">File</span>.<span class="ruby-identifier">unlink</span>(<span class="ruby-node">&quot;#{filename}.o&quot;</span>) <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- apr_config_needed_for_building_apache_modules-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- apr_config_needed_for_building_apache_modules-3F-method -->
+
+      
+        <div id="apr_flags-method" class="method-detail ">
+          <a name="method-c-apr_flags"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">apr_flags</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The C compiler flags that are necessary for programs that use APR.</p>
+            
+
+            
+            <div class="method-source-code" id="apr_flags-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/apache.rb, line 249</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">apr_flags</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">determine_apr_info</span>[<span class="ruby-value">0</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- apr_flags-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- apr_flags-method -->
+
+      
+        <div id="apr_libs-method" class="method-detail ">
+          <a name="method-c-apr_libs"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">apr_libs</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The linker flags that are necessary for linking programs that use APR.</p>
+            
+
+            
+            <div class="method-source-code" id="apr_libs-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/apache.rb, line 254</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">apr_libs</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">determine_apr_info</span>[<span class="ruby-value">1</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- apr_libs-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- apr_libs-method -->
+
+      
+        <div id="apu_config-method" class="method-detail ">
+          <a name="method-c-apu_config"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">apu_config</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The absolute path to the ‘apu-config’ or ‘apu-1-config’ executable,
+or nil if not found.</p>
+            
+
+            
+            <div class="method-source-code" id="apu_config-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/apache.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">apu_config</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">env_defined?</span>(<span class="ruby-string">'APU_CONFIG'</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'APU_CONFIG'</span>]
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">apxs2</span>.<span class="ruby-identifier">nil?</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">filename</span> = <span class="ruby-node">`#{apxs2} -q APU_CONFIG 2&gt;/dev/null`</span>.<span class="ruby-identifier">strip</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">filename</span>.<span class="ruby-identifier">empty?</span>
+                        <span class="ruby-identifier">apu_bindir</span> = <span class="ruby-node">`#{apxs2} -q APU_BINDIR 2&gt;/dev/null`</span>.<span class="ruby-identifier">strip</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">apu_bindir</span>.<span class="ruby-identifier">empty?</span>
+                                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-keyword">return</span> <span class="ruby-identifier">select_executable</span>(<span class="ruby-identifier">apu_bindir</span>,
+                                        <span class="ruby-string">&quot;apu-1-config&quot;</span>, <span class="ruby-string">&quot;apu-config&quot;</span>)
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">elsif</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">filename</span>)
+                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">filename</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- apu_config-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- apu_config-method -->
+
+      
+        <div id="apu_flags-method" class="method-detail ">
+          <a name="method-c-apu_flags"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">apu_flags</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The C compiler flags that are necessary for programs that use APR-Util.</p>
+            
+
+            
+            <div class="method-source-code" id="apu_flags-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/apache.rb, line 259</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">apu_flags</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">determine_apu_info</span>[<span class="ruby-value">0</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- apu_flags-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- apu_flags-method -->
+
+      
+        <div id="apu_libs-method" class="method-detail ">
+          <a name="method-c-apu_libs"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">apu_libs</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The linker flags that are necessary for linking programs that use APR-Util.</p>
+            
+
+            
+            <div class="method-source-code" id="apu_libs-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/apache.rb, line 264</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">apu_libs</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">determine_apu_info</span>[<span class="ruby-value">1</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- apu_libs-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- apu_libs-method -->
+
+      
+        <div id="apxs2-method" class="method-detail ">
+          <a name="method-c-apxs2"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">apxs2</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The absolute path to the ‘apxs’ or ‘apxs2’ executable, or nil if
+not found.</p>
+            
+
+            
+            <div class="method-source-code" id="apxs2-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/apache.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">apxs2</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">env_defined?</span>(<span class="ruby-string">&quot;APXS2&quot;</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;APXS2&quot;</span>]
+        <span class="ruby-keyword">end</span>
+        [<span class="ruby-string">'apxs2'</span>, <span class="ruby-string">'apxs'</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">command</span> = <span class="ruby-identifier">find_command</span>(<span class="ruby-identifier">name</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">command</span>.<span class="ruby-identifier">nil?</span>
+                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">command</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- apxs2-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- apxs2-method -->
+
+      
+        <div id="asciidoc-method" class="method-detail ">
+          <a name="method-c-asciidoc"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">asciidoc</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="asciidoc-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/documentation_tools.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">asciidoc</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">find_command</span>(<span class="ruby-string">'asciidoc'</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">find_command</span>(<span class="ruby-string">'mizuho-asciidoc'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- asciidoc-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- asciidoc-method -->
+
+      
+        <div id="cc-method" class="method-detail ">
+          <a name="method-c-cc"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cc</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="cc-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info.rb, line 250</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cc</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'CC'</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;gcc&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- cc-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- cc-method -->
+
+      
+        <div id="compiler_supports_architecture-3F-method" class="method-detail ">
+          <a name="method-c-compiler_supports_architecture-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">compiler_supports_architecture?</span><span
+              class="method-args">(arch)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Checks whether the compiler supports “-arch #{arch}”.</p>
+            
+
+            
+            <div class="method-source-code" id="compiler_supports_architecture-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/compiler.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">compiler_supports_architecture?</span>(<span class="ruby-identifier">arch</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">try_compile</span>(<span class="ruby-value">:c</span>, <span class="ruby-string">''</span>, <span class="ruby-node">&quot;-arch #{arch}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- compiler_supports_architecture-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- compiler_supports_architecture-3F-method -->
+
+      
+        <div id="compiler_supports_visibility_flag-3F-method" class="method-detail ">
+          <a name="method-c-compiler_supports_visibility_flag-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">compiler_supports_visibility_flag?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="compiler_supports_visibility_flag-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/compiler.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">compiler_supports_visibility_flag?</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">try_compile</span>(<span class="ruby-value">:c</span>, <span class="ruby-string">''</span>, <span class="ruby-string">'-fvisibility=hidden'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- compiler_supports_visibility_flag-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- compiler_supports_visibility_flag-3F-method -->
+
+      
+        <div id="compiler_supports_wno_attributes_flag-3F-method" class="method-detail ">
+          <a name="method-c-compiler_supports_wno_attributes_flag-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">compiler_supports_wno_attributes_flag?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="compiler_supports_wno_attributes_flag-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/compiler.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">compiler_supports_wno_attributes_flag?</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">try_compile</span>(<span class="ruby-value">:c</span>, <span class="ruby-string">''</span>, <span class="ruby-string">'-Wno-attributes'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- compiler_supports_wno_attributes_flag-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- compiler_supports_wno_attributes_flag-3F-method -->
+
+      
+        <div id="compiler_visibility_flag_generates_warnings-3F-method" class="method-detail ">
+          <a name="method-c-compiler_visibility_flag_generates_warnings-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">compiler_visibility_flag_generates_warnings?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns whether compiling C++ with -fvisibility=hidden might result in tons
+of useless warnings, like this: <a
+href="http://code.google.com/p/phusion-passenger/issues/detail?id=526">code.google.com/p/phusion-passenger/issues/detail?id=526</a>
+This appears to be a bug in older g++ versions: <a
+href="http://gcc.gnu.org/ml/gcc-patches/2006-07/msg00861.html">gcc.gnu.org/ml/gcc-patches/2006-07/msg00861.html</a>
+Warnings should be suppressed with -Wno-attributes.</p>
+            
+
+            
+            <div class="method-source-code" id="compiler_visibility_flag_generates_warnings-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/compiler.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">compiler_visibility_flag_generates_warnings?</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/linux/</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-node">`#{cxx} -v 2&gt;&amp;1`</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/gcc version (.*?)/</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-node">$1</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-string">&quot;4.1.2&quot;</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- compiler_visibility_flag_generates_warnings-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- compiler_visibility_flag_generates_warnings-3F-method -->
+
+      
+        <div id="cpu_architectures-method" class="method-detail ">
+          <a name="method-c-cpu_architectures"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cpu_architectures</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns a list of all CPU architecture names that the current machine CPU
+supports. If there are multiple such architectures then the first item in
+the result denotes that OS runtime’s main/preferred architecture.</p>
+
+<p>This function normalizes some names. For example x86 is always reported as
+“x86” regardless of whether the OS reports it as “i386” or
+“i686”. x86_64 is always reported as “x86_64” even if the OS
+reports it as “amd64”.</p>
+
+<p>Please note that even if the CPU supports multiple architectures, the
+operating system might not. For example most x86 CPUs nowadays also support
+x86_64, but x86_64 Linux systems require various x86 compatibility
+libraries to be installed before x86 executables can be run. This function
+does not detect whether these compatibility libraries are installed. The
+only guarantee that you have is that the OS can run executables in the
+architecture denoted by the first item in the result.</p>
+
+<p>For example, on x86_64 Linux this function can return [“x86_64”,
+“x86”]. This indicates that the CPU supports both of these
+architectures, and that the OS’s main/preferred architecture is x86_64.
+Most executables on the system are thus be x86_64. It is guaranteed that
+the OS can run x86_64 executables, but not x86 executables per se.</p>
+
+<p>Another example: on MacOS X this function can return either</p>
+<dl class="rdoc-list"><dt>“x86_64”, “x86”</dt>
+<dd>
+<p>or [“x86”, “x86_64”]. The former result indicates</p>
+</dd></dl>
+
+<p>OS X 10.6 (Snow Leopard) and beyond because starting from that version
+everything is 64-bit by default. The latter result indicates an OS X
+version older than 10.6.</p>
+            
+
+            
+            <div class="method-source-code" id="cpu_architectures-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/operating_system.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cpu_architectures</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">os_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;macosx&quot;</span>
+                <span class="ruby-identifier">arch</span> = <span class="ruby-value">`uname -p`</span>.<span class="ruby-identifier">strip</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">arch</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;i386&quot;</span>
+                        <span class="ruby-comment"># Macs have been x86 since around 2007. I think all of them come with</span>
+                        <span class="ruby-comment"># a recent enough Intel CPU that supports both x86 and x86_64, and I</span>
+                        <span class="ruby-comment"># think every OS X version has both the x86 and x86_64 runtime installed.</span>
+                        <span class="ruby-identifier">major</span>, <span class="ruby-identifier">minor</span>, *<span class="ruby-identifier">rest</span> = <span class="ruby-value">`sw_vers -productVersion`</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>)
+                        <span class="ruby-identifier">major</span> = <span class="ruby-identifier">major</span>.<span class="ruby-identifier">to_i</span>
+                        <span class="ruby-identifier">minor</span> = <span class="ruby-identifier">minor</span>.<span class="ruby-identifier">to_i</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">major</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">10</span> <span class="ruby-operator">||</span> (<span class="ruby-identifier">major</span> <span class="ruby-operator">==</span> <span class="ruby-value">10</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">minor</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">6</span>)
+                                <span class="ruby-comment"># Since Snow Leopard x86_64 is the default.</span>
+                                [<span class="ruby-string">&quot;x86_64&quot;</span>, <span class="ruby-string">&quot;x86&quot;</span>]
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-comment"># Before Snow Leopard x86 was the default.</span>
+                                [<span class="ruby-string">&quot;x86&quot;</span>, <span class="ruby-string">&quot;x86_64&quot;</span>]
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">arch</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">arch</span> = <span class="ruby-value">`uname -p`</span>.<span class="ruby-identifier">strip</span>
+                <span class="ruby-comment"># On some systems 'uname -p' returns something like</span>
+                <span class="ruby-comment"># 'Intel(R) Pentium(R) M processor 1400MHz'.</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">arch</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;unknown&quot;</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">arch</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/ /</span>
+                        <span class="ruby-identifier">arch</span> = <span class="ruby-value">`uname -m`</span>.<span class="ruby-identifier">strip</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">arch</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^i.86$/</span>
+                        <span class="ruby-identifier">arch</span> = <span class="ruby-string">&quot;x86&quot;</span>
+                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">arch</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;amd64&quot;</span>
+                        <span class="ruby-identifier">arch</span> = <span class="ruby-string">&quot;x86_64&quot;</span>
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">arch</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;x86&quot;</span>
+                        <span class="ruby-comment"># Most x86 operating systems nowadays are probably running on</span>
+                        <span class="ruby-comment"># a CPU that supports both x86 and x86_64, but we're not gonna</span>
+                        <span class="ruby-comment"># go through the trouble of checking that. The main architecture</span>
+                        <span class="ruby-comment"># is what we usually care about.</span>
+                        [<span class="ruby-string">&quot;x86&quot;</span>]
+                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">arch</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;x86_64&quot;</span>
+                        <span class="ruby-comment"># I don't think there's a single x86_64 CPU out there</span>
+                        <span class="ruby-comment"># that doesn't support x86 as well.</span>
+                        [<span class="ruby-string">&quot;x86_64&quot;</span>, <span class="ruby-string">&quot;x86&quot;</span>]
+                <span class="ruby-keyword">else</span>
+                        [<span class="ruby-identifier">arch</span>]
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- cpu_architectures-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- cpu_architectures-method -->
+
+      
+        <div id="curl_flags-method" class="method-detail ">
+          <a name="method-c-curl_flags"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">curl_flags</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="curl_flags-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/curl.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">curl_flags</span>
+        <span class="ruby-identifier">result</span> = <span class="ruby-value">`(curl-config --cflags) 2&gt;/dev/null`</span>.<span class="ruby-identifier">strip</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">empty?</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">version</span> = <span class="ruby-value">`curl-config --vernum`</span>.<span class="ruby-identifier">strip</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-string">'070c01'</span>
+                        <span class="ruby-comment"># Curl &gt;= 7.12.1 supports curl_easy_reset()</span>
+                        <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot; -DHAS_CURL_EASY_RESET&quot;</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- curl_flags-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- curl_flags-method -->
+
+      
+        <div id="curl_libs-method" class="method-detail ">
+          <a name="method-c-curl_libs"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">curl_libs</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="curl_libs-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/curl.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">curl_libs</span>
+        <span class="ruby-identifier">result</span> = <span class="ruby-value">`(curl-config --libs) 2&gt;/dev/null`</span>.<span class="ruby-identifier">strip</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">empty?</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- curl_libs-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- curl_libs-method -->
+
+      
+        <div id="curl_supports_ssl-3F-method" class="method-detail ">
+          <a name="method-c-curl_supports_ssl-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">curl_supports_ssl?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="curl_supports_ssl-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/curl.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">curl_supports_ssl?</span>
+        <span class="ruby-identifier">features</span> = <span class="ruby-value">`(curl-config --feature) 2&gt;/dev/null`</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">features</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/SSL/</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- curl_supports_ssl-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- curl_supports_ssl-3F-method -->
+
+      
+        <div id="cxx-method" class="method-detail ">
+          <a name="method-c-cxx"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cxx</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="cxx-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info.rb, line 254</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cxx</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'CXX'</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;g++&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- cxx-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- cxx-method -->
+
+      
+        <div id="debugging_cflags-method" class="method-detail ">
+          <a name="method-c-debugging_cflags"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">debugging_cflags</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>C compiler flags that should be passed in order to enable debugging
+information.</p>
+            
+
+            
+            <div class="method-source-code" id="debugging_cflags-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/compiler.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">debugging_cflags</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/openbsd/</span>
+                <span class="ruby-comment"># According to OpenBSD's pthreads man page, pthreads do not work</span>
+                <span class="ruby-comment"># correctly when an app is compiled with -g. It recommends using</span>
+                <span class="ruby-comment"># -ggdb instead.</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-string">'-ggdb'</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-string">'-g'</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- debugging_cflags-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- debugging_cflags-method -->
+
+      
+        <div id="env_defined-3F-method" class="method-detail ">
+          <a name="method-c-env_defined-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">env_defined?</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="env_defined-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">env_defined?</span>(<span class="ruby-identifier">name</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-operator">!</span><span class="ruby-constant">ENV</span>[<span class="ruby-identifier">name</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-constant">ENV</span>[<span class="ruby-identifier">name</span>].<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- env_defined-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- env_defined-3F-method -->
+
+      
+        <div id="export_dynamic_flags-method" class="method-detail ">
+          <a name="method-c-export_dynamic_flags"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">export_dynamic_flags</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="export_dynamic_flags-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/compiler.rb, line 179</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">export_dynamic_flags</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/linux/</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-string">'-rdynamic'</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- export_dynamic_flags-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- export_dynamic_flags-method -->
+
+      
+        <div id="find_command-method" class="method-detail ">
+          <a name="method-c-find_command"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">find_command</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Check whether the specified command is in $PATH, and return its absolute
+filename. Returns nil if the command is not found.</p>
+
+<p>This function exists because system(‘which’) doesn’t always behave
+correctly, for some weird reason.</p>
+            
+
+            
+            <div class="method-source-code" id="find_command-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find_command</span>(<span class="ruby-identifier">name</span>)
+        <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+        <span class="ruby-constant">ENV</span>[<span class="ruby-string">'PATH'</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">PATH_SEPARATOR</span>).<span class="ruby-identifier">detect</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">directory</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">directory</span>, <span class="ruby-identifier">name</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">file?</span>(<span class="ruby-identifier">path</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">path</span>)
+                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">path</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- find_command-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- find_command-method -->
+
+      
+        <div id="gem_command-method" class="method-detail ">
+          <a name="method-c-gem_command"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">gem_command</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the correct ‘gem’ command for this Ruby interpreter.</p>
+            
+
+            
+            <div class="method-source-code" id="gem_command-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/ruby.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">gem_command</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">locate_ruby_tool</span>(<span class="ruby-string">'gem'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- gem_command-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- gem_command-method -->
+
+      
+        <div id="gnu_make-method" class="method-detail ">
+          <a name="method-c-gnu_make"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">gnu_make</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="gnu_make-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/compiler.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">gnu_make</span>
+        <span class="ruby-identifier">gmake</span> = <span class="ruby-identifier">find_command</span>(<span class="ruby-string">'gmake'</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">gmake</span>
+                <span class="ruby-identifier">gmake</span> = <span class="ruby-identifier">find_command</span>(<span class="ruby-string">'make'</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">gmake</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-node">`#{gmake} --version 2&gt;&amp;1`</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/GNU/</span>
+                                <span class="ruby-keyword">return</span> <span class="ruby-identifier">gmake</span>
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">gmake</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- gnu_make-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- gnu_make-method -->
+
+      
+        <div id="has_math_library-3F-method" class="method-detail ">
+          <a name="method-c-has_math_library-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">has_math_library?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="has_math_library-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/compiler.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">has_math_library?</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">try_link</span>(<span class="ruby-value">:c</span>, <span class="ruby-string">&quot;int main() { return 0; }\n&quot;</span>, <span class="ruby-string">'-lmath'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- has_math_library-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- has_math_library-3F-method -->
+
+      
+        <div id="httpd-method" class="method-detail ">
+          <a name="method-c-httpd"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">httpd</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The absolute path to the Apache binary (that is, ‘httpd’, ‘httpd2’,
+‘apache’ or ‘apache2’), or nil if not found.</p>
+            
+
+            
+            <div class="method-source-code" id="httpd-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/apache.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">httpd</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">env_defined?</span>(<span class="ruby-string">'HTTPD'</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'HTTPD'</span>]
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">apxs2</span>.<span class="ruby-identifier">nil?</span>
+                [<span class="ruby-string">&quot;apache2&quot;</span>, <span class="ruby-string">&quot;httpd2&quot;</span>, <span class="ruby-string">&quot;apache&quot;</span>, <span class="ruby-string">&quot;httpd&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">command</span> = <span class="ruby-identifier">find_command</span>(<span class="ruby-identifier">name</span>)
+                        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">command</span>.<span class="ruby-identifier">nil?</span>
+                                <span class="ruby-keyword">return</span> <span class="ruby-identifier">command</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">find_apache2_executable</span>(<span class="ruby-node">`#{apxs2} -q TARGET`</span>.<span class="ruby-identifier">strip</span>)
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- httpd-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- httpd-method -->
+
+      
+        <div id="in_rvm-3F-method" class="method-detail ">
+          <a name="method-c-in_rvm-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">in_rvm?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns whether the current Ruby interpreter is managed by RVM.</p>
+            
+
+            
+            <div class="method-source-code" id="in_rvm-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/ruby.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">in_rvm?</span>
+        <span class="ruby-identifier">bindir</span> = <span class="ruby-constant">Config</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-string">'bindir'</span>]
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">bindir</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'/.rvm/'</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">bindir</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'/rvm/'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- in_rvm-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- in_rvm-3F-method -->
+
+      
+        <div id="library_extension-method" class="method-detail ">
+          <a name="method-c-library_extension"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">library_extension</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The current platform’s shared library extension (‘so’ on most
+Unices).</p>
+            
+
+            
+            <div class="method-source-code" id="library_extension-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/operating_system.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">library_extension</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/darwin/</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;bundle&quot;</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;so&quot;</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- library_extension-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- library_extension-method -->
+
+      
+        <div id="linux_distro-method" class="method-detail ">
+          <a name="method-c-linux_distro"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">linux_distro</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>An identifier for the current Linux distribution. nil if the operating
+system is not Linux.</p>
+            
+
+            
+            <div class="method-source-code" id="linux_distro-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/linux.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">linux_distro</span>
+        <span class="ruby-identifier">tags</span> = <span class="ruby-identifier">linux_distro_tags</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">tags</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">tags</span>.<span class="ruby-identifier">first</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- linux_distro-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- linux_distro-method -->
+
+      
+        <div id="linux_distro_tags-method" class="method-detail ">
+          <a name="method-c-linux_distro_tags"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">linux_distro_tags</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Autodetects the current Linux distribution and return a number of
+identifier tags. The first tag identifies the distribution while the other
+tags indicate which distributions it is likely compatible with. Returns nil
+if the operating system is not Linux.</p>
+            
+
+            
+            <div class="method-source-code" id="linux_distro_tags-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/linux.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">linux_distro_tags</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp">/linux/</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">lsb_release</span> = <span class="ruby-identifier">read_file</span>(<span class="ruby-string">&quot;/etc/lsb-release&quot;</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">lsb_release</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/Ubuntu/</span>
+                <span class="ruby-keyword">return</span> [<span class="ruby-value">:ubuntu</span>, <span class="ruby-value">:debian</span>]
+        <span class="ruby-keyword">elsif</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;/etc/debian_version&quot;</span>)
+                <span class="ruby-keyword">return</span> [<span class="ruby-value">:debian</span>]
+        <span class="ruby-keyword">elsif</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;/etc/redhat-release&quot;</span>)
+                <span class="ruby-identifier">redhat_release</span> = <span class="ruby-identifier">read_file</span>(<span class="ruby-string">&quot;/etc/redhat-release&quot;</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">redhat_release</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/CentOS/</span>
+                        <span class="ruby-keyword">return</span> [<span class="ruby-value">:centos</span>, <span class="ruby-value">:redhat</span>]
+                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">redhat_release</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/Fedora/</span>
+                        <span class="ruby-keyword">return</span> [<span class="ruby-value">:fedora</span>, <span class="ruby-value">:redhat</span>]
+                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">redhat_release</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/Mandriva/</span>
+                        <span class="ruby-keyword">return</span> [<span class="ruby-value">:mandriva</span>, <span class="ruby-value">:redhat</span>]
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-comment"># On official RHEL distros, the content is in the form of</span>
+                        <span class="ruby-comment"># &quot;Red Hat Enterprise Linux Server release 5.1 (Tikanga)&quot;</span>
+                        <span class="ruby-keyword">return</span> [<span class="ruby-value">:rhel</span>, <span class="ruby-value">:redhat</span>]
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;/etc/suse-release&quot;</span>)
+                <span class="ruby-keyword">return</span> [<span class="ruby-value">:suse</span>]
+        <span class="ruby-keyword">elsif</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;/etc/gentoo-release&quot;</span>)
+                <span class="ruby-keyword">return</span> [<span class="ruby-value">:gentoo</span>]
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> [<span class="ruby-value">:unknown</span>]
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-comment"># TODO: Slackware</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- linux_distro_tags-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- linux_distro_tags-method -->
+
+      
+        <div id="locate_ruby_tool-method" class="method-detail ">
+          <a name="method-c-locate_ruby_tool"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">locate_ruby_tool</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Locates a Ruby tool command, e.g. ‘gem’, ‘rake’, ‘bundle’, etc.
+Instead of naively looking in $PATH, this function uses a variety of search
+heuristics to find the command that’s really associated with the current
+Ruby interpreter. It should never locate a command that’s actually
+associated with a different Ruby interpreter. Returns nil when nothing’s
+found.</p>
+            
+
+            
+            <div class="method-source-code" id="locate_ruby_tool-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/ruby.rb, line 246</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">locate_ruby_tool</span>(<span class="ruby-identifier">name</span>)
+        <span class="ruby-identifier">result</span> = <span class="ruby-identifier">locate_ruby_tool_by_basename</span>(<span class="ruby-identifier">name</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">result</span>
+                <span class="ruby-identifier">exeext</span> = <span class="ruby-constant">Config</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-string">'EXEEXT'</span>]
+                <span class="ruby-identifier">exeext</span> = <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">exeext</span>.<span class="ruby-identifier">empty?</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">exeext</span>
+                        <span class="ruby-identifier">result</span> = <span class="ruby-identifier">locate_ruby_tool_by_basename</span>(<span class="ruby-node">&quot;#{name}#{exeext}&quot;</span>)
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">result</span>
+                        <span class="ruby-identifier">result</span> = <span class="ruby-identifier">locate_ruby_tool_by_basename</span>(<span class="ruby-identifier">transform_according_to_ruby_exec_format</span>(<span class="ruby-identifier">name</span>))
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">result</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">exeext</span>
+                        <span class="ruby-identifier">result</span> = <span class="ruby-identifier">locate_ruby_tool_by_basename</span>(<span class="ruby-identifier">transform_according_to_ruby_exec_format</span>(<span class="ruby-identifier">name</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">exeext</span>)
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- locate_ruby_tool-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- locate_ruby_tool-method -->
+
+      
+        <div id="os_name-method" class="method-detail ">
+          <a name="method-c-os_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">os_name</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the operating system’s name. This name is in lowercase and
+contains no spaces, and thus is suitable to be used in some kind of ID.
+E.g. “linux”, “macosx”.</p>
+            
+
+            
+            <div class="method-source-code" id="os_name-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/operating_system.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">os_name</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">Config</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-string">'target_os'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/darwin/</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">sw_vers</span> = <span class="ruby-identifier">find_command</span>(<span class="ruby-string">'sw_vers'</span>))
+                <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;macosx&quot;</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-constant">RUBY_PLATFORM</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/.*?-/</span>, <span class="ruby-string">''</span>)
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- os_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- os_name-method -->
+
+      
+        <div id="passenger_binary_compatibility_id-method" class="method-detail ">
+          <a name="method-c-passenger_binary_compatibility_id"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">passenger_binary_compatibility_id</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns an identifier string that describes the current platform’s binary
+compatibility with regard to Phusion Passenger binaries, both the Ruby
+extension and the C++ binaries. Two systems with the same binary
+compatibility identifiers are able to run the same Phusion Passenger
+binaries.</p>
+
+<p>The the string depends on the following factors:</p>
+<ul><li>
+<p>The Ruby extension binary compatibility identifiers.</p>
+</li><li>
+<p>The operating system name.</p>
+</li><li>
+<p>Operating system runtime identifier. This may include the kernel version,
+libc version, C++ ABI version, etc. Everything that is of interest for
+binary compatibility with Phusion Passenger’s C++ components.</p>
+</li><li>
+<p>Operating system default runtime architecture. This is not the same as the
+CPU architecture; some CPUs support multiple architectures, e.g. Intel Core
+2 Duo supports x86 and x86_64. Some operating systems actually support
+multiple runtime architectures: a lot of x86_64 Linux distributions also
+include 32-bit runtimes, and OS X Snow Leopard is x86_64 by default but all
+system libraries also support x86. This component identifies the
+architecture that is used when compiling a binary with the system’s C++
+compiler with its default options.</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="passenger_binary_compatibility_id-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/binary_compatibility.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">passenger_binary_compatibility_id</span>
+        <span class="ruby-identifier">ruby_engine</span>, <span class="ruby-identifier">ruby_ext_version</span>, <span class="ruby-identifier">ruby_arch</span>, <span class="ruby-identifier">os_name</span> =
+                <span class="ruby-identifier">ruby_extension_binary_compatibility_ids</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">os_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;macosx&quot;</span>
+                <span class="ruby-comment"># RUBY_PLATFORM gives us the kernel version, but we want</span>
+                <span class="ruby-comment"># the OS X version.</span>
+                <span class="ruby-identifier">os_version_string</span> = <span class="ruby-value">`sw_vers -productVersion`</span>.<span class="ruby-identifier">strip</span>
+                <span class="ruby-comment"># sw_vers returns something like &quot;10.6.2&quot;. We're only</span>
+                <span class="ruby-comment"># interested in the first two digits (MAJOR.MINOR) since</span>
+                <span class="ruby-comment"># tiny releases tend to be binary compatible with each</span>
+                <span class="ruby-comment"># other.</span>
+                <span class="ruby-identifier">components</span> = <span class="ruby-identifier">os_version_string</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>)
+                <span class="ruby-identifier">os_version</span> = <span class="ruby-node">&quot;#{components[0]}.#{components[1]}&quot;</span>
+                <span class="ruby-identifier">os_runtime</span> = <span class="ruby-identifier">os_version</span>
+                
+                <span class="ruby-identifier">os_arch</span> = <span class="ruby-identifier">cpu_architectures</span>[<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">os_version</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-string">&quot;10.5&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">os_arch</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^i.86$/</span>
+                        <span class="ruby-comment"># On Snow Leopard, 'uname -m' returns i386 but</span>
+                        <span class="ruby-comment"># we *know* that everything is x86_64 by default.</span>
+                        <span class="ruby-identifier">os_arch</span> = <span class="ruby-string">&quot;x86_64&quot;</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">os_arch</span> = <span class="ruby-identifier">cpu_architectures</span>[<span class="ruby-value">0</span>]
+                
+                <span class="ruby-identifier">cpp</span> = <span class="ruby-identifier">find_command</span>(<span class="ruby-string">'cpp'</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">cpp</span>
+                        <span class="ruby-identifier">macros</span> = <span class="ruby-node">`#{cpp} -dM &lt; /dev/null`</span>
+                        
+                        <span class="ruby-comment"># Can be something like &quot;4.3.2&quot;</span>
+                        <span class="ruby-comment"># or &quot;4.2.1 20070719 (FreeBSD)&quot;</span>
+                        <span class="ruby-identifier">macros</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/__VERSION__ &quot;(.+)&quot;/</span>
+                        <span class="ruby-identifier">compiler_version</span> = <span class="ruby-node">$1</span>
+                        <span class="ruby-identifier">compiler_version</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/ .*/</span>, <span class="ruby-string">''</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">compiler_version</span>
+                        
+                        <span class="ruby-identifier">macros</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/__GXX_ABI_VERSION (.+)$/</span>
+                        <span class="ruby-identifier">cxx_abi_version</span> = <span class="ruby-node">$1</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">compiler_version</span> = <span class="ruby-keyword">nil</span>
+                        <span class="ruby-identifier">cxx_abi_version</span> = <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">compiler_version</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">cxx_abi_version</span>
+                        <span class="ruby-identifier">os_runtime</span> = <span class="ruby-node">&quot;gcc#{compiler_version}-#{cxx_abi_version}&quot;</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">os_runtime</span> = [<span class="ruby-identifier">compiler_version</span>, <span class="ruby-identifier">cxx_abi_version</span>].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;-&quot;</span>)
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">os_runtime</span>.<span class="ruby-identifier">empty?</span>
+                                <span class="ruby-identifier">os_runtime</span> = <span class="ruby-value">`uname -r`</span>.<span class="ruby-identifier">strip</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">ruby_engine</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;jruby&quot;</span>
+                <span class="ruby-comment"># For JRuby it's kinda useless to prepend &quot;java&quot; as extension</span>
+                <span class="ruby-comment"># architecture because JRuby doesn't allow any other extension</span>
+                <span class="ruby-comment"># architecture.</span>
+                <span class="ruby-identifier">identifier</span> = <span class="ruby-string">&quot;&quot;</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">identifier</span> = <span class="ruby-node">&quot;#{ruby_arch}-&quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">identifier</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ruby_engine}#{ruby_ext_version}-&quot;</span>
+        <span class="ruby-comment"># If the extension architecture is the same as the OS architecture</span>
+        <span class="ruby-comment"># then there's no need to specify it twice.</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">ruby_arch</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">os_arch</span>
+                <span class="ruby-identifier">identifier</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{os_arch}-&quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">identifier</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{os_name}-#{os_runtime}&quot;</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">identifier</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- passenger_binary_compatibility_id-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- passenger_binary_compatibility_id-method -->
+
+      
+        <div id="portability_cflags-method" class="method-detail ">
+          <a name="method-c-portability_cflags"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">portability_cflags</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Compiler flags that should be used for compiling every C/C++ program, for
+portability reasons. These flags should be specified as last when invoking
+the compiler.</p>
+            
+
+            
+            <div class="method-source-code" id="portability_cflags-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/compiler.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">portability_cflags</span>
+        <span class="ruby-identifier">flags</span> = [<span class="ruby-string">&quot;-D_REENTRANT -I/usr/local/include&quot;</span>]
+        
+        <span class="ruby-comment"># Google SparseHash flags.</span>
+        <span class="ruby-comment"># Figure out header for hash function object and its namespace.</span>
+        <span class="ruby-comment"># Based on stl_hash.m4 and stl_hash_fun.m4 in the Google SparseHash sources.</span>
+        <span class="ruby-identifier">hash_namespace</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">ok</span> = <span class="ruby-keyword">false</span>
+        [<span class="ruby-string">'__gnu_cxx'</span>, <span class="ruby-string">''</span>, <span class="ruby-string">'std'</span>, <span class="ruby-string">'stdext'</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">namespace</span><span class="ruby-operator">|</span>
+                [<span class="ruby-string">'ext/hash_map'</span>, <span class="ruby-string">'hash_map'</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">hash_map_header</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">ok</span> = <span class="ruby-identifier">try_compile</span>(<span class="ruby-value">:cxx</span>, <span class="ruby-node">%{
+                                #include &lt;#{hash_map_header}&gt;
+                                int
+                                main() {
+                                        #{namespace}::hash_map&lt;int, int&gt; m;
+                                        return 0;
+                                }
+                        }</span>)
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">ok</span>
+                                <span class="ruby-identifier">hash_namespace</span> = <span class="ruby-identifier">namespace</span>
+                                <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-DHASH_NAMESPACE=\&quot;#{namespace}\&quot;&quot;</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">ok</span>
+        <span class="ruby-keyword">end</span>
+        [<span class="ruby-string">'ext/hash_fun.h'</span>, <span class="ruby-string">'functional'</span>, <span class="ruby-string">'tr1/functional'</span>,
+         <span class="ruby-string">'ext/stl_hash_fun.h'</span>, <span class="ruby-string">'hash_fun.h'</span>, <span class="ruby-string">'stl_hash_fun.h'</span>,
+         <span class="ruby-string">'stl/_hash_fun.h'</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">hash_function_header</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">ok</span> = <span class="ruby-identifier">try_compile</span>(<span class="ruby-value">:cxx</span>, <span class="ruby-node">%{
+                        #include &lt;#{hash_function_header}&gt;
+                        int
+                        main() {
+                                #{hash_namespace}::hash&lt;int&gt;()(5);
+                                return 0;
+                        }
+                }</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">ok</span>
+                        <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-DHASH_FUN_H=\&quot;&lt;#{hash_function_header}&gt;\&quot;&quot;</span>
+                        <span class="ruby-keyword">break</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/solaris/</span>
+                <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">'-pthreads'</span>
+                <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">'-D_XOPEN_SOURCE=500 -D_XPG4_2 -D__EXTENSIONS__ -D__SOLARIS__ -D_FILE_OFFSET_BITS=64'</span>
+                <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">'-DBOOST_HAS_STDINT_H'</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/solaris2.9/</span>
+                <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">'-D__SOLARIS9__ -DBOOST__STDC_CONSTANT_MACROS_DEFINED'</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/solaris2.9/</span>
+                <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">'-mcpu=ultrasparc'</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/sparc/</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/openbsd/</span>
+                <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">'-DBOOST_HAS_STDINT_H -D_GLIBCPP__PTHREADS'</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/aix/</span>
+                <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">'-DOXT_DISABLE_BACKTRACES'</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/(sparc-linux|arm-linux|^arm.*-linux|sh4-linux)/</span>
+                <span class="ruby-comment"># http://code.google.com/p/phusion-passenger/issues/detail?id=200</span>
+                <span class="ruby-comment"># http://groups.google.com/group/phusion-passenger/t/6b904a962ee28e5c</span>
+                <span class="ruby-comment"># http://groups.google.com/group/phusion-passenger/browse_thread/thread/aad4bd9d8d200561</span>
+                <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">'-DBOOST_SP_USE_PTHREADS'</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">'-DHAS_SFENCE'</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">supports_sfence_instruction?</span>
+        <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">'-DHAS_LFENCE'</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">supports_lfence_instruction?</span>
+        
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">flags</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot; &quot;</span>).<span class="ruby-identifier">strip</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- portability_cflags-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- portability_cflags-method -->
+
+      
+        <div id="portability_ldflags-method" class="method-detail ">
+          <a name="method-c-portability_ldflags"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">portability_ldflags</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Linker flags that should be used for linking every C/C++ program, for
+portability reasons. These flags should be specified as last when invoking
+the linker.</p>
+            
+
+            
+            <div class="method-source-code" id="portability_ldflags-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/compiler.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">portability_ldflags</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/solaris/</span>
+                <span class="ruby-identifier">result</span> = <span class="ruby-string">'-lxnet -lrt -lsocket -lnsl -lpthread'</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">result</span> = <span class="ruby-string">'-lpthread'</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">' -lmath'</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">has_math_library?</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- portability_ldflags-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- portability_ldflags-method -->
+
+      
+        <div id="rake-method" class="method-detail ">
+          <a name="method-c-rake"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rake</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the absolute path to the Rake executable that belongs to the
+current Ruby interpreter. Returns nil if it doesn’t exist.</p>
+
+<p>The return value may not be the actual correct invocation for Rake. Use <a
+href="PlatformInfo.html#method-c-rake_command">rake_command</a> for that.</p>
+            
+
+            
+            <div class="method-source-code" id="rake-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/ruby.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rake</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">locate_ruby_tool</span>(<span class="ruby-string">'rake'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rake-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rake-method -->
+
+      
+        <div id="rake_command-method" class="method-detail ">
+          <a name="method-c-rake_command"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rake_command</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the correct command string for invoking the Rake executable that
+belongs to the current Ruby interpreter. Returns nil if Rake is not found.</p>
+            
+
+            
+            <div class="method-source-code" id="rake_command-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/ruby.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rake_command</span>
+        <span class="ruby-identifier">filename</span> = <span class="ruby-identifier">rake</span>
+        <span class="ruby-comment"># If the Rake executable is a Ruby program then we need to run</span>
+        <span class="ruby-comment"># it in the correct Ruby interpreter just in case Rake doesn't</span>
+        <span class="ruby-comment"># have the correct shebang line; we don't want a totally different</span>
+        <span class="ruby-comment"># Ruby than the current one to be invoked.</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">filename</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">is_ruby_program?</span>(<span class="ruby-identifier">filename</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-node">&quot;#{ruby_command} #{filename}&quot;</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-comment"># If it's not a Ruby program then it's probably a wrapper</span>
+                <span class="ruby-comment"># script as is the case with e.g. RVM (~/.rvm/wrappers).</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">filename</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rake_command-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rake_command-method -->
+
+      
+        <div id="rspec-method" class="method-detail ">
+          <a name="method-c-rspec"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rspec</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the absolute path to the RSpec runner program that belongs to the
+current Ruby interpreter. Returns nil if it doesn’t exist.</p>
+            
+
+            
+            <div class="method-source-code" id="rspec-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/ruby.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rspec</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">locate_ruby_tool</span>(<span class="ruby-string">'spec'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rspec-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rspec-method -->
+
+      
+        <div id="ruby_command-method" class="method-detail ">
+          <a name="method-c-ruby_command"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ruby_command</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns correct command for invoking the current Ruby interpreter. In case
+of RVM this function will return the path to the RVM wrapper script that
+executes the current Ruby interpreter in the currently active gem set.</p>
+            
+
+            
+            <div class="method-source-code" id="ruby_command-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/ruby.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ruby_command</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">in_rvm?</span>
+                <span class="ruby-identifier">name</span> = <span class="ruby-identifier">rvm_ruby_string</span>
+                <span class="ruby-identifier">dir</span> = <span class="ruby-identifier">rvm_path</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">dir</span>
+                        <span class="ruby-identifier">filename</span> = <span class="ruby-node">&quot;#{dir}/wrappers/#{name}/ruby&quot;</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">filename</span>)
+                                <span class="ruby-identifier">contents</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-string">'rb'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+                                        <span class="ruby-identifier">f</span>.<span class="ruby-identifier">read</span>
+                                <span class="ruby-keyword">end</span>
+                                <span class="ruby-comment"># Old wrapper scripts reference $HOME which causes</span>
+                                <span class="ruby-comment"># things to blow up when run by a different user.</span>
+                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;$HOME&quot;</span>)
+                                        <span class="ruby-identifier">filename</span> = <span class="ruby-keyword">nil</span>
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-identifier">filename</span> = <span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">filename</span>
+                                <span class="ruby-keyword">return</span> <span class="ruby-identifier">filename</span>
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Your RVM wrapper scripts are too old. Please &quot;</span> <span class="ruby-operator">+</span>
+                                        <span class="ruby-string">&quot;update them first by running 'rvm update --head &amp;&amp; &quot;</span> <span class="ruby-operator">+</span>
+                                        <span class="ruby-string">&quot;rvm reload &amp;&amp; rvm repair all'.&quot;</span>
+                                <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-comment"># Something's wrong with the user's RVM installation.</span>
+                        <span class="ruby-comment"># Raise an error so that the user knows this instead of</span>
+                        <span class="ruby-comment"># having things fail randomly later on.</span>
+                        <span class="ruby-comment"># 'name' is guaranteed to be non-nil because rvm_ruby_string</span>
+                        <span class="ruby-comment"># already raises an exception on error.</span>
+                        <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Your RVM installation appears to be broken: the RVM &quot;</span> <span class="ruby-operator">+</span>
+                                <span class="ruby-string">&quot;path cannot be found. Please fix your RVM installation &quot;</span> <span class="ruby-operator">+</span>
+                                <span class="ruby-string">&quot;or contact the RVM developers for support.&quot;</span>
+                        <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">ruby_executable</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ruby_command-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ruby_command-method -->
+
+      
+        <div id="ruby_executable-method" class="method-detail ">
+          <a name="method-c-ruby_executable"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ruby_executable</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the full path to the current Ruby interpreter’s executable file.
+This might not be the actual correct command to use for invoking the Ruby
+interpreter; use <a
+href="PlatformInfo.html#method-c-ruby_command">ruby_command</a> instead.</p>
+            
+
+            
+            <div class="method-source-code" id="ruby_executable-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/ruby.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ruby_executable</span>
+        <span class="ruby-identifier">@@ruby_executable</span> <span class="ruby-operator">||=</span>
+                <span class="ruby-constant">Config</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-string">'bindir'</span>] <span class="ruby-operator">+</span> <span class="ruby-string">'/'</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Config</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-string">'RUBY_INSTALL_NAME'</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Config</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-string">'EXEEXT'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ruby_executable-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ruby_executable-method -->
+
+      
+        <div id="ruby_extension_binary_compatibility_ids-method" class="method-detail ">
+          <a name="method-c-ruby_extension_binary_compatibility_ids"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ruby_extension_binary_compatibility_ids</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns an array of identifiers that describe the current Ruby
+interpreter’s extension binary compatibility. A Ruby extension compiled
+for a certain Ruby interpreter can also be loaded on a different Ruby
+interpreter with the same binary compatibility identifiers.</p>
+
+<p>The identifiers depend on the following factors:</p>
+<ul><li>
+<p>Ruby engine name.</p>
+</li><li>
+<p>Ruby extension version. This is not the same as the Ruby language version,
+which identifies language-level compatibility. This is rather about binary
+compatibility of extensions. MRI seems to break source compatibility
+between tiny releases, though patchlevel releases tend to be source and
+binary compatible.</p>
+</li><li>
+<p>Ruby extension architecture. This is not necessarily the same as the
+operating system runtime architecture or the CPU architecture. For example,
+in case of JRuby, the extension architecture is just “java” because all
+extensions target the Java platform; the architecture the JVM was compiled
+for has no effect on compatibility. On systems with universal binaries
+support there may be multiple architectures. In this case the architecture
+is “universal” because extensions must be able to support all of the
+Ruby executable’s architectures.</p>
+</li><li>
+<p>The operating system for which the Ruby interpreter was compiled.</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="ruby_extension_binary_compatibility_ids-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/binary_compatibility.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ruby_extension_binary_compatibility_ids</span>
+        <span class="ruby-identifier">ruby_engine</span> = <span class="ruby-keyword">defined?</span>(<span class="ruby-constant">RUBY_ENGINE</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">RUBY_ENGINE</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;ruby&quot;</span>
+        <span class="ruby-identifier">ruby_ext_version</span> = <span class="ruby-constant">RUBY_VERSION</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/darwin/</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/universal/</span>
+                        <span class="ruby-identifier">ruby_arch</span> = <span class="ruby-string">&quot;universal&quot;</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-comment"># Something like:</span>
+                        <span class="ruby-comment"># &quot;/opt/ruby-enterprise/bin/ruby: Mach-O 64-bit executable x86_64&quot;</span>
+                        <span class="ruby-identifier">ruby_arch</span> = <span class="ruby-node">`file -L &quot;#{ruby_executable}&quot;`</span>.<span class="ruby-identifier">strip</span>
+                        <span class="ruby-identifier">ruby_arch</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/.* /</span>, <span class="ruby-string">''</span>)
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;java&quot;</span>
+                <span class="ruby-identifier">ruby_arch</span> = <span class="ruby-string">&quot;java&quot;</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">ruby_arch</span> = <span class="ruby-identifier">cpu_architectures</span>[<span class="ruby-value">0</span>]
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> [<span class="ruby-identifier">ruby_engine</span>, <span class="ruby-identifier">ruby_ext_version</span>, <span class="ruby-identifier">ruby_arch</span>, <span class="ruby-identifier">os_name</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ruby_extension_binary_compatibility_ids-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ruby_extension_binary_compatibility_ids-method -->
+
+      
+        <div id="ruby_sudo_command-method" class="method-detail ">
+          <a name="method-c-ruby_sudo_command"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ruby_sudo_command</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns either ‘sudo’ or ‘rvmsudo’ depending on whether the current
+Ruby interpreter is managed by RVM.</p>
+            
+
+            
+            <div class="method-source-code" id="ruby_sudo_command-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/ruby.rb, line 232</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ruby_sudo_command</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">in_rvm?</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;rvmsudo&quot;</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;sudo&quot;</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ruby_sudo_command-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ruby_sudo_command-method -->
+
+      
+        <div id="ruby_supports_fork-3F-method" class="method-detail ">
+          <a name="method-c-ruby_supports_fork-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ruby_supports_fork?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns whether the Ruby interpreter supports process forking.</p>
+            
+
+            
+            <div class="method-source-code" id="ruby_supports_fork-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/ruby.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ruby_supports_fork?</span>
+        <span class="ruby-comment"># MRI &gt;= 1.9.2's respond_to? returns false for methods</span>
+        <span class="ruby-comment"># that are not implemented.</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">Process</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:fork</span>) <span class="ruby-operator">&amp;&amp;</span>
+                <span class="ruby-constant">RUBY_ENGINE</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;jruby&quot;</span> <span class="ruby-operator">&amp;&amp;</span>
+                <span class="ruby-constant">RUBY_ENGINE</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;macruby&quot;</span> <span class="ruby-operator">&amp;&amp;</span>
+                <span class="ruby-constant">Config</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-string">'target_os'</span>] <span class="ruby-operator">!~</span> <span class="ruby-regexp">/mswin|windows|mingw/</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ruby_supports_fork-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ruby_supports_fork-3F-method -->
+
+      
+        <div id="rvm_path-method" class="method-detail ">
+          <a name="method-c-rvm_path"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rvm_path</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>If the current Ruby interpreter is managed by RVM, returns the directory in
+which RVM places its working files. Otherwise returns nil.</p>
+            
+
+            
+            <div class="method-source-code" id="rvm_path-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/ruby.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rvm_path</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">in_rvm?</span>
+                [<span class="ruby-constant">ENV</span>[<span class="ruby-string">'rvm_path'</span>], <span class="ruby-string">&quot;~/.rvm&quot;</span>, <span class="ruby-string">&quot;/usr/local/rvm&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+                        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">nil?</span>
+                        <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">path</span>)
+                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">path</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">path</span>)
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-comment"># Failure to locate the RVM path is probably caused by the</span>
+                <span class="ruby-comment"># user customizing $rvm_path. Older RVM versions don't</span>
+                <span class="ruby-comment"># export $rvm_path, making us unable to detect its value.</span>
+                <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Unable to locate the RVM path. Your RVM installation &quot;</span> <span class="ruby-operator">+</span>
+                        <span class="ruby-string">&quot;is probably too old. Please update it with &quot;</span> <span class="ruby-operator">+</span>
+                        <span class="ruby-string">&quot;'rvm update --head &amp;&amp; rvm reload &amp;&amp; rvm repair all'.&quot;</span>
+                <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rvm_path-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rvm_path-method -->
+
+      
+        <div id="rvm_ruby_string-method" class="method-detail ">
+          <a name="method-c-rvm_ruby_string"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rvm_ruby_string</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>If the current Ruby interpreter is managed by RVM, returns the RVM name
+which identifies the current Ruby interpreter plus the currently active
+gemset, e.g. something like this: “ruby-1.9.2-p0@mygemset”</p>
+
+<p>Returns nil otherwise.</p>
+            
+
+            
+            <div class="method-source-code" id="rvm_ruby_string-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/ruby.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rvm_ruby_string</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">in_rvm?</span>
+                <span class="ruby-comment"># RVM used to export the necessary information through</span>
+                <span class="ruby-comment"># environment variables, but doesn't always do that anymore</span>
+                <span class="ruby-comment"># in the latest versions in order to fight env var pollution.</span>
+                <span class="ruby-comment"># Scanning $LOAD_PATH seems to be the only way to obtain</span>
+                <span class="ruby-comment"># the information.</span>
+                
+                <span class="ruby-comment"># Getting the RVM name of the Ruby interpreter (&quot;ruby-1.9.2&quot;)</span>
+                <span class="ruby-comment"># isn't so hard, we can extract it from the #ruby_executable</span>
+                <span class="ruby-comment"># string. Getting the gemset name is a bit harder, so let's</span>
+                <span class="ruby-comment"># try various strategies...</span>
+                
+                <span class="ruby-comment"># $GEM_HOME usually contains the gem set name.</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-constant">GEM_HOME</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">GEM_HOME</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;rvm/gems/&quot;</span>)
+                        <span class="ruby-keyword">return</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-constant">GEM_HOME</span>)
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-comment"># User somehow managed to nuke $GEM_HOME. Extract info</span>
+                <span class="ruby-comment"># from $LOAD_PATH.</span>
+                <span class="ruby-identifier">matching_path</span> = <span class="ruby-identifier">$LOAD_PATH</span>.<span class="ruby-identifier">find_all</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">item</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;rvm/gems/&quot;</span>)
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">matching_path</span>
+                        <span class="ruby-identifier">subpath</span> = <span class="ruby-identifier">matching_path</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^.*rvm\/gems\//</span>, <span class="ruby-string">''</span>)
+                        <span class="ruby-identifier">result</span> = <span class="ruby-identifier">subpath</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'/'</span>).<span class="ruby-identifier">first</span>
+                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-comment"># On Ruby 1.9, $LOAD_PATH does not contain any gem paths until</span>
+                <span class="ruby-comment"># at least one gem has been required so the above can fail.</span>
+                <span class="ruby-comment"># We're out of options now, we can't detect the gem set.</span>
+                <span class="ruby-comment"># Raise an exception so that the user knows what's going on</span>
+                <span class="ruby-comment"># instead of having things fail in obscure ways later.</span>
+                <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Unable to autodetect the currently active RVM gem &quot;</span> <span class="ruby-operator">+</span>
+                        <span class="ruby-string">&quot;set name. Please contact this program's author for support.&quot;</span>
+                <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rvm_ruby_string-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rvm_ruby_string-method -->
+
+      
+        <div id="supports_lfence_instruction-3F-method" class="method-detail ">
+          <a name="method-c-supports_lfence_instruction-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">supports_lfence_instruction?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns whether the OS’s main CPU architecture supports the x86/x86_64
+lfence instruction.</p>
+            
+
+            
+            <div class="method-source-code" id="supports_lfence_instruction-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/operating_system.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">supports_lfence_instruction?</span>
+        <span class="ruby-identifier">arch</span> = <span class="ruby-identifier">cpu_architectures</span>[<span class="ruby-value">0</span>]
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">arch</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;x86_64&quot;</span> <span class="ruby-operator">||</span> (<span class="ruby-identifier">arch</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;x86&quot;</span> <span class="ruby-operator">&amp;&amp;</span>
+                <span class="ruby-identifier">try_compile_and_run</span>(<span class="ruby-value">:c</span>, <span class="ruby-string">%{
+                        int
+                        main() {
+                                __asm__ __volatile__ (&quot;lfence&quot; ::: &quot;memory&quot;);
+                                return 0;
+                        }
+                }</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- supports_lfence_instruction-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- supports_lfence_instruction-3F-method -->
+
+      
+        <div id="supports_sfence_instruction-3F-method" class="method-detail ">
+          <a name="method-c-supports_sfence_instruction-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">supports_sfence_instruction?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns whether the OS’s main CPU architecture supports the x86/x86_64
+sfence instruction.</p>
+            
+
+            
+            <div class="method-source-code" id="supports_sfence_instruction-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/operating_system.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">supports_sfence_instruction?</span>
+        <span class="ruby-identifier">arch</span> = <span class="ruby-identifier">cpu_architectures</span>[<span class="ruby-value">0</span>]
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">arch</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;x86_64&quot;</span> <span class="ruby-operator">||</span> (<span class="ruby-identifier">arch</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;x86&quot;</span> <span class="ruby-operator">&amp;&amp;</span>
+                <span class="ruby-identifier">try_compile_and_run</span>(<span class="ruby-value">:c</span>, <span class="ruby-string">%{
+                        int
+                        main() {
+                                __asm__ __volatile__ (&quot;sfence&quot; ::: &quot;memory&quot;);
+                                return 0;
+                        }
+                }</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- supports_sfence_instruction-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- supports_sfence_instruction-3F-method -->
+
+      
+        <div id="tmpdir-method" class="method-detail ">
+          <a name="method-c-tmpdir"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">tmpdir</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="tmpdir-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">tmpdir</span>
+        <span class="ruby-identifier">result</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">'TMPDIR'</span>]
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">result</span>.<span class="ruby-identifier">empty?</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/\/+\Z/</span>, <span class="ruby-string">''</span>)
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-string">'/tmp'</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- tmpdir-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- tmpdir-method -->
+
+      
+        <div id="tmpexedir-method" class="method-detail ">
+          <a name="method-c-tmpexedir"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">tmpexedir</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the directory in which test executables should be placed. The
+returned directory is guaranteed to be writable and guaranteed to not be
+mounted with the ‘noexec’ option. If no such directory can be found
+then it will raise a <a
+href="PlatformInfo/RuntimeError.html">PlatformInfo::RuntimeError</a> with
+an appropriate error message.</p>
+            
+
+            
+            <div class="method-source-code" id="tmpexedir-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">tmpexedir</span>
+        <span class="ruby-identifier">basename</span> = <span class="ruby-node">&quot;test-exe.#{Process.pid}.#{Thread.current.object_id}&quot;</span>
+        <span class="ruby-identifier">attempts</span> = []
+        
+        <span class="ruby-identifier">dir</span> = <span class="ruby-identifier">tmpdir</span>
+        <span class="ruby-identifier">filename</span> = <span class="ruby-node">&quot;#{dir}/#{basename}&quot;</span>
+        <span class="ruby-keyword">begin</span>
+                <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-string">'w'</span>).<span class="ruby-identifier">close</span>
+                <span class="ruby-constant">File</span>.<span class="ruby-identifier">chmod</span>(<span class="ruby-value">0700</span>, <span class="ruby-identifier">filename</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">filename</span>)
+                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">dir</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">attempts</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">:dir</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dir</span>,
+                                <span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;This directory's filesystem is mounted with the 'noexec' option.&quot;</span> }
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+                <span class="ruby-identifier">attempts</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">:dir</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dir</span>, <span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;This directory doesn't exist.&quot;</span> }
+        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EACCES</span>
+                <span class="ruby-identifier">attempts</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">:dir</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dir</span>, <span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;This program doesn't have permission to write to this directory.&quot;</span> }
+        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">SystemCallError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+                <span class="ruby-identifier">attempts</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">:dir</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dir</span>, <span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span> }
+        <span class="ruby-keyword">ensure</span>
+                <span class="ruby-constant">File</span>.<span class="ruby-identifier">unlink</span>(<span class="ruby-identifier">filename</span>) <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-identifier">dir</span> = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">pwd</span>
+        <span class="ruby-identifier">filename</span> = <span class="ruby-node">&quot;#{dir}/#{basename}&quot;</span>
+        <span class="ruby-keyword">begin</span>
+                <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-string">'w'</span>).<span class="ruby-identifier">close</span>
+                <span class="ruby-constant">File</span>.<span class="ruby-identifier">chmod</span>(<span class="ruby-value">0700</span>, <span class="ruby-identifier">filename</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">filename</span>)
+                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">dir</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">attempts</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">:dir</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dir</span>,
+                                <span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;This directory's filesystem is mounted with the 'noexec' option.&quot;</span> }
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+                <span class="ruby-identifier">attempts</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">:dir</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dir</span>, <span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;This directory doesn't exist.&quot;</span> }
+        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EACCES</span>
+                <span class="ruby-identifier">attempts</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">:dir</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dir</span>, <span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;This program doesn't have permission to write to this directory.&quot;</span> }
+        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">SystemCallError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+                <span class="ruby-identifier">attempts</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">:dir</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dir</span>, <span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span> }
+        <span class="ruby-keyword">ensure</span>
+                <span class="ruby-constant">File</span>.<span class="ruby-identifier">unlink</span>(<span class="ruby-identifier">filename</span>) <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-identifier">message</span> = <span class="ruby-string">&quot;In order to run certain tests, this program &quot;</span> <span class="ruby-operator">+</span>
+                <span class="ruby-string">&quot;must be able to write temporary\n&quot;</span> <span class="ruby-operator">+</span>
+                <span class="ruby-string">&quot;executable files to some directory. However no such &quot;</span> <span class="ruby-operator">+</span>
+                <span class="ruby-string">&quot;directory can be found. \n&quot;</span> <span class="ruby-operator">+</span>
+                <span class="ruby-string">&quot;The following directories have been tried:\n\n&quot;</span>
+        <span class="ruby-identifier">attempts</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">attempt</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot; * #{attempt[:dir]}\n&quot;</span>
+                <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;   #{attempt[:error]}\n&quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\nYou can solve this problem by telling this program what directory to write\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                <span class="ruby-string">&quot;temporary executable files to.\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                <span class="ruby-string">&quot;  Set the $TMPDIR environment variable to the desired directory's filename and\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                <span class="ruby-string">&quot;  re-run this program.\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                <span class="ruby-string">&quot;Notes:\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                <span class="ruby-string">&quot; * If you're using 'sudo'/'rvmsudo', remember that 'sudo'/'rvmsudo' unsets all\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                <span class="ruby-string">&quot;   environment variables, so you must set the environment variable *after*\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                <span class="ruby-string">&quot;   having gained root privileges.\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                <span class="ruby-string">&quot; * The directory you choose must writeable and must not be mounted with the\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                <span class="ruby-string">&quot;   'noexec' option.&quot;</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span>, <span class="ruby-identifier">message</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- tmpexedir-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- tmpexedir-method -->
+
+      
+        <div id="zlib_flags-method" class="method-detail ">
+          <a name="method-c-zlib_flags"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">zlib_flags</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="zlib_flags-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/zlib.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">zlib_flags</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- zlib_flags-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- zlib_flags-method -->
+
+      
+        <div id="zlib_libs-method" class="method-detail ">
+          <a name="method-c-zlib_libs"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">zlib_libs</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="zlib_libs-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/platform_info/zlib.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">zlib_libs</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-string">'-lz'</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- zlib_libs-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- zlib_libs-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

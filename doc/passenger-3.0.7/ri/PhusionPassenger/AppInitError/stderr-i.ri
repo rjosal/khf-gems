@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"stderr"*PhusionPassenger::AppInitError#stderr"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["CAny messages printed to stderr before the failure. May be nil.F"(lib/phusion_passenger/exceptions.rb

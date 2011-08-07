@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"rdoc_files"RDoc::Task#rdoc_files"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["IList of files to be included in the rdoc generation. (default is [])F"lib/rdoc/task.rb

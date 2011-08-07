@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Mysql::Result</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/mysql_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mysql.rb">lib/mysql.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-data_seek">#data_seek</a></li>
+          
+          <li><a href="#method-i-each">#each</a></li>
+          
+          <li><a href="#method-i-each_hash">#each_hash</a></li>
+          
+          <li><a href="#method-i-fetch_field">#fetch_field</a></li>
+          
+          <li><a href="#method-i-fetch_field_direct">#fetch_field_direct</a></li>
+          
+          <li><a href="#method-i-fetch_fields">#fetch_fields</a></li>
+          
+          <li><a href="#method-i-fetch_hash">#fetch_hash</a></li>
+          
+          <li><a href="#method-i-fetch_lengths">#fetch_lengths</a></li>
+          
+          <li><a href="#method-i-fetch_row">#fetch_row</a></li>
+          
+          <li><a href="#method-i-field_seek">#field_seek</a></li>
+          
+          <li><a href="#method-i-field_tell">#field_tell</a></li>
+          
+          <li><a href="#method-i-free">#free</a></li>
+          
+          <li><a href="#method-i-num_fields">#num_fields</a></li>
+          
+          <li><a href="#method-i-num_rows">#num_rows</a></li>
+          
+          <li><a href="#method-i-row_seek">#row_seek</a></li>
+          
+          <li><a href="#method-i-row_tell">#row_tell</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../History_txt.html">History.txt</a></li>
+        
+          <li class="file"><a href="../Manifest_txt.html">Manifest.txt</a></li>
+        
+          <li class="file"><a href="../README_txt.html">README.txt</a></li>
+        
+          <li class="file"><a href="../ext/mysql_api/Makefile.html">Makefile</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Mysql.html">Mysql</a></li>
+        
+          <li><a href="../Mysql/Error.html">Mysql::Error</a></li>
+        
+          <li><a href="../Mysql/Field.html">Mysql::Field</a></li>
+        
+          <li><a href="../Mysql/GemVersion.html">Mysql::GemVersion</a></li>
+        
+          <li><a href="../Mysql/Result.html">Mysql::Result</a></li>
+        
+          <li><a href="../Mysql/RowOffset.html">Mysql::RowOffset</a></li>
+        
+          <li><a href="../Mysql/Stmt.html">Mysql::Stmt</a></li>
+        
+          <li><a href="../Mysql/Time.html">Mysql::Time</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Mysql::Result</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="data_seek-method" class="method-detail ">
+          <a name="method-i-data_seek"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">data_seek</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Result.html#method-i-data_seek">data_seek</a>(offset)</p>
+            
+
+            
+            <div class="method-source-code" id="data_seek-source">
+<pre>
+static VALUE data_seek(VALUE obj, VALUE offset)
+{
+    check_free(obj);
+    mysql_data_seek(GetMysqlRes(obj), NUM2INT(offset));
+    return obj;
+}</pre>
+            </div><!-- data_seek-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- data_seek-method -->
+
+      
+        <div id="each-method" class="method-detail ">
+          <a name="method-i-each"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">each</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>each {…}</p>
+            
+
+            
+            <div class="method-source-code" id="each-source">
+<pre>
+static VALUE each(VALUE obj)
+{
+    VALUE row;
+    check_free(obj);
+    while ((row = fetch_row(obj)) != Qnil)
+        rb_yield(row);
+    return obj;
+}</pre>
+            </div><!-- each-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each-method -->
+
+      
+        <div id="each_hash-method" class="method-detail ">
+          <a name="method-i-each_hash"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">each_hash</span><span
+              class="method-args">(p1 = v1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Result.html#method-i-each_hash">each_hash</a>(with_table=false)
+{…}</p>
+            
+
+            
+            <div class="method-source-code" id="each_hash-source">
+<pre>
+static VALUE each_hash(int argc, VALUE* argv, VALUE obj)
+{
+    VALUE with_table;
+    VALUE hash;
+    check_free(obj);
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;with_table);
+    if (with_table == Qnil)
+        with_table = Qfalse;
+    while ((hash = fetch_hash2(obj, with_table)) != Qnil)
+        rb_yield(hash);
+    return obj;
+}</pre>
+            </div><!-- each_hash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each_hash-method -->
+
+      
+        <div id="fetch_field-method" class="method-detail ">
+          <a name="method-i-fetch_field"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fetch_field</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Result.html#method-i-fetch_field">fetch_field</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="fetch_field-source">
+<pre>
+static VALUE fetch_field(VALUE obj)
+{
+    check_free(obj);
+    return make_field_obj(mysql_fetch_field(GetMysqlRes(obj)));
+}</pre>
+            </div><!-- fetch_field-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fetch_field-method -->
+
+      
+        <div id="fetch_field_direct-method" class="method-detail ">
+          <a name="method-i-fetch_field_direct"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fetch_field_direct</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a
+href="Result.html#method-i-fetch_field_direct">fetch_field_direct</a>(nr)</p>
+            
+
+            
+            <div class="method-source-code" id="fetch_field_direct-source">
+<pre>
+static VALUE fetch_field_direct(VALUE obj, VALUE nr)
+{
+    MYSQL_RES* res;
+    unsigned int max;
+    unsigned int n;
+    check_free(obj);
+    res = GetMysqlRes(obj);
+    max = mysql_num_fields(res);
+    n = NUM2INT(nr);
+    if (n &gt;= max)
+        rb_raise(eMysql, &quot;%d: out of range (max: %d)&quot;, n, max-1);
+#if MYSQL_VERSION_ID &gt;= 32226
+    return make_field_obj(mysql_fetch_field_direct(res, n));
+#else
+    return make_field_obj(&amp;mysql_fetch_field_direct(res, n));
+#endif
+}</pre>
+            </div><!-- fetch_field_direct-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fetch_field_direct-method -->
+
+      
+        <div id="fetch_fields-method" class="method-detail ">
+          <a name="method-i-fetch_fields"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fetch_fields</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Result.html#method-i-fetch_fields">fetch_fields</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="fetch_fields-source">
+<pre>
+static VALUE fetch_fields(VALUE obj)
+{
+    MYSQL_RES* res;
+    MYSQL_FIELD* f;
+    unsigned int n;
+    VALUE ret;
+    unsigned int i;
+    check_free(obj);
+    res = GetMysqlRes(obj);
+    f = mysql_fetch_fields(res);
+    n = mysql_num_fields(res);
+    ret = rb_ary_new2(n);
+    for (i=0; i&lt;n; i++)
+        rb_ary_store(ret, i, make_field_obj(&amp;f[i]));
+    return ret;
+}</pre>
+            </div><!-- fetch_fields-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fetch_fields-method -->
+
+      
+        <div id="fetch_hash-method" class="method-detail ">
+          <a name="method-i-fetch_hash"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fetch_hash</span><span
+              class="method-args">(p1 = v1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Result.html#method-i-fetch_hash">fetch_hash</a>(with_table=false)</p>
+            
+
+            
+            <div class="method-source-code" id="fetch_hash-source">
+<pre>
+static VALUE fetch_hash(int argc, VALUE* argv, VALUE obj)
+{
+    VALUE with_table;
+    check_free(obj);
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;with_table);
+    if (with_table == Qnil)
+        with_table = Qfalse;
+    return fetch_hash2(obj, with_table);
+}</pre>
+            </div><!-- fetch_hash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fetch_hash-method -->
+
+      
+        <div id="fetch_lengths-method" class="method-detail ">
+          <a name="method-i-fetch_lengths"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fetch_lengths</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Result.html#method-i-fetch_lengths">fetch_lengths</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="fetch_lengths-source">
+<pre>
+static VALUE fetch_lengths(VALUE obj)
+{
+    MYSQL_RES* res;
+    unsigned int n;
+    unsigned long* lengths;
+    VALUE ary;
+    unsigned int i;
+    check_free(obj);
+    res = GetMysqlRes(obj);
+    n = mysql_num_fields(res);
+    lengths = mysql_fetch_lengths(res);
+    if (lengths == NULL)
+        return Qnil;
+    ary = rb_ary_new2(n);
+    for (i=0; i&lt;n; i++)
+        rb_ary_store(ary, i, INT2NUM(lengths[i]));
+    return ary;
+}</pre>
+            </div><!-- fetch_lengths-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fetch_lengths-method -->
+
+      
+        <div id="fetch_row-method" class="method-detail ">
+          <a name="method-i-fetch_row"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fetch_row</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Result.html#method-i-fetch_row">fetch_row</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="fetch_row-source">
+<pre>
+static VALUE fetch_row(VALUE obj)
+{
+    MYSQL_RES* res;
+    unsigned int n;
+    MYSQL_ROW row;
+    unsigned long* lengths;
+    VALUE ary;
+    unsigned int i;
+    check_free(obj);
+    res = GetMysqlRes(obj);
+    n = mysql_num_fields(res);
+    row = mysql_fetch_row(res);
+    lengths = mysql_fetch_lengths(res);
+    if (row == NULL)
+        return Qnil;
+    ary = rb_ary_new2(n);
+    for (i=0; i&lt;n; i++)
+        rb_ary_store(ary, i, row[i]? rb_tainted_str_new(row[i], lengths[i]): Qnil);
+    return ary;
+}</pre>
+            </div><!-- fetch_row-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fetch_row-method -->
+
+      
+        <div id="field_seek-method" class="method-detail ">
+          <a name="method-i-field_seek"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">field_seek</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Result.html#method-i-field_seek">field_seek</a>(offset)</p>
+            
+
+            
+            <div class="method-source-code" id="field_seek-source">
+<pre>
+static VALUE field_seek(VALUE obj, VALUE offset)
+{
+    check_free(obj);
+    return INT2NUM(mysql_field_seek(GetMysqlRes(obj), NUM2INT(offset)));
+}</pre>
+            </div><!-- field_seek-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- field_seek-method -->
+
+      
+        <div id="field_tell-method" class="method-detail ">
+          <a name="method-i-field_tell"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">field_tell</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Result.html#method-i-field_tell">field_tell</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="field_tell-source">
+<pre>
+static VALUE field_tell(VALUE obj)
+{
+    check_free(obj);
+    return INT2NUM(mysql_field_tell(GetMysqlRes(obj)));
+}</pre>
+            </div><!-- field_tell-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- field_tell-method -->
+
+      
+        <div id="free-method" class="method-detail ">
+          <a name="method-i-free"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">free</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>free()</p>
+            
+
+            
+            <div class="method-source-code" id="free-source">
+<pre>
+static VALUE res_free(VALUE obj)
+{
+    struct mysql_res* resp = DATA_PTR(obj);
+    check_free(obj);
+    mysql_free_result(resp-&gt;res);
+    resp-&gt;freed = Qtrue;
+    store_result_count--;
+    return Qnil;
+}</pre>
+            </div><!-- free-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- free-method -->
+
+      
+        <div id="num_fields-method" class="method-detail ">
+          <a name="method-i-num_fields"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">num_fields</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Result.html#method-i-num_fields">num_fields</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="num_fields-source">
+<pre>
+static VALUE num_fields(VALUE obj)
+{
+    check_free(obj);
+    return INT2NUM(mysql_num_fields(GetMysqlRes(obj)));
+}</pre>
+            </div><!-- num_fields-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- num_fields-method -->
+
+      
+        <div id="num_rows-method" class="method-detail ">
+          <a name="method-i-num_rows"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">num_rows</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Result.html#method-i-num_rows">num_rows</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="num_rows-source">
+<pre>
+static VALUE num_rows(VALUE obj)
+{
+    check_free(obj);
+    return INT2NUM(mysql_num_rows(GetMysqlRes(obj)));
+}</pre>
+            </div><!-- num_rows-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- num_rows-method -->
+
+      
+        <div id="row_seek-method" class="method-detail ">
+          <a name="method-i-row_seek"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">row_seek</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Result.html#method-i-row_seek">row_seek</a>(offset)</p>
+            
+
+            
+            <div class="method-source-code" id="row_seek-source">
+<pre>
+static VALUE row_seek(VALUE obj, VALUE offset)
+{
+    MYSQL_ROW_OFFSET prev_offset;
+    if (CLASS_OF(offset) != cMysqlRowOffset)
+        rb_raise(rb_eTypeError, &quot;wrong argument type %s (expected Mysql::RowOffset)&quot;, rb_obj_classname(offset));
+    check_free(obj);
+    prev_offset = mysql_row_seek(GetMysqlRes(obj), DATA_PTR(offset));
+    return Data_Wrap_Struct(cMysqlRowOffset, 0, NULL, prev_offset);
+}</pre>
+            </div><!-- row_seek-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- row_seek-method -->
+
+      
+        <div id="row_tell-method" class="method-detail ">
+          <a name="method-i-row_tell"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">row_tell</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Result.html#method-i-row_tell">row_tell</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="row_tell-source">
+<pre>
+static VALUE row_tell(VALUE obj)
+{
+    MYSQL_ROW_OFFSET offset;
+    check_free(obj);
+    offset = mysql_row_tell(GetMysqlRes(obj));
+    return Data_Wrap_Struct(cMysqlRowOffset, 0, NULL, offset);
+}</pre>
+            </div><!-- row_tell-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- row_tell-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

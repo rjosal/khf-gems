@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"content_type"*Rack::Test::UploadedFile#content_type"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	[",The content type of the "uploaded" fileF"#lib/rack/test/uploaded_file.rb

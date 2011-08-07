@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"template"Rake::RDocTask#template"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["FName of template to be used by rdoc. (defaults to rdoc's default)F"lib/rake/rdoctask.rb

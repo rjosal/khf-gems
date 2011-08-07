@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"rdoc_dir"Rake::RDocTask#rdoc_dir"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["LName of directory to receive the html output files. (default is "html")F"lib/rake/rdoctask.rb

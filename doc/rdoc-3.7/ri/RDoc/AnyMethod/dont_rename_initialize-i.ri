@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"dont_rename_initialize"+RDoc::AnyMethod#dont_rename_initialize"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["(Don't rename \#initialize to \::newF"lib/rdoc/any_method.rb

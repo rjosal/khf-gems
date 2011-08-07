@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"	type"RDoc::RI::Store#type"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["FType of ri datastore this was loaded from.  See RDoc::RI::Driver,"RDoc::RI::Paths.F"lib/rdoc/ri/store.rb

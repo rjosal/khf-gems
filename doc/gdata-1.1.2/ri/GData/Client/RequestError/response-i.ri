@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"response")GData::Client::RequestError#response"RW:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;["2The Net::HTTPResponse that caused this error.:
+@file0F"lib/gdata/client.rb

@@ -1,0 +1,13 @@
+Mon, 27 Jun 2011 21:46:35 -0700
+lib/will_paginate/collection.rb	Mon, 27 Jun 2011 21:46:34 -0700
+LICENSE	Mon, 27 Jun 2011 21:46:34 -0700
+CHANGELOG.rdoc	Mon, 27 Jun 2011 21:46:34 -0700
+lib/will_paginate.rb	Mon, 27 Jun 2011 21:46:34 -0700
+README.rdoc	Mon, 27 Jun 2011 21:46:34 -0700
+lib/will_paginate/named_scope.rb	Mon, 27 Jun 2011 21:46:34 -0700
+lib/will_paginate/view_helpers.rb	Mon, 27 Jun 2011 21:46:34 -0700
+lib/will_paginate/named_scope_patch.rb	Mon, 27 Jun 2011 21:46:34 -0700
+lib/will_paginate/array.rb	Mon, 27 Jun 2011 21:46:34 -0700
+lib/will_paginate/finder.rb	Mon, 27 Jun 2011 21:46:34 -0700
+lib/will_paginate/version.rb	Mon, 27 Jun 2011 21:46:34 -0700
+lib/will_paginate/core_ext.rb	Mon, 27 Jun 2011 21:46:34 -0700

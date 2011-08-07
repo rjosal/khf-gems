@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"status_code"&GData::HTTP::Response#status_code"RW:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;["The HTTP response code.:
+@file0F"lib/gdata/http/response.rb

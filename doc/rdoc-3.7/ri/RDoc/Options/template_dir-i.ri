@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"template_dir"RDoc::Options#template_dir"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["$Directory the template lives inF"lib/rdoc/options.rb

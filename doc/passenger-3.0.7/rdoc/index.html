@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>passenger-3.0.7 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>passenger-3.0.7 Documentation</h1>
+
+  
+  <div id="main">
+    
+<h2>Introduction</h2>
+
+<p>Phusion Passenger probably requires no introduction. We kindly refer the
+reader to <a href="http://www.modrails.com/">www.modrails.com/</a> for
+general information.</p>
+
+<h2>Installation</h2>
+
+<h3>Regular installation</h3>
+
+<p>You can install either Phusion Passenger for Apache or for Nginx. Run
+either of the following programs as root:</p>
+
+<pre>./bin/passenger-install-apache2-module</pre>
+
+<p>-OR-</p>
+
+<pre>./bin/passenger-install-nginx-module</pre>
+
+<p>That’s it. :)</p>
+
+<p>For troubleshooting, configuration and tips, please read the corresponding
+Users Guide:</p>
+
+<pre>doc/Users guide Apache.html
+doc/Users guide Nginx.html</pre>
+
+<p>These files are included in the source tarball, and may also be viewed
+online on our website.</p>
+
+<h3>Installing via a gem</h3>
+
+<p>You may also first generate a .gem file, and then install that. First, make
+sure that you have the following software installed:</p>
+<ul><li>
+<p>Doxygen: <a
+href="http://www.stack.nl/~dimitri/doxygen/">www.stack.nl/~dimitri/doxygen/</a></p>
+</li><li>
+<p>Asciidoc: <a
+href="http://www.methods.co.nz/asciidoc/">www.methods.co.nz/asciidoc/</a></p>
+</li></ul>
+
+<p>Next, run:</p>
+
+<pre>rake package</pre>
+
+<p>The gem will be available under the ‘pkg’ folder.</p>
+
+<h2>Legal</h2>
+
+<p>Phusion Passenger is a trademark of Hongli Lai &amp; Ninh Bui.</p>
+
+  </div>
+  
+
+  
+  
+  <h2>Files</h2>
+  <ul>
+    
+      <li class="file"><a href="README.html">README</a></li>
+    
+  </ul>
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="PhusionPassenger.html">PhusionPassenger</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AbstractInstaller.html">PhusionPassenger::AbstractInstaller</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AbstractRequestHandler.html">PhusionPassenger::AbstractRequestHandler</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AbstractServer.html">PhusionPassenger::AbstractServer</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AbstractServer/InvalidPassword.html">PhusionPassenger::AbstractServer::InvalidPassword</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AbstractServer/ServerAlreadyStarted.html">PhusionPassenger::AbstractServer::ServerAlreadyStarted</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AbstractServer/ServerError.html">PhusionPassenger::AbstractServer::ServerError</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AbstractServer/ServerNotStarted.html">PhusionPassenger::AbstractServer::ServerNotStarted</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AbstractServer/UnknownMessage.html">PhusionPassenger::AbstractServer::UnknownMessage</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AbstractServerCollection.html">PhusionPassenger::AbstractServerCollection</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/AdminTools.html">PhusionPassenger::AdminTools</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AdminTools/MemoryStats.html">PhusionPassenger::AdminTools::MemoryStats</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AdminTools/MemoryStats/Process.html">PhusionPassenger::AdminTools::MemoryStats::Process</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AdminTools/ServerInstance.html">PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AdminTools/ServerInstance/CorruptedDirectoryError.html">PhusionPassenger::AdminTools::ServerInstance::CorruptedDirectoryError</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AdminTools/ServerInstance/GenerationsAbsentError.html">PhusionPassenger::AdminTools::ServerInstance::GenerationsAbsentError</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AdminTools/ServerInstance/Group.html">PhusionPassenger::AdminTools::ServerInstance::Group</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AdminTools/ServerInstance/Process.html">PhusionPassenger::AdminTools::ServerInstance::Process</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AdminTools/ServerInstance/RoleDeniedError.html">PhusionPassenger::AdminTools::ServerInstance::RoleDeniedError</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AdminTools/ServerInstance/StaleDirectoryError.html">PhusionPassenger::AdminTools::ServerInstance::StaleDirectoryError</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AdminTools/ServerInstance/Stats.html">PhusionPassenger::AdminTools::ServerInstance::Stats</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AdminTools/ServerInstance/UnsupportedGenerationStructureVersionError.html">PhusionPassenger::AdminTools::ServerInstance::UnsupportedGenerationStructureVersionError</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AnalyticsLogger.html">PhusionPassenger::AnalyticsLogger</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AnalyticsLogger/Lock.html">PhusionPassenger::AnalyticsLogger::Lock</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AnalyticsLogger/Log.html">PhusionPassenger::AnalyticsLogger::Log</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AnalyticsLogger/SharedData.html">PhusionPassenger::AnalyticsLogger::SharedData</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AppInitError.html">PhusionPassenger::AppInitError</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/AppProcess.html">PhusionPassenger::AppProcess</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/ClassicRails.html">PhusionPassenger::ClassicRails</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/ClassicRails/ApplicationSpawner.html">PhusionPassenger::ClassicRails::ApplicationSpawner</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/ClassicRails/ApplicationSpawner/Error.html">PhusionPassenger::ClassicRails::ApplicationSpawner::Error</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/ClassicRails/CGIFixed.html">PhusionPassenger::ClassicRails::CGIFixed</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/ClassicRails/FrameworkSpawner.html">PhusionPassenger::ClassicRails::FrameworkSpawner</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/ClassicRails/FrameworkSpawner/Error.html">PhusionPassenger::ClassicRails::FrameworkSpawner::Error</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/ClassicRails/RequestHandler.html">PhusionPassenger::ClassicRails::RequestHandler</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/ClassicRailsExtensions.html">PhusionPassenger::ClassicRailsExtensions</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACBaseExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACBaseExtension</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACBenchmarkingExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACBenchmarkingExtension</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACRescueExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACRescueExtension</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ARAbstractAdapterExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ARAbstractAdapterExtension</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/AVBenchmarkHelperExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::AVBenchmarkHelperExtension</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/CacheStoreExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::CacheStoreExtension</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ConcreteCacheStoreExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ConcreteCacheStoreExtension</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/ConsoleTextTemplate.html">PhusionPassenger::ConsoleTextTemplate</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/DebugLogging.html">PhusionPassenger::DebugLogging</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/FrameworkInitError.html">PhusionPassenger::FrameworkInitError</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/HTMLTemplate.html">PhusionPassenger::HTMLTemplate</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/InitializationError.html">PhusionPassenger::InitializationError</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/InvalidPath.html">PhusionPassenger::InvalidPath</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/MessageChannel.html">PhusionPassenger::MessageChannel</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/MessageChannel/InvalidHashError.html">PhusionPassenger::MessageChannel::InvalidHashError</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/MessageClient.html">PhusionPassenger::MessageClient</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/NativeSupportLoader.html">PhusionPassenger::NativeSupportLoader</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/Packaging.html">PhusionPassenger::Packaging</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/PlatformInfo.html">PhusionPassenger::PlatformInfo</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/PlatformInfo/RuntimeError.html">PhusionPassenger::PlatformInfo::RuntimeError</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Plugin.html">PhusionPassenger::Plugin</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/Rack.html">PhusionPassenger::Rack</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Rack/ApplicationSpawner.html">PhusionPassenger::Rack::ApplicationSpawner</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Rack/ApplicationSpawner/Error.html">PhusionPassenger::Rack::ApplicationSpawner::Error</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Rack/RequestHandler.html">PhusionPassenger::Rack::RequestHandler</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/Rails3Extensions.html">PhusionPassenger::Rails3Extensions</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging/ACExtension.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging::ACExtension</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging/ASBenchmarkableExtension.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging::ASBenchmarkableExtension</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging/ExceptionLogger.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging::ExceptionLogger</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/SpawnManager.html">PhusionPassenger::SpawnManager</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/Standalone.html">PhusionPassenger::Standalone</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Standalone/AppFinder.html">PhusionPassenger::Standalone::AppFinder</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Standalone/Command.html">PhusionPassenger::Standalone::Command</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Standalone/ConfigFile.html">PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Standalone/ConfigFile/DisallowedContextError.html">PhusionPassenger::Standalone::ConfigFile::DisallowedContextError</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Standalone/HelpCommand.html">PhusionPassenger::Standalone::HelpCommand</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Standalone/Main.html">PhusionPassenger::Standalone::Main</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Standalone/PackageRuntimeCommand.html">PhusionPassenger::Standalone::PackageRuntimeCommand</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Standalone/RuntimeInstaller.html">PhusionPassenger::Standalone::RuntimeInstaller</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Standalone/StartCommand.html">PhusionPassenger::Standalone::StartCommand</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Standalone/StatusCommand.html">PhusionPassenger::Standalone::StatusCommand</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Standalone/StopCommand.html">PhusionPassenger::Standalone::StopCommand</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/Standalone/Utils.html">PhusionPassenger::Standalone::Utils</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Standalone/VersionCommand.html">PhusionPassenger::Standalone::VersionCommand</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/UnknownError.html">PhusionPassenger::UnknownError</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/Utils.html">PhusionPassenger::Utils</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Utils/FileSystemWatcher.html">PhusionPassenger::Utils::FileSystemWatcher</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Utils/FileSystemWatcher/DirInfo.html">PhusionPassenger::Utils::FileSystemWatcher::DirInfo</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Utils/FileSystemWatcher/FileInfo.html">PhusionPassenger::Utils::FileSystemWatcher::FileInfo</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Utils/HostsFileParser.html">PhusionPassenger::Utils::HostsFileParser</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/Utils/Kernel.html">PhusionPassenger::Utils::Kernel</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Utils/PseudoIO.html">PhusionPassenger::Utils::PseudoIO</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Utils/RewindableInput.html">PhusionPassenger::Utils::RewindableInput</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Utils/RewindableInput/Tempfile.html">PhusionPassenger::Utils::RewindableInput::Tempfile</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/Utils/UnseekableSocket.html">PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/VersionNotFound.html">PhusionPassenger::VersionNotFound</a></li>
+    
+    <li class="module"><a href="PhusionPassenger/WSGI.html">PhusionPassenger::WSGI</a></li>
+    
+    <li class="class"><a href="PhusionPassenger/WSGI/ApplicationSpawner.html">PhusionPassenger::WSGI::ApplicationSpawner</a></li>
+    
+    <li class="class"><a href="ConditionVariable.html">ConditionVariable</a></li>
+    
+    <li class="class"><a href="Exception.html">Exception</a></li>
+    
+    <li class="module"><a href="GC.html">GC</a></li>
+    
+    <li class="class"><a href="IO.html">IO</a></li>
+    
+    <li class="class"><a href="Object.html">Object</a></li>
+    
+    <li class="module"><a href="Process.html">Process</a></li>
+    
+    <li class="module"><a href="Signal.html">Signal</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="PhusionPassenger/DebugLogging.html#method-c-_log_device">::_log_device &mdash; PhusionPassenger::DebugLogging</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-apache2_bindir">::apache2_bindir &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-apache2_module_cflags">::apache2_module_cflags &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-apache2_module_ldflags">::apache2_module_ldflags &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-apache2_sbindir">::apache2_sbindir &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-apache2ctl">::apache2ctl &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-apr_config">::apr_config &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-apr_config_needed_for_building_apache_modules-3F">::apr_config_needed_for_building_apache_modules? &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-apr_flags">::apr_flags &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-apr_libs">::apr_libs &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-apu_config">::apu_config &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-apu_flags">::apu_flags &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-apu_libs">::apu_libs &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-apxs2">::apxs2 &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-asciidoc">::asciidoc &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger.html#method-c-benchmark">::benchmark &mdash; PhusionPassenger</a></li>
+    
+      <li><a href="PhusionPassenger.html#method-c-call_event">::call_event &mdash; PhusionPassenger</a></li>
+    
+      <li><a href="PhusionPassenger/Plugin.html#method-c-call_hook">::call_hook &mdash; PhusionPassenger::Plugin</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-cc">::cc &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-compiler_supports_architecture-3F">::compiler_supports_architecture? &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-compiler_supports_visibility_flag-3F">::compiler_supports_visibility_flag? &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-compiler_supports_wno_attributes_flag-3F">::compiler_supports_wno_attributes_flag? &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-compiler_visibility_flag_generates_warnings-3F">::compiler_visibility_flag_generates_warnings? &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="GC.html#method-c-copy_on_write_friendly-3F">::copy_on_write_friendly? &mdash; GC</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-cpu_architectures">::cpu_architectures &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-curl_flags">::curl_flags &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-curl_libs">::curl_libs &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-curl_supports_ssl-3F">::curl_supports_ssl? &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-cxx">::cxx &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/DebugLogging.html#method-c-debug">::debug &mdash; PhusionPassenger::DebugLogging</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-debugging_cflags">::debugging_cflags &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/StartCommand.html#method-c-description">::description &mdash; PhusionPassenger::Standalone::StartCommand</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/StopCommand.html#method-c-description">::description &mdash; PhusionPassenger::Standalone::StopCommand</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/StatusCommand.html#method-c-description">::description &mdash; PhusionPassenger::Standalone::StatusCommand</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/PackageRuntimeCommand.html#method-c-description">::description &mdash; PhusionPassenger::Standalone::PackageRuntimeCommand</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/Command.html#method-c-description">::description &mdash; PhusionPassenger::Standalone::Command</a></li>
+    
+      <li><a href="PhusionPassenger/AppProcess.html#method-c-detect_framework_version">::detect_framework_version &mdash; PhusionPassenger::AppProcess</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/Main.html#method-c-each_command">::each_command &mdash; PhusionPassenger::Standalone::Main</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-env_defined-3F">::env_defined? &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/DebugLogging.html#method-c-error">::error &mdash; PhusionPassenger::DebugLogging</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-export_dynamic_flags">::export_dynamic_flags &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-find_command">::find_command &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/HostsFileParser.html#method-c-flush_dns_cache-21">::flush_dns_cache! &mdash; PhusionPassenger::Utils::HostsFileParser</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-c-for_pid">::for_pid &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-gem_command">::gem_command &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-gnu_make">::gnu_make &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-has_math_library-3F">::has_math_library? &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-httpd">::httpd &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-in_rvm-3F">::in_rvm? &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/DebugLogging.html#method-c-included">::included &mdash; PhusionPassenger::DebugLogging</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRailsExtensions.html#method-c-init-21">::init! &mdash; PhusionPassenger::ClassicRailsExtensions</a></li>
+    
+      <li><a href="PhusionPassenger/Rails3Extensions.html#method-c-init-21">::init! &mdash; PhusionPassenger::Rails3Extensions</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging.html#method-c-install-21">::install! &mdash; PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging</a></li>
+    
+      <li><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging.html#method-c-install-21">::install! &mdash; PhusionPassenger::Rails3Extensions::AnalyticsLogging</a></li>
+    
+      <li><a href="PhusionPassenger.html#method-c-install_framework_extensions-21">::install_framework_extensions! &mdash; PhusionPassenger</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-library_extension">::library_extension &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-linux_distro">::linux_distro &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-linux_distro_tags">::linux_distro_tags &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-c-list">::list &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="Signal.html#method-c-list_trappable">::list_trappable &mdash; Signal</a></li>
+    
+      <li><a href="PhusionPassenger/Plugin.html#method-c-load">::load &mdash; PhusionPassenger::Plugin</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-locate_ruby_tool">::locate_ruby_tool &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger.html#method-c-log_cache_hit">::log_cache_hit &mdash; PhusionPassenger</a></li>
+    
+      <li><a href="PhusionPassenger.html#method-c-log_cache_miss">::log_cache_miss &mdash; PhusionPassenger</a></li>
+    
+      <li><a href="PhusionPassenger/DebugLogging.html#method-c-log_file-3D">::log_file= &mdash; PhusionPassenger::DebugLogging</a></li>
+    
+      <li><a href="PhusionPassenger/DebugLogging.html#method-c-log_level-3D">::log_level= &mdash; PhusionPassenger::DebugLogging</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/AppFinder.html#method-c-looks_like_app_directory-3F">::looks_like_app_directory? &mdash; PhusionPassenger::Standalone::AppFinder</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-c-lower_privilege_called">::lower_privilege_called &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger.html#method-c-natively_packaged-3F">::natively_packaged? &mdash; PhusionPassenger</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/HostsFileParser.html#method-c-new">::new &mdash; PhusionPassenger::Utils::HostsFileParser</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/StartCommand.html#method-c-new">::new &mdash; PhusionPassenger::Standalone::StartCommand</a></li>
+    
+      <li><a href="PhusionPassenger/ConsoleTextTemplate.html#method-c-new">::new &mdash; PhusionPassenger::ConsoleTextTemplate</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/Command.html#method-c-new">::new &mdash; PhusionPassenger::Standalone::Command</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/CGIFixed.html#method-c-new">::new &mdash; PhusionPassenger::ClassicRails::CGIFixed</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-c-new">::new &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger.html#method-c-new">::new &mdash; PhusionPassenger::AnalyticsLogger</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance/Group.html#method-c-new">::new &mdash; PhusionPassenger::AdminTools::ServerInstance::Group</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/FileSystemWatcher/FileInfo.html#method-c-new">::new &mdash; PhusionPassenger::Utils::FileSystemWatcher::FileInfo</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/AppFinder.html#method-c-new">::new &mdash; PhusionPassenger::Standalone::AppFinder</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile/DisallowedContextError.html#method-c-new">::new &mdash; PhusionPassenger::Standalone::ConfigFile::DisallowedContextError</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/FileSystemWatcher/DirInfo.html#method-c-new">::new &mdash; PhusionPassenger::Utils::FileSystemWatcher::DirInfo</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/RequestHandler.html#method-c-new">::new &mdash; PhusionPassenger::ClassicRails::RequestHandler</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance/Process.html#method-c-new">::new &mdash; PhusionPassenger::AdminTools::ServerInstance::Process</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServerCollection.html#method-c-new">::new &mdash; PhusionPassenger::AbstractServerCollection</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServer.html#method-c-new">::new &mdash; PhusionPassenger::AbstractServer</a></li>
+    
+      <li><a href="PhusionPassenger/FrameworkInitError.html#method-c-new">::new &mdash; PhusionPassenger::FrameworkInitError</a></li>
+    
+      <li><a href="PhusionPassenger/AppProcess.html#method-c-new">::new &mdash; PhusionPassenger::AppProcess</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractInstaller.html#method-c-new">::new &mdash; PhusionPassenger::AbstractInstaller</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/SharedData.html#method-c-new">::new &mdash; PhusionPassenger::AnalyticsLogger::SharedData</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/FileSystemWatcher.html#method-c-new">::new &mdash; PhusionPassenger::Utils::FileSystemWatcher</a></li>
+    
+      <li><a href="PhusionPassenger/MessageClient.html#method-c-new">::new &mdash; PhusionPassenger::MessageClient</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/Log.html#method-c-new">::new &mdash; PhusionPassenger::AnalyticsLogger::Log</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/Lock.html#method-c-new">::new &mdash; PhusionPassenger::AnalyticsLogger::Lock</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/ApplicationSpawner.html#method-c-new">::new &mdash; PhusionPassenger::ClassicRails::ApplicationSpawner</a></li>
+    
+      <li><a href="PhusionPassenger/UnknownError.html#method-c-new">::new &mdash; PhusionPassenger::UnknownError</a></li>
+    
+      <li><a href="PhusionPassenger/Plugin.html#method-c-new">::new &mdash; PhusionPassenger::Plugin</a></li>
+    
+      <li><a href="PhusionPassenger/SpawnManager.html#method-c-new">::new &mdash; PhusionPassenger::SpawnManager</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-c-new">::new &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractRequestHandler.html#method-c-new">::new &mdash; PhusionPassenger::AbstractRequestHandler</a></li>
+    
+      <li><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging/ExceptionLogger.html#method-c-new">::new &mdash; PhusionPassenger::Rails3Extensions::AnalyticsLogging::ExceptionLogger</a></li>
+    
+      <li><a href="PhusionPassenger/Rack/RequestHandler.html#method-c-new">::new &mdash; PhusionPassenger::Rack::RequestHandler</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-c-new">::new &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/FrameworkSpawner.html#method-c-new">::new &mdash; PhusionPassenger::ClassicRails::FrameworkSpawner</a></li>
+    
+      <li><a href="PhusionPassenger/HTMLTemplate.html#method-c-new">::new &mdash; PhusionPassenger::HTMLTemplate</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/PseudoIO.html#method-c-new">::new &mdash; PhusionPassenger::Utils::PseudoIO</a></li>
+    
+      <li><a href="PhusionPassenger/VersionNotFound.html#method-c-new">::new &mdash; PhusionPassenger::VersionNotFound</a></li>
+    
+      <li><a href="PhusionPassenger/InitializationError.html#method-c-new">::new &mdash; PhusionPassenger::InitializationError</a></li>
+    
+      <li><a href="PhusionPassenger/MessageChannel.html#method-c-new">::new &mdash; PhusionPassenger::MessageChannel</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/RewindableInput.html#method-c-new">::new &mdash; PhusionPassenger::Utils::RewindableInput</a></li>
+    
+      <li><a href="PhusionPassenger/AppInitError.html#method-c-new">::new &mdash; PhusionPassenger::AppInitError</a></li>
+    
+      <li><a href="PhusionPassenger/Rack/ApplicationSpawner.html#method-c-new">::new &mdash; PhusionPassenger::Rack::ApplicationSpawner</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger.html#method-c-new_from_options">::new_from_options &mdash; PhusionPassenger::AnalyticsLogger</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging.html#method-c-new_transaction_log">::new_transaction_log &mdash; PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging</a></li>
+    
+      <li><a href="PhusionPassenger.html#method-c-on_event">::on_event &mdash; PhusionPassenger</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-c-opens_files-3F">::opens_files? &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/FileSystemWatcher.html#method-c-opens_files-3F">::opens_files? &mdash; PhusionPassenger::Utils::FileSystemWatcher</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-os_name">::os_name &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/Kernel.html#method-c-passenger_at_exit">::passenger_at_exit &mdash; PhusionPassenger::Utils::Kernel</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-passenger_binary_compatibility_id">::passenger_binary_compatibility_id &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/Kernel.html#method-c-passenger_call_at_exit_blocks">::passenger_call_at_exit_blocks &mdash; PhusionPassenger::Utils::Kernel</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-c-passenger_tmpdir">::passenger_tmpdir &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-c-passenger_tmpdir-3D">::passenger_tmpdir= &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-portability_cflags">::portability_cflags &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-portability_ldflags">::portability_ldflags &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools.html#method-c-process_is_alive-3F">::process_is_alive? &mdash; PhusionPassenger::AdminTools</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-c-process_is_alive-3F">::process_is_alive? &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-rake">::rake &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-rake_command">::rake_command &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/AppProcess.html#method-c-read_from_channel">::read_from_channel &mdash; PhusionPassenger::AppProcess</a></li>
+    
+      <li><a href="PhusionPassenger/Plugin.html#method-c-register">::register &mdash; PhusionPassenger::Plugin</a></li>
+    
+      <li><a href="PhusionPassenger/Plugin.html#method-c-register_hook">::register_hook &mdash; PhusionPassenger::Plugin</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-rspec">::rspec &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-ruby_command">::ruby_command &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-ruby_executable">::ruby_executable &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-ruby_extension_binary_compatibility_ids">::ruby_extension_binary_compatibility_ids &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-ruby_sudo_command">::ruby_sudo_command &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-ruby_supports_fork-3F">::ruby_supports_fork? &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/Main.html#method-c-run-21">::run! &mdash; PhusionPassenger::Standalone::Main</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-rvm_path">::rvm_path &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-rvm_ruby_string">::rvm_ruby_string &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/Command.html#method-c-show_in_command_list">::show_in_command_list &mdash; PhusionPassenger::Standalone::Command</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/HelpCommand.html#method-c-show_in_command_list">::show_in_command_list &mdash; PhusionPassenger::Standalone::HelpCommand</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/VersionCommand.html#method-c-show_in_command_list">::show_in_command_list &mdash; PhusionPassenger::Standalone::VersionCommand</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/ApplicationSpawner.html#method-c-spawn_application">::spawn_application &mdash; PhusionPassenger::ClassicRails::ApplicationSpawner</a></li>
+    
+      <li><a href="PhusionPassenger/Rack/ApplicationSpawner.html#method-c-spawn_application">::spawn_application &mdash; PhusionPassenger::Rack::ApplicationSpawner</a></li>
+    
+      <li><a href="PhusionPassenger/WSGI/ApplicationSpawner.html#method-c-spawn_application">::spawn_application &mdash; PhusionPassenger::WSGI::ApplicationSpawner</a></li>
+    
+      <li><a href="PhusionPassenger/DebugLogging.html#method-c-stderr_evaluator-3D">::stderr_evaluator= &mdash; PhusionPassenger::DebugLogging</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-supports_lfence_instruction-3F">::supports_lfence_instruction? &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-supports_sfence_instruction-3F">::supports_sfence_instruction? &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="Process.html#method-c-timed_waitpid">::timed_waitpid &mdash; Process</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools.html#method-c-tmpdir">::tmpdir &mdash; PhusionPassenger::AdminTools</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-tmpdir">::tmpdir &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-tmpexedir">::tmpexedir &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/DebugLogging.html#method-c-trace">::trace &mdash; PhusionPassenger::DebugLogging</a></li>
+    
+      <li><a href="PhusionPassenger/DebugLogging.html#method-c-warn">::warn &mdash; PhusionPassenger::DebugLogging</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-c-wrap">::wrap &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-zlib_flags">::zlib_flags &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/PlatformInfo.html#method-c-zlib_libs">::zlib_libs &mdash; PhusionPassenger::PlatformInfo</a></li>
+    
+      <li><a href="PhusionPassenger/ConsoleTextTemplate.html#method-i-5B-5D-3D">#[]= &mdash; PhusionPassenger::ConsoleTextTemplate</a></li>
+    
+      <li><a href="PhusionPassenger/HTMLTemplate.html#method-i-5B-5D-3D">#[]= &mdash; PhusionPassenger::HTMLTemplate</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/RewindableInput/Tempfile.html#method-i-_close">#_close &mdash; PhusionPassenger::Utils::RewindableInput::Tempfile</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/HostsFileParser.html#method-i-add_group_data">#add_group_data &mdash; PhusionPassenger::Utils::HostsFileParser</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-addr">#addr &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-i-address">#address &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-after_handling_requests">#after_handling_requests &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/RuntimeInstaller.html#method-i-after_install">#after_install &mdash; PhusionPassenger::Standalone::RuntimeInstaller</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-after_loading_app_code">#after_loading_app_code &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-i-analytics">#analytics &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-i-analytics_log_dir">#analytics_log_dir &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/MemoryStats.html#method-i-apache_processes">#apache_processes &mdash; PhusionPassenger::AdminTools::MemoryStats</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/CGIFixed.html#method-i-args">#args &mdash; PhusionPassenger::ClassicRails::CGIFixed</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-assert_valid_directory">#assert_valid_directory &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-assert_valid_file">#assert_valid_file &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-assert_valid_groupname">#assert_valid_groupname &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-assert_valid_username">#assert_valid_username &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-at_exit">#at_exit &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="Exception.html#method-i-backtrace_string">#backtrace_string &mdash; Exception</a></li>
+    
+      <li><a href="PhusionPassenger/MessageClient.html#method-i-backtraces">#backtraces &mdash; PhusionPassenger::MessageClient</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-i-backtraces">#backtraces &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServer.html#method-i-before_fork">#before_fork &mdash; PhusionPassenger::AbstractServer</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-before_handling_requests">#before_handling_requests &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/RuntimeInstaller.html#method-i-before_install">#before_install &mdash; PhusionPassenger::Standalone::RuntimeInstaller</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/Log.html#method-i-begin_measure">#begin_measure &mdash; PhusionPassenger::AnalyticsLogger::Log</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACBenchmarkingExtension.html#method-i-benchmark_with_passenger">#benchmark_with_passenger &mdash; PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACBenchmarkingExtension</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/AVBenchmarkHelperExtension.html#method-i-benchmark_with_passenger">#benchmark_with_passenger &mdash; PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::AVBenchmarkHelperExtension</a></li>
+    
+      <li><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging/ASBenchmarkableExtension.html#method-i-benchmark_with_passenger">#benchmark_with_passenger &mdash; PhusionPassenger::Rails3Extensions::AnalyticsLogging::ASBenchmarkableExtension</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-binmode">#binmode &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging.html#method-i-cache_fetch_hit">#cache_fetch_hit &mdash; PhusionPassenger::Rails3Extensions::AnalyticsLogging</a></li>
+    
+      <li><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging.html#method-i-cache_generate">#cache_generate &mdash; PhusionPassenger::Rails3Extensions::AnalyticsLogging</a></li>
+    
+      <li><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging.html#method-i-cache_read">#cache_read &mdash; PhusionPassenger::Rails3Extensions::AnalyticsLogging</a></li>
+    
+      <li><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging/ExceptionLogger.html#method-i-call">#call &mdash; PhusionPassenger::Rails3Extensions::AnalyticsLogging::ExceptionLogger</a></li>
+    
+      <li><a href="PhusionPassenger/Plugin.html#method-i-call_hook">#call_hook &mdash; PhusionPassenger::Plugin</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-canonicalize_path">#canonicalize_path &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/FileSystemWatcher/FileInfo.html#method-i-changed-3F">#changed? &mdash; PhusionPassenger::Utils::FileSystemWatcher::FileInfo</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/FileSystemWatcher/DirInfo.html#method-i-changed-3F">#changed? &mdash; PhusionPassenger::Utils::FileSystemWatcher::DirInfo</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-check_directory_tree_permissions">#check_directory_tree_permissions &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServerCollection.html#method-i-check_idle_servers-21">#check_idle_servers! &mdash; PhusionPassenger::AbstractServerCollection</a></li>
+    
+      <li><a href="PhusionPassenger/MessageClient.html#method-i-check_security_response">#check_security_response &mdash; PhusionPassenger::MessageClient</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServerCollection.html#method-i-cleanup">#cleanup &mdash; PhusionPassenger::AbstractServerCollection</a></li>
+    
+      <li><a href="PhusionPassenger/SpawnManager.html#method-i-cleanup">#cleanup &mdash; PhusionPassenger::SpawnManager</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractRequestHandler.html#method-i-cleanup">#cleanup &mdash; PhusionPassenger::AbstractRequestHandler</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServerCollection.html#method-i-clear">#clear &mdash; PhusionPassenger::AbstractServerCollection</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger.html#method-i-clear_connection">#clear_connection &mdash; PhusionPassenger::AnalyticsLogger</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/Log.html#method-i-close">#close &mdash; PhusionPassenger::AnalyticsLogger::Log</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/FileSystemWatcher.html#method-i-close">#close &mdash; PhusionPassenger::Utils::FileSystemWatcher</a></li>
+    
+      <li><a href="PhusionPassenger/MessageChannel.html#method-i-close">#close &mdash; PhusionPassenger::MessageChannel</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger.html#method-i-close">#close &mdash; PhusionPassenger::AnalyticsLogger</a></li>
+    
+      <li><a href="PhusionPassenger/MessageClient.html#method-i-close">#close &mdash; PhusionPassenger::MessageClient</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-close">#close &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/AppProcess.html#method-i-close">#close &mdash; PhusionPassenger::AppProcess</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/RewindableInput.html#method-i-close">#close &mdash; PhusionPassenger::Utils::RewindableInput</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-close_all_io_objects_for_fds">#close_all_io_objects_for_fds &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="IO.html#method-i-close_on_exec-21">#close_on_exec! &mdash; IO</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-close_read">#close_read &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-close_write">#close_write &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-closed-3F">#closed? &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/Log.html#method-i-closed-3F">#closed? &mdash; PhusionPassenger::AnalyticsLogger::Log</a></li>
+    
+      <li><a href="PhusionPassenger/MessageChannel.html#method-i-closed-3F">#closed? &mdash; PhusionPassenger::MessageChannel</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance/Process.html#method-i-connect">#connect &mdash; PhusionPassenger::AdminTools::ServerInstance::Process</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-i-connect">#connect &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServer.html#method-i-connect">#connect &mdash; PhusionPassenger::AbstractServer</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-connect_to_server">#connect_to_server &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/MessageClient.html#method-i-connected-3F">#connected? &mdash; PhusionPassenger::MessageClient</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger.html#method-i-continue_transaction">#continue_transaction &mdash; PhusionPassenger::AnalyticsLogger</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-i-daemonize">#daemonize &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-i-debugger">#debugger &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServer.html#method-i-define_message_handler">#define_message_handler &mdash; PhusionPassenger::AbstractServer</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServer.html#method-i-define_signal_handler">#define_signal_handler &mdash; PhusionPassenger::AbstractServer</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServerCollection.html#method-i-delete">#delete &mdash; PhusionPassenger::AbstractServerCollection</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/RuntimeInstaller.html#method-i-dependencies">#dependencies &mdash; PhusionPassenger::Standalone::RuntimeInstaller</a></li>
+    
+      <li><a href="PhusionPassenger/MessageClient.html#method-i-detach">#detach &mdash; PhusionPassenger::MessageClient</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/SharedData.html#method-i-disconnect">#disconnect &mdash; PhusionPassenger::AnalyticsLogger::SharedData</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-i-domain_name">#domain_name &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-i-domain_names">#domain_names &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/PseudoIO.html#method-i-done-21">#done! &mdash; PhusionPassenger::Utils::PseudoIO</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/RewindableInput.html#method-i-each">#each &mdash; PhusionPassenger::Utils::RewindableInput</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-each">#each &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServerCollection.html#method-i-each">#each &mdash; PhusionPassenger::AbstractServerCollection</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServerCollection.html#method-i-each_pair">#each_pair &mdash; PhusionPassenger::AbstractServerCollection</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServerCollection.html#method-i-empty-3F">#empty? &mdash; PhusionPassenger::AbstractServerCollection</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/Log.html#method-i-end_measure">#end_measure &mdash; PhusionPassenger::AnalyticsLogger::Log</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-i-env">#env &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/CGIFixed.html#method-i-env_table">#env_table &mdash; PhusionPassenger::ClassicRails::CGIFixed</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-i-environment">#environment &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/CacheStoreExtension.html#method-i-fetch_2_1">#fetch_2_1 &mdash; PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::CacheStoreExtension</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/CacheStoreExtension.html#method-i-fetch_2_2">#fetch_2_2 &mdash; PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::CacheStoreExtension</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/CacheStoreExtension.html#method-i-fetch_2_3">#fetch_2_3 &mdash; PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::CacheStoreExtension</a></li>
+    
+      <li><a href="PhusionPassenger/MessageChannel.html#method-i-fileno">#fileno &mdash; PhusionPassenger::MessageChannel</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServer.html#method-i-fileno_of">#fileno_of &mdash; PhusionPassenger::AbstractServer</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServer.html#method-i-finalize_server">#finalize_server &mdash; PhusionPassenger::AbstractServer</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-flush">#flush &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-generate_random_id">#generate_random_id &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-get_socket_address_type">#get_socket_address_type &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/RewindableInput.html#method-i-gets">#gets &mdash; PhusionPassenger::Utils::RewindableInput</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-gets">#gets &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-global_backtrace_report">#global_backtrace_report &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-i-global_queue_size">#global_queue_size &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-i-groups">#groups &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServerCollection.html#method-i-has_key-3F">#has_key? &mdash; PhusionPassenger::AbstractServerCollection</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance/Process.html#method-i-has_metrics-3F">#has_metrics? &mdash; PhusionPassenger::AdminTools::ServerInstance::Process</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-i-helper_server_pid">#helper_server_pid &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/HostsFileParser.html#method-i-host_count">#host_count &mdash; PhusionPassenger::Utils::HostsFileParser</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServer.html#method-i-initialize_server">#initialize_server &mdash; PhusionPassenger::AbstractServer</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/RuntimeInstaller.html#method-i-install-21">#install! &mdash; PhusionPassenger::Standalone::RuntimeInstaller</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/HostsFileParser.html#method-i-ip_count">#ip_count &mdash; PhusionPassenger::Utils::HostsFileParser</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-local_socket_address-3F">#local_socket_address? &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/Lock.html#method-i-lock">#lock &mdash; PhusionPassenger::AnalyticsLogger::Lock</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ARAbstractAdapterExtension.html#method-i-log_with_passenger">#log_with_passenger &mdash; PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ARAbstractAdapterExtension</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServerCollection.html#method-i-lookup_or_add">#lookup_or_add &mdash; PhusionPassenger::AbstractServerCollection</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-lower_privilege">#lower_privilege &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractRequestHandler.html#method-i-main_loop">#main_loop &mdash; PhusionPassenger::AbstractRequestHandler</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractRequestHandler.html#method-i-main_loop_running-3F">#main_loop_running? &mdash; PhusionPassenger::AbstractRequestHandler</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-marshal_exception">#marshal_exception &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-i-max_pool_size">#max_pool_size &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/Log.html#method-i-measure">#measure &mdash; PhusionPassenger::AnalyticsLogger::Log</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/Log.html#method-i-measured_time_points">#measured_time_points &mdash; PhusionPassenger::AnalyticsLogger::Log</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/Log.html#method-i-message">#message &mdash; PhusionPassenger::AnalyticsLogger::Log</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/PseudoIO.html#method-i-method_missing">#method_missing &mdash; PhusionPassenger::Utils::PseudoIO</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-i-min_instances">#min_instances &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/AppFinder.html#method-i-monitor">#monitor &mdash; PhusionPassenger::Standalone::AppFinder</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger.html#method-i-new_transaction">#new_transaction &mdash; PhusionPassenger::AnalyticsLogger</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-i-nginx_bin">#nginx_bin &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/MemoryStats.html#method-i-nginx_processes">#nginx_processes &mdash; PhusionPassenger::AdminTools::MemoryStats</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/Log.html#method-i-null-3F">#null? &mdash; PhusionPassenger::AnalyticsLogger::Log</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/MemoryStats.html#method-i-passenger_processes">#passenger_processes &mdash; PhusionPassenger::AdminTools::MemoryStats</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-passenger_tmpdir">#passenger_tmpdir &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/MemoryStats.html#method-i-platform_provides_private_dirty_rss_information-3F">#platform_provides_private_dirty_rss_information? &mdash; PhusionPassenger::AdminTools::MemoryStats</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-i-port">#port &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-prepare_app_process">#prepare_app_process &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-print_exception">#print_exception &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-private_class_method">#private_class_method &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/MemoryStats/Process.html#method-i-private_dirty_rss_in_mb">#private_dirty_rss_in_mb &mdash; PhusionPassenger::AdminTools::MemoryStats::Process</a></li>
+    
+      <li><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging.html#method-i-process_action">#process_action &mdash; PhusionPassenger::Rails3Extensions::AnalyticsLogging</a></li>
+    
+      <li><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging/ACExtension.html#method-i-process_action">#process_action &mdash; PhusionPassenger::Rails3Extensions::AnalyticsLogging::ACExtension</a></li>
+    
+      <li><a href="PhusionPassenger/Rack/RequestHandler.html#method-i-process_request">#process_request &mdash; PhusionPassenger::Rack::RequestHandler</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/RequestHandler.html#method-i-process_request">#process_request &mdash; PhusionPassenger::ClassicRails::RequestHandler</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-i-processes">#processes &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-puts">#puts &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-i-rack_env">#rack_env &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/ConfigFile.html#method-i-rails_env">#rails_env &mdash; PhusionPassenger::Standalone::ConfigFile</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-read">#read &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/MessageChannel.html#method-i-read">#read &mdash; PhusionPassenger::MessageChannel</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/RewindableInput.html#method-i-read">#read &mdash; PhusionPassenger::Utils::RewindableInput</a></li>
+    
+      <li><a href="PhusionPassenger/MessageClient.html#method-i-read">#read &mdash; PhusionPassenger::MessageClient</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ConcreteCacheStoreExtension.html#method-i-read">#read &mdash; PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ConcreteCacheStoreExtension</a></li>
+    
+      <li><a href="PhusionPassenger/MessageChannel.html#method-i-read_hash">#read_hash &mdash; PhusionPassenger::MessageChannel</a></li>
+    
+      <li><a href="PhusionPassenger/MessageChannel.html#method-i-read_scalar">#read_scalar &mdash; PhusionPassenger::MessageChannel</a></li>
+    
+      <li><a href="PhusionPassenger/MessageClient.html#method-i-read_scalar">#read_scalar &mdash; PhusionPassenger::MessageClient</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-readline">#readline &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-readpartial">#readpartial &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/MessageClient.html#method-i-recv_io">#recv_io &mdash; PhusionPassenger::MessageClient</a></li>
+    
+      <li><a href="Object.html#method-i-recv_io">#recv_io &mdash; Object</a></li>
+    
+      <li><a href="PhusionPassenger/MessageChannel.html#method-i-recv_io">#recv_io &mdash; PhusionPassenger::MessageChannel</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/SharedData.html#method-i-ref">#ref &mdash; PhusionPassenger::AnalyticsLogger::SharedData</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServerCollection.html#method-i-register_activity">#register_activity &mdash; PhusionPassenger::AbstractServerCollection</a></li>
+    
+      <li><a href="PhusionPassenger/SpawnManager.html#method-i-reload">#reload &mdash; PhusionPassenger::SpawnManager</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/FrameworkSpawner.html#method-i-reload">#reload &mdash; PhusionPassenger::ClassicRails::FrameworkSpawner</a></li>
+    
+      <li><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging/ACExtension.html#method-i-render">#render &mdash; PhusionPassenger::Rails3Extensions::AnalyticsLogging::ACExtension</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACBaseExtension.html#method-i-render_with_passenger">#render_with_passenger &mdash; PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACBaseExtension</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-report_app_init_status">#report_app_init_status &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACRescueExtension.html#method-i-rescue_action_with_passenger">#rescue_action_with_passenger &mdash; PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACRescueExtension</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/Lock.html#method-i-reset">#reset &mdash; PhusionPassenger::AnalyticsLogger::Lock</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/HostsFileParser.html#method-i-resolve">#resolve &mdash; PhusionPassenger::Utils::HostsFileParser</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/HostsFileParser.html#method-i-resolves_to_localhost-3F">#resolves_to_localhost? &mdash; PhusionPassenger::Utils::HostsFileParser</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/PseudoIO.html#method-i-respond_to-3F">#respond_to? &mdash; PhusionPassenger::Utils::PseudoIO</a></li>
+    
+      <li><a href="PhusionPassenger/HTMLTemplate.html#method-i-result">#result &mdash; PhusionPassenger::HTMLTemplate</a></li>
+    
+      <li><a href="PhusionPassenger/ConsoleTextTemplate.html#method-i-result">#result &mdash; PhusionPassenger::ConsoleTextTemplate</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/RewindableInput.html#method-i-rewind">#rewind &mdash; PhusionPassenger::Utils::RewindableInput</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/MemoryStats.html#method-i-root_privileges_required_for_private_dirty_rss-3F">#root_privileges_required_for_private_dirty_rss? &mdash; PhusionPassenger::AdminTools::MemoryStats</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/MemoryStats/Process.html#method-i-rss_in_mb">#rss_in_mb &mdash; PhusionPassenger::AdminTools::MemoryStats::Process</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/StatusCommand.html#method-i-run">#run &mdash; PhusionPassenger::Standalone::StatusCommand</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/PackageRuntimeCommand.html#method-i-run">#run &mdash; PhusionPassenger::Standalone::PackageRuntimeCommand</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/StopCommand.html#method-i-run">#run &mdash; PhusionPassenger::Standalone::StopCommand</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/HelpCommand.html#method-i-run">#run &mdash; PhusionPassenger::Standalone::HelpCommand</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/StartCommand.html#method-i-run">#run &mdash; PhusionPassenger::Standalone::StartCommand</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/VersionCommand.html#method-i-run">#run &mdash; PhusionPassenger::Standalone::VersionCommand</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/Main.html#method-i-run-21">#run! &mdash; PhusionPassenger::Standalone::Main</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-safe_fork">#safe_fork &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-sanitize_spawn_options">#sanitize_spawn_options &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/AppFinder.html#method-i-scan">#scan &mdash; PhusionPassenger::Standalone::AppFinder</a></li>
+    
+      <li><a href="Object.html#method-i-send_io">#send_io &mdash; Object</a></li>
+    
+      <li><a href="PhusionPassenger/MessageChannel.html#method-i-send_io">#send_io &mdash; PhusionPassenger::MessageChannel</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServer.html#method-i-server_pid">#server_pid &mdash; PhusionPassenger::AbstractServer</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/MemoryStats.html#method-i-should_show_private_dirty_rss-3F">#should_show_private_dirty_rss? &mdash; PhusionPassenger::AdminTools::MemoryStats</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/RewindableInput.html#method-i-size">#size &mdash; PhusionPassenger::Utils::RewindableInput</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractRequestHandler.html#method-i-soft_shutdown">#soft_shutdown &mdash; PhusionPassenger::AbstractRequestHandler</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-source_of_exception-3F">#source_of_exception? &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/Rack/ApplicationSpawner.html#method-i-spawn_application">#spawn_application &mdash; PhusionPassenger::Rack::ApplicationSpawner</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/ApplicationSpawner.html#method-i-spawn_application">#spawn_application &mdash; PhusionPassenger::ClassicRails::ApplicationSpawner</a></li>
+    
+      <li><a href="PhusionPassenger/SpawnManager.html#method-i-spawn_application">#spawn_application &mdash; PhusionPassenger::SpawnManager</a></li>
+    
+      <li><a href="PhusionPassenger/WSGI/ApplicationSpawner.html#method-i-spawn_application">#spawn_application &mdash; PhusionPassenger::WSGI::ApplicationSpawner</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/FrameworkSpawner.html#method-i-spawn_application">#spawn_application &mdash; PhusionPassenger::ClassicRails::FrameworkSpawner</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-split_by_null_into_hash">#split_by_null_into_hash &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Rails3Extensions/AnalyticsLogging.html#method-i-sql">#sql &mdash; PhusionPassenger::Rails3Extensions::AnalyticsLogging</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/FrameworkSpawner.html#method-i-start">#start &mdash; PhusionPassenger::ClassicRails::FrameworkSpawner</a></li>
+    
+      <li><a href="PhusionPassenger/NativeSupportLoader.html#method-i-start">#start &mdash; PhusionPassenger::NativeSupportLoader</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractInstaller.html#method-i-start">#start &mdash; PhusionPassenger::AbstractInstaller</a></li>
+    
+      <li><a href="PhusionPassenger/Rack/ApplicationSpawner.html#method-i-start">#start &mdash; PhusionPassenger::Rack::ApplicationSpawner</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServer.html#method-i-start">#start &mdash; PhusionPassenger::AbstractServer</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/ApplicationSpawner.html#method-i-start">#start &mdash; PhusionPassenger::ClassicRails::ApplicationSpawner</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractRequestHandler.html#method-i-start_main_loop_thread">#start_main_loop_thread &mdash; PhusionPassenger::AbstractRequestHandler</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServer.html#method-i-start_synchronously">#start_synchronously &mdash; PhusionPassenger::AbstractServer</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServer.html#method-i-started-3F">#started? &mdash; PhusionPassenger::AbstractServer</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-i-stats">#stats &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="PhusionPassenger/MessageClient.html#method-i-status">#status &mdash; PhusionPassenger::MessageClient</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-i-status">#status &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/CGIFixed.html#method-i-stdinput">#stdinput &mdash; PhusionPassenger::ClassicRails::CGIFixed</a></li>
+    
+      <li><a href="PhusionPassenger/ClassicRails/CGIFixed.html#method-i-stdoutput">#stdoutput &mdash; PhusionPassenger::ClassicRails::CGIFixed</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServer.html#method-i-stop">#stop &mdash; PhusionPassenger::AbstractServer</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/MemoryStats.html#method-i-sum_memory_usage">#sum_memory_usage &mdash; PhusionPassenger::AdminTools::MemoryStats</a></li>
+    
+      <li><a href="PhusionPassenger/NativeSupportLoader.html#method-i-supported-3F">#supported? &mdash; PhusionPassenger::NativeSupportLoader</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-sync-3D">#sync= &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/Lock.html#method-i-synchronize">#synchronize &mdash; PhusionPassenger::AnalyticsLogger::Lock</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/SharedData.html#method-i-synchronize">#synchronize &mdash; PhusionPassenger::AnalyticsLogger::SharedData</a></li>
+    
+      <li><a href="PhusionPassenger/AbstractServerCollection.html#method-i-synchronize">#synchronize &mdash; PhusionPassenger::AbstractServerCollection</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/MemoryStats.html#method-i-system_ram_usage">#system_ram_usage &mdash; PhusionPassenger::AdminTools::MemoryStats</a></li>
+    
+      <li><a href="ConditionVariable.html#method-i-timed_wait">#timed_wait &mdash; ConditionVariable</a></li>
+    
+      <li><a href="ConditionVariable.html#method-i-timed_wait-21">#timed_wait! &mdash; ConditionVariable</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/MemoryStats/Process.html#method-i-to_a">#to_a &mdash; PhusionPassenger::AdminTools::MemoryStats::Process</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-to_boolean">#to_boolean &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-to_io">#to_io &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/PseudoIO.html#method-i-to_io">#to_io &mdash; PhusionPassenger::Utils::PseudoIO</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/Lock.html#method-i-unlock">#unlock &mdash; PhusionPassenger::AnalyticsLogger::Lock</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-unmarshal_and_raise_errors">#unmarshal_and_raise_errors &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/Utils.html#method-i-unmarshal_exception">#unmarshal_exception &mdash; PhusionPassenger::Utils</a></li>
+    
+      <li><a href="PhusionPassenger/AnalyticsLogger/SharedData.html#method-i-unref">#unref &mdash; PhusionPassenger::AnalyticsLogger::SharedData</a></li>
+    
+      <li><a href="PhusionPassenger/Standalone/RuntimeInstaller.html#method-i-users_guide">#users_guide &mdash; PhusionPassenger::Standalone::RuntimeInstaller</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/MemoryStats/Process.html#method-i-vm_size_in_mb">#vm_size_in_mb &mdash; PhusionPassenger::AdminTools::MemoryStats::Process</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/FileSystemWatcher.html#method-i-wait_for_change">#wait_for_change &mdash; PhusionPassenger::Utils::FileSystemWatcher</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-i-web_server_config_files">#web_server_config_files &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-i-web_server_description">#web_server_description &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-wrap">#wrap &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/MessageChannel.html#method-i-write">#write &mdash; PhusionPassenger::MessageChannel</a></li>
+    
+      <li><a href="PhusionPassenger/MessageClient.html#method-i-write">#write &mdash; PhusionPassenger::MessageClient</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/HostsFileParser.html#method-i-write">#write &mdash; PhusionPassenger::Utils::HostsFileParser</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-write">#write &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="PhusionPassenger/MessageClient.html#method-i-write_scalar">#write_scalar &mdash; PhusionPassenger::MessageClient</a></li>
+    
+      <li><a href="PhusionPassenger/MessageChannel.html#method-i-write_scalar">#write_scalar &mdash; PhusionPassenger::MessageChannel</a></li>
+    
+      <li><a href="PhusionPassenger/AppProcess.html#method-i-write_to_channel">#write_to_channel &mdash; PhusionPassenger::AppProcess</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-writev">#writev &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="IO.html#method-i-writev">#writev &mdash; IO</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-writev2">#writev2 &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="IO.html#method-i-writev2">#writev2 &mdash; IO</a></li>
+    
+      <li><a href="PhusionPassenger/Utils/UnseekableSocket.html#method-i-writev3">#writev3 &mdash; PhusionPassenger::Utils::UnseekableSocket</a></li>
+    
+      <li><a href="IO.html#method-i-writev3">#writev3 &mdash; IO</a></li>
+    
+      <li><a href="PhusionPassenger/AdminTools/ServerInstance.html#method-i-xml">#xml &mdash; PhusionPassenger::AdminTools::ServerInstance</a></li>
+    
+      <li><a href="PhusionPassenger/MessageClient.html#method-i-xml">#xml &mdash; PhusionPassenger::MessageClient</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

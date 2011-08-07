@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: DaemonController</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/daemon_controller_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/daemon_controller.rb">lib/daemon_controller.rb</a></li>
+          
+            <li><a href="./lib/daemon_controller/lock_file_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/daemon_controller/lock_file.rb">lib/daemon_controller/lock_file.rb</a></li>
+          
+            <li><a href="./lib/daemon_controller/version_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/daemon_controller/version.rb">lib/daemon_controller/version.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="DaemonController/AlreadyStarted.html">DaemonController::AlreadyStarted</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="DaemonController/ConnectError.html">DaemonController::ConnectError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="DaemonController/DaemonizationTimeout.html">DaemonController::DaemonizationTimeout</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="DaemonController/Error.html">DaemonController::Error</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="DaemonController/LockFile.html">DaemonController::LockFile</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="DaemonController/StartError.html">DaemonController::StartError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="DaemonController/StartTimeout.html">DaemonController::StartTimeout</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="DaemonController/StopError.html">DaemonController::StopError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="DaemonController/StopTimeout.html">DaemonController::StopTimeout</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="DaemonController/TimeoutError.html">DaemonController::TimeoutError</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-connect">#connect</a></li>
+          
+          <li><a href="#method-i-pid">#pid</a></li>
+          
+          <li><a href="#method-i-running-3F">#running?</a></li>
+          
+          <li><a href="#method-i-start">#start</a></li>
+          
+          <li><a href="#method-i-stop">#stop</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./DaemonController.html">DaemonController</a></li>
+        
+          <li><a href="./DaemonController/AlreadyStarted.html">DaemonController::AlreadyStarted</a></li>
+        
+          <li><a href="./DaemonController/ConnectError.html">DaemonController::ConnectError</a></li>
+        
+          <li><a href="./DaemonController/DaemonizationTimeout.html">DaemonController::DaemonizationTimeout</a></li>
+        
+          <li><a href="./DaemonController/Error.html">DaemonController::Error</a></li>
+        
+          <li><a href="./DaemonController/LockFile.html">DaemonController::LockFile</a></li>
+        
+          <li><a href="./DaemonController/LockFile/AlreadyLocked.html">DaemonController::LockFile::AlreadyLocked</a></li>
+        
+          <li><a href="./DaemonController/StartError.html">DaemonController::StartError</a></li>
+        
+          <li><a href="./DaemonController/StartTimeout.html">DaemonController::StartTimeout</a></li>
+        
+          <li><a href="./DaemonController/StopError.html">DaemonController::StopError</a></li>
+        
+          <li><a href="./DaemonController/StopTimeout.html">DaemonController::StopTimeout</a></li>
+        
+          <li><a href="./DaemonController/TimeoutError.html">DaemonController::TimeoutError</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">DaemonController</h1>
+
+    <div id="description" class="description">
+      
+<p>Main daemon controller object. See the README for an introduction and
+tutorial.</p>
+<hr style="height: 1px">
+
+<p>daemon_controller, library for robust daemon management Copyright © 2010
+Phusion</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+“Software”), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the
+following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.</p>
+
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="ALLOWED_CONNECT_EXCEPTIONS">ALLOWED_CONNECT_EXCEPTIONS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="MAJOR">MAJOR</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="MINOR">MINOR</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SPAWNER_FILE">SPAWNER_FILE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="TINY">TINY</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="VERSION_STRING">VERSION_STRING</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(options)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new <a href="DaemonController.html">DaemonController</a> object.</p>
+
+<h3>Mandatory options</h3>
+<dl class="rdoc-list"><dt>:identifier</dt>
+<dd>
+<p>A human-readable, unique name for this daemon, e.g. “Sphinx search
+server”. This identifier will be used in some error messages. On some
+platforms, it will be used for concurrency control: on such platforms, no
+two <a href="DaemonController.html">DaemonController</a> objects will
+operate on the same identifier on the same time.</p>
+</dd><dt>:start_command</dt>
+<dd>
+<p>The command to start the daemon. This must be a a String, e.g.
+“mongrel_rails start -e production”, or a Proc which returns a String.</p>
+
+<p>If the value is a Proc, and the <tt>before_start</tt> option is given too,
+then the <tt>start_command</tt> Proc is guaranteed to be called after the
+<tt>before_start</tt> Proc is called.</p>
+</dd><dt>:ping_command</dt>
+<dd>
+<p>The ping command is used to check whether the daemon can be connected to.
+It is also used to ensure that <a
+href="DaemonController.html#method-i-start">start</a> only returns when the
+daemon can be connected to.</p>
+
+<p>The value may be a command string. This command must exit with an exit code
+of 0 if the daemon can be successfully connected to, or exit with a non-0
+exit code on failure.</p>
+
+<p>The value may also be a Proc, which returns an expression that evaluates to
+true (indicating that the daemon can be connected to) or false (failure).
+If the Proc raises Errno::ECONNREFUSED, Errno::ENETUNREACH,
+Errno::ETIMEDOUT or Errno::ECONNRESET, Errno::EINVAL and
+Errno::EADDRNOTAVAIL then that also means that the daemon cannot be
+connected to. <b>NOTE:</b> if the ping command returns an object which
+responds to <tt>#close</tt>, then that method will be called on the return
+value. This makes it possible to specify a ping command such as <tt>lambda
+{ TCPSocket.new('localhost', 1234) }</tt>, without having to worry about
+closing it afterwards. Any exceptions raised by #close are ignored.</p>
+</dd><dt>:pid_file</dt>
+<dd>
+<p>The PID file that the daemon will write to. Used to check whether the
+daemon is running.</p>
+</dd><dt>:log_file</dt>
+<dd>
+<p>The log file that the daemon will write to. It will be consulted to see
+whether the daemon has printed any error messages during startup.</p>
+</dd></dl>
+
+<h3>Optional options</h3>
+<dl class="rdoc-list"><dt>:stop_command</dt>
+<dd>
+<p>A command to stop the daemon with, e.g. “/etc/rc.d/nginx stop”. If no
+stop command is given (i.e. <tt>nil</tt>), then <a
+href="DaemonController.html">DaemonController</a> will stop the daemon by
+killing the PID written in the PID file.</p>
+
+<p>The default value is <tt>nil</tt>.</p>
+</dd><dt>:before_start</dt>
+<dd>
+<p>This may be a Proc. It will be called just before running the start
+command. The before_start proc is not subject to the start timeout.</p>
+</dd><dt>:start_timeout</dt>
+<dd>
+<p>The maximum amount of time, in seconds, that <a
+href="DaemonController.html#method-i-start">start</a> may take to start the
+daemon. Since <a href="DaemonController.html#method-i-start">start</a> also
+waits until the daemon can be connected to, that wait time is counted as
+well. If the daemon does not start in time, then <a
+href="DaemonController.html#method-i-start">start</a> will raise an
+exception.</p>
+
+<p>The default value is 15.</p>
+</dd><dt>:stop_timeout</dt>
+<dd>
+<p>The maximum amount of time, in seconds, that <a
+href="DaemonController.html#method-i-stop">stop</a> may take to stop the
+daemon. Since <a href="DaemonController.html#method-i-stop">stop</a> also
+waits until the daemon is no longer running, that wait time is counted as
+well. If the daemon does not stop in time, then <a
+href="DaemonController.html#method-i-stop">stop</a> will raise an
+exception.</p>
+
+<p>The default value is 15.</p>
+</dd><dt>:log_file_activity_timeout</dt>
+<dd>
+<p>Once a daemon has gone into the background, it will become difficult to
+know for certain whether it is still initializing or whether it has failed
+and exited, until it has written its PID file. Suppose that it failed with
+an error after daemonizing but before it has written its PID file; not many
+system administrators want to wait 15 seconds (the default start timeout)
+to be notified of whether the daemon has terminated with an error.</p>
+
+<p>An alternative way to check whether the daemon has terminated with an
+error, is by checking whether its log file has been recently updated. If,
+after the daemon has started, the log file hasn’t been updated for the
+amount of seconds given by the :log_file_activity_timeout option, then the
+daemon is assumed to have terminated with an error.</p>
+
+<p>The default value is 7.</p>
+</dd><dt>:daemonize_for_me</dt>
+<dd>
+<p>Normally daemon_controller will wait until the daemon has daemonized into
+the background, in order to capture any errors that it may print on stdout
+or stderr before daemonizing. However, if the daemon doesn’t support
+daemonization for some reason, then setting this option to true will cause
+daemon_controller to do the daemonization for the daemon.</p>
+
+<p>The default is false.</p>
+</dd><dt>:keep_ios</dt>
+<dd>
+<p>Upon spawning the daemon, daemon_controller will normally close all file
+descriptors except stdin, stdout and stderr. However if there are any file
+descriptors you want to keep open, specify the IO objects here. This must
+be an array of IO objects.</p>
+</dd></dl>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/daemon_controller.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">options</span>)
+        [<span class="ruby-value">:identifier</span>, <span class="ruby-value">:start_command</span>, <span class="ruby-value">:ping_command</span>, <span class="ruby-value">:pid_file</span>, <span class="ruby-value">:log_file</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">option</span><span class="ruby-operator">|</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">option</span>)
+                        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;The ':#{option}' option is mandatory.&quot;</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-ivar">@identifier</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:identifier</span>]
+        <span class="ruby-ivar">@start_command</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:start_command</span>]
+        <span class="ruby-ivar">@stop_command</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:stop_command</span>]
+        <span class="ruby-ivar">@ping_command</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:ping_command</span>]
+        <span class="ruby-ivar">@ping_interval</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:ping_interval</span>] <span class="ruby-operator">||</span> <span class="ruby-value">0.1</span>
+        <span class="ruby-ivar">@pid_file</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:pid_file</span>]
+        <span class="ruby-ivar">@log_file</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:log_file</span>]
+        <span class="ruby-ivar">@before_start</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:before_start</span>]
+        <span class="ruby-ivar">@start_timeout</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:start_timeout</span>] <span class="ruby-operator">||</span> <span class="ruby-value">15</span>
+        <span class="ruby-ivar">@stop_timeout</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:stop_timeout</span>] <span class="ruby-operator">||</span> <span class="ruby-value">15</span>
+        <span class="ruby-ivar">@log_file_activity_timeout</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:log_file_activity_timeout</span>] <span class="ruby-operator">||</span> <span class="ruby-value">7</span>
+        <span class="ruby-ivar">@daemonize_for_me</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:daemonize_for_me</span>]
+        <span class="ruby-ivar">@keep_ios</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:keep_ios</span>] <span class="ruby-operator">||</span> []
+        <span class="ruby-ivar">@lock_file</span> = <span class="ruby-identifier">determine_lock_file</span>(<span class="ruby-ivar">@identifier</span>, <span class="ruby-ivar">@pid_file</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="connect-method" class="method-detail ">
+          <a name="method-i-connect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">connect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Connect to the daemon by running the given block, which contains the
+connection logic. If the daemon isn’t already running, then it will be
+started.</p>
+
+<p>The block must return nil or raise Errno::ECONNREFUSED, Errno::ENETUNREACH,
+Errno::ETIMEDOUT, Errno::ECONNRESET, Errno::EINVAL and Errno::EADDRNOTAVAIL
+to indicate that the daemon cannot be connected to. It must return non-nil
+if the daemon can be connected to. Upon successful connection, the return
+value of the block will be returned by <a
+href="DaemonController.html#method-i-connect">connect</a>.</p>
+
+<p>Note that the block may be called multiple times.</p>
+
+<p>Raises:</p>
+<ul><li>
+<p><a href="DaemonController/StartError.html">StartError</a> - an attempt to
+start the daemon was made, but the start command failed with an error.</p>
+</li><li>
+<p><a href="DaemonController/StartTimeout.html">StartTimeout</a> - an attempt
+to start the daemon was made, but the daemon did not start in time, or it
+failed after it has gone into the background.</p>
+</li><li>
+<p><a href="DaemonController/ConnectError.html">ConnectError</a> - the daemon
+wasn’t already running, but we couldn’t connect to the daemon even
+after starting it.</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="connect-source">
+<pre>
+<span class="ruby-comment"># File lib/daemon_controller.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">connect</span>
+        <span class="ruby-identifier">connection</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-ivar">@lock_file</span>.<span class="ruby-identifier">shared_lock</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-keyword">begin</span>
+                        <span class="ruby-identifier">connection</span> = <span class="ruby-keyword">yield</span>
+                <span class="ruby-keyword">rescue</span> *<span class="ruby-constant">ALLOWED_CONNECT_EXCEPTIONS</span>
+                        <span class="ruby-identifier">connection</span> = <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">nil?</span>
+                <span class="ruby-ivar">@lock_file</span>.<span class="ruby-identifier">exclusive_lock</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">daemon_is_running?</span>
+                                <span class="ruby-identifier">start_without_locking</span>
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-identifier">connect_exception</span> = <span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">begin</span>
+                                <span class="ruby-identifier">connection</span> = <span class="ruby-keyword">yield</span>
+                        <span class="ruby-keyword">rescue</span> *<span class="ruby-constant">ALLOWED_CONNECT_EXCEPTIONS</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+                                <span class="ruby-identifier">connection</span> = <span class="ruby-keyword">nil</span>
+                                <span class="ruby-identifier">connect_exception</span> = <span class="ruby-identifier">e</span>
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">nil?</span>
+                                <span class="ruby-comment"># Daemon is running but we couldn't connect to it. Possible</span>
+                                <span class="ruby-comment"># reasons:</span>
+                                <span class="ruby-comment"># - The daemon froze.</span>
+                                <span class="ruby-comment"># - Bizarre security restrictions.</span>
+                                <span class="ruby-comment"># - There's a bug in the yielded code.</span>
+                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">connect_exception</span>
+                                        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ConnectError</span>, <span class="ruby-node">&quot;Cannot connect to the daemon: #{connect_exception} (#{connect_exception.class})&quot;</span>
+                                <span class="ruby-keyword">else</span>
+                                        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ConnectError</span>, <span class="ruby-string">&quot;Cannot connect to the daemon&quot;</span>
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-keyword">return</span> <span class="ruby-identifier">connection</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">connection</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- connect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- connect-method -->
+
+      
+        <div id="pid-method" class="method-detail ">
+          <a name="method-i-pid"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pid</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the daemon’s PID, as reported by its PID file. Returns the PID as
+an integer, or nil there is no valid PID in the PID file.</p>
+
+<p>This method doesn’t check whether the daemon’s actually running. Use <a
+href="DaemonController.html#method-i-running-3F">running?</a> if you want
+to check whether it’s actually running.</p>
+
+<p>Raises SystemCallError or IOError if something went wrong during reading of
+the PID file.</p>
+            
+
+            
+            <div class="method-source-code" id="pid-source">
+<pre>
+<span class="ruby-comment"># File lib/daemon_controller.rb, line 291</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pid</span>
+        <span class="ruby-ivar">@lock_file</span>.<span class="ruby-identifier">shared_lock</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">read_pid_file</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pid-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pid-method -->
+
+      
+        <div id="running-3F-method" class="method-detail ">
+          <a name="method-i-running-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">running?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Checks whether the daemon is still running. This is done by reading the PID
+file and then checking whether there is a process with that PID.</p>
+
+<p>Raises SystemCallError or IOError if something went wrong during reading of
+the PID file.</p>
+            
+
+            
+            <div class="method-source-code" id="running-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/daemon_controller.rb, line 303</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">running?</span>
+        <span class="ruby-ivar">@lock_file</span>.<span class="ruby-identifier">shared_lock</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">daemon_is_running?</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- running-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- running-3F-method -->
+
+      
+        <div id="start-method" class="method-detail ">
+          <a name="method-i-start"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">start</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Start the daemon and wait until it can be pinged.</p>
+
+<p>Raises:</p>
+<ul><li>
+<p><a href="DaemonController/AlreadyStarted.html">AlreadyStarted</a> - the
+daemon is already running.</p>
+</li><li>
+<p><a href="DaemonController/StartError.html">StartError</a> - the start
+command failed.</p>
+</li><li>
+<p><a href="DaemonController/StartTimeout.html">StartTimeout</a> - the daemon
+did not start in time. This could also mean that the daemon failed after it
+has gone into the background.</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="start-source">
+<pre>
+<span class="ruby-comment"># File lib/daemon_controller.rb, line 196</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">start</span>
+        <span class="ruby-ivar">@lock_file</span>.<span class="ruby-identifier">exclusive_lock</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-identifier">start_without_locking</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- start-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- start-method -->
+
+      
+        <div id="stop-method" class="method-detail ">
+          <a name="method-i-stop"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stop</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Stop the daemon and wait until it has exited.</p>
+
+<p>Raises:</p>
+<ul><li>
+<p><a href="DaemonController/StopError.html">StopError</a> - the stop command
+failed.</p>
+</li><li>
+<p><a href="DaemonController/StopTimeout.html">StopTimeout</a> - the daemon
+didn’t stop in time.</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="stop-source">
+<pre>
+<span class="ruby-comment"># File lib/daemon_controller.rb, line 268</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stop</span>
+        <span class="ruby-ivar">@lock_file</span>.<span class="ruby-identifier">exclusive_lock</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-keyword">begin</span>
+                        <span class="ruby-constant">Timeout</span>.<span class="ruby-identifier">timeout</span>(<span class="ruby-ivar">@stop_timeout</span>, <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>) <span class="ruby-keyword">do</span>
+                                <span class="ruby-identifier">kill_daemon</span>
+                                <span class="ruby-identifier">wait_until</span> <span class="ruby-keyword">do</span>
+                                        <span class="ruby-operator">!</span><span class="ruby-identifier">daemon_is_running?</span>
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>
+                        <span class="ruby-identifier">raise</span> <span class="ruby-constant">StopTimeout</span>, <span class="ruby-node">&quot;Daemon '#{@identifier}' did not exit in time&quot;</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stop-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stop-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

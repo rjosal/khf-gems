@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"max_age"%ActionMailer::ARSendmail#max_age"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["MMaximum age of emails in seconds before they are removed from the queue.F"%lib/action_mailer/ar_sendmail.rb

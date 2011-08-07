@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"child_exception":PhusionPassenger::InitializationError#child_exception"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["GThe exception that caused initialization to fail. This may be nil.F"(lib/phusion_passenger/exceptions.rb

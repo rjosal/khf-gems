@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"temporary_section"$RDoc::Context#temporary_section"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["GUse this section for the next method, attribute or constant added.F"lib/rdoc/context.rb

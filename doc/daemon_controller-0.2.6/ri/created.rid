@@ -1,0 +1,5 @@
+Mon, 27 Jun 2011 21:51:26 -0700
+lib/daemon_controller.rb	Mon, 27 Jun 2011 21:51:21 -0700
+lib/daemon_controller/spawn.rb	Mon, 27 Jun 2011 21:51:21 -0700
+lib/daemon_controller/lock_file.rb	Mon, 27 Jun 2011 21:51:21 -0700
+lib/daemon_controller/version.rb	Mon, 27 Jun 2011 21:51:21 -0700

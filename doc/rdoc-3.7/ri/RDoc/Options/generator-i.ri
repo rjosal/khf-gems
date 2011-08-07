@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"generator"RDoc::Options#generator"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["MDescription of the output generator (set with the <tt>--fmt</tt> option)F"lib/rdoc/options.rb

@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"	main"Rake::RDocTask#main"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["?Name of file to be used as the main, top level file of the"RDoc. (default is none)F"lib/rake/rdoctask.rb

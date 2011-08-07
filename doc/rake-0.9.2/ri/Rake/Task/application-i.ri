@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"application"Rake::Task#application"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	[""Application owning this task.F"lib/rake/task.rb

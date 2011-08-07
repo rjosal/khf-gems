@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"	docs"MIME::Type#docs"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["EThe documentation for this MIME::Type. Documentation about media"Atypes will be found on a media type definition as a comment."/Documentation will be found through #docs.F"lib/mime/types.rb

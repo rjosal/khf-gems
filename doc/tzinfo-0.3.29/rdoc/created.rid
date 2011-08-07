@@ -1,0 +1,25 @@
+Mon, 27 Jun 2011 21:33:17 -0700
+lib/tzinfo/timezone_index_definition.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/timezone_definition.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/timezone_period.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/country_info.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/offset_rationals.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/timezone.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/country_timezone.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/country_index_definition.rb	Mon, 27 Jun 2011 21:30:45 -0700
+README	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/linked_timezone.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/country.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/data_timezone.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/data_timezone_info.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/timezone_info.rb	Mon, 27 Jun 2011 21:30:45 -0700
+CHANGES	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/timezone_proxy.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/timezone_offset_info.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/ruby_core_support.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/tzdataparser.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/timezone_transition_info.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/info_timezone.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/linked_timezone_info.rb	Mon, 27 Jun 2011 21:30:45 -0700
+lib/tzinfo/time_or_datetime.rb	Mon, 27 Jun 2011 21:30:45 -0700

@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"visibility" RDoc::MethodAttr#visibility"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["public, protected, privateF"lib/rdoc/method_attr.rb

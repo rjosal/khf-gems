@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: ActionMailer::ARMailer</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/action_mailer/ar_mailer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/action_mailer/ar_mailer.rb">lib/action_mailer/ar_mailer.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">ActionMailer::Base</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-email_class">::email_class</a></li>
+          
+          <li><a href="#method-c-email_class-3D">::email_class=</a></li>
+          
+          <li><a href="#method-i-perform_delivery_activerecord">#perform_delivery_activerecord</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../History_txt.html">History.txt</a></li>
+        
+          <li class="file"><a href="../LICENSE_txt.html">LICENSE.txt</a></li>
+        
+          <li class="file"><a href="../Manifest_txt.html">Manifest.txt</a></li>
+        
+          <li class="file"><a href="../README_txt.html">README.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../ActionMailer.html">ActionMailer</a></li>
+        
+          <li><a href="../ActionMailer/ARMailer.html">ActionMailer::ARMailer</a></li>
+        
+          <li><a href="../ActionMailer/ARSendmail.html">ActionMailer::ARSendmail</a></li>
+        
+          <li><a href="../Net.html">Net</a></li>
+        
+          <li><a href="../Net/SMTP.html">Net::SMTP</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">ActionMailer::ARMailer</h1>
+
+    <div id="description" class="description">
+      
+<p>Adds sending email through an ActiveRecord table as a delivery method for
+<a href="../ActionMailer.html">ActionMailer</a>.</p>
+
+<h2>Converting to <a href="ARMailer.html">ActionMailer::ARMailer</a></h2>
+
+<p>Go to your Rails project:</p>
+
+<pre>$ cd your_rails_project</pre>
+
+<p>Create a new migration:</p>
+
+<pre>$ ar_sendmail --create-migration</pre>
+
+<p>You’ll need to redirect this into a file.  If you want a different name
+provide the –table-name option.</p>
+
+<p>Create a new model:</p>
+
+<pre>$ ar_sendmail --create-model</pre>
+
+<p>You’ll need to redirect this into a file.  If you want a different name
+provide the –table-name option.</p>
+
+<p>Change your email classes to inherit from <a
+href="ARMailer.html">ActionMailer::ARMailer</a> instead of
+ActionMailer::Base:</p>
+
+<pre>--- app/model/emailer.rb.orig   2006-08-10 13:16:33.000000000 -0700
++++ app/model/emailer.rb        2006-08-10 13:16:43.000000000 -0700
+@@ -1,4 +1,4 @@
+-class Emailer &lt; ActionMailer::Base
++class Emailer &lt; ActionMailer::ARMailer
+
+def comment_notification(comment)
+  from comment.author.email</pre>
+
+<p>You’ll need to be sure to set the From address for your emails. 
+Something like:</p>
+
+<pre>def list_send(recipient)
+  from 'no_reply@example.com'
+  # ...</pre>
+
+<p>Edit config/environment.rb and require ar_mailer.rb:</p>
+
+<pre>require 'action_mailer/ar_mailer'</pre>
+
+<p>Edit config/environments/production.rb and set the delivery agent:</p>
+
+<pre>$ grep delivery_method config/environments/production.rb
+config.action_mailer.delivery_method = :activerecord</pre>
+
+<p>For Rails 1.x and older:</p>
+
+<pre>$ grep delivery_method config/environments/production.rb
+ActionMailer::Base.delivery_method = :activerecord</pre>
+
+<p>Run ar_sendmail:</p>
+
+<pre>$ ar_sendmail</pre>
+
+<p>You can also run it from cron with -o, or as a daemon with -d.</p>
+
+<p>See <tt>ar_sendmail -h</tt> for full details.</p>
+
+<h2>Alternate Mail Storage</h2>
+
+<p>If you want to set the ActiveRecord model that emails will be stored in,
+see <a
+href="ARMailer.html#method-c-email_class-3D">ActionMailer::ARMailer::email_class=</a></p>
+
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="email_class-method" class="method-detail ">
+          <a name="method-c-email_class"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">email_class</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Current email class for deliveries.</p>
+            
+
+            
+            <div class="method-source-code" id="email_class-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_mailer.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">email_class</span>
+  <span class="ruby-ivar">@email_class</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Email</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- email_class-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- email_class-method -->
+
+      
+        <div id="email_class-3D-method" class="method-detail ">
+          <a name="method-c-email_class-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">email_class=</span><span
+              class="method-args">(klass)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the email class for deliveries.</p>
+            
+
+            
+            <div class="method-source-code" id="email_class-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_mailer.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">email_class=</span>(<span class="ruby-identifier">klass</span>)
+  <span class="ruby-ivar">@email_class</span> = <span class="ruby-identifier">klass</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- email_class-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- email_class-3D-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="perform_delivery_activerecord-method" class="method-detail ">
+          <a name="method-i-perform_delivery_activerecord"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">perform_delivery_activerecord</span><span
+              class="method-args">(mail)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Adds <tt>mail</tt> to the Email table.  Only the first From address for
+<tt>mail</tt> is used.</p>
+            
+
+            
+            <div class="method-source-code" id="perform_delivery_activerecord-source">
+<pre>
+<span class="ruby-comment"># File lib/action_mailer/ar_mailer.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">perform_delivery_activerecord</span>(<span class="ruby-identifier">mail</span>)
+  <span class="ruby-identifier">email_class</span> = <span class="ruby-constant">ActionMailer</span><span class="ruby-operator">::</span><span class="ruby-constant">ARMailer</span>.<span class="ruby-identifier">email_class</span>
+
+  <span class="ruby-identifier">mail</span>.<span class="ruby-identifier">destinations</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">destination</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">email_class</span>.<span class="ruby-identifier">create</span> <span class="ruby-value">:mail</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">mail</span>.<span class="ruby-identifier">encoded</span>, <span class="ruby-value">:to</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">destination</span>,
+                       <span class="ruby-value">:from</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">mail</span>.<span class="ruby-identifier">from</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- perform_delivery_activerecord-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- perform_delivery_activerecord-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

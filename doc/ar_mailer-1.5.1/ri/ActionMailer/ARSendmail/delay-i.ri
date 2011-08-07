@@ -1,0 +1,3 @@
+U:RDoc::Attr[i"
+delay"#ActionMailer::ARSendmail#delay"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	[""Seconds to delay between runsF"%lib/action_mailer/ar_sendmail.rb

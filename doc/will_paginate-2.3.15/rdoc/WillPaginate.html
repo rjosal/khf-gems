@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: WillPaginate</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/will_paginate/view_helpers_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/will_paginate/view_helpers.rb">lib/will_paginate/view_helpers.rb</a></li>
+          
+            <li><a href="./lib/will_paginate/version_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/will_paginate/version.rb">lib/will_paginate/version.rb</a></li>
+          
+            <li><a href="./lib/will_paginate/named_scope_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/will_paginate/named_scope.rb">lib/will_paginate/named_scope.rb</a></li>
+          
+            <li><a href="./lib/will_paginate/collection_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/will_paginate/collection.rb">lib/will_paginate/collection.rb</a></li>
+          
+            <li><a href="./lib/will_paginate/finder_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/will_paginate/finder.rb">lib/will_paginate/finder.rb</a></li>
+          
+            <li><a href="./lib/will_paginate_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/will_paginate.rb">lib/will_paginate.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">MODULE</span> <a href="WillPaginate/Finder.html">WillPaginate::Finder</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="WillPaginate/NamedScope.html">WillPaginate::NamedScope</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="WillPaginate/VERSION.html">WillPaginate::VERSION</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="WillPaginate/ViewHelpers.html">WillPaginate::ViewHelpers</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="WillPaginate/Collection.html">WillPaginate::Collection</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="WillPaginate/InvalidPage.html">WillPaginate::InvalidPage</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="WillPaginate/LinkRenderer.html">WillPaginate::LinkRenderer</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-construct_count_options_from_args">::construct_count_options_from_args</a></li>
+          
+          <li><a href="#method-c-enable">::enable</a></li>
+          
+          <li><a href="#method-c-enable_actionpack">::enable_actionpack</a></li>
+          
+          <li><a href="#method-c-enable_activerecord">::enable_activerecord</a></li>
+          
+          <li><a href="#method-c-enable_named_scope">::enable_named_scope</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./CHANGELOG_rdoc.html">CHANGELOG.rdoc</a></li>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./WillPaginate.html">WillPaginate</a></li>
+        
+          <li><a href="./WillPaginate/Collection.html">WillPaginate::Collection</a></li>
+        
+          <li><a href="./WillPaginate/Finder.html">WillPaginate::Finder</a></li>
+        
+          <li><a href="./WillPaginate/Finder/ClassMethods.html">WillPaginate::Finder::ClassMethods</a></li>
+        
+          <li><a href="./WillPaginate/InvalidPage.html">WillPaginate::InvalidPage</a></li>
+        
+          <li><a href="./WillPaginate/LinkRenderer.html">WillPaginate::LinkRenderer</a></li>
+        
+          <li><a href="./WillPaginate/NamedScope.html">WillPaginate::NamedScope</a></li>
+        
+          <li><a href="./WillPaginate/NamedScope/ClassMethods.html">WillPaginate::NamedScope::ClassMethods</a></li>
+        
+          <li><a href="./WillPaginate/NamedScope/Scope.html">WillPaginate::NamedScope::Scope</a></li>
+        
+          <li><a href="./WillPaginate/VERSION.html">WillPaginate::VERSION</a></li>
+        
+          <li><a href="./WillPaginate/ViewHelpers.html">WillPaginate::ViewHelpers</a></li>
+        
+          <li><a href="./Array.html">Array</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">WillPaginate</h1>
+
+    <div id="description" class="description">
+      
+<h1>You <b>will</b> paginate!</h1>
+
+<p>First read about <a
+href="WillPaginate/Finder/ClassMethods.html">WillPaginate::Finder::ClassMethods</a>,
+then see <a
+href="WillPaginate/ViewHelpers.html">WillPaginate::ViewHelpers</a>. The
+magical array you’re handling in-between is <a
+href="WillPaginate/Collection.html">WillPaginate::Collection</a>.</p>
+
+<p>Happy paginating!</p>
+
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="construct_count_options_from_args-method" class="method-detail ">
+          <a name="method-c-construct_count_options_from_args"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">construct_count_options_from_args</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="construct_count_options_from_args-source">
+<pre>
+<span class="ruby-comment"># File lib/will_paginate.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">construct_count_options_from_args</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">result</span>[<span class="ruby-value">0</span>] = <span class="ruby-string">'*'</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">result</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\.\*$/</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- construct_count_options_from_args-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- construct_count_options_from_args-method -->
+
+      
+        <div id="enable-method" class="method-detail ">
+          <a name="method-c-enable"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">enable</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>shortcut for <tt><a
+href="WillPaginate.html#method-c-enable_actionpack">enable_actionpack</a></tt>
+and <tt><a
+href="WillPaginate.html#method-c-enable_activerecord">enable_activerecord</a></tt>
+combined</p>
+            
+
+            
+            <div class="method-source-code" id="enable-source">
+<pre>
+<span class="ruby-comment"># File lib/will_paginate.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">enable</span>
+  <span class="ruby-identifier">enable_actionpack</span>
+  <span class="ruby-identifier">enable_activerecord</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- enable-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- enable-method -->
+
+      
+        <div id="enable_actionpack-method" class="method-detail ">
+          <a name="method-c-enable_actionpack"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">enable_actionpack</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>hooks <a href="WillPaginate/ViewHelpers.html">WillPaginate::ViewHelpers</a>
+into ActionView::Base</p>
+            
+
+            
+            <div class="method-source-code" id="enable_actionpack-source">
+<pre>
+<span class="ruby-comment"># File lib/will_paginate.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">enable_actionpack</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">ActionView</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">instance_methods</span>.<span class="ruby-identifier">include_method?</span> <span class="ruby-value">:will_paginate</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'will_paginate/view_helpers'</span>
+  <span class="ruby-constant">ActionView</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:include</span>, <span class="ruby-constant">ViewHelpers</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-keyword">and</span> <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:rescue_responses</span>
+    <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">rescue_responses</span>[<span class="ruby-string">'WillPaginate::InvalidPage'</span>] = <span class="ruby-value">:not_found</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- enable_actionpack-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- enable_actionpack-method -->
+
+      
+        <div id="enable_activerecord-method" class="method-detail ">
+          <a name="method-c-enable_activerecord"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">enable_activerecord</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>hooks <a href="WillPaginate/Finder.html">WillPaginate::Finder</a> into
+ActiveRecord::Base and classes that deal with associations</p>
+            
+
+            
+            <div class="method-source-code" id="enable_activerecord-source">
+<pre>
+<span class="ruby-comment"># File lib/will_paginate.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">enable_activerecord</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:paginate</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'will_paginate/finder'</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:include</span>, <span class="ruby-constant">Finder</span>
+
+  <span class="ruby-comment"># support pagination on associations</span>
+  <span class="ruby-identifier">a</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Associations</span>
+  [ <span class="ruby-identifier">a</span><span class="ruby-operator">::</span><span class="ruby-constant">AssociationCollection</span> ].<span class="ruby-identifier">tap</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">classes</span><span class="ruby-operator">|</span>
+    <span class="ruby-comment"># detect http://dev.rubyonrails.org/changeset/9230</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">a</span><span class="ruby-operator">::</span><span class="ruby-constant">HasManyThroughAssociation</span>.<span class="ruby-identifier">superclass</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">a</span><span class="ruby-operator">::</span><span class="ruby-constant">HasManyAssociation</span>
+      <span class="ruby-identifier">classes</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">a</span><span class="ruby-operator">::</span><span class="ruby-constant">HasManyThroughAssociation</span>
+    <span class="ruby-keyword">end</span>
+  }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:include</span>, <span class="ruby-constant">Finder</span><span class="ruby-operator">::</span><span class="ruby-constant">ClassMethods</span>
+    <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">class_eval</span> { <span class="ruby-identifier">alias_method_chain</span> <span class="ruby-value">:method_missing</span>, <span class="ruby-value">:paginate</span> }
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment"># monkeypatch Rails ticket #2189: &quot;count breaks has_many :through&quot;</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">protected</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">construct_count_options_from_args</span>(*<span class="ruby-identifier">args</span>)
+      <span class="ruby-identifier">result</span> = <span class="ruby-keyword">super</span>
+      <span class="ruby-identifier">result</span>[<span class="ruby-value">0</span>] = <span class="ruby-string">'*'</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">result</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\.\*$/</span>
+      <span class="ruby-identifier">result</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- enable_activerecord-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- enable_activerecord-method -->
+
+      
+        <div id="enable_named_scope-method" class="method-detail ">
+          <a name="method-c-enable_named_scope"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">enable_named_scope</span><span
+              class="method-args">(patch = true)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Enable named_scope, a feature of Rails 2.1, even if you have older Rails
+(tested on Rails 2.0.2 and 1.2.6).</p>
+
+<p>You can pass <tt>false</tt> for <tt>patch</tt> parameter to skip
+monkeypatching <b>associations</b>. Use this if you feel that
+<tt>named_scope</tt> broke has_many, has_many :through or
+has_and_belongs_to_many associations in your app. By passing
+<tt>false</tt>, you can still use <tt>named_scope</tt> in your models, but
+not through associations.</p>
+            
+
+            
+            <div class="method-source-code" id="enable_named_scope-source">
+<pre>
+<span class="ruby-comment"># File lib/will_paginate.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">enable_named_scope</span>(<span class="ruby-identifier">patch</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">NamedScope</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'will_paginate/named_scope'</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'will_paginate/named_scope_patch'</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">patch</span>
+
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:include</span>, <span class="ruby-constant">WillPaginate</span><span class="ruby-operator">::</span><span class="ruby-constant">NamedScope</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- enable_named_scope-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- enable_named_scope-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

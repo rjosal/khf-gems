@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: GData::Client::Base</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/gdata/client/base_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/gdata/client/base.rb">lib/gdata/client/base.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-authsub_private_key-3D">#authsub_private_key=</a></li>
+          
+          <li><a href="#method-i-authsub_token-3D">#authsub_token=</a></li>
+          
+          <li><a href="#method-i-authsub_url">#authsub_url</a></li>
+          
+          <li><a href="#method-i-clientlogin">#clientlogin</a></li>
+          
+          <li><a href="#method-i-delete">#delete</a></li>
+          
+          <li><a href="#method-i-get">#get</a></li>
+          
+          <li><a href="#method-i-make_file_request">#make_file_request</a></li>
+          
+          <li><a href="#method-i-make_request">#make_request</a></li>
+          
+          <li><a href="#method-i-post">#post</a></li>
+          
+          <li><a href="#method-i-post_file">#post_file</a></li>
+          
+          <li><a href="#method-i-prepare_headers">#prepare_headers</a></li>
+          
+          <li><a href="#method-i-put">#put</a></li>
+          
+          <li><a href="#method-i-put_file">#put_file</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../../README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../GData.html">GData</a></li>
+        
+          <li><a href="../../GData/Auth.html">GData::Auth</a></li>
+        
+          <li><a href="../../GData/Auth/AuthSub.html">GData::Auth::AuthSub</a></li>
+        
+          <li><a href="../../GData/Auth/ClientLogin.html">GData::Auth::ClientLogin</a></li>
+        
+          <li><a href="../../GData/Client.html">GData::Client</a></li>
+        
+          <li><a href="../../GData/Client/Apps.html">GData::Client::Apps</a></li>
+        
+          <li><a href="../../GData/Client/AuthorizationError.html">GData::Client::AuthorizationError</a></li>
+        
+          <li><a href="../../GData/Client/BadRequestError.html">GData::Client::BadRequestError</a></li>
+        
+          <li><a href="../../GData/Client/Base.html">GData::Client::Base</a></li>
+        
+          <li><a href="../../GData/Client/Blogger.html">GData::Client::Blogger</a></li>
+        
+          <li><a href="../../GData/Client/BookSearch.html">GData::Client::BookSearch</a></li>
+        
+          <li><a href="../../GData/Client/Calendar.html">GData::Client::Calendar</a></li>
+        
+          <li><a href="../../GData/Client/CaptchaError.html">GData::Client::CaptchaError</a></li>
+        
+          <li><a href="../../GData/Client/Contacts.html">GData::Client::Contacts</a></li>
+        
+          <li><a href="../../GData/Client/DocList.html">GData::Client::DocList</a></li>
+        
+          <li><a href="../../GData/Client/Error.html">GData::Client::Error</a></li>
+        
+          <li><a href="../../GData/Client/Finance.html">GData::Client::Finance</a></li>
+        
+          <li><a href="../../GData/Client/GBase.html">GData::Client::GBase</a></li>
+        
+          <li><a href="../../GData/Client/GMail.html">GData::Client::GMail</a></li>
+        
+          <li><a href="../../GData/Client/Health.html">GData::Client::Health</a></li>
+        
+          <li><a href="../../GData/Client/Notebook.html">GData::Client::Notebook</a></li>
+        
+          <li><a href="../../GData/Client/Photos.html">GData::Client::Photos</a></li>
+        
+          <li><a href="../../GData/Client/RequestError.html">GData::Client::RequestError</a></li>
+        
+          <li><a href="../../GData/Client/ServerError.html">GData::Client::ServerError</a></li>
+        
+          <li><a href="../../GData/Client/Spreadsheets.html">GData::Client::Spreadsheets</a></li>
+        
+          <li><a href="../../GData/Client/UnknownError.html">GData::Client::UnknownError</a></li>
+        
+          <li><a href="../../GData/Client/VersionConflictError.html">GData::Client::VersionConflictError</a></li>
+        
+          <li><a href="../../GData/Client/WebmasterTools.html">GData::Client::WebmasterTools</a></li>
+        
+          <li><a href="../../GData/Client/YouTube.html">GData::Client::YouTube</a></li>
+        
+          <li><a href="../../GData/HTTP.html">GData::HTTP</a></li>
+        
+          <li><a href="../../GData/HTTP/DefaultService.html">GData::HTTP::DefaultService</a></li>
+        
+          <li><a href="../../GData/HTTP/MimeBody.html">GData::HTTP::MimeBody</a></li>
+        
+          <li><a href="../../GData/HTTP/MimeBodyString.html">GData::HTTP::MimeBodyString</a></li>
+        
+          <li><a href="../../GData/HTTP/Request.html">GData::HTTP::Request</a></li>
+        
+          <li><a href="../../GData/HTTP/Response.html">GData::HTTP::Response</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">GData::Client::Base</h1>
+
+    <div id="description" class="description">
+      
+<p>A client object used to interact with different Google Data APIs.</p>
+
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="auth_handler-attribute-method" class="method-detail">
+          <a name="auth_handler"></a>
+          
+          <a name="auth_handler="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">auth_handler</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>A subclass of <a href="../Auth.html">GData::Auth</a> that handles
+authentication signing.</p>
+          
+          </div>
+        </div>
+        
+        <div id="authsub_scope-attribute-method" class="method-detail">
+          <a name="authsub_scope"></a>
+          
+          <a name="authsub_scope="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">authsub_scope</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The broadest AuthSub scope for working with an API. This is overriden by
+the service-specific subclasses.</p>
+          
+          </div>
+        </div>
+        
+        <div id="clientlogin_service-attribute-method" class="method-detail">
+          <a name="clientlogin_service"></a>
+          
+          <a name="clientlogin_service="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">clientlogin_service</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>A default service name for ClientLogin (overriden by subclasses).</p>
+          
+          </div>
+        </div>
+        
+        <div id="clientlogin_url-attribute-method" class="method-detail">
+          <a name="clientlogin_url"></a>
+          
+          <a name="clientlogin_url="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">clientlogin_url</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The default URL for ClientLogin.</p>
+          
+          </div>
+        </div>
+        
+        <div id="headers-attribute-method" class="method-detail">
+          <a name="headers"></a>
+          
+          <a name="headers="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">headers</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Headers to include in every request.</p>
+          
+          </div>
+        </div>
+        
+        <div id="http_service-attribute-method" class="method-detail">
+          <a name="http_service"></a>
+          
+          <a name="http_service="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">http_service</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>A subclass of <a href="../HTTP.html">GData::HTTP</a> that handles making <a
+href="../HTTP.html">HTTP</a> requests.</p>
+          
+          </div>
+        </div>
+        
+        <div id="source-attribute-method" class="method-detail">
+          <a name="source"></a>
+          
+          <a name="source="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">source</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>A short string identifying the current application.</p>
+          
+          </div>
+        </div>
+        
+        <div id="version-attribute-method" class="method-detail">
+          <a name="version"></a>
+          
+          <a name="version="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">version</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The API version being used.</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(options = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/gdata/client/base.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">options</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{key}=&quot;</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-ivar">@headers</span> <span class="ruby-operator">||=</span> {}
+  <span class="ruby-ivar">@http_service</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">GData</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span><span class="ruby-operator">::</span><span class="ruby-constant">DefaultService</span>
+  <span class="ruby-ivar">@version</span> <span class="ruby-operator">||=</span> <span class="ruby-string">'2'</span>
+  <span class="ruby-ivar">@source</span> <span class="ruby-operator">||=</span> <span class="ruby-string">'AnonymousApp'</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="authsub_private_key-3D-method" class="method-detail ">
+          <a name="method-i-authsub_private_key-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">authsub_private_key=</span><span
+              class="method-args">(key)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets a private key to use with AuthSub requests.</p>
+            
+
+            
+            <div class="method-source-code" id="authsub_private_key-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/gdata/client/base.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">authsub_private_key=</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@auth_handler</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">GData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">AuthSub</span>
+    <span class="ruby-ivar">@auth_handler</span>.<span class="ruby-identifier">private_key</span> = <span class="ruby-identifier">key</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-string">&quot;An AuthSub token must be set first.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- authsub_private_key-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- authsub_private_key-3D-method -->
+
+      
+        <div id="authsub_token-3D-method" class="method-detail ">
+          <a name="method-i-authsub_token-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">authsub_token=</span><span
+              class="method-args">(token)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets an AuthSub token for the service.</p>
+            
+
+            
+            <div class="method-source-code" id="authsub_token-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/gdata/client/base.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">authsub_token=</span>(<span class="ruby-identifier">token</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">auth_handler</span> = <span class="ruby-constant">GData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">AuthSub</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">token</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- authsub_token-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- authsub_token-3D-method -->
+
+      
+        <div id="authsub_url-method" class="method-detail ">
+          <a name="method-i-authsub_url"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">authsub_url</span><span
+              class="method-args">(next_url, secure = false, session = true, domain = nil, scope = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="authsub_url-source">
+<pre>
+<span class="ruby-comment"># File lib/gdata/client/base.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">authsub_url</span>(<span class="ruby-identifier">next_url</span>, <span class="ruby-identifier">secure</span> = <span class="ruby-keyword">false</span>, <span class="ruby-identifier">session</span> = <span class="ruby-keyword">true</span>, <span class="ruby-identifier">domain</span> = <span class="ruby-keyword">nil</span>,
+  <span class="ruby-identifier">scope</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">scope</span> = <span class="ruby-ivar">@authsub_scope</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">GData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">AuthSub</span>.<span class="ruby-identifier">get_url</span>(<span class="ruby-identifier">next_url</span>, <span class="ruby-identifier">scope</span>, <span class="ruby-identifier">secure</span>, <span class="ruby-identifier">session</span>, <span class="ruby-identifier">domain</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- authsub_url-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- authsub_url-method -->
+
+      
+        <div id="clientlogin-method" class="method-detail ">
+          <a name="method-i-clientlogin"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clientlogin</span><span
+              class="method-args">(username, password, captcha_token = nil, captcha_answer = nil, service = nil, account_type = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Performs ClientLogin for the service. See <a
+href="../Auth/ClientLogin.html">GData::Auth::ClientLogin</a> for details.</p>
+            
+
+            
+            <div class="method-source-code" id="clientlogin-source">
+<pre>
+<span class="ruby-comment"># File lib/gdata/client/base.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clientlogin</span>(<span class="ruby-identifier">username</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">captcha_token</span> = <span class="ruby-keyword">nil</span>, 
+  <span class="ruby-identifier">captcha_answer</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">service</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">account_type</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">service</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">service</span> = <span class="ruby-ivar">@clientlogin_service</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">options</span> = { <span class="ruby-value">:account_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">account_type</span> }
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">auth_handler</span> = <span class="ruby-constant">GData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">ClientLogin</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">service</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@clientlogin_url</span>
+    <span class="ruby-ivar">@auth_handler</span>.<span class="ruby-identifier">auth_url</span> = <span class="ruby-ivar">@clientlogin_url</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">source</span> = <span class="ruby-constant">GData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">SOURCE_LIB_STRING</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@source</span>
+  <span class="ruby-ivar">@auth_handler</span>.<span class="ruby-identifier">get_token</span>(<span class="ruby-identifier">username</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">source</span>, <span class="ruby-identifier">captcha_token</span>, <span class="ruby-identifier">captcha_answer</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clientlogin-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clientlogin-method -->
+
+      
+        <div id="delete-method" class="method-detail ">
+          <a name="method-i-delete"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">delete</span><span
+              class="method-args">(url)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Performs an <a href="../HTTP.html">HTTP</a> DELETE against the API.</p>
+            
+
+            
+            <div class="method-source-code" id="delete-source">
+<pre>
+<span class="ruby-comment"># File lib/gdata/client/base.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">make_request</span>(<span class="ruby-value">:delete</span>, <span class="ruby-identifier">url</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- delete-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- delete-method -->
+
+      
+        <div id="get-method" class="method-detail ">
+          <a name="method-i-get"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get</span><span
+              class="method-args">(url)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Performs an <a href="../HTTP.html">HTTP</a> GET against the API.</p>
+            
+
+            
+            <div class="method-source-code" id="get-source">
+<pre>
+<span class="ruby-comment"># File lib/gdata/client/base.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">make_request</span>(<span class="ruby-value">:get</span>, <span class="ruby-identifier">url</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get-method -->
+
+      
+        <div id="make_file_request-method" class="method-detail ">
+          <a name="method-i-make_file_request"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">make_file_request</span><span
+              class="method-args">(method, url, file_path, mime_type, entry = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sends an <a href="../HTTP.html">HTTP</a> request with the given file as a
+stream</p>
+            
+
+            
+            <div class="method-source-code" id="make_file_request-source">
+<pre>
+<span class="ruby-comment"># File lib/gdata/client/base.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_file_request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">file_path</span>, <span class="ruby-identifier">mime_type</span>, <span class="ruby-identifier">entry</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">readable?</span>(<span class="ruby-identifier">file_path</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;File #{file_path} is not readable.&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">file_path</span>, <span class="ruby-string">'rb'</span>)
+  <span class="ruby-ivar">@headers</span>[<span class="ruby-string">'Slug'</span>] = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">file_path</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">entry</span>
+    <span class="ruby-ivar">@headers</span>[<span class="ruby-string">'MIME-Version'</span>] = <span class="ruby-string">'1.0'</span>
+    <span class="ruby-identifier">body</span> = <span class="ruby-constant">GData</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span><span class="ruby-operator">::</span><span class="ruby-constant">MimeBody</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">entry</span>, <span class="ruby-identifier">file</span>, <span class="ruby-identifier">mime_type</span>)
+    <span class="ruby-ivar">@headers</span>[<span class="ruby-string">'Content-Type'</span>] = <span class="ruby-identifier">body</span>.<span class="ruby-identifier">content_type</span>
+    <span class="ruby-identifier">response</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">make_request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">body</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@headers</span>[<span class="ruby-string">'Content-Type'</span>] = <span class="ruby-identifier">mime_type</span>
+    <span class="ruby-identifier">response</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">make_request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">response</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- make_file_request-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- make_file_request-method -->
+
+      
+        <div id="make_request-method" class="method-detail ">
+          <a name="method-i-make_request"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">make_request</span><span
+              class="method-args">(method, url, body = '')</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sends an <a href="../HTTP.html">HTTP</a> request and return the response.</p>
+            
+
+            
+            <div class="method-source-code" id="make_request-source">
+<pre>
+<span class="ruby-comment"># File lib/gdata/client/base.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">body</span> = <span class="ruby-string">''</span>)
+  <span class="ruby-identifier">headers</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">prepare_headers</span>
+  <span class="ruby-identifier">request</span> = <span class="ruby-constant">GData</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span><span class="ruby-operator">::</span><span class="ruby-constant">Request</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">url</span>, <span class="ruby-value">:headers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">headers</span>, 
+    <span class="ruby-value">:method</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">method</span>, <span class="ruby-value">:body</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">body</span>)
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@auth_handler</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@auth_handler</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:sign_request!</span>)
+    <span class="ruby-ivar">@auth_handler</span>.<span class="ruby-identifier">sign_request!</span>(<span class="ruby-identifier">request</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">service</span> = <span class="ruby-identifier">http_service</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">service</span>.<span class="ruby-identifier">make_request</span>(<span class="ruby-identifier">request</span>)
+  
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">status_code</span>  
+  <span class="ruby-keyword">when</span> <span class="ruby-value">200</span>, <span class="ruby-value">201</span>, <span class="ruby-value">302</span>
+    <span class="ruby-comment">#Do nothing, it's a success.</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">401</span>, <span class="ruby-value">403</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">AuthorizationError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">400</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">BadRequestError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">409</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">VersionConflictError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">500</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ServerError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">UnknownError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>)
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">response</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- make_request-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- make_request-method -->
+
+      
+        <div id="post-method" class="method-detail ">
+          <a name="method-i-post"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">post</span><span
+              class="method-args">(url, body)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Performs an <a href="../HTTP.html">HTTP</a> POST against the API.</p>
+            
+
+            
+            <div class="method-source-code" id="post-source">
+<pre>
+<span class="ruby-comment"># File lib/gdata/client/base.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">post</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">body</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">make_request</span>(<span class="ruby-value">:post</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">body</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- post-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- post-method -->
+
+      
+        <div id="post_file-method" class="method-detail ">
+          <a name="method-i-post_file"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">post_file</span><span
+              class="method-args">(url, file_path, mime_type, entry = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Performs an <a href="../HTTP.html">HTTP</a> POST with the given file</p>
+            
+
+            
+            <div class="method-source-code" id="post_file-source">
+<pre>
+<span class="ruby-comment"># File lib/gdata/client/base.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">post_file</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">file_path</span>, <span class="ruby-identifier">mime_type</span>, <span class="ruby-identifier">entry</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">make_file_request</span>(<span class="ruby-value">:post</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">file_path</span>, <span class="ruby-identifier">mime_type</span>, <span class="ruby-identifier">entry</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- post_file-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- post_file-method -->
+
+      
+        <div id="prepare_headers-method" class="method-detail ">
+          <a name="method-i-prepare_headers"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">prepare_headers</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Constructs some necessary headers for every request.</p>
+            
+
+            
+            <div class="method-source-code" id="prepare_headers-source">
+<pre>
+<span class="ruby-comment"># File lib/gdata/client/base.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">prepare_headers</span>
+  <span class="ruby-identifier">headers</span> = <span class="ruby-ivar">@headers</span>
+  <span class="ruby-identifier">headers</span>[<span class="ruby-string">'GData-Version'</span>] = <span class="ruby-ivar">@version</span>
+  <span class="ruby-identifier">headers</span>[<span class="ruby-string">'User-Agent'</span>] = <span class="ruby-constant">GData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">SOURCE_LIB_STRING</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@source</span>
+  <span class="ruby-comment"># by default we assume we are sending Atom entries</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">headers</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'Content-Type'</span>)
+    <span class="ruby-identifier">headers</span>[<span class="ruby-string">'Content-Type'</span>] = <span class="ruby-string">'application/atom+xml'</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">headers</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- prepare_headers-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- prepare_headers-method -->
+
+      
+        <div id="put-method" class="method-detail ">
+          <a name="method-i-put"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">put</span><span
+              class="method-args">(url, body)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Performs an <a href="../HTTP.html">HTTP</a> PUT against the API.</p>
+            
+
+            
+            <div class="method-source-code" id="put-source">
+<pre>
+<span class="ruby-comment"># File lib/gdata/client/base.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">put</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">body</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">make_request</span>(<span class="ruby-value">:put</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">body</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- put-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- put-method -->
+
+      
+        <div id="put_file-method" class="method-detail ">
+          <a name="method-i-put_file"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">put_file</span><span
+              class="method-args">(url, file_path, mime_type, entry = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Performs an <a href="../HTTP.html">HTTP</a> PUT with the given file</p>
+            
+
+            
+            <div class="method-source-code" id="put_file-source">
+<pre>
+<span class="ruby-comment"># File lib/gdata/client/base.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">put_file</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">file_path</span>, <span class="ruby-identifier">mime_type</span>, <span class="ruby-identifier">entry</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">make_file_request</span>(<span class="ruby-value">:put</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">file_path</span>, <span class="ruby-identifier">mime_type</span>, <span class="ruby-identifier">entry</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- put_file-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- put_file-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

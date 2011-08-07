@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"	name"Rake::TestTask#name"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["*Name of test task. (default is :test)F"lib/rake/testtask.rb

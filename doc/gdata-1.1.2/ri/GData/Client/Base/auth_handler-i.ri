@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"auth_handler"%GData::Client::Base#auth_handler"RW:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;["CA subclass of GData::Auth that handles authentication signing.:
+@file0F"lib/gdata/client/base.rb

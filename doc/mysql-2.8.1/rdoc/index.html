@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>mysql-2.8.1 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>mysql-2.8.1 Documentation</h1>
+
+  
+  <div id="main">
+    
+<ul><li>
+<p><a href="http://mysql-win.rubyforge.org">mysql-win.rubyforge.org</a></p>
+</li><li>
+<p><a
+href="http://rubyforge.org/projects/mysql-win">rubyforge.org/projects/mysql-win</a></p>
+</li><li>
+<p><a
+href="http://github.com/luislaven/mysql-gem">github.com/luislaven/mysql-gem</a></p>
+</li></ul>
+
+<h2>DESCRIPTION</h2>
+
+<p>This is the MySQL API module for Ruby. It provides the same functions for
+Ruby programs that the MySQL C API provides for C programs.</p>
+
+<p>This is a conversion of tmtm’s original extension into a proper RubyGems.</p>
+
+<h3>Warning about incompatible MySQL versions</h3>
+
+<p>Mixing MySQL versions will generate segmentation faults.</p>
+
+<p>Running the binary version of this gem against a different version of MySQL
+shared library <tt>libMySQL.dll</tt> will generate segmentation faults and
+terminate your application.</p>
+
+<p>Please use the exact same MAJOR.MINOR version of MySQL, see <a
+href="History_txt.html">History.txt</a> for specific version of MySQL used
+to build the binaries.</p>
+
+  </div>
+  
+
+  
+  
+  <h2>Files</h2>
+  <ul>
+    
+      <li class="file"><a href="History_txt.html">History.txt</a></li>
+    
+      <li class="file"><a href="Manifest_txt.html">Manifest.txt</a></li>
+    
+      <li class="file"><a href="README_txt.html">README.txt</a></li>
+    
+      <li class="file"><a href="ext/mysql_api/Makefile.html">Makefile</a></li>
+    
+  </ul>
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="class"><a href="Mysql.html">Mysql</a></li>
+    
+    <li class="class"><a href="Mysql/Error.html">Mysql::Error</a></li>
+    
+    <li class="class"><a href="Mysql/Field.html">Mysql::Field</a></li>
+    
+    <li class="module"><a href="Mysql/GemVersion.html">Mysql::GemVersion</a></li>
+    
+    <li class="class"><a href="Mysql/Result.html">Mysql::Result</a></li>
+    
+    <li class="class"><a href="Mysql/RowOffset.html">Mysql::RowOffset</a></li>
+    
+    <li class="class"><a href="Mysql/Stmt.html">Mysql::Stmt</a></li>
+    
+    <li class="class"><a href="Mysql/Time.html">Mysql::Time</a></li>
+    
+    <li class="class"><a href="Object.html">Object</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="Mysql.html#method-c-client_info">::client_info &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-c-client_version">::client_version &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-c-connect">::connect &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-c-debug">::debug &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-c-escape_string">::escape_string &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-c-get_client_info">::get_client_info &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-c-get_client_version">::get_client_version &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-c-init">::init &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-c-new">::new &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Time.html#method-c-new">::new &mdash; Mysql::Time</a></li>
+    
+      <li><a href="Mysql.html#method-c-quote">::quote &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-c-real_connect">::real_connect &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Time.html#method-i-3D-3D">#== &mdash; Mysql::Time</a></li>
+    
+      <li><a href="Mysql.html#method-i-affected_rows">#affected_rows &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-affected_rows">#affected_rows &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-attr_get">#attr_get &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-attr_set">#attr_set &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql.html#method-i-autocommit">#autocommit &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-bind_result">#bind_result &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql.html#method-i-change_user">#change_user &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-character_set_name">#character_set_name &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-client_info">#client_info &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-client_version">#client_version &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-close">#close &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql.html#method-i-close">#close &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-commit">#commit &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-connect">#connect &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-create_db">#create_db &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-data_seek">#data_seek &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-data_seek">#data_seek &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Object.html#method-i-default_mysql_config_path">#default_mysql_config_path &mdash; Object</a></li>
+    
+      <li><a href="Mysql.html#method-i-drop_db">#drop_db &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-dump_debug_info">#dump_debug_info &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-each">#each &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-each">#each &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-each_hash">#each_hash &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql.html#method-i-errno">#errno &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Error.html#method-i-errno">#errno &mdash; Mysql::Error</a></li>
+    
+      <li><a href="Mysql.html#method-i-error">#error &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Error.html#method-i-error">#error &mdash; Mysql::Error</a></li>
+    
+      <li><a href="Mysql.html#method-i-escape_string">#escape_string &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-execute">#execute &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-fetch">#fetch &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-fetch_field">#fetch_field &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-fetch_field_direct">#fetch_field_direct &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-fetch_fields">#fetch_fields &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-fetch_hash">#fetch_hash &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-fetch_lengths">#fetch_lengths &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-fetch_row">#fetch_row &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-field_count">#field_count &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql.html#method-i-field_count">#field_count &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-field_seek">#field_seek &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-field_tell">#field_tell &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-free">#free &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-free_result">#free_result &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql.html#method-i-get_client_info">#get_client_info &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-get_client_version">#get_client_version &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-get_host_info">#get_host_info &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-get_proto_info">#get_proto_info &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-get_server_info">#get_server_info &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-get_server_version">#get_server_version &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Field.html#method-i-hash">#hash &mdash; Mysql::Field</a></li>
+    
+      <li><a href="Mysql.html#method-i-host_info">#host_info &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-info">#info &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-insert_id">#insert_id &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-insert_id">#insert_id &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql/Time.html#method-i-inspect">#inspect &mdash; Mysql::Time</a></li>
+    
+      <li><a href="Mysql/Field.html#method-i-inspect">#inspect &mdash; Mysql::Field</a></li>
+    
+      <li><a href="Mysql/Field.html#method-i-is_not_null-3F">#is_not_null? &mdash; Mysql::Field</a></li>
+    
+      <li><a href="Mysql/Field.html#method-i-is_num-3F">#is_num? &mdash; Mysql::Field</a></li>
+    
+      <li><a href="Mysql/Field.html#method-i-is_pri_key-3F">#is_pri_key? &mdash; Mysql::Field</a></li>
+    
+      <li><a href="Mysql.html#method-i-kill">#kill &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-list_dbs">#list_dbs &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-list_fields">#list_fields &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-list_processes">#list_processes &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-list_tables">#list_tables &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-more_results">#more_results &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-more_results-3F">#more_results? &mdash; Mysql</a></li>
+    
+      <li><a href="Object.html#method-i-mysql_config_paths">#mysql_config_paths &mdash; Object</a></li>
+    
+      <li><a href="Mysql/Time.html#method-i-neg-3D">#neg= &mdash; Mysql::Time</a></li>
+    
+      <li><a href="Mysql.html#method-i-next_result">#next_result &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-num_fields">#num_fields &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-num_rows">#num_rows &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-num_rows">#num_rows &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql.html#method-i-options">#options &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-param_count">#param_count &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql.html#method-i-ping">#ping &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-prepare">#prepare &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql.html#method-i-prepare">#prepare &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-proto_info">#proto_info &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-query">#query &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-query_with_result">#query_with_result &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-query_with_result-3D">#query_with_result= &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-quote">#quote &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-real_connect">#real_connect &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-real_query">#real_query &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-reconnect">#reconnect &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-reconnect-3D">#reconnect= &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-refresh">#refresh &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-reload">#reload &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-reset">#reset &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-result_metadata">#result_metadata &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql.html#method-i-rollback">#rollback &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-row_seek">#row_seek &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-row_seek">#row_seek &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql/Result.html#method-i-row_tell">#row_tell &mdash; Mysql::Result</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-row_tell">#row_tell &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql.html#method-i-select_db">#select_db &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-send_long_data">#send_long_data &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql.html#method-i-server_info">#server_info &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-server_version">#server_version &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-set_server_option">#set_server_option &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-shutdown">#shutdown &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-sqlstate">#sqlstate &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Stmt.html#method-i-sqlstate">#sqlstate &mdash; Mysql::Stmt</a></li>
+    
+      <li><a href="Mysql/Error.html#method-i-sqlstate">#sqlstate &mdash; Mysql::Error</a></li>
+    
+      <li><a href="Mysql.html#method-i-ssl_set">#ssl_set &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-stat">#stat &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-stmt_init">#stmt_init &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-store_result">#store_result &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-thread_id">#thread_id &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql/Time.html#method-i-to_s">#to_s &mdash; Mysql::Time</a></li>
+    
+      <li><a href="Mysql.html#method-i-use_result">#use_result &mdash; Mysql</a></li>
+    
+      <li><a href="Mysql.html#method-i-warning_count">#warning_count &mdash; Mysql</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

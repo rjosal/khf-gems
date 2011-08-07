@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"list_index"$RDoc::Markup::ToRdoc#list_index"R:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["CStack of current list indexes for alphabetic and numeric listsF"lib/rdoc/markup/to_rdoc.rb

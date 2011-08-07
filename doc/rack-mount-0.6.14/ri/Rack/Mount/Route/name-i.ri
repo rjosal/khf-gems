@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"	name"Rack::Mount::Route#name"R:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["FSymbol identifier for the route used with named route generationsF"lib/rack/mount/route.rb

@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"max_idle_time"3PhusionPassenger::AbstractServer#max_idle_time"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	[	"CThe maximum time that this AbstractServer may be idle. Used by"BAbstractServerCollection to determine when this object should"Cbe cleaned up. nil or 0 indicate that this object should never"be idle cleaned.F"-lib/phusion_passenger/abstract_server.rb

@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"pid"%PhusionPassenger::AppProcess#pid"R:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["This process's PID.F")lib/phusion_passenger/app_process.rb

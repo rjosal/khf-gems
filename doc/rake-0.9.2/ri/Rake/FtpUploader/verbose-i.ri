@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"verbose"Rake::FtpUploader#verbose"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	[".Log uploads to standard output when true.F"!lib/rake/contrib/ftptools.rb

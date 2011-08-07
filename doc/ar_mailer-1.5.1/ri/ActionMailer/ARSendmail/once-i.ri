@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"	once""ActionMailer::ARSendmail#once"R:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["CTrue if only one delivery attempt will be made per call to runF"%lib/action_mailer/ar_sendmail.rb

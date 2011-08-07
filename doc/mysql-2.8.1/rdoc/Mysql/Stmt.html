@@ -1,0 +1,1293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Mysql::Stmt</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/mysql_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mysql.rb">lib/mysql.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-affected_rows">#affected_rows</a></li>
+          
+          <li><a href="#method-i-attr_get">#attr_get</a></li>
+          
+          <li><a href="#method-i-attr_set">#attr_set</a></li>
+          
+          <li><a href="#method-i-bind_result">#bind_result</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-data_seek">#data_seek</a></li>
+          
+          <li><a href="#method-i-each">#each</a></li>
+          
+          <li><a href="#method-i-execute">#execute</a></li>
+          
+          <li><a href="#method-i-fetch">#fetch</a></li>
+          
+          <li><a href="#method-i-field_count">#field_count</a></li>
+          
+          <li><a href="#method-i-free_result">#free_result</a></li>
+          
+          <li><a href="#method-i-insert_id">#insert_id</a></li>
+          
+          <li><a href="#method-i-num_rows">#num_rows</a></li>
+          
+          <li><a href="#method-i-param_count">#param_count</a></li>
+          
+          <li><a href="#method-i-prepare">#prepare</a></li>
+          
+          <li><a href="#method-i-reset">#reset</a></li>
+          
+          <li><a href="#method-i-result_metadata">#result_metadata</a></li>
+          
+          <li><a href="#method-i-row_seek">#row_seek</a></li>
+          
+          <li><a href="#method-i-row_tell">#row_tell</a></li>
+          
+          <li><a href="#method-i-send_long_data">#send_long_data</a></li>
+          
+          <li><a href="#method-i-sqlstate">#sqlstate</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../History_txt.html">History.txt</a></li>
+        
+          <li class="file"><a href="../Manifest_txt.html">Manifest.txt</a></li>
+        
+          <li class="file"><a href="../README_txt.html">README.txt</a></li>
+        
+          <li class="file"><a href="../ext/mysql_api/Makefile.html">Makefile</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Mysql.html">Mysql</a></li>
+        
+          <li><a href="../Mysql/Error.html">Mysql::Error</a></li>
+        
+          <li><a href="../Mysql/Field.html">Mysql::Field</a></li>
+        
+          <li><a href="../Mysql/GemVersion.html">Mysql::GemVersion</a></li>
+        
+          <li><a href="../Mysql/Result.html">Mysql::Result</a></li>
+        
+          <li><a href="../Mysql/RowOffset.html">Mysql::RowOffset</a></li>
+        
+          <li><a href="../Mysql/Stmt.html">Mysql::Stmt</a></li>
+        
+          <li><a href="../Mysql/Time.html">Mysql::Time</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Mysql::Stmt</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="ATTR_UPDATE_MAX_LENGTH">ATTR_UPDATE_MAX_LENGTH</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="affected_rows-method" class="method-detail ">
+          <a name="method-i-affected_rows"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">affected_rows</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Stmt.html#method-i-affected_rows">affected_rows</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="affected_rows-source">
+<pre>
+static VALUE stmt_affected_rows(VALUE obj)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    my_ulonglong n;
+    check_stmt_closed(obj);
+    n = mysql_stmt_affected_rows(s-&gt;stmt);
+    return INT2NUM(n);
+}</pre>
+            </div><!-- affected_rows-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- affected_rows-method -->
+
+      
+        <div id="attr_get-method" class="method-detail ">
+          <a name="method-i-attr_get"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">attr_get</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Stmt.html#method-i-attr_get">attr_get</a>(option)</p>
+            
+
+            
+            <div class="method-source-code" id="attr_get-source">
+<pre>
+static VALUE stmt_attr_get(VALUE obj, VALUE opt)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    check_stmt_closed(obj);
+    if (NUM2INT(opt) == STMT_ATTR_UPDATE_MAX_LENGTH) {
+        my_bool arg;
+        mysql_stmt_attr_get(s-&gt;stmt, STMT_ATTR_UPDATE_MAX_LENGTH, &amp;arg);
+        return arg == 1 ? Qtrue : Qfalse;
+    }
+    rb_raise(eMysql, &quot;unknown option: %d&quot;, NUM2INT(opt));
+}</pre>
+            </div><!-- attr_get-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- attr_get-method -->
+
+      
+        <div id="attr_set-method" class="method-detail ">
+          <a name="method-i-attr_set"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">attr_set</span><span
+              class="method-args">(p1, p2)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Stmt.html#method-i-attr_set">attr_set</a>(option, arg)</p>
+            
+
+            
+            <div class="method-source-code" id="attr_set-source">
+<pre>
+static VALUE stmt_attr_set(VALUE obj, VALUE opt, VALUE val)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    check_stmt_closed(obj);
+    if (NUM2INT(opt) == STMT_ATTR_UPDATE_MAX_LENGTH) {
+        my_bool arg;
+        arg = (val == Qnil || val == Qfalse) ? 0 : 1;
+        mysql_stmt_attr_set(s-&gt;stmt, STMT_ATTR_UPDATE_MAX_LENGTH, &amp;arg);
+        return obj;
+    }
+    rb_raise(eMysql, &quot;unknown option: %d&quot;, NUM2INT(opt));
+}</pre>
+            </div><!-- attr_set-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- attr_set-method -->
+
+      
+        <div id="bind_result-method" class="method-detail ">
+          <a name="method-i-bind_result"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bind_result</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Stmt.html#method-i-bind_result">bind_result</a>(bind,…)</p>
+            
+
+            
+            <div class="method-source-code" id="bind_result-source">
+<pre>
+static VALUE stmt_bind_result(int argc, VALUE *argv, VALUE obj)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    int i;
+    MYSQL_FIELD *field;
+
+    check_stmt_closed(obj);
+    if (argc != s-&gt;result.n)
+        rb_raise(eMysql, &quot;bind_result: result value count(%d) != number of argument(%d)&quot;, s-&gt;result.n, argc);
+    for (i = 0; i &lt; argc; i++) {
+        if (argv[i] == Qnil || argv[i] == rb_cNilClass) {
+            field = mysql_fetch_fields(s-&gt;res);
+            s-&gt;result.bind[i].buffer_type = field[i].type;
+        }
+        else if (argv[i] == rb_cString)
+            s-&gt;result.bind[i].buffer_type = MYSQL_TYPE_STRING;
+        else if (argv[i] == rb_cNumeric || argv[i] == rb_cInteger || argv[i] == rb_cFixnum)
+            s-&gt;result.bind[i].buffer_type = MYSQL_TYPE_LONGLONG;
+        else if (argv[i] == rb_cFloat)
+            s-&gt;result.bind[i].buffer_type = MYSQL_TYPE_DOUBLE;
+        else if (argv[i] == cMysqlTime)
+            s-&gt;result.bind[i].buffer_type = MYSQL_TYPE_DATETIME;
+        else
+            rb_raise(rb_eTypeError, &quot;unrecognized class: %s&quot;, RSTRING_PTR(rb_inspect(argv[i])));
+        if (mysql_stmt_bind_result(s-&gt;stmt, s-&gt;result.bind))
+            mysql_stmt_raise(s-&gt;stmt);
+    }
+    return obj;
+}</pre>
+            </div><!-- bind_result-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- bind_result-method -->
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>close()</p>
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+static VALUE stmt_close(VALUE obj)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    check_stmt_closed(obj);
+    mysql_stmt_close(s-&gt;stmt);
+    s-&gt;closed = Qtrue;
+    return Qnil;
+}</pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="data_seek-method" class="method-detail ">
+          <a name="method-i-data_seek"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">data_seek</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Stmt.html#method-i-data_seek">data_seek</a>(offset)</p>
+            
+
+            
+            <div class="method-source-code" id="data_seek-source">
+<pre>
+static VALUE stmt_data_seek(VALUE obj, VALUE offset)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    check_stmt_closed(obj);
+    mysql_stmt_data_seek(s-&gt;stmt, NUM2INT(offset));
+    return obj;
+}</pre>
+            </div><!-- data_seek-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- data_seek-method -->
+
+      
+        <div id="each-method" class="method-detail ">
+          <a name="method-i-each"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">each</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>each {…}</p>
+            
+
+            
+            <div class="method-source-code" id="each-source">
+<pre>
+static VALUE stmt_each(VALUE obj)
+{
+    VALUE row;
+    check_stmt_closed(obj);
+    while ((row = stmt_fetch(obj)) != Qnil)
+        rb_yield(row);
+    return obj;
+}</pre>
+            </div><!-- each-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each-method -->
+
+      
+        <div id="execute-method" class="method-detail ">
+          <a name="method-i-execute"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">execute</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>execute(arg,…)</p>
+            
+
+            
+            <div class="method-source-code" id="execute-source">
+<pre>
+static VALUE stmt_execute(int argc, VALUE *argv, VALUE obj)
+{
+    struct mysql_stmt *s = DATA_PTR(obj);
+    MYSQL_STMT *stmt = s-&gt;stmt;
+    int i;
+
+    check_stmt_closed(obj);
+    free_execute_memory(s);
+    if (s-&gt;param.n != argc)
+        rb_raise(eMysql, &quot;execute: param_count(%d) != number of argument(%d)&quot;, s-&gt;param.n, argc);
+    if (argc &gt; 0) {
+        memset(s-&gt;param.bind, 0, sizeof(*(s-&gt;param.bind))*argc);
+        for (i = 0; i &lt; argc; i++) {
+            switch (TYPE(argv[i])) {
+            case T_NIL:
+                s-&gt;param.bind[i].buffer_type = MYSQL_TYPE_NULL;
+                break;
+            case T_FIXNUM:
+#if SIZEOF_INT &lt; SIZEOF_LONG
+                s-&gt;param.bind[i].buffer_type = MYSQL_TYPE_LONGLONG;
+                s-&gt;param.bind[i].buffer = &amp;(s-&gt;param.buffer[i]);
+                *(LONG_LONG*)(s-&gt;param.bind[i].buffer) = FIX2LONG(argv[i]);
+#else
+                s-&gt;param.bind[i].buffer_type = MYSQL_TYPE_LONG;
+                s-&gt;param.bind[i].buffer = &amp;(s-&gt;param.buffer[i]);
+                *(int*)(s-&gt;param.bind[i].buffer) = FIX2INT(argv[i]);
+#endif
+                break;
+            case T_BIGNUM:
+                s-&gt;param.bind[i].buffer_type = MYSQL_TYPE_LONGLONG;
+                s-&gt;param.bind[i].buffer = &amp;(s-&gt;param.buffer[i]);
+                *(LONG_LONG*)(s-&gt;param.bind[i].buffer) = rb_big2ll(argv[i]);
+                break;
+            case T_FLOAT:
+                s-&gt;param.bind[i].buffer_type = MYSQL_TYPE_DOUBLE;
+                s-&gt;param.bind[i].buffer = &amp;(s-&gt;param.buffer[i]);
+                *(double*)(s-&gt;param.bind[i].buffer) = NUM2DBL(argv[i]);
+                break;
+            case T_STRING:
+                s-&gt;param.bind[i].buffer_type = MYSQL_TYPE_STRING;
+                s-&gt;param.bind[i].buffer = RSTRING_PTR(argv[i]);
+                s-&gt;param.bind[i].buffer_length = RSTRING_LEN(argv[i]);
+                s-&gt;param.length[i] = RSTRING_LEN(argv[i]);
+                s-&gt;param.bind[i].length = &amp;(s-&gt;param.length[i]);
+                break;
+            default:
+                if (CLASS_OF(argv[i]) == rb_cTime) {
+                    MYSQL_TIME t;
+                    VALUE a = rb_funcall(argv[i], rb_intern(&quot;to_a&quot;), 0);
+                    s-&gt;param.bind[i].buffer_type = MYSQL_TYPE_DATETIME;
+                    s-&gt;param.bind[i].buffer = &amp;(s-&gt;param.buffer[i]);
+                    memset(&amp;t, 0, sizeof(t));    /* avoid warning */
+                    t.second_part = 0;
+                    t.neg = 0;
+                    t.second = FIX2INT(RARRAY_PTR(a)[0]);
+                    t.minute = FIX2INT(RARRAY_PTR(a)[1]);
+                    t.hour = FIX2INT(RARRAY_PTR(a)[2]);
+                    t.day = FIX2INT(RARRAY_PTR(a)[3]);
+                    t.month = FIX2INT(RARRAY_PTR(a)[4]);
+                    t.year = FIX2INT(RARRAY_PTR(a)[5]);
+                    *(MYSQL_TIME*)&amp;(s-&gt;param.buffer[i]) = t;
+                } else if (CLASS_OF(argv[i]) == cMysqlTime) {
+                    MYSQL_TIME t;
+                    s-&gt;param.bind[i].buffer_type = MYSQL_TYPE_DATETIME;
+                    s-&gt;param.bind[i].buffer = &amp;(s-&gt;param.buffer[i]);
+                    memset(&amp;t, 0, sizeof(t));    /* avoid warning */
+                    t.second_part = 0;
+                    t.neg = 0;
+                    t.second = NUM2INT(rb_iv_get(argv[i], &quot;second&quot;));
+                    t.minute = NUM2INT(rb_iv_get(argv[i], &quot;minute&quot;));
+                    t.hour = NUM2INT(rb_iv_get(argv[i], &quot;hour&quot;));
+                    t.day = NUM2INT(rb_iv_get(argv[i], &quot;day&quot;));
+                    t.month = NUM2INT(rb_iv_get(argv[i], &quot;month&quot;));
+                    t.year = NUM2INT(rb_iv_get(argv[i], &quot;year&quot;));
+                    *(MYSQL_TIME*)&amp;(s-&gt;param.buffer[i]) = t;
+                } else
+                    rb_raise(rb_eTypeError, &quot;unsupported type: %d&quot;, TYPE(argv[i]));
+            }
+        }
+        if (mysql_stmt_bind_param(stmt, s-&gt;param.bind))
+            mysql_stmt_raise(stmt);
+    }
+
+    if (mysql_stmt_execute(stmt))
+        mysql_stmt_raise(stmt);
+    if (s-&gt;res) {
+        MYSQL_FIELD *field;
+        if (mysql_stmt_store_result(stmt))
+            mysql_stmt_raise(stmt);
+        field = mysql_fetch_fields(s-&gt;res);
+        for (i = 0; i &lt; s-&gt;result.n; i++) {
+            switch(s-&gt;result.bind[i].buffer_type) {
+            case MYSQL_TYPE_NULL:
+                break;
+            case MYSQL_TYPE_TINY:
+            case MYSQL_TYPE_SHORT:
+            case MYSQL_TYPE_YEAR:
+            case MYSQL_TYPE_INT24:
+            case MYSQL_TYPE_LONG:
+            case MYSQL_TYPE_LONGLONG:
+            case MYSQL_TYPE_FLOAT:
+            case MYSQL_TYPE_DOUBLE:
+                s-&gt;result.bind[i].buffer = xmalloc(8);
+                s-&gt;result.bind[i].buffer_length = 8;
+                memset(s-&gt;result.bind[i].buffer, 0, 8);
+                break;
+            case MYSQL_TYPE_DECIMAL:
+            case MYSQL_TYPE_STRING:
+            case MYSQL_TYPE_VAR_STRING:
+            case MYSQL_TYPE_TINY_BLOB:
+            case MYSQL_TYPE_BLOB:
+            case MYSQL_TYPE_MEDIUM_BLOB:
+            case MYSQL_TYPE_LONG_BLOB:
+#if MYSQL_VERSION_ID &gt;= 50003
+            case MYSQL_TYPE_NEWDECIMAL:
+            case MYSQL_TYPE_BIT:
+#endif
+                s-&gt;result.bind[i].buffer = xmalloc(field[i].max_length);
+                memset(s-&gt;result.bind[i].buffer, 0, field[i].max_length);
+                s-&gt;result.bind[i].buffer_length = field[i].max_length;
+                break;
+            case MYSQL_TYPE_TIME:
+            case MYSQL_TYPE_DATE:
+            case MYSQL_TYPE_DATETIME:
+            case MYSQL_TYPE_TIMESTAMP:
+                s-&gt;result.bind[i].buffer = xmalloc(sizeof(MYSQL_TIME));
+                s-&gt;result.bind[i].buffer_length = sizeof(MYSQL_TIME);
+                memset(s-&gt;result.bind[i].buffer, 0, sizeof(MYSQL_TIME));
+                break;
+            default:
+                rb_raise(rb_eTypeError, &quot;unknown buffer_type: %d&quot;, s-&gt;result.bind[i].buffer_type);
+            }
+        }
+        if (mysql_stmt_bind_result(s-&gt;stmt, s-&gt;result.bind))
+            mysql_stmt_raise(s-&gt;stmt);
+    }
+    return obj;
+}</pre>
+            </div><!-- execute-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- execute-method -->
+
+      
+        <div id="fetch-method" class="method-detail ">
+          <a name="method-i-fetch"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fetch</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>fetch()</p>
+            
+
+            
+            <div class="method-source-code" id="fetch-source">
+<pre>
+static VALUE stmt_fetch(VALUE obj)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    VALUE ret;
+    int i;
+    int r;
+
+    check_stmt_closed(obj);
+    r = mysql_stmt_fetch(s-&gt;stmt);
+    if (r == MYSQL_NO_DATA)
+        return Qnil;
+#ifdef MYSQL_DATA_TRUNCATED
+    if (r == MYSQL_DATA_TRUNCATED)
+        rb_raise(rb_eRuntimeError, &quot;unexpectedly data truncated&quot;);
+#endif
+    if (r == 1)
+        mysql_stmt_raise(s-&gt;stmt);
+
+    ret = rb_ary_new2(s-&gt;result.n);
+    for (i = 0; i &lt; s-&gt;result.n; i++) {
+        if (s-&gt;result.is_null[i])
+            rb_ary_push(ret, Qnil);
+        else {
+            VALUE v;
+            MYSQL_TIME *t;
+            switch (s-&gt;result.bind[i].buffer_type) {
+            case MYSQL_TYPE_TINY:
+                if (s-&gt;result.bind[i].is_unsigned)
+                    v = UINT2NUM(*(unsigned char *)s-&gt;result.bind[i].buffer);
+                else
+                    v = INT2NUM(*(signed char *)s-&gt;result.bind[i].buffer);
+                break;
+            case MYSQL_TYPE_SHORT:
+            case MYSQL_TYPE_YEAR:
+                if (s-&gt;result.bind[i].is_unsigned)
+                    v = UINT2NUM(*(unsigned short *)s-&gt;result.bind[i].buffer);
+                else
+                    v = INT2NUM(*(short *)s-&gt;result.bind[i].buffer);
+                break;
+            case MYSQL_TYPE_INT24:
+            case MYSQL_TYPE_LONG:
+                if (s-&gt;result.bind[i].is_unsigned)
+                    v = UINT2NUM(*(unsigned int *)s-&gt;result.bind[i].buffer);
+                else
+                    v = INT2NUM(*(int *)s-&gt;result.bind[i].buffer);
+                break;
+            case MYSQL_TYPE_LONGLONG:
+                if (s-&gt;result.bind[i].is_unsigned)
+                    v = ULL2NUM(*(unsigned long long *)s-&gt;result.bind[i].buffer);
+                else
+                    v = LL2NUM(*(long long *)s-&gt;result.bind[i].buffer);
+                break;
+            case MYSQL_TYPE_FLOAT:
+                v = rb_float_new((double)(*(float *)s-&gt;result.bind[i].buffer));
+                break;
+            case MYSQL_TYPE_DOUBLE:
+                v = rb_float_new(*(double *)s-&gt;result.bind[i].buffer);
+                break;
+            case MYSQL_TYPE_TIME:
+            case MYSQL_TYPE_DATE:
+            case MYSQL_TYPE_DATETIME:
+            case MYSQL_TYPE_TIMESTAMP:
+                t = (MYSQL_TIME *)s-&gt;result.bind[i].buffer;
+                v = rb_obj_alloc(cMysqlTime);
+                rb_funcall(v, rb_intern(&quot;initialize&quot;), 8,
+                           INT2FIX(t-&gt;year), INT2FIX(t-&gt;month),
+                           INT2FIX(t-&gt;day), INT2FIX(t-&gt;hour),
+                           INT2FIX(t-&gt;minute), INT2FIX(t-&gt;second),
+                           (t-&gt;neg ? Qtrue : Qfalse),
+                           INT2FIX(t-&gt;second_part));
+                break;
+            case MYSQL_TYPE_DECIMAL:
+            case MYSQL_TYPE_STRING:
+            case MYSQL_TYPE_VAR_STRING:
+            case MYSQL_TYPE_TINY_BLOB:
+            case MYSQL_TYPE_BLOB:
+            case MYSQL_TYPE_MEDIUM_BLOB:
+            case MYSQL_TYPE_LONG_BLOB:
+#if MYSQL_VERSION_ID &gt;= 50003
+            case MYSQL_TYPE_NEWDECIMAL:
+            case MYSQL_TYPE_BIT:
+#endif
+                v = rb_tainted_str_new(s-&gt;result.bind[i].buffer, s-&gt;result.length[i]);
+                break;
+            default:
+                rb_raise(rb_eTypeError, &quot;unknown buffer_type: %d&quot;, s-&gt;result.bind[i].buffer_type);
+            }
+            rb_ary_push(ret, v);
+        }
+    }
+    return ret;
+}</pre>
+            </div><!-- fetch-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fetch-method -->
+
+      
+        <div id="field_count-method" class="method-detail ">
+          <a name="method-i-field_count"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">field_count</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Stmt.html#method-i-field_count">field_count</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="field_count-source">
+<pre>
+static VALUE stmt_field_count(VALUE obj)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    unsigned int n;
+    check_stmt_closed(obj);
+    n = mysql_stmt_field_count(s-&gt;stmt);
+    return INT2NUM(n);
+}</pre>
+            </div><!-- field_count-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- field_count-method -->
+
+      
+        <div id="free_result-method" class="method-detail ">
+          <a name="method-i-free_result"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">free_result</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Stmt.html#method-i-free_result">free_result</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="free_result-source">
+<pre>
+static VALUE stmt_free_result(VALUE obj)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    check_stmt_closed(obj);
+    if (mysql_stmt_free_result(s-&gt;stmt))
+        mysql_stmt_raise(s-&gt;stmt);
+    return obj;
+}</pre>
+            </div><!-- free_result-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- free_result-method -->
+
+      
+        <div id="insert_id-method" class="method-detail ">
+          <a name="method-i-insert_id"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">insert_id</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Stmt.html#method-i-insert_id">insert_id</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="insert_id-source">
+<pre>
+static VALUE stmt_insert_id(VALUE obj)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    my_ulonglong n;
+    check_stmt_closed(obj);
+    n = mysql_stmt_insert_id(s-&gt;stmt);
+    return INT2NUM(n);
+}</pre>
+            </div><!-- insert_id-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- insert_id-method -->
+
+      
+        <div id="num_rows-method" class="method-detail ">
+          <a name="method-i-num_rows"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">num_rows</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Stmt.html#method-i-num_rows">num_rows</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="num_rows-source">
+<pre>
+static VALUE stmt_num_rows(VALUE obj)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    my_ulonglong n;
+    check_stmt_closed(obj);
+    n = mysql_stmt_num_rows(s-&gt;stmt);
+    return INT2NUM(n);
+}</pre>
+            </div><!-- num_rows-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- num_rows-method -->
+
+      
+        <div id="param_count-method" class="method-detail ">
+          <a name="method-i-param_count"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">param_count</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Stmt.html#method-i-param_count">param_count</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="param_count-source">
+<pre>
+static VALUE stmt_param_count(VALUE obj)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    unsigned long n;
+    check_stmt_closed(obj);
+    n = mysql_stmt_param_count(s-&gt;stmt);
+    return INT2NUM(n);
+}</pre>
+            </div><!-- param_count-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- param_count-method -->
+
+      
+        <div id="prepare-method" class="method-detail ">
+          <a name="method-i-prepare"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">prepare</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>prepare(query)</p>
+            
+
+            
+            <div class="method-source-code" id="prepare-source">
+<pre>
+static VALUE stmt_prepare(VALUE obj, VALUE query)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    int n;
+    int i;
+    MYSQL_FIELD *field;
+
+    free_mysqlstmt_memory(s);
+    check_stmt_closed(obj);
+    Check_Type(query, T_STRING);
+    if (mysql_stmt_prepare(s-&gt;stmt, RSTRING_PTR(query), RSTRING_LEN(query)))
+        mysql_stmt_raise(s-&gt;stmt);
+
+    n = mysql_stmt_param_count(s-&gt;stmt);
+    s-&gt;param.n = n;
+    s-&gt;param.bind = xmalloc(sizeof(s-&gt;param.bind[0]) * n);
+    s-&gt;param.length = xmalloc(sizeof(s-&gt;param.length[0]) * n);
+    s-&gt;param.buffer = xmalloc(sizeof(s-&gt;param.buffer[0]) * n);
+
+    s-&gt;res = mysql_stmt_result_metadata(s-&gt;stmt);
+    if (s-&gt;res) {
+        n = s-&gt;result.n = mysql_num_fields(s-&gt;res);
+        s-&gt;result.bind = xmalloc(sizeof(s-&gt;result.bind[0]) * n);
+        s-&gt;result.is_null = xmalloc(sizeof(s-&gt;result.is_null[0]) * n);
+        s-&gt;result.length = xmalloc(sizeof(s-&gt;result.length[0]) * n);
+        field = mysql_fetch_fields(s-&gt;res);
+        memset(s-&gt;result.bind, 0, sizeof(s-&gt;result.bind[0]) * n);
+        for (i = 0; i &lt; n; i++) {
+            s-&gt;result.bind[i].buffer_type = field[i].type;
+#if MYSQL_VERSION_ID &lt; 50003
+            if (field[i].type == MYSQL_TYPE_DECIMAL)
+                s-&gt;result.bind[i].buffer_type = MYSQL_TYPE_STRING;
+#endif
+            s-&gt;result.bind[i].is_null = &amp;(s-&gt;result.is_null[i]);
+            s-&gt;result.bind[i].length = &amp;(s-&gt;result.length[i]);
+            s-&gt;result.bind[i].is_unsigned = ((field[i].flags &amp; UNSIGNED_FLAG) != 0);
+        }
+    } else {
+        if (mysql_stmt_errno(s-&gt;stmt))
+            mysql_stmt_raise(s-&gt;stmt);
+    }
+
+    return obj;
+}</pre>
+            </div><!-- prepare-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- prepare-method -->
+
+      
+        <div id="reset-method" class="method-detail ">
+          <a name="method-i-reset"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reset</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>reset()</p>
+            
+
+            
+            <div class="method-source-code" id="reset-source">
+<pre>
+static VALUE stmt_reset(VALUE obj)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    check_stmt_closed(obj);
+    if (mysql_stmt_reset(s-&gt;stmt))
+        mysql_stmt_raise(s-&gt;stmt);
+    return obj;
+}</pre>
+            </div><!-- reset-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reset-method -->
+
+      
+        <div id="result_metadata-method" class="method-detail ">
+          <a name="method-i-result_metadata"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">result_metadata</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Stmt.html#method-i-result_metadata">result_metadata</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="result_metadata-source">
+<pre>
+static VALUE stmt_result_metadata(VALUE obj)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    MYSQL_RES *res;
+    check_stmt_closed(obj);
+    res = mysql_stmt_result_metadata(s-&gt;stmt);
+    if (res == NULL) {
+      if (mysql_stmt_errno(s-&gt;stmt) != 0)
+        mysql_stmt_raise(s-&gt;stmt);
+      return Qnil;
+    }
+    return mysqlres2obj(res);
+}</pre>
+            </div><!-- result_metadata-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- result_metadata-method -->
+
+      
+        <div id="row_seek-method" class="method-detail ">
+          <a name="method-i-row_seek"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">row_seek</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Stmt.html#method-i-row_seek">row_seek</a>(offset)</p>
+            
+
+            
+            <div class="method-source-code" id="row_seek-source">
+<pre>
+static VALUE stmt_row_seek(VALUE obj, VALUE offset)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    MYSQL_ROW_OFFSET prev_offset;
+    if (CLASS_OF(offset) != cMysqlRowOffset)
+        rb_raise(rb_eTypeError, &quot;wrong argument type %s (expected Mysql::RowOffset)&quot;, rb_obj_classname(offset));
+    check_stmt_closed(obj);
+    prev_offset = mysql_stmt_row_seek(s-&gt;stmt, DATA_PTR(offset));
+    return Data_Wrap_Struct(cMysqlRowOffset, 0, NULL, prev_offset);
+}</pre>
+            </div><!-- row_seek-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- row_seek-method -->
+
+      
+        <div id="row_tell-method" class="method-detail ">
+          <a name="method-i-row_tell"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">row_tell</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Stmt.html#method-i-row_tell">row_tell</a>()</p>
+            
+
+            
+            <div class="method-source-code" id="row_tell-source">
+<pre>
+static VALUE stmt_row_tell(VALUE obj)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    MYSQL_ROW_OFFSET offset;
+    check_stmt_closed(obj);
+    offset = mysql_stmt_row_tell(s-&gt;stmt);
+    return Data_Wrap_Struct(cMysqlRowOffset, 0, NULL, offset);
+}</pre>
+            </div><!-- row_tell-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- row_tell-method -->
+
+      
+        <div id="send_long_data-method" class="method-detail ">
+          <a name="method-i-send_long_data"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">send_long_data</span><span
+              class="method-args">(p1, p2)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Stmt.html#method-i-send_long_data">send_long_data</a>(col, data)</p>
+            
+
+            
+            <div class="method-source-code" id="send_long_data-source">
+<pre>
+static VALUE stmt_send_long_data(VALUE obj, VALUE col, VALUE data)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    int c;
+    check_stmt_closed(obj);
+    c = NUM2INT(col);
+    if (0 &lt;= c &amp;&amp; c &lt; s-&gt;param.n) {
+        s-&gt;param.bind[c].buffer_type = MYSQL_TYPE_STRING;
+        if (mysql_stmt_bind_param(s-&gt;stmt, s-&gt;param.bind))
+            mysql_stmt_raise(s-&gt;stmt);
+    }
+    if (mysql_stmt_send_long_data(s-&gt;stmt, c, RSTRING_PTR(data), RSTRING_LEN(data)))
+        mysql_stmt_raise(s-&gt;stmt);
+    return obj;
+}</pre>
+            </div><!-- send_long_data-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- send_long_data-method -->
+
+      
+        <div id="sqlstate-method" class="method-detail ">
+          <a name="method-i-sqlstate"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sqlstate</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>sqlstate()</p>
+            
+
+            
+            <div class="method-source-code" id="sqlstate-source">
+<pre>
+static VALUE stmt_sqlstate(VALUE obj)
+{
+    struct mysql_stmt* s = DATA_PTR(obj);
+    return rb_tainted_str_new2(mysql_stmt_sqlstate(s-&gt;stmt));
+}</pre>
+            </div><!-- sqlstate-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sqlstate-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

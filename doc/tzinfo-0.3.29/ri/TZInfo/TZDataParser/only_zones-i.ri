@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"only_zones"$TZInfo::TZDataParser#only_zones"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["HLimit the set of zones to generate (set to an array containing zone"identifiers).F"lib/tzinfo/tzdataparser.rb

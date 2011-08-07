@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"_spawn_options"%PhusionPassenger::_spawn_options"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["DSet during spawning, and set back to nil when spawning is done.T"(lib/phusion_passenger/public_api.rb

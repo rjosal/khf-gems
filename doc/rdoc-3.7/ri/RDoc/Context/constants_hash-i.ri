@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"constants_hash"!RDoc::Context#constants_hash"R:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	[""Hash of registered constants.F"lib/rdoc/context.rb

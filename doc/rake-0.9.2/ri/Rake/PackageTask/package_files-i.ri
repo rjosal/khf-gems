@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"package_files"$Rake::PackageTask#package_files"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["1List of files to be included in the package.F"lib/rake/packagetask.rb

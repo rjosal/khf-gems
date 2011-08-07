@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"auth_url"&GData::Auth::ClientLogin#auth_url"RW:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;["+The ClientLogin authentication handler:
+@file0F""lib/gdata/auth/clientlogin.rb

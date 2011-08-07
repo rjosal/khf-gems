@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"original_filename"/Rack::Test::UploadedFile#original_filename"R:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["CThe filename, *not* including the path, of the "uploaded" fileF"#lib/rack/test/uploaded_file.rb

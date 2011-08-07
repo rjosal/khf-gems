@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: PhusionPassenger::MessageChannel</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/phusion_passenger/message_channel_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/phusion_passenger/message_channel.rb">lib/phusion_passenger/message_channel.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="MessageChannel/InvalidHashError.html">PhusionPassenger::MessageChannel::InvalidHashError</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-closed-3F">#closed?</a></li>
+          
+          <li><a href="#method-i-fileno">#fileno</a></li>
+          
+          <li><a href="#method-i-read">#read</a></li>
+          
+          <li><a href="#method-i-read_hash">#read_hash</a></li>
+          
+          <li><a href="#method-i-read_scalar">#read_scalar</a></li>
+          
+          <li><a href="#method-i-recv_io">#recv_io</a></li>
+          
+          <li><a href="#method-i-send_io">#send_io</a></li>
+          
+          <li><a href="#method-i-write">#write</a></li>
+          
+          <li><a href="#method-i-write_scalar">#write_scalar</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../PhusionPassenger.html">PhusionPassenger</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractInstaller.html">PhusionPassenger::AbstractInstaller</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractRequestHandler.html">PhusionPassenger::AbstractRequestHandler</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractServer.html">PhusionPassenger::AbstractServer</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractServer/InvalidPassword.html">PhusionPassenger::AbstractServer::InvalidPassword</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractServer/ServerAlreadyStarted.html">PhusionPassenger::AbstractServer::ServerAlreadyStarted</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractServer/ServerError.html">PhusionPassenger::AbstractServer::ServerError</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractServer/ServerNotStarted.html">PhusionPassenger::AbstractServer::ServerNotStarted</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractServer/UnknownMessage.html">PhusionPassenger::AbstractServer::UnknownMessage</a></li>
+        
+          <li><a href="../PhusionPassenger/AbstractServerCollection.html">PhusionPassenger::AbstractServerCollection</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools.html">PhusionPassenger::AdminTools</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/MemoryStats.html">PhusionPassenger::AdminTools::MemoryStats</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/MemoryStats/Process.html">PhusionPassenger::AdminTools::MemoryStats::Process</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance.html">PhusionPassenger::AdminTools::ServerInstance</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/CorruptedDirectoryError.html">PhusionPassenger::AdminTools::ServerInstance::CorruptedDirectoryError</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/GenerationsAbsentError.html">PhusionPassenger::AdminTools::ServerInstance::GenerationsAbsentError</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/Group.html">PhusionPassenger::AdminTools::ServerInstance::Group</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/Process.html">PhusionPassenger::AdminTools::ServerInstance::Process</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/RoleDeniedError.html">PhusionPassenger::AdminTools::ServerInstance::RoleDeniedError</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/StaleDirectoryError.html">PhusionPassenger::AdminTools::ServerInstance::StaleDirectoryError</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/Stats.html">PhusionPassenger::AdminTools::ServerInstance::Stats</a></li>
+        
+          <li><a href="../PhusionPassenger/AdminTools/ServerInstance/UnsupportedGenerationStructureVersionError.html">PhusionPassenger::AdminTools::ServerInstance::UnsupportedGenerationStructureVersionError</a></li>
+        
+          <li><a href="../PhusionPassenger/AnalyticsLogger.html">PhusionPassenger::AnalyticsLogger</a></li>
+        
+          <li><a href="../PhusionPassenger/AnalyticsLogger/Lock.html">PhusionPassenger::AnalyticsLogger::Lock</a></li>
+        
+          <li><a href="../PhusionPassenger/AnalyticsLogger/Log.html">PhusionPassenger::AnalyticsLogger::Log</a></li>
+        
+          <li><a href="../PhusionPassenger/AnalyticsLogger/SharedData.html">PhusionPassenger::AnalyticsLogger::SharedData</a></li>
+        
+          <li><a href="../PhusionPassenger/AppInitError.html">PhusionPassenger::AppInitError</a></li>
+        
+          <li><a href="../PhusionPassenger/AppProcess.html">PhusionPassenger::AppProcess</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRails.html">PhusionPassenger::ClassicRails</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRails/ApplicationSpawner.html">PhusionPassenger::ClassicRails::ApplicationSpawner</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRails/ApplicationSpawner/Error.html">PhusionPassenger::ClassicRails::ApplicationSpawner::Error</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRails/CGIFixed.html">PhusionPassenger::ClassicRails::CGIFixed</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRails/FrameworkSpawner.html">PhusionPassenger::ClassicRails::FrameworkSpawner</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRails/FrameworkSpawner/Error.html">PhusionPassenger::ClassicRails::FrameworkSpawner::Error</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRails/RequestHandler.html">PhusionPassenger::ClassicRails::RequestHandler</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions.html">PhusionPassenger::ClassicRailsExtensions</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACBaseExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACBaseExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACBenchmarkingExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACBenchmarkingExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ACRescueExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ACRescueExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ARAbstractAdapterExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ARAbstractAdapterExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/AVBenchmarkHelperExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::AVBenchmarkHelperExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/CacheStoreExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::CacheStoreExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/ClassicRailsExtensions/AnalyticsLogging/ConcreteCacheStoreExtension.html">PhusionPassenger::ClassicRailsExtensions::AnalyticsLogging::ConcreteCacheStoreExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/ConsoleTextTemplate.html">PhusionPassenger::ConsoleTextTemplate</a></li>
+        
+          <li><a href="../PhusionPassenger/DebugLogging.html">PhusionPassenger::DebugLogging</a></li>
+        
+          <li><a href="../PhusionPassenger/FrameworkInitError.html">PhusionPassenger::FrameworkInitError</a></li>
+        
+          <li><a href="../PhusionPassenger/HTMLTemplate.html">PhusionPassenger::HTMLTemplate</a></li>
+        
+          <li><a href="../PhusionPassenger/InitializationError.html">PhusionPassenger::InitializationError</a></li>
+        
+          <li><a href="../PhusionPassenger/InvalidPath.html">PhusionPassenger::InvalidPath</a></li>
+        
+          <li><a href="../PhusionPassenger/MessageChannel.html">PhusionPassenger::MessageChannel</a></li>
+        
+          <li><a href="../PhusionPassenger/MessageChannel/InvalidHashError.html">PhusionPassenger::MessageChannel::InvalidHashError</a></li>
+        
+          <li><a href="../PhusionPassenger/MessageClient.html">PhusionPassenger::MessageClient</a></li>
+        
+          <li><a href="../PhusionPassenger/NativeSupportLoader.html">PhusionPassenger::NativeSupportLoader</a></li>
+        
+          <li><a href="../PhusionPassenger/Packaging.html">PhusionPassenger::Packaging</a></li>
+        
+          <li><a href="../PhusionPassenger/PlatformInfo.html">PhusionPassenger::PlatformInfo</a></li>
+        
+          <li><a href="../PhusionPassenger/PlatformInfo/RuntimeError.html">PhusionPassenger::PlatformInfo::RuntimeError</a></li>
+        
+          <li><a href="../PhusionPassenger/Plugin.html">PhusionPassenger::Plugin</a></li>
+        
+          <li><a href="../PhusionPassenger/Rack.html">PhusionPassenger::Rack</a></li>
+        
+          <li><a href="../PhusionPassenger/Rack/ApplicationSpawner.html">PhusionPassenger::Rack::ApplicationSpawner</a></li>
+        
+          <li><a href="../PhusionPassenger/Rack/ApplicationSpawner/Error.html">PhusionPassenger::Rack::ApplicationSpawner::Error</a></li>
+        
+          <li><a href="../PhusionPassenger/Rack/RequestHandler.html">PhusionPassenger::Rack::RequestHandler</a></li>
+        
+          <li><a href="../PhusionPassenger/Rails3Extensions.html">PhusionPassenger::Rails3Extensions</a></li>
+        
+          <li><a href="../PhusionPassenger/Rails3Extensions/AnalyticsLogging.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging</a></li>
+        
+          <li><a href="../PhusionPassenger/Rails3Extensions/AnalyticsLogging/ACExtension.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging::ACExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/Rails3Extensions/AnalyticsLogging/ASBenchmarkableExtension.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging::ASBenchmarkableExtension</a></li>
+        
+          <li><a href="../PhusionPassenger/Rails3Extensions/AnalyticsLogging/ExceptionLogger.html">PhusionPassenger::Rails3Extensions::AnalyticsLogging::ExceptionLogger</a></li>
+        
+          <li><a href="../PhusionPassenger/SpawnManager.html">PhusionPassenger::SpawnManager</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone.html">PhusionPassenger::Standalone</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/AppFinder.html">PhusionPassenger::Standalone::AppFinder</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/Command.html">PhusionPassenger::Standalone::Command</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/ConfigFile.html">PhusionPassenger::Standalone::ConfigFile</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/ConfigFile/DisallowedContextError.html">PhusionPassenger::Standalone::ConfigFile::DisallowedContextError</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/HelpCommand.html">PhusionPassenger::Standalone::HelpCommand</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/Main.html">PhusionPassenger::Standalone::Main</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/PackageRuntimeCommand.html">PhusionPassenger::Standalone::PackageRuntimeCommand</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/RuntimeInstaller.html">PhusionPassenger::Standalone::RuntimeInstaller</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/StartCommand.html">PhusionPassenger::Standalone::StartCommand</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/StatusCommand.html">PhusionPassenger::Standalone::StatusCommand</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/StopCommand.html">PhusionPassenger::Standalone::StopCommand</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/Utils.html">PhusionPassenger::Standalone::Utils</a></li>
+        
+          <li><a href="../PhusionPassenger/Standalone/VersionCommand.html">PhusionPassenger::Standalone::VersionCommand</a></li>
+        
+          <li><a href="../PhusionPassenger/UnknownError.html">PhusionPassenger::UnknownError</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils.html">PhusionPassenger::Utils</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/FileSystemWatcher.html">PhusionPassenger::Utils::FileSystemWatcher</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/FileSystemWatcher/DirInfo.html">PhusionPassenger::Utils::FileSystemWatcher::DirInfo</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/FileSystemWatcher/FileInfo.html">PhusionPassenger::Utils::FileSystemWatcher::FileInfo</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/HostsFileParser.html">PhusionPassenger::Utils::HostsFileParser</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/Kernel.html">PhusionPassenger::Utils::Kernel</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/PseudoIO.html">PhusionPassenger::Utils::PseudoIO</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/RewindableInput.html">PhusionPassenger::Utils::RewindableInput</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/RewindableInput/Tempfile.html">PhusionPassenger::Utils::RewindableInput::Tempfile</a></li>
+        
+          <li><a href="../PhusionPassenger/Utils/UnseekableSocket.html">PhusionPassenger::Utils::UnseekableSocket</a></li>
+        
+          <li><a href="../PhusionPassenger/VersionNotFound.html">PhusionPassenger::VersionNotFound</a></li>
+        
+          <li><a href="../PhusionPassenger/WSGI.html">PhusionPassenger::WSGI</a></li>
+        
+          <li><a href="../PhusionPassenger/WSGI/ApplicationSpawner.html">PhusionPassenger::WSGI::ApplicationSpawner</a></li>
+        
+          <li><a href="../ConditionVariable.html">ConditionVariable</a></li>
+        
+          <li><a href="../Exception.html">Exception</a></li>
+        
+          <li><a href="../GC.html">GC</a></li>
+        
+          <li><a href="../IO.html">IO</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+          <li><a href="../Process.html">Process</a></li>
+        
+          <li><a href="../Signal.html">Signal</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">PhusionPassenger::MessageChannel</h1>
+
+    <div id="description" class="description">
+      
+<p>This class provides convenience methods for:</p>
+<ul><li>
+<p>sending and receiving raw data over an <a href="../IO.html">IO</a> channel.</p>
+</li><li>
+<p>sending and receiving messages over an <a href="../IO.html">IO</a> channel.</p>
+</li><li>
+<p>file descriptor (<a href="../IO.html">IO</a> object) passing over a Unix
+socket.</p>
+</li></ul>
+
+<p>All of these methods use exceptions for error reporting.</p>
+
+<p>There are two kinds of messages:</p>
+<dl class="rdoc-list"><dt> Array messages </dt>
+<dd>
+<p>These are just a list of strings, and the message itself has a specific
+length. The contained strings may not contain NUL characters
+(<tt>'\0'</tt>). Note that an array message must have at least one element.</p>
+</dd><dt> Scalar messages </dt>
+<dd>
+<p>These are byte strings which may contain arbitrary binary data. Scalar
+messages also have a specific length.</p>
+</dd></dl>
+
+<p>The protocol is designed to be low overhead, easy to implement and easy to
+parse.</p>
+
+<p><a href="MessageChannel.html">MessageChannel</a> is to be wrapped around an
+<a href="../IO.html">IO</a> object. For example:</p>
+
+<pre>a, b = IO.pipe
+channel1 = MessageChannel.new(a)
+channel2 = MessageChannel.new(b)
+
+# Send an array message.
+channel2.write(&quot;hello&quot;, &quot;world !!&quot;)
+channel1.read    # =&gt; [&quot;hello&quot;, &quot;world !!&quot;]
+
+# Send a scalar message.
+channel2.write_scalar(&quot;some long string which can contain arbitrary binary data&quot;)
+channel1.read_scalar</pre>
+
+<p>The life time of a <a href="MessageChannel.html">MessageChannel</a> is
+independent from that of the wrapped <a href="../IO.html">IO</a> object. If
+a <a href="MessageChannel.html">MessageChannel</a> object is destroyed, the
+underlying <a href="../IO.html">IO</a> object is not automatically closed.
+Call close() if you want to close the underlying <a
+href="../IO.html">IO</a> object.</p>
+
+<p>Note: Be careful with mixing the sending/receiving of array messages,
+scalar messages and <a href="../IO.html">IO</a> objects. If you send a
+collection of any of these in a specific order, then the receiving side
+must receive them in the exact some order. So suppose you first send a
+message, then an <a href="../IO.html">IO</a> object, then a scalar, then
+the receiving side must first receive a message, then an <a
+href="../IO.html">IO</a> object, then a scalar. If the receiving side does
+things in the wrong order then bad things will happen.</p>
+
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="io-attribute-method" class="method-detail">
+          <a name="io"></a>
+          
+          <a name="io="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">io</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The wrapped <a href="../IO.html">IO</a> object.</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(io = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new <a href="MessageChannel.html">MessageChannel</a> by wrapping
+the given <a href="../IO.html">IO</a> object.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/message_channel.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">io</span> = <span class="ruby-keyword">nil</span>)
+        <span class="ruby-ivar">@io</span> = <span class="ruby-identifier">io</span>
+        <span class="ruby-comment"># Make it binary just in case.</span>
+        <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">binmode</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@io</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Close the underlying <a href="../IO.html">IO</a> stream. Might raise
+SystemCallError or IOError when something goes wrong.</p>
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/message_channel.rb, line 359</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+        <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">close</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="closed-3F-method" class="method-detail ">
+          <a name="method-i-closed-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">closed?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Checks whether the underlying <a href="../IO.html">IO</a> stream is closed.</p>
+            
+
+            
+            <div class="method-source-code" id="closed-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/message_channel.rb, line 364</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">closed?</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">closed?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- closed-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- closed-3F-method -->
+
+      
+        <div id="fileno-method" class="method-detail ">
+          <a name="method-i-fileno"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fileno</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the file descriptor of the underlying <a href="../IO.html">IO</a>
+object.</p>
+            
+
+            
+            <div class="method-source-code" id="fileno-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/message_channel.rb, line 353</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fileno</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">fileno</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fileno-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fileno-method -->
+
+      
+        <div id="read-method" class="method-detail ">
+          <a name="method-i-read"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Read an array message from the underlying file descriptor. Returns the
+array message as an array, or nil when end-of-stream has been reached.</p>
+
+<p>Might raise SystemCallError, IOError or SocketError when something goes
+wrong.</p>
+            
+
+            
+            <div class="method-source-code" id="read-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/message_channel.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read</span>
+        <span class="ruby-identifier">buffer</span> = <span class="ruby-identifier">new_buffer</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-constant">HEADER_SIZE</span>, <span class="ruby-identifier">buffer</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">while</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">HEADER_SIZE</span>
+                <span class="ruby-identifier">tmp</span> = <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-constant">HEADER_SIZE</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">empty?</span>
+                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-identifier">chunk_size</span> = <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-constant">UINT16_PACK_FORMAT</span>)[<span class="ruby-value">0</span>]
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">chunk_size</span>, <span class="ruby-identifier">buffer</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">while</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">chunk_size</span>
+                <span class="ruby-identifier">tmp</span> = <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">chunk_size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">empty?</span>
+                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-identifier">message</span> = []
+        <span class="ruby-identifier">offset</span> = <span class="ruby-value">0</span>
+        <span class="ruby-identifier">delimiter_pos</span> = <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">index</span>(<span class="ruby-constant">DELIMITER</span>, <span class="ruby-identifier">offset</span>)
+        <span class="ruby-keyword">while</span> <span class="ruby-operator">!</span><span class="ruby-identifier">delimiter_pos</span>.<span class="ruby-identifier">nil?</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">delimiter_pos</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+                        <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;&quot;</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">buffer</span>[<span class="ruby-identifier">offset</span> <span class="ruby-operator">..</span> <span class="ruby-identifier">delimiter_pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>]
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">delimiter_pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+                <span class="ruby-identifier">delimiter_pos</span> = <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">index</span>(<span class="ruby-constant">DELIMITER</span>, <span class="ruby-identifier">offset</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">message</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ECONNRESET</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read-method -->
+
+      
+        <div id="read_hash-method" class="method-detail ">
+          <a name="method-i-read_hash"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read_hash</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Read an array message from the underlying file descriptor and return the
+result as a hash instead of an array. This assumes that the array message
+has an even number of elements. Returns nil when end-of-stream has been
+reached.</p>
+
+<p>Might raise SystemCallError, IOError or SocketError when something goes
+wrong.</p>
+            
+
+            
+            <div class="method-source-code" id="read_hash-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/message_channel.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_hash</span>
+        <span class="ruby-identifier">buffer</span> = <span class="ruby-identifier">new_buffer</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-constant">HEADER_SIZE</span>, <span class="ruby-identifier">buffer</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">while</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">HEADER_SIZE</span>
+                <span class="ruby-identifier">tmp</span> = <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-constant">HEADER_SIZE</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">empty?</span>
+                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-identifier">chunk_size</span> = <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-constant">UINT16_PACK_FORMAT</span>)[<span class="ruby-value">0</span>]
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">chunk_size</span>, <span class="ruby-identifier">buffer</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">while</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">chunk_size</span>
+                <span class="ruby-identifier">tmp</span> = <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">chunk_size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">empty?</span>
+                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-identifier">result</span> = {}
+        <span class="ruby-identifier">offset</span> = <span class="ruby-value">0</span>
+        <span class="ruby-identifier">delimiter_pos</span> = <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">index</span>(<span class="ruby-constant">DELIMITER</span>, <span class="ruby-identifier">offset</span>)
+        <span class="ruby-keyword">while</span> <span class="ruby-operator">!</span><span class="ruby-identifier">delimiter_pos</span>.<span class="ruby-identifier">nil?</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">delimiter_pos</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+                        <span class="ruby-identifier">name</span> = <span class="ruby-string">&quot;&quot;</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">name</span> = <span class="ruby-identifier">buffer</span>[<span class="ruby-identifier">offset</span> <span class="ruby-operator">..</span> <span class="ruby-identifier">delimiter_pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">delimiter_pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+                <span class="ruby-identifier">delimiter_pos</span> = <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">index</span>(<span class="ruby-constant">DELIMITER</span>, <span class="ruby-identifier">offset</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">delimiter_pos</span>.<span class="ruby-identifier">nil?</span>
+                        <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidHashError</span>
+                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">delimiter_pos</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+                        <span class="ruby-identifier">value</span> = <span class="ruby-string">&quot;&quot;</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">value</span> = <span class="ruby-identifier">buffer</span>[<span class="ruby-identifier">offset</span> <span class="ruby-operator">..</span> <span class="ruby-identifier">delimiter_pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-identifier">result</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">value</span>
+                <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">delimiter_pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+                <span class="ruby-identifier">delimiter_pos</span> = <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">index</span>(<span class="ruby-constant">DELIMITER</span>, <span class="ruby-identifier">offset</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ECONNRESET</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read_hash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read_hash-method -->
+
+      
+        <div id="read_scalar-method" class="method-detail ">
+          <a name="method-i-read_scalar"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read_scalar</span><span
+              class="method-args">(buffer = new_buffer, max_size = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Read a scalar message from the underlying <a href="../IO.html">IO</a>
+object. Returns the read message, or nil on end-of-stream.</p>
+
+<p>Might raise SystemCallError, IOError or SocketError when something goes
+wrong.</p>
+
+<p>The <tt>buffer</tt> argument specifies a buffer in which <a
+href="MessageChannel.html#method-i-read_scalar">#read_scalar</a> stores the
+read data. It is good practice to reuse existing buffers in order to
+minimize stress on the garbage collector.</p>
+
+<p>The <tt>max_size</tt> argument allows one to specify the maximum allowed
+size for the scalar message. If the received scalar message’s size is
+larger than <tt>max_size</tt>, then a SecurityError will be raised.</p>
+            
+
+            
+            <div class="method-source-code" id="read_scalar-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/message_channel.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_scalar</span>(<span class="ruby-identifier">buffer</span> = <span class="ruby-identifier">new_buffer</span>, <span class="ruby-identifier">max_size</span> = <span class="ruby-keyword">nil</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">4</span>, <span class="ruby-identifier">buffer</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">while</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span>
+                <span class="ruby-identifier">tmp</span> = <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">4</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">empty?</span>
+                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-identifier">size</span> = <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-constant">UINT32_PACK_FORMAT</span>)[<span class="ruby-value">0</span>]
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+                <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">replace</span>(<span class="ruby-string">''</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">buffer</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">max_size</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">max_size</span>
+                        <span class="ruby-identifier">raise</span> <span class="ruby-constant">SecurityError</span>, <span class="ruby-node">&quot;Scalar message size (#{size}) &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                                <span class="ruby-node">&quot;exceeds maximum allowed size (#{max_size}).&quot;</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">size</span>, <span class="ruby-identifier">buffer</span>)
+                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">size</span>
+                        <span class="ruby-identifier">tmp</span> = <span class="ruby-string">''</span>
+                        <span class="ruby-keyword">while</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">size</span>
+                                <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span>, <span class="ruby-identifier">tmp</span>)
+                                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+                                <span class="ruby-keyword">else</span>
+                                        <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">buffer</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ECONNRESET</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read_scalar-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read_scalar-method -->
+
+      
+        <div id="recv_io-method" class="method-detail ">
+          <a name="method-i-recv_io"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">recv_io</span><span
+              class="method-args">(klass = IO, negotiate = true)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Receive an <a href="../IO.html">IO</a> object (a file descriptor) from the
+channel. The other side must have sent an <a href="../IO.html">IO</a>
+object by calling <a
+href="MessageChannel.html#method-i-send_io">send_io</a>(). Note that this
+only works on Unix sockets.</p>
+
+<p>Might raise SystemCallError, IOError or SocketError when something goes
+wrong.</p>
+            
+
+            
+            <div class="method-source-code" id="recv_io-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/message_channel.rb, line 296</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">recv_io</span>(<span class="ruby-identifier">klass</span> = <span class="ruby-constant">IO</span>, <span class="ruby-identifier">negotiate</span> = <span class="ruby-keyword">true</span>)
+        <span class="ruby-identifier">write</span>(<span class="ruby-string">&quot;pass IO&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">negotiate</span>
+        <span class="ruby-identifier">io</span> = <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">recv_io</span>(<span class="ruby-identifier">klass</span>)
+        <span class="ruby-identifier">write</span>(<span class="ruby-string">&quot;got IO&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">negotiate</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">io</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- recv_io-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- recv_io-method -->
+
+      
+        <div id="send_io-method" class="method-detail ">
+          <a name="method-i-send_io"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">send_io</span><span
+              class="method-args">(io)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Send an <a href="../IO.html">IO</a> object (a file descriptor) over the
+channel. The other side must receive the <a href="../IO.html">IO</a> object
+by calling <a href="MessageChannel.html#method-i-recv_io">recv_io</a>().
+Note that this only works on Unix sockets.</p>
+
+<p>Might raise SystemCallError, IOError or SocketError when something goes
+wrong.</p>
+            
+
+            
+            <div class="method-source-code" id="send_io-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/message_channel.rb, line 309</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">send_io</span>(<span class="ruby-identifier">io</span>)
+        <span class="ruby-comment"># We read a message before actually calling #send_io</span>
+        <span class="ruby-comment"># in order to prevent the other side from accidentally</span>
+        <span class="ruby-comment"># read()ing past the normal data and reading our file</span>
+        <span class="ruby-comment"># descriptor too.</span>
+        <span class="ruby-comment">#</span>
+        <span class="ruby-comment"># For example suppose that side A looks like this:</span>
+        <span class="ruby-comment">#</span>
+        <span class="ruby-comment">#   read(fd, buf, 1024)</span>
+        <span class="ruby-comment">#   read_io(fd)</span>
+        <span class="ruby-comment">#</span>
+        <span class="ruby-comment"># and side B:</span>
+        <span class="ruby-comment">#</span>
+        <span class="ruby-comment">#   write(fd, buf, 100)</span>
+        <span class="ruby-comment">#   send_io(fd_to_pass)</span>
+        <span class="ruby-comment">#</span>
+        <span class="ruby-comment"># If B completes both write() and send_io(), then A's read() call</span>
+        <span class="ruby-comment"># reads past the 100 bytes that B sent. On some platforms, like</span>
+        <span class="ruby-comment"># Linux, this will cause read_io() to fail. And it just so happens</span>
+        <span class="ruby-comment"># that Ruby's IO#read method slurps more than just the given amount</span>
+        <span class="ruby-comment"># of bytes.</span>
+        <span class="ruby-identifier">result</span> = <span class="ruby-identifier">read</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">result</span>
+                <span class="ruby-identifier">raise</span> <span class="ruby-constant">EOFError</span>, <span class="ruby-string">&quot;End of stream&quot;</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">result</span> <span class="ruby-operator">!=</span> [<span class="ruby-string">&quot;pass IO&quot;</span>]
+                <span class="ruby-identifier">raise</span> <span class="ruby-constant">IOError</span>, <span class="ruby-string">&quot;IO passing pre-negotiation header expected&quot;</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">send_io</span>(<span class="ruby-identifier">io</span>)
+                <span class="ruby-comment"># Once you've sent the IO you expect to be able to close it on the</span>
+                <span class="ruby-comment"># sender's side, even if the other side hasn't read the IO yet.</span>
+                <span class="ruby-comment"># Not so: on some operating systems (I'm looking at you OS X) this</span>
+                <span class="ruby-comment"># can cause the receiving side to receive a bad file descriptor.</span>
+                <span class="ruby-comment"># The post negotiation protocol ensures that we block until the</span>
+                <span class="ruby-comment"># other side has really received the IO.</span>
+                <span class="ruby-identifier">result</span> = <span class="ruby-identifier">read</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">result</span>
+                        <span class="ruby-identifier">raise</span> <span class="ruby-constant">EOFError</span>, <span class="ruby-string">&quot;End of stream&quot;</span>
+                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">result</span> <span class="ruby-operator">!=</span> [<span class="ruby-string">&quot;got IO&quot;</span>]
+                        <span class="ruby-identifier">raise</span> <span class="ruby-constant">IOError</span>, <span class="ruby-string">&quot;IO passing post-negotiation header expected&quot;</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- send_io-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- send_io-method -->
+
+      
+        <div id="write-method" class="method-detail ">
+          <a name="method-i-write"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">write</span><span
+              class="method-args">(name, *args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Send an array message, which consists of the given elements, over the
+underlying file descriptor. <em>name</em> is the first element in the
+message, and <em>args</em> are the other elements. These arguments will
+internally be converted to strings by calling to_s().</p>
+
+<p>Might raise SystemCallError, IOError or SocketError when something goes
+wrong.</p>
+            
+
+            
+            <div class="method-source-code" id="write-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/message_channel.rb, line 267</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write</span>(<span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>)
+        <span class="ruby-identifier">check_argument</span>(<span class="ruby-identifier">name</span>)
+        <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">check_argument</span>(<span class="ruby-identifier">arg</span>)
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-identifier">message</span> = <span class="ruby-node">&quot;#{name}#{DELIMITER}&quot;</span>
+        <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">DELIMITER</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">write</span>([<span class="ruby-identifier">message</span>.<span class="ruby-identifier">size</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'n'</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">message</span>)
+        <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">flush</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- write-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- write-method -->
+
+      
+        <div id="write_scalar-method" class="method-detail ">
+          <a name="method-i-write_scalar"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">write_scalar</span><span
+              class="method-args">(data)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Send a scalar message over the underlying <a href="../IO.html">IO</a>
+object.</p>
+
+<p>Might raise SystemCallError, IOError or SocketError when something goes
+wrong.</p>
+            
+
+            
+            <div class="method-source-code" id="write_scalar-source">
+<pre>
+<span class="ruby-comment"># File lib/phusion_passenger/message_channel.rb, line 285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write_scalar</span>(<span class="ruby-identifier">data</span>)
+        <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">write</span>([<span class="ruby-identifier">data</span>.<span class="ruby-identifier">size</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'N'</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">data</span>)
+        <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">flush</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- write_scalar-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- write_scalar-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

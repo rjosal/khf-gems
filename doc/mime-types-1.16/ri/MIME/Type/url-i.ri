@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"url"MIME::Type#url"RW:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["AThe encoded URL list for this MIME::Type. See #urls for more"information.F"lib/mime/types.rb

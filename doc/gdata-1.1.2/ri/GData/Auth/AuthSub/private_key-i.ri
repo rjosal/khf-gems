@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"private_key"%GData::Auth::AuthSub#private_key"R:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;["2Private RSA key used to sign secure requests.:
+@file0F"lib/gdata/auth/authsub.rb

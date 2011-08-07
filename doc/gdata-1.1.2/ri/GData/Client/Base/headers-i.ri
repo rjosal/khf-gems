@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"headers" GData::Client::Base#headers"RW:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;[")Headers to include in every request.:
+@file0F"lib/gdata/client/base.rb

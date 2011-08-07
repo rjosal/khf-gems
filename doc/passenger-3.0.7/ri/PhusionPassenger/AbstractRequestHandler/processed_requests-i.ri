@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"processed_requests"@PhusionPassenger::AbstractRequestHandler#processed_requests"R:publico:RDoc::Markup::Document:
+@file0:@parts[o:RDoc::Markup::Paragraph;	["LNumber of requests processed so far. This includes requests that raised"exceptions.F"6lib/phusion_passenger/abstract_request_handler.rb

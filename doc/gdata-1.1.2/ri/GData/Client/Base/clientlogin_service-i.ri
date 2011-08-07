@@ -1,0 +1,2 @@
+U:RDoc::Attr[i"clientlogin_service",GData::Client::Base#clientlogin_service"RW:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;["FA default service name for ClientLogin (overriden by subclasses).:
+@file0F"lib/gdata/client/base.rb
